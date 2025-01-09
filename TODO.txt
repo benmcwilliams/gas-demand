@@ -1,0 +1,14 @@
+# scrapers
+- UK Scraper from National Grid (hopefully an API)
+- Quick scraper to download the German Household data from Bundesnetzagentur website
+- incorporate Spanish scraper and extractor
+
+# analysers
+- monthly demand analyser (groupby - add Eurostat; add BNetzA)
+
+# figures
+- plot daily demand in plotly for selection of countries
+
+# ad hoc
+- CBS extractor - how do we need to use this for the Dutch data? can compare old CBS data with what I get now from ENTSOG
+

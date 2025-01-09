@@ -1,0 +1,44 @@
+# Configuration file for energy demand data extraction
+api_keys:
+  # Add any API keys if needed later
+  example_api: ""
+
+data_sources:
+  austria:
+    csv_path: "data/raw/consumption-aggm.csv"
+  
+  spain:
+    # Placeholder for Spain data source configuration
+    data_path: "data/raw/spain_demand.csv"
+  
+  germany:
+    # Placeholder for Germany data source configuration
+    data_path: "data/raw/germany_demand.csv"
+  
+  france:
+    # Placeholder for France data source configuration
+    data_path: "data/raw/france_demand.csv"
+  
+  denmark:
+    data_path: "data/raw/Gasflow.xlsx"
+  
+  uk:
+    data_path: "data/raw/uk/"
+    files:
+      full_years: ["2019", "2020", "2021"]
+      half_years: 
+        - year: "2022"
+          periods: ["H1", "H2"]
+        - year: "2023"
+          periods: ["H1", "H2"]
+        - year: "2024"
+          periods: ["H1"]
+
+# Output settings
+output:
+  processed_data_path: "data/processed/demand_dataset.csv"
+
+# Logging settings
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(levelname)s - %(message)s" 
