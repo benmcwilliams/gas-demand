@@ -1,14 +1,28 @@
-# scrapers
+# Ben
+
+## scrapers
 - UK Scraper from National Grid (hopefully an API)
 - Quick scraper to download the German Household data from Bundesnetzagentur website
 - incorporate Spanish scraper and extractor
 
-# analysers
+## analysers
 - monthly demand analyser (groupby - add Eurostat; add BNetzA)
 
-# figures
-- plot daily demand in plotly for selection of countries
-
-# ad hoc
+## ad hoc
 - CBS extractor - how do we need to use this for the Dutch data? can compare old CBS data with what I get now from ENTSOG
+
+# Marie 
+
+Fig1 - Daily Gas demand
+type == total
+main_y_line = "2025" / "2024"
+also plot 2022, 2023, 2019-21 AVG (but greyed out)
+x-axis is dayofyear. 
+the existing country selector bar at RHS, so you can pick AT or BE or FR (default to EU22)
+
+Fig2 - Indexed daily demand
+identical to EV figure 
+one line per country, type == total
+
+
 
