@@ -35,7 +35,7 @@ class IrelandDemandExtractor:
             # Map of original names to standardized type names
             type_mapping = {
                 'NDM': 'household',  # Non-Daily Metered (residential/small commercial)
-                'ROI LDM': 'industry',  # Large Daily Metered (industrial)
+                'ROI LDM': 'industry-power',  # Large Daily Metered (industrial)
                 'ROI Power Gen': 'power'  # Power Generation
             }
             
@@ -54,7 +54,7 @@ class IrelandDemandExtractor:
                 result_dfs.append(type_df)
             
             # Calculate total demand
-            total_by_date = df.groupby('Date')['Value'].sum().reset_index()
+            total_by_date = df[df['Name'].isin(['NDM', 'ROI LDM'])].groupby('Date')['Value'].sum().reset_index()
             total_df = pd.DataFrame({
                 'country': 'IE',
                 'date': total_by_date['Date'],

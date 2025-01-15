@@ -54,7 +54,7 @@ filter_conditions = [
     ('FR', 'household', 'entsog'),
     ('FR', 'household', 'grtgaz'),
     ('FR', 'industry', 'grtgaz'),
-    ('FR', 'household', 'grtgaz'),
+    ('FR', 'industry', 'entsog'),
     ('FR', 'power', 'grtgaz'),
     ('DE', 'total', 'the'),
     ('DE', 'total', 'gaspool-ncg'),

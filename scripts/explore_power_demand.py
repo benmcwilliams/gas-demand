@@ -5,9 +5,9 @@ import json
 
 def test_power_api():
     # Test parameters
-    country = 'de'  # Let's start with Germany as an example
+    country = 'be'  # Let's start with Germany as an example
     start_date = '2024-01-01'
-    end_date = '2024-03-01'
+    end_date = '2024-01-31'
     
     try:
         url = "https://api.energy-charts.info/public_power"
@@ -42,6 +42,8 @@ def test_power_api():
                 'demand': df.groupby(df['timestamp'].dt.date)['demand'].mean(),
                 'type': 'power'
             }).reset_index(drop=True)
+
+            print(daily_df.head(10))
             
             print("\nSample of processed data:")
             print(daily_df.head().to_string())

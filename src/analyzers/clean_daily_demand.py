@@ -4,7 +4,7 @@ from src.utils.functions import calculate_industry_demand_from_industry_power, c
 
 class DailyDemandAnalyzer:
     def __init__(self):
-        self.calculate_industry_demand_countries = ['HU', 'LU', 'PT', 'RO']
+        self.calculate_industry_demand_countries = ['HU', 'LU', 'IE', 'PT', 'RO']
         self.calculate_country_totals = ['BE', 'FR', 'HU', 'IT', 'LU', 'NL', 'PT', 'RO']
 
     def analyze(self):
@@ -23,15 +23,14 @@ class DailyDemandAnalyzer:
         )
 
         industry_df = calculate_industry_demand_from_industry_power(aggregated_df, self.calculate_industry_demand_countries)
-
+        
         # Concatenate the new 'industry' data with the original DataFrame
         updated_df = pd.concat([aggregated_df, industry_df], ignore_index=True)
         updated_df = updated_df.drop_duplicates()
         updated_df = updated_df.sort_values(by=['country', 'type', 'date']).reset_index(drop=True)
 
         # calculate totals for countries (sum of power, industry, household)
-        updated_df = calculate_totals_for_countries(aggregated_df, self.calculate_country_totals)
-
+        updated_df = calculate_totals_for_countries(updated_df, self.calculate_country_totals)
         print("The number of rows in the filtered dataframe is: ", filtered_df.shape[0])
         print("The number of rows in the aggregated dataframe is: ", aggregated_df.shape[0])
         print("The number of rows in the dataframe with calculated industry demand is: ", updated_df.shape[0])

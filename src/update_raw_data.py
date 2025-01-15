@@ -20,10 +20,10 @@ def update_raw_data():
         #DenmarkScraper(),
         #EntsogScraper(),
         #FranceScraper(),
-        GermanyScraper(),
+        #GermanyScraper(),
         #GermanyHouseholdScraper(),
         #IrelandScraper(),
-        #EnergyChartsScraper(),
+        EnergyChartsScraper(),
         #UKScraper()
     ]
     

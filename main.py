@@ -88,7 +88,7 @@ def main(update_raw=False, initial_load=False):
 
 if __name__ == "__main__":
     # For regular updates:
-    main(update_raw=False, initial_load=False)
+    main(update_raw=True, initial_load=True)
     
     # For initial load of ENTSOG data (commented out):
     # main(update_raw=True, initial_load=True) 

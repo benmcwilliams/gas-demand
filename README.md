@@ -2,9 +2,6 @@ Figures for Marie
 
 **src/data/analyzed/daily_demand_clean.csv** is the file we are working with
 
-
-
-
 # European Gas Demand Data Pipeline
 
 This project collects, processes, and standardizes natural gas demand data from different sources into a consistent output. It handles data from multiple countries and sources, including national transmission system operators and European-wide aggregators.

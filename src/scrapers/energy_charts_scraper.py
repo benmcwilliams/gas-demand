@@ -127,12 +127,14 @@ class EnergyChartsScraper:
                     'timestamp': [datetime.utcfromtimestamp(ts) for ts in timestamps],
                     'demand': values
                 })
+
+                df['timestamp'] = df['timestamp'] + pd.DateOffset(hours=1)  # Added line to shift timestamps
                 
                 # Convert to daily values
                 daily_df = pd.DataFrame({
                     'country': country.upper(),
                     'date': df.groupby(df['timestamp'].dt.date)['timestamp'].first(),
-                    'demand': df.groupby(df['timestamp'].dt.date)['demand'].mean(),
+                    'demand': df.groupby(df['timestamp'].dt.date)['demand'].sum(),
                     'type': 'power'
                 }).reset_index(drop=True)
                 
