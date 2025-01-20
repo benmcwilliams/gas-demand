@@ -1,28 +1,25 @@
 # Ben
-
-## scrapers
+decide how to calculate industry demand for Germany (some combination of household, total and power)
+calculate European total demands
 - UK Scraper from National Grid (hopefully an API)
-- Quick scraper to download the German Household data from Bundesnetzagentur website
-- incorporate Spanish scraper and extractor
-
-## analysers
-- monthly demand analyser (groupby - add Eurostat; add BNetzA)
-
-## ad hoc
-- CBS extractor - how do we need to use this for the Dutch data? can compare old CBS data with what I get now from ENTSOG
+- add CBS extractor for historic Dutch power (and perhaps other) data
+- Ireland scraper not downloading properly (when adding Ireland back be sure to add the the daily_demand and monthly_demand
+analyzer files for industry_power calculations)
 
 # Marie 
 
-Fig1 - Daily Gas demand
-type == total
-main_y_line = "2025" / "2024"
-also plot 2022, 2023, 2019-21 AVG (but greyed out)
-x-axis is dayofyear. 
-the existing country selector bar at RHS, so you can pick AT or BE or FR (default to EU22)
+clean_data_files
+src/data/analyzed/daily_demand_clean.csv
+src/data/analyzed/monthly_demand_clean.csv
+TO-CREATE, calculating weekofyear 1-52 and years from the daily_demand.csv
 
-Fig2 - Indexed daily demand
-identical to EV figure 
-one line per country, type == total
+Fig1 - Weekly Gas demand
+y-lines are 2025, 2024, 2023, 2022, 2019-21 AVG
+x is weekofyear
+highcharts filter component (like EV deployment) where use can select from any (country, type) options. 
+eg (Europe, Total) or (France, Industry)
+
+Fig2 - Indexed monthly demand
 
 
 

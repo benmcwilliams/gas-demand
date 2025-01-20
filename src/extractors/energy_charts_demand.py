@@ -30,6 +30,9 @@ class EnergyChartsDemandExtractor:
             df = pd.read_csv(self.raw_file)
             df['date'] = pd.to_datetime(df['date']).dt.date
             df['source'] = self.source
+
+            #convert to gas-burn
+            df['demand'] = df['demand'] * 2
             
             return df[['country', 'date', 'demand', 'type', 'source']]
             

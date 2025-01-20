@@ -102,44 +102,38 @@ class EnergyChartsScraper:
             logger.info(f"Querying {country.upper()} from {start_date} to {end_date}")
             response = requests.get(url, params=params, timeout=30)
             data = response.json()
+
+            entries = data['production_types']
+            entries_dict = {entry['name']: entry['data'] for entry in entries}
+            gas_data = entries_dict.get("Fossil gas")
+            timestamps = data['unix_seconds']
             
-            # Find and extract Fossil gas data
-            gas_data = None
-            for prod_type in data['production_types']:
-                if prod_type['name'] == 'Fossil gas':
-                    gas_data = prod_type
-                    logger.debug(f"Debug {country.upper()} gas data:")
-                    logger.debug(f"- Data length: {len(prod_type['data']) if 'data' in prod_type else 'No data'}")
-                    logger.debug(f"- First few values: {prod_type['data'][:5] if 'data' in prod_type else 'No data'}")
-                    break
-            
-            if gas_data and gas_data['data']:  # Check if we have data
-                # Create lists of timestamps and values, filtering out None values
-                timestamps = []
-                values = []
-                for ts, val in zip(data['unix_seconds'], gas_data['data']):
-                    if val is not None:  # Only include non-None values
-                        timestamps.append(ts)
-                        values.append(val * 2)  # Multiply by 2
-                
-                # Create DataFrame with filtered data
+            if gas_data:
+                #create DataFrame
                 df = pd.DataFrame({
-                    'timestamp': [datetime.utcfromtimestamp(ts) for ts in timestamps],
-                    'demand': values
+                    'timestamp': pd.to_datetime([datetime.utcfromtimestamp(ts) for ts in timestamps]),
+                    'demand': gas_data
                 })
 
-                df['timestamp'] = df['timestamp'] + pd.DateOffset(hours=1)  # Added line to shift timestamps
-                
-                # Convert to daily values
-                daily_df = pd.DataFrame({
+                #aggregate to hourly mean averages
+                hourly_df = df.set_index('timestamp').resample('h').mean()
+
+                #sum hours to daily totals
+                daily_df = hourly_df.resample('D').sum()
+
+                #we return MWh of electricity output (we multiply these by 2 to get gas-burn in the extractor)
+                daily_df['demand'] = daily_df['demand'] * 1000
+
+                # Format the output as requested
+                result_df = pd.DataFrame({
                     'country': country.upper(),
-                    'date': df.groupby(df['timestamp'].dt.date)['timestamp'].first(),
-                    'demand': df.groupby(df['timestamp'].dt.date)['demand'].sum(),
+                    'date': daily_df.index.date,
+                    'demand': daily_df['demand'],
                     'type': 'power'
                 }).reset_index(drop=True)
                 
                 logger.info(f"Found {len(daily_df)} days of data for {country.upper()}")
-                return daily_df
+                return result_df
                 
             logger.warning(f"No gas power data found for {country.upper()}")
             return pd.DataFrame()

@@ -5,11 +5,11 @@ from src.scrapers.entsog_scraper import EntsogScraper
 from src.scrapers.france_scraper import FranceScraper
 from src.scrapers.germany_scraper import GermanyScraper
 from src.scrapers.energy_charts_scraper import EnergyChartsScraper
-#from src.scrapers.germany_household_scraper import GermanyHouseholdScraper
 from src.scrapers.ireland_scraper import IrelandScraper
+from src.scrapers.spain_scraper import SpainScraper
 #from src.scrapers.uk_scraper import UKScraper
 
-def update_raw_data():
+def update_raw_data(initial_load=False):
     # Initialize logging
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)
@@ -20,11 +20,11 @@ def update_raw_data():
         #DenmarkScraper(),
         #EntsogScraper(),
         #FranceScraper(),
-        #GermanyScraper(),
-        #GermanyHouseholdScraper(),
+        GermanyScraper(),
         #IrelandScraper(),
-        EnergyChartsScraper(),
+        #EnergyChartsScraper(),
         #UKScraper()
+        #SpainScraper()
     ]
     
     # Run all scrapers
@@ -32,9 +32,15 @@ def update_raw_data():
     for scraper in scrapers:
         scraper_name = scraper.__class__.__name__
         logger.info(f"Running {scraper_name}...")
-        success = scraper.scrape()
+        
+        # Only pass initial_load to specific scrapers
+        if isinstance(scraper, (EnergyChartsScraper, EntsogScraper)):
+            success = scraper.scrape(initial_load=initial_load)
+        else:
+            success = scraper.scrape()
+            
         results.append((scraper_name, success))
-    
+
     # Log results
     logger.info("\nScraping Results:")
     for name, success in results:

@@ -58,5 +58,9 @@ filter_conditions = [
     ('FR', 'power', 'grtgaz'),
     ('DE', 'total', 'the'),
     ('DE', 'total', 'gaspool-ncg'),
-    ('DE', 'power', 'energy-charts')
+    ('DE', 'power', 'energy-charts'),
+    ('ES', 'total', 'enagas'),
+    ('ES', 'power', 'enagas'),
+    ('ES', 'household', 'enagas'),
+    ('ES', 'industry', 'enagas')
 ]

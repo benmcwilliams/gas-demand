@@ -13,11 +13,11 @@ from src.extractors.germany_demand import GermanyDemandExtractor
 from src.extractors.germany_household_demand import GermanyHouseholdDemandExtractor
 from src.extractors.ireland_demand import IrelandDemandExtractor
 from src.extractors.energy_charts_demand import EnergyChartsDemandExtractor 
-#from src.extractors.spain_demand import SpainDemandExtractor
+from src.extractors.spain_demand import SpainDemandExtractor
 from src.extractors.uk_demand import UKDemandExtractor
 #from src.extractors.cbs_demand import CBSDemandExtractor
-from src.analyzers.demand_analyzer import DemandAnalyzer
 from src.analyzers.clean_daily_demand import DailyDemandAnalyzer
+from src.analyzers.clean_monthly_demand import MonthlyDemandAnalyzer
 
 def main(update_raw=False, initial_load=False):
     # Initialize config and logging
@@ -29,20 +29,20 @@ def main(update_raw=False, initial_load=False):
         # Optionally update raw data first
         if update_raw:
             logger.info("Updating raw data files...")
-            update_raw_data()
+            update_raw_data(initial_load=initial_load)
         
         # Initialize demand data extractors
         demand_extractors = [
             AustriaDemandExtractor(),
             DenmarkDemandExtractor(),
             FranceDemandExtractor(),
-            IrelandDemandExtractor(),
             GermanyDemandExtractor(),
-            #SpainDemandExtractor(),
-            UKDemandExtractor(),
+            SpainDemandExtractor(),
             EntsogDemandExtractor(),
             EnergyChartsDemandExtractor(),
-            #GermanyHouseholdDemandExtractor(),
+            GermanyHouseholdDemandExtractor(),
+            #IrelandDemandExtractor(),
+            #UKDemandExtractor(),
             #EurostatDemandExtractor(),
             #CBSDemandExtractor(),
         ]
@@ -76,8 +76,8 @@ def main(update_raw=False, initial_load=False):
             
             # Add monthly demand analysis step
             logger.info("Performing monthly demand analysis...")
-            analyzer = DemandAnalyzer()
-            monthly_demand = analyzer.calculate_monthly_demand()
+            monthly_analyzer = MonthlyDemandAnalyzer()
+            monthly_analyzer.analyze()
             logger.info("Monthly demand analysis completed")
             
         else:
@@ -88,7 +88,7 @@ def main(update_raw=False, initial_load=False):
 
 if __name__ == "__main__":
     # For regular updates:
-    main(update_raw=True, initial_load=True)
+    main(update_raw=False, initial_load=False)
     
     # For initial load of ENTSOG data (commented out):
     # main(update_raw=True, initial_load=True) 

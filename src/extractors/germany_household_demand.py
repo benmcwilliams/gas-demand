@@ -22,15 +22,17 @@ class GermanyHouseholdDemandExtractor:
                                 delimiter=',')
             
             # Clean column names
-            hist_df.columns = ['month'] + [str(year) for year in range(2018, 2022)]
+            hist_df.columns = ['month'] + [str(year) for year in range(2018, 2023)]
             
             # Melt years into rows
             demand_df = hist_df.melt(
                 id_vars=['month'],
-                value_vars=['2018', '2019', '2020', '2021'],
+                value_vars=['2018', '2019', '2020', '2021', '2022'],
                 var_name='year',
                 value_name='demand'
             )
+
+            print(demand_df.head())
             
             # Create proper dates
             demand_df['date'] = pd.to_datetime(
@@ -107,6 +109,7 @@ class GermanyHouseholdDemandExtractor:
             
             # Get all column names
             all_columns = df.columns.tolist()
+            print(all_columns)
             
             # Identify year columns (those that are 4-digit numbers)
             year_columns = [col for col in all_columns if str(col).strip().isdigit() and len(str(col).strip()) == 4]
@@ -156,6 +159,11 @@ class GermanyHouseholdDemandExtractor:
             
             # Sort by date and remove any duplicates
             result_df = result_df.sort_values('date').drop_duplicates(subset=['date'])
+            
+            # Convert daily GWh to monthly TWh
+            result_df['days_in_month'] = result_df['date'].dt.days_in_month
+            result_df['demand'] = (result_df['demand'] * result_df['days_in_month']) / 1000
+            result_df = result_df.drop('days_in_month', axis=1)
             
             # Save to historic file
             self._save_historic_data(result_df)
