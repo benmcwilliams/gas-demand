@@ -16,12 +16,12 @@ def update_raw_data(initial_load=False):
     
     # Initialize scrapers
     scrapers = [
-        #AustriaScraper(),
-        #DenmarkScraper(),
+        AustriaScraper(),
+        DenmarkScraper(),
         #EntsogScraper(),
-        #FranceScraper(),
+        FranceScraper(),
         GermanyScraper(),
-        #IrelandScraper(),
+        IrelandScraper(),
         #EnergyChartsScraper(),
         #UKScraper()
         #SpainScraper()

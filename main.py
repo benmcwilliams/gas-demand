@@ -14,7 +14,7 @@ from src.extractors.germany_household_demand import GermanyHouseholdDemandExtrac
 from src.extractors.ireland_demand import IrelandDemandExtractor
 from src.extractors.energy_charts_demand import EnergyChartsDemandExtractor 
 from src.extractors.spain_demand import SpainDemandExtractor
-from src.extractors.uk_demand import UKDemandExtractor
+#from src.extractors.uk_demand import UKDemandExtractor
 #from src.extractors.cbs_demand import CBSDemandExtractor
 from src.analyzers.clean_daily_demand import DailyDemandAnalyzer
 from src.analyzers.clean_monthly_demand import MonthlyDemandAnalyzer
@@ -41,9 +41,9 @@ def main(update_raw=False, initial_load=False):
             EntsogDemandExtractor(),
             EnergyChartsDemandExtractor(),
             GermanyHouseholdDemandExtractor(),
-            #IrelandDemandExtractor(),
+            IrelandDemandExtractor(),
             #UKDemandExtractor(),
-            #EurostatDemandExtractor(),
+            EurostatDemandExtractor(),
             #CBSDemandExtractor(),
         ]
 
@@ -88,7 +88,7 @@ def main(update_raw=False, initial_load=False):
 
 if __name__ == "__main__":
     # For regular updates:
-    main(update_raw=False, initial_load=False)
+    main(update_raw=True, initial_load=False)
     
     # For initial load of ENTSOG data (commented out):
     # main(update_raw=True, initial_load=True) 

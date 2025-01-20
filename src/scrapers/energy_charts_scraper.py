@@ -16,7 +16,7 @@ class EnergyChartsScraper:
         self.countries = [
             'at', 'be', 'bg', 'hr', 'cz', 'dk', 'ee', 'fi', 'fr',
             'de', 'gr', 'hu', 'ie', 'it', 'lv', 'lt', 'lu', 'nl',
-            'pl', 'pt', 'ro', 'sk', 'si', 'es', 'se', 'uk',
+            'pl', 'pt', 'ro', 'sk', 'si', 'es', 'se', 'uk'
         ]
         self.interrupt_handler = None
 
@@ -25,7 +25,9 @@ class EnergyChartsScraper:
             # Set up interrupt handler
             self.interrupt_handler = InterruptHandler()
             
+            logger.debug("Loading existing data...")
             historic_df = self._load_existing_data()
+            logger.debug(f"Historic DataFrame loaded: {historic_df.shape}")
             end_date = datetime.now().strftime('%Y-%m-%d')
             
             if initial_load:
@@ -41,7 +43,9 @@ class EnergyChartsScraper:
                     logger.warning("Interrupt received - saving partial data...")
                     break
                     
+                logger.debug(f"Querying API for country: {country}")
                 df = self._query_api_data(country, start_date, end_date)
+                logger.debug(f"DataFrame returned for {country}: {df.shape}")
                 if not df.empty:
                     new_dfs.append(df)
                     logger.info(f"Successfully retrieved power data for {country.upper()} ({i+1}/{len(self.countries)})")
@@ -60,8 +64,11 @@ class EnergyChartsScraper:
                 if not historic_df.empty:
                     # Only remove overlapping dates for countries we successfully updated
                     updated_countries = new_df['country'].unique()
-                    cutoff_date = datetime.strptime(start_date, '%Y-%m-%d')
-                    
+                    cutoff_date = datetime.strptime(start_date, '%Y-%m-%d').date()  # Convert to date object
+
+                    # Ensure 'date' column in historic_df is a date object for comparison
+                    historic_df['date'] = historic_df['date'].dt.date
+
                     # Keep historic data for countries not in the update
                     mask = ~(
                         (historic_df['country'].isin(updated_countries)) & 
@@ -73,6 +80,7 @@ class EnergyChartsScraper:
                 combined_df = combined_df.drop_duplicates(subset=['date', 'country'])
                 combined_df = combined_df.sort_values('date')
                 
+                logger.debug(f"Combined DataFrame before saving: {combined_df.shape}")
                 self._save_data(combined_df)
                 self._cleanup_temp_file()
                 return True
@@ -99,7 +107,7 @@ class EnergyChartsScraper:
                 "end": f"{end_date}T23:45+01:00"
             }
             
-            logger.info(f"Querying {country.upper()} from {start_date} to {end_date}")
+            logger.debug(f"Querying {country.upper()} from {start_date} to {end_date}")
             response = requests.get(url, params=params, timeout=30)
             data = response.json()
 
@@ -109,6 +117,7 @@ class EnergyChartsScraper:
             timestamps = data['unix_seconds']
             
             if gas_data:
+                logger.debug(f"Gas data found for {country.upper()}: {len(gas_data)} entries")
                 #create DataFrame
                 df = pd.DataFrame({
                     'timestamp': pd.to_datetime([datetime.utcfromtimestamp(ts) for ts in timestamps]),

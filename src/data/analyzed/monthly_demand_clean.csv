@@ -71,7 +71,7 @@ AT,power,2024,9,0.18,energy-charts
 AT,power,2024,10,0.81,energy-charts
 AT,power,2024,11,2.87,energy-charts
 AT,power,2024,12,2.72,energy-charts
-AT,power,2025,1,1.18,energy-charts
+AT,power,2025,1,1.75,energy-charts
 AT,total,2019,1,13.78,aggm
 AT,total,2019,2,10.27,aggm
 AT,total,2019,3,6.61,aggm
@@ -144,7 +144,7 @@ AT,total,2024,9,4.06,aggm
 AT,total,2024,10,5.8,aggm
 AT,total,2024,11,10.25,aggm
 AT,total,2024,12,10.77,aggm
-AT,total,2025,1,4.76,aggm
+AT,total,2025,1,6.89,aggm
 BE,household,2019,1,15.43,entsog
 BE,household,2019,2,11.18,entsog
 BE,household,2019,3,10.35,entsog
@@ -217,7 +217,7 @@ BE,household,2024,9,3.45,entsog
 BE,household,2024,10,5.8,entsog
 BE,household,2024,11,9.85,entsog
 BE,household,2024,12,11.94,entsog
-BE,household,2025,1,6.07,entsog
+BE,household,2025,1,8.06,entsog
 BE,industry,2019,1,4.65,entsog
 BE,industry,2019,2,4.19,entsog
 BE,industry,2019,3,4.38,entsog
@@ -290,7 +290,7 @@ BE,industry,2024,9,3.48,entsog
 BE,industry,2024,10,3.53,entsog
 BE,industry,2024,11,3.79,entsog
 BE,industry,2024,12,3.93,entsog
-BE,industry,2025,1,1.66,entsog
+BE,industry,2025,1,2.17,entsog
 BE,power,2019,1,5.79,entsog
 BE,power,2019,2,4.08,entsog
 BE,power,2019,3,3.29,entsog
@@ -363,7 +363,7 @@ BE,power,2024,9,1.58,entsog
 BE,power,2024,10,1.79,entsog
 BE,power,2024,11,3.4,entsog
 BE,power,2024,12,2.55,entsog
-BE,power,2025,1,0.97,entsog
+BE,power,2025,1,1.73,entsog
 BE,total,2019,1,25.87,calculated
 BE,total,2019,2,19.45,calculated
 BE,total,2019,3,18.02,calculated
@@ -436,7 +436,7 @@ BE,total,2024,9,8.51,calculated
 BE,total,2024,10,11.12,calculated
 BE,total,2024,11,17.03,calculated
 BE,total,2024,12,18.43,calculated
-BE,total,2025,1,8.7,calculated
+BE,total,2025,1,11.96,calculated
 BG,power,2019,1,0.54,energy-charts
 BG,power,2019,2,0.52,energy-charts
 BG,power,2019,3,0.47,energy-charts
@@ -509,7 +509,7 @@ BG,power,2024,9,0.25,energy-charts
 BG,power,2024,10,0.28,energy-charts
 BG,power,2024,11,0.36,energy-charts
 BG,power,2024,12,0.44,energy-charts
-BG,power,2025,1,0.2,energy-charts
+BG,power,2025,1,0.28,energy-charts
 BG,total,2019,1,4.19,entsog
 BG,total,2019,2,3.42,entsog
 BG,total,2019,3,2.97,entsog
@@ -582,7 +582,7 @@ BG,total,2024,9,1.9,entsog
 BG,total,2024,10,2.2,entsog
 BG,total,2024,11,3.04,entsog
 BG,total,2024,12,3.08,entsog
-BG,total,2025,1,1.37,entsog
+BG,total,2025,1,1.91,entsog
 CZ,power,2019,1,1.07,energy-charts
 CZ,power,2019,2,0.84,energy-charts
 CZ,power,2019,3,0.58,energy-charts
@@ -655,7 +655,7 @@ CZ,power,2024,9,0.38,energy-charts
 CZ,power,2024,10,0.58,energy-charts
 CZ,power,2024,11,1.02,energy-charts
 CZ,power,2024,12,0.79,energy-charts
-CZ,power,2025,1,0.37,energy-charts
+CZ,power,2025,1,0.6,energy-charts
 CZ,total,2019,1,13.79,eurostat
 CZ,total,2019,2,10.73,eurostat
 CZ,total,2019,3,9.05,eurostat
@@ -872,7 +872,7 @@ DE,power,2024,9,5.05,energy-charts
 DE,power,2024,10,7.71,energy-charts
 DE,power,2024,11,14.12,energy-charts
 DE,power,2024,12,13.32,energy-charts
-DE,power,2025,1,6.84,energy-charts
+DE,power,2025,1,10.28,energy-charts
 DE,total,2019,1,135.07,gaspool-ncg
 DE,total,2019,2,105.01,gaspool-ncg
 DE,total,2019,3,96.27,gaspool-ncg
@@ -906,46 +906,6 @@ DE,total,2021,6,47.03,gaspool-ncg
 DE,total,2021,7,46.33,gaspool-ncg
 DE,total,2021,8,45.7,gaspool-ncg
 DE,total,2021,9,50.36,gaspool-ncg
-DE,total,2021,10,75.6,the
-DE,total,2021,11,106.62,the
-DE,total,2021,12,121.72,the
-DE,total,2022,1,123.71,the
-DE,total,2022,2,101.53,the
-DE,total,2022,3,103.12,the
-DE,total,2022,4,79.4,the
-DE,total,2022,5,51.98,the
-DE,total,2022,6,41.86,the
-DE,total,2022,7,38.5,the
-DE,total,2022,8,36.48,the
-DE,total,2022,9,47.35,the
-DE,total,2022,10,55.38,the
-DE,total,2022,11,80.24,the
-DE,total,2022,12,110.21,the
-DE,total,2023,1,103.19,the
-DE,total,2023,2,96.11,the
-DE,total,2023,3,92.02,the
-DE,total,2023,4,72.98,the
-DE,total,2023,5,49.78,the
-DE,total,2023,6,38.49,the
-DE,total,2023,7,37.38,the
-DE,total,2023,8,39.2,the
-DE,total,2023,9,39.64,the
-DE,total,2023,10,59.23,the
-DE,total,2023,11,89.65,the
-DE,total,2023,12,102.51,the
-DE,total,2024,1,120.52,the
-DE,total,2024,2,86.35,the
-DE,total,2024,3,82.58,the
-DE,total,2024,4,67.31,the
-DE,total,2024,5,47.6,the
-DE,total,2024,6,42.83,the
-DE,total,2024,7,39.11,the
-DE,total,2024,8,37.16,the
-DE,total,2024,9,44.64,the
-DE,total,2024,10,63.65,the
-DE,total,2024,11,96.62,the
-DE,total,2024,12,120.6,the
-DE,total,2025,1,55.16,the
 DK,power,2019,1,0.78,energy-charts
 DK,power,2019,2,0.62,energy-charts
 DK,power,2019,3,0.55,energy-charts
@@ -1018,7 +978,7 @@ DK,power,2024,9,0.16,energy-charts
 DK,power,2024,10,0.27,energy-charts
 DK,power,2024,11,0.41,energy-charts
 DK,power,2024,12,0.41,energy-charts
-DK,power,2025,1,0.2,energy-charts
+DK,power,2025,1,0.29,energy-charts
 DK,total,2019,1,4.12,energinet
 DK,total,2019,2,3.12,energinet
 DK,total,2019,3,3.01,energinet
@@ -1078,7 +1038,7 @@ DK,total,2023,8,1.2,energinet
 DK,total,2023,9,1.04,energinet
 DK,total,2023,10,1.66,energinet
 DK,total,2023,11,2.42,energinet
-DK,total,2023,12,2.65,energinet
+DK,total,2023,12,2.48,energinet
 DK,total,2024,1,3.46,energinet
 DK,total,2024,2,2.31,energinet
 DK,total,2024,3,2.18,energinet
@@ -1091,7 +1051,7 @@ DK,total,2024,9,1.16,energinet
 DK,total,2024,10,1.66,energinet
 DK,total,2024,11,2.29,energinet
 DK,total,2024,12,2.46,energinet
-DK,total,2025,1,1.44,energinet
+DK,total,2025,1,1.94,energinet
 EE,power,2019,1,0.0,energy-charts
 EE,power,2019,2,0.0,energy-charts
 EE,power,2019,3,0.0,energy-charts
@@ -1237,7 +1197,7 @@ EE,total,2024,9,0.13,entsog
 EE,total,2024,10,0.25,entsog
 EE,total,2024,11,0.36,entsog
 EE,total,2024,12,0.48,entsog
-EE,total,2025,1,0.23,entsog
+EE,total,2025,1,0.29,entsog
 ES,power,2019,7,6.84,enagas
 ES,power,2019,8,14.94,enagas
 ES,power,2019,9,11.51,enagas
@@ -1304,7 +1264,7 @@ ES,power,2024,9,6.03,enagas
 ES,power,2024,10,6.11,enagas
 ES,power,2024,11,8.32,enagas
 ES,power,2024,12,10.43,enagas
-ES,power,2025,1,3.02,enagas
+ES,power,2025,1,4.04,enagas
 ES,total,2019,7,15.55,enagas
 ES,total,2019,8,32.87,enagas
 ES,total,2019,9,31.07,enagas
@@ -1371,7 +1331,7 @@ ES,total,2024,9,22.66,enagas
 ES,total,2024,10,24.2,enagas
 ES,total,2024,11,29.43,enagas
 ES,total,2024,12,35.11,enagas
-ES,total,2025,1,15.23,enagas
+ES,total,2025,1,18.91,enagas
 FI,power,2019,1,1.44,energy-charts
 FI,power,2019,2,1.14,energy-charts
 FI,power,2019,3,1.04,energy-charts
@@ -1444,7 +1404,7 @@ FI,power,2024,9,0.08,energy-charts
 FI,power,2024,10,0.13,energy-charts
 FI,power,2024,11,0.17,energy-charts
 FI,power,2024,12,0.18,energy-charts
-FI,power,2025,1,0.16,energy-charts
+FI,power,2025,1,0.18,energy-charts
 FI,total,2019,1,4.09,eurostat
 FI,total,2019,2,2.97,eurostat
 FI,total,2019,3,2.87,eurostat
@@ -1589,7 +1549,7 @@ FR,household,2024,9,7.68,"entsog, grtgaz"
 FR,household,2024,10,13.43,"entsog, grtgaz"
 FR,household,2024,11,27.39,"entsog, grtgaz"
 FR,household,2024,12,36.67,"entsog, grtgaz"
-FR,household,2025,1,18.65,"entsog, grtgaz"
+FR,household,2025,1,26.41,"entsog, grtgaz"
 FR,household,2025,2,0.0,grtgaz
 FR,household,2025,3,0.0,grtgaz
 FR,household,2025,4,0.0,grtgaz
@@ -1673,7 +1633,7 @@ FR,industry,2024,9,8.16,"entsog, grtgaz"
 FR,industry,2024,10,9.27,"entsog, grtgaz"
 FR,industry,2024,11,10.46,"entsog, grtgaz"
 FR,industry,2024,12,10.92,"entsog, grtgaz"
-FR,industry,2025,1,5.04,"entsog, grtgaz"
+FR,industry,2025,1,6.98,"entsog, grtgaz"
 FR,industry,2025,2,0.0,grtgaz
 FR,industry,2025,3,0.0,grtgaz
 FR,industry,2025,4,0.0,grtgaz
@@ -1757,7 +1717,7 @@ FR,power,2024,9,0.71,grtgaz
 FR,power,2024,10,0.62,grtgaz
 FR,power,2024,11,2.96,grtgaz
 FR,power,2024,12,2.38,grtgaz
-FR,power,2025,1,0.97,grtgaz
+FR,power,2025,1,2.06,grtgaz
 FR,power,2025,2,0.0,grtgaz
 FR,power,2025,3,0.0,grtgaz
 FR,power,2025,4,0.0,grtgaz
@@ -1841,7 +1801,7 @@ FR,total,2024,9,16.55,calculated
 FR,total,2024,10,23.32,calculated
 FR,total,2024,11,40.8,calculated
 FR,total,2024,12,49.96,calculated
-FR,total,2025,1,24.66,calculated
+FR,total,2025,1,35.44,calculated
 FR,total,2025,2,0.0,calculated
 FR,total,2025,3,0.0,calculated
 FR,total,2025,4,0.0,calculated
@@ -1925,7 +1885,7 @@ GR,power,2024,9,3.4,energy-charts
 GR,power,2024,10,2.89,energy-charts
 GR,power,2024,11,4.3,energy-charts
 GR,power,2024,12,4.32,energy-charts
-GR,power,2025,1,1.95,energy-charts
+GR,power,2025,1,2.71,energy-charts
 GR,total,2019,1,7.47,eurostat
 GR,total,2019,2,5.43,eurostat
 GR,total,2019,3,4.19,eurostat
@@ -2070,7 +2030,7 @@ HR,power,2024,9,0.47,energy-charts
 HR,power,2024,10,0.4,energy-charts
 HR,power,2024,11,0.34,energy-charts
 HR,power,2024,12,0.64,energy-charts
-HR,power,2025,1,0.34,energy-charts
+HR,power,2025,1,0.44,energy-charts
 HR,total,2019,1,4.07,entsog
 HR,total,2019,2,2.99,entsog
 HR,total,2019,3,2.41,entsog
@@ -2143,7 +2103,7 @@ HR,total,2024,9,1.98,entsog
 HR,total,2024,10,2.35,entsog
 HR,total,2024,11,2.77,entsog
 HR,total,2024,12,3.3,entsog
-HR,total,2025,1,1.19,entsog
+HR,total,2025,1,1.68,entsog
 HU,household,2019,1,14.82,entsog
 HU,household,2019,2,10.82,entsog
 HU,household,2019,3,8.4,entsog
@@ -2216,7 +2176,7 @@ HU,household,2024,9,2.37,entsog
 HU,household,2024,10,4.9,entsog
 HU,household,2024,11,9.52,entsog
 HU,household,2024,12,10.86,entsog
-HU,household,2025,1,5.16,entsog
+HU,household,2025,1,6.97,entsog
 HU,industry,2019,1,0.79,calculated
 HU,industry,2019,2,0.92,calculated
 HU,industry,2019,3,0.99,calculated
@@ -2289,7 +2249,7 @@ HU,industry,2024,9,1.24,calculated
 HU,industry,2024,10,1.19,calculated
 HU,industry,2024,11,0.45,calculated
 HU,industry,2024,12,0.72,calculated
-HU,industry,2025,1,0.32,calculated
+HU,industry,2025,1,0.4,calculated
 HU,industry-power,2019,1,2.76,entsog
 HU,industry-power,2019,2,2.0,entsog
 HU,industry-power,2019,3,1.93,entsog
@@ -2362,7 +2322,7 @@ HU,industry-power,2024,9,2.07,entsog
 HU,industry-power,2024,10,2.27,entsog
 HU,industry-power,2024,11,2.12,entsog
 HU,industry-power,2024,12,2.42,entsog
-HU,industry-power,2025,1,1.11,entsog
+HU,industry-power,2025,1,1.54,entsog
 HU,power,2019,1,1.97,energy-charts
 HU,power,2019,2,1.08,energy-charts
 HU,power,2019,3,0.94,energy-charts
@@ -2435,7 +2395,7 @@ HU,power,2024,9,0.84,energy-charts
 HU,power,2024,10,1.08,energy-charts
 HU,power,2024,11,1.68,energy-charts
 HU,power,2024,12,1.71,energy-charts
-HU,power,2025,1,0.79,energy-charts
+HU,power,2025,1,1.13,energy-charts
 HU,total,2019,1,17.58,calculated
 HU,total,2019,2,12.81,calculated
 HU,total,2019,3,10.33,calculated
@@ -2508,7 +2468,7 @@ HU,total,2024,9,4.45,calculated
 HU,total,2024,10,7.17,calculated
 HU,total,2024,11,11.65,calculated
 HU,total,2024,12,13.29,calculated
-HU,total,2025,1,6.28,calculated
+HU,total,2025,1,8.51,calculated
 IT,household,2019,1,66.69,entsog
 IT,household,2019,2,48.58,entsog
 IT,household,2019,3,35.17,entsog
@@ -2581,7 +2541,7 @@ IT,household,2024,9,10.65,entsog
 IT,household,2024,10,14.82,entsog
 IT,household,2024,11,33.51,entsog
 IT,household,2024,12,49.44,entsog
-IT,household,2025,1,20.84,entsog
+IT,household,2025,1,30.01,entsog
 IT,industry,2019,1,13.76,entsog
 IT,industry,2019,2,13.1,entsog
 IT,industry,2019,3,14.02,entsog
@@ -2654,7 +2614,7 @@ IT,industry,2024,9,10.54,entsog
 IT,industry,2024,10,11.2,entsog
 IT,industry,2024,11,10.79,entsog
 IT,industry,2024,12,9.22,entsog
-IT,industry,2025,1,3.72,entsog
+IT,industry,2025,1,5.53,entsog
 IT,power,2019,1,28.0,entsog
 IT,power,2019,2,21.01,entsog
 IT,power,2019,3,22.3,entsog
@@ -2727,7 +2687,7 @@ IT,power,2024,9,20.2,entsog
 IT,power,2024,10,17.84,entsog
 IT,power,2024,11,22.52,entsog
 IT,power,2024,12,22.72,entsog
-IT,power,2025,1,8.07,entsog
+IT,power,2025,1,12.21,entsog
 IT,total,2019,1,108.45,calculated
 IT,total,2019,2,82.69,calculated
 IT,total,2019,3,71.48,calculated
@@ -2800,7 +2760,7 @@ IT,total,2024,9,41.39,calculated
 IT,total,2024,10,43.87,calculated
 IT,total,2024,11,66.81,calculated
 IT,total,2024,12,81.38,calculated
-IT,total,2025,1,32.63,calculated
+IT,total,2025,1,47.75,calculated
 LT,power,2019,1,0.06,energy-charts
 LT,power,2019,2,0.07,energy-charts
 LT,power,2019,3,0.08,energy-charts
@@ -2873,7 +2833,7 @@ LT,power,2024,9,0.09,energy-charts
 LT,power,2024,10,0.11,energy-charts
 LT,power,2024,11,0.16,energy-charts
 LT,power,2024,12,0.27,energy-charts
-LT,power,2025,1,0.19,energy-charts
+LT,power,2025,1,0.25,energy-charts
 LT,total,2019,1,3.04,eurostat
 LT,total,2019,2,2.3,eurostat
 LT,total,2019,3,2.3,eurostat
@@ -2945,7 +2905,7 @@ LT,total,2024,8,1.0,eurostat
 LT,total,2024,9,1.02,eurostat
 LT,total,2024,10,1.65,eurostat
 LT,total,2024,11,2.18,eurostat
-LT,total,2024,12,0.0,eurostat
+LT,total,2024,12,2.08,eurostat
 LU,household,2019,1,0.86,entsog
 LU,household,2019,2,0.64,entsog
 LU,household,2019,3,0.59,entsog
@@ -3018,7 +2978,7 @@ LU,household,2024,9,0.17,entsog
 LU,household,2024,10,0.3,entsog
 LU,household,2024,11,0.51,entsog
 LU,household,2024,12,0.66,entsog
-LU,household,2025,1,0.33,entsog
+LU,household,2025,1,0.46,entsog
 LU,industry,2019,1,0.3,calculated
 LU,industry,2019,2,0.27,calculated
 LU,industry,2019,3,0.29,calculated
@@ -3091,7 +3051,7 @@ LU,industry,2024,9,0.19,calculated
 LU,industry,2024,10,0.21,calculated
 LU,industry,2024,11,0.22,calculated
 LU,industry,2024,12,0.17,calculated
-LU,industry,2025,1,0.09,calculated
+LU,industry,2025,1,0.13,calculated
 LU,industry-power,2019,1,0.36,entsog
 LU,industry-power,2019,2,0.32,entsog
 LU,industry-power,2019,3,0.35,entsog
@@ -3164,7 +3124,7 @@ LU,industry-power,2024,9,0.2,entsog
 LU,industry-power,2024,10,0.22,entsog
 LU,industry-power,2024,11,0.23,entsog
 LU,industry-power,2024,12,0.19,entsog
-LU,industry-power,2025,1,0.1,entsog
+LU,industry-power,2025,1,0.14,entsog
 LU,power,2019,1,0.06,energy-charts
 LU,power,2019,2,0.05,energy-charts
 LU,power,2019,3,0.05,energy-charts
@@ -3310,7 +3270,7 @@ LU,total,2024,9,0.37,calculated
 LU,total,2024,10,0.51,calculated
 LU,total,2024,11,0.74,calculated
 LU,total,2024,12,0.85,calculated
-LU,total,2025,1,0.43,calculated
+LU,total,2025,1,0.6,calculated
 LV,power,2019,1,0.76,energy-charts
 LV,power,2019,2,0.38,energy-charts
 LV,power,2019,3,0.32,energy-charts
@@ -3383,7 +3343,7 @@ LV,power,2024,9,0.28,energy-charts
 LV,power,2024,10,0.13,energy-charts
 LV,power,2024,11,0.31,energy-charts
 LV,power,2024,12,0.26,energy-charts
-LV,power,2025,1,0.16,energy-charts
+LV,power,2025,1,0.22,energy-charts
 LV,total,2020,1,1.29,entsog
 LV,total,2020,2,1.28,entsog
 LV,total,2020,3,1.16,entsog
@@ -3444,7 +3404,7 @@ LV,total,2024,9,0.5,entsog
 LV,total,2024,10,0.57,entsog
 LV,total,2024,11,0.93,entsog
 LV,total,2024,12,1.02,entsog
-LV,total,2025,1,0.34,entsog
+LV,total,2025,1,0.41,entsog
 NL,household,2019,1,30.32,entsog
 NL,household,2019,2,21.57,entsog
 NL,household,2019,3,20.42,entsog
@@ -3517,7 +3477,7 @@ NL,household,2024,9,5.48,entsog
 NL,household,2024,10,9.15,entsog
 NL,household,2024,11,16.15,entsog
 NL,household,2024,12,19.63,entsog
-NL,household,2025,1,10.79,entsog
+NL,household,2025,1,14.92,entsog
 NL,industry,2019,1,19.47,entsog
 NL,industry,2019,2,17.09,entsog
 NL,industry,2019,3,17.97,entsog
@@ -3590,7 +3550,7 @@ NL,industry,2024,9,7.28,entsog
 NL,industry,2024,10,7.63,entsog
 NL,industry,2024,11,7.56,entsog
 NL,industry,2024,12,7.93,entsog
-NL,industry,2025,1,3.49,entsog
+NL,industry,2025,1,4.84,entsog
 NL,power,2022,7,5.13,entsog
 NL,power,2022,8,5.75,entsog
 NL,power,2022,9,4.81,entsog
@@ -3621,7 +3581,7 @@ NL,power,2024,9,4.27,entsog
 NL,power,2024,10,4.8,entsog
 NL,power,2024,11,7.9,entsog
 NL,power,2024,12,5.56,entsog
-NL,power,2025,1,2.57,entsog
+NL,power,2025,1,4.96,entsog
 NL,total,2019,1,49.79,calculated
 NL,total,2019,2,38.67,calculated
 NL,total,2019,3,38.39,calculated
@@ -3694,7 +3654,7 @@ NL,total,2024,9,17.03,calculated
 NL,total,2024,10,21.58,calculated
 NL,total,2024,11,31.61,calculated
 NL,total,2024,12,33.13,calculated
-NL,total,2025,1,16.85,calculated
+NL,total,2025,1,24.72,calculated
 PL,power,2019,1,1.73,energy-charts
 PL,power,2019,2,1.55,energy-charts
 PL,power,2019,3,1.82,energy-charts
@@ -3767,7 +3727,7 @@ PL,power,2024,9,3.0,energy-charts
 PL,power,2024,10,3.26,energy-charts
 PL,power,2024,11,3.93,energy-charts
 PL,power,2024,12,3.68,energy-charts
-PL,power,2025,1,1.6,energy-charts
+PL,power,2025,1,2.35,energy-charts
 PL,total,2019,1,23.43,entsog
 PL,total,2019,2,18.83,entsog
 PL,total,2019,3,18.91,entsog
@@ -3840,7 +3800,7 @@ PL,total,2024,9,12.72,entsog
 PL,total,2024,10,16.67,entsog
 PL,total,2024,11,21.88,entsog
 PL,total,2024,12,23.08,entsog
-PL,total,2025,1,10.52,entsog
+PL,total,2025,1,14.16,entsog
 PT,household,2019,1,2.5,entsog
 PT,household,2019,2,2.21,entsog
 PT,household,2019,3,2.26,entsog
@@ -3913,7 +3873,7 @@ PT,household,2024,9,1.68,entsog
 PT,household,2024,10,1.74,entsog
 PT,household,2024,11,1.71,entsog
 PT,household,2024,12,1.75,entsog
-PT,household,2025,1,0.79,entsog
+PT,household,2025,1,1.07,entsog
 PT,industry,2019,1,0.73,calculated
 PT,industry,2019,2,0.66,calculated
 PT,industry,2019,3,0.71,calculated
@@ -3986,7 +3946,7 @@ PT,industry,2024,9,0.59,calculated
 PT,industry,2024,10,0.68,calculated
 PT,industry,2024,11,0.63,calculated
 PT,industry,2024,12,0.7,calculated
-PT,industry,2025,1,0.25,calculated
+PT,industry,2025,1,0.31,calculated
 PT,industry-power,2019,1,3.06,entsog
 PT,industry-power,2019,2,2.33,entsog
 PT,industry-power,2019,3,2.03,entsog
@@ -4059,7 +4019,7 @@ PT,industry-power,2024,9,1.41,entsog
 PT,industry-power,2024,10,1.53,entsog
 PT,industry-power,2024,11,1.78,entsog
 PT,industry-power,2024,12,2.17,entsog
-PT,industry-power,2025,1,0.84,entsog
+PT,industry-power,2025,1,1.15,entsog
 PT,power,2019,1,2.33,energy-charts
 PT,power,2019,2,1.67,energy-charts
 PT,power,2019,3,1.32,energy-charts
@@ -4132,7 +4092,7 @@ PT,power,2024,9,0.82,energy-charts
 PT,power,2024,10,0.86,energy-charts
 PT,power,2024,11,1.15,energy-charts
 PT,power,2024,12,1.47,energy-charts
-PT,power,2025,1,0.58,energy-charts
+PT,power,2025,1,0.84,energy-charts
 PT,total,2019,1,5.56,calculated
 PT,total,2019,2,4.54,calculated
 PT,total,2019,3,4.29,calculated
@@ -4205,7 +4165,7 @@ PT,total,2024,9,3.09,calculated
 PT,total,2024,10,3.27,calculated
 PT,total,2024,11,3.49,calculated
 PT,total,2024,12,3.93,calculated
-PT,total,2025,1,1.63,calculated
+PT,total,2025,1,2.22,calculated
 RO,household,2019,1,14.15,entsog
 RO,household,2019,2,10.86,entsog
 RO,household,2019,3,8.4,entsog
@@ -4278,7 +4238,7 @@ RO,household,2024,9,2.23,entsog
 RO,household,2024,10,4.85,entsog
 RO,household,2024,11,9.93,entsog
 RO,household,2024,12,11.5,entsog
-RO,household,2025,1,4.88,entsog
+RO,household,2025,1,7.06,entsog
 RO,industry,2019,1,1.64,calculated
 RO,industry,2019,2,1.29,calculated
 RO,industry,2019,3,1.41,calculated
@@ -4351,7 +4311,7 @@ RO,industry,2024,9,0.36,calculated
 RO,industry,2024,10,0.38,calculated
 RO,industry,2024,11,0.3,calculated
 RO,industry,2024,12,0.33,calculated
-RO,industry,2025,1,0.02,calculated
+RO,industry,2025,1,0.14,calculated
 RO,industry-power,2019,1,4.25,entsog
 RO,industry-power,2019,2,3.52,entsog
 RO,industry-power,2019,3,3.05,entsog
@@ -4424,7 +4384,7 @@ RO,industry-power,2024,9,1.86,entsog
 RO,industry-power,2024,10,2.03,entsog
 RO,industry-power,2024,11,2.39,entsog
 RO,industry-power,2024,12,2.52,entsog
-RO,industry-power,2025,1,1.11,entsog
+RO,industry-power,2025,1,1.61,entsog
 RO,power,2019,1,2.6,energy-charts
 RO,power,2019,2,2.23,energy-charts
 RO,power,2019,3,1.64,energy-charts
@@ -4497,7 +4457,7 @@ RO,power,2024,9,1.5,energy-charts
 RO,power,2024,10,1.65,energy-charts
 RO,power,2024,11,2.09,energy-charts
 RO,power,2024,12,2.2,energy-charts
-RO,power,2025,1,1.09,energy-charts
+RO,power,2025,1,1.47,energy-charts
 RO,total,2019,1,18.4,calculated
 RO,total,2019,2,14.38,calculated
 RO,total,2019,3,11.44,calculated
@@ -4570,7 +4530,7 @@ RO,total,2024,9,4.09,calculated
 RO,total,2024,10,6.88,calculated
 RO,total,2024,11,12.32,calculated
 RO,total,2024,12,14.03,calculated
-RO,total,2025,1,5.99,calculated
+RO,total,2025,1,8.67,calculated
 SE,power,2019,1,0.0,energy-charts
 SE,power,2019,2,0.0,energy-charts
 SE,power,2019,3,0.0,energy-charts
@@ -4788,7 +4748,7 @@ SI,power,2024,9,0.06,energy-charts
 SI,power,2024,10,0.06,energy-charts
 SI,power,2024,11,0.12,energy-charts
 SI,power,2024,12,0.19,energy-charts
-SI,power,2025,1,0.09,energy-charts
+SI,power,2025,1,0.12,energy-charts
 SI,total,2019,1,1.27,entsog
 SI,total,2019,2,1.02,entsog
 SI,total,2019,3,0.94,entsog
@@ -4861,7 +4821,7 @@ SI,total,2024,9,0.6,entsog
 SI,total,2024,10,0.65,entsog
 SI,total,2024,11,0.98,entsog
 SI,total,2024,12,1.15,entsog
-SI,total,2025,1,0.58,entsog
+SI,total,2025,1,0.8,entsog
 SK,power,2019,1,0.41,energy-charts
 SK,power,2019,2,0.41,energy-charts
 SK,power,2019,3,0.45,energy-charts
@@ -4934,7 +4894,7 @@ SK,power,2024,9,0.39,energy-charts
 SK,power,2024,10,0.44,energy-charts
 SK,power,2024,11,0.67,energy-charts
 SK,power,2024,12,0.61,energy-charts
-SK,power,2025,1,0.25,energy-charts
+SK,power,2025,1,0.38,energy-charts
 SK,total,2019,1,8.17,eurostat
 SK,total,2019,2,6.22,eurostat
 SK,total,2019,3,5.42,eurostat
@@ -5040,42 +5000,3 @@ DE,industry,2021,6,32.18,calculated
 DE,industry,2021,7,32.87,calculated
 DE,industry,2021,8,32.67,calculated
 DE,industry,2021,9,32.21,calculated
-DE,industry,2021,10,38.43,calculated
-DE,industry,2021,11,45.36,calculated
-DE,industry,2021,12,47.43,calculated
-DE,industry,2022,1,47.78,calculated
-DE,industry,2022,2,41.56,calculated
-DE,industry,2022,3,46.51,calculated
-DE,industry,2022,4,39.28,calculated
-DE,industry,2022,5,32.74,calculated
-DE,industry,2022,6,28.38,calculated
-DE,industry,2022,7,27.06,calculated
-DE,industry,2022,8,24.93,calculated
-DE,industry,2022,9,30.34,calculated
-DE,industry,2022,10,30.71,calculated
-DE,industry,2022,11,37.04,calculated
-DE,industry,2022,12,40.28,calculated
-DE,industry,2023,1,40.35,calculated
-DE,industry,2023,2,37.79,calculated
-DE,industry,2023,3,39.21,calculated
-DE,industry,2023,4,34.61,calculated
-DE,industry,2023,5,29.84,calculated
-DE,industry,2023,6,26.28,calculated
-DE,industry,2023,7,25.88,calculated
-DE,industry,2023,8,26.36,calculated
-DE,industry,2023,9,27.11,calculated
-DE,industry,2023,10,32.27,calculated
-DE,industry,2023,11,38.49,calculated
-DE,industry,2023,12,39.25,calculated
-DE,industry,2024,1,45.02,calculated
-DE,industry,2024,2,36.22,calculated
-DE,industry,2024,3,36.69,calculated
-DE,industry,2024,4,34.19,calculated
-DE,industry,2024,5,30.63,calculated
-DE,industry,2024,6,29.31,calculated
-DE,industry,2024,7,28.16,calculated
-DE,industry,2024,8,26.53,calculated
-DE,industry,2024,9,29.0,calculated
-DE,industry,2024,10,31.98,calculated
-DE,industry,2024,11,38.73,calculated
-DE,industry,2024,12,53.46,calculated
