@@ -23,7 +23,7 @@ class SpainDemandExtractor:
         """
         try:
             # Read the most recent complete dataset
-            files = list(Path("src/data/raw").glob("spain_gas_demand_*.csv"))
+            files = list(Path("src/data/raw/spain").glob("spain_gas_demand_*.csv"))
             if not files:
                 self.logger.error("No Spain gas demand data files found")
                 return pd.DataFrame()
