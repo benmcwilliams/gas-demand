@@ -33,14 +33,14 @@ def main(update_raw=False, initial_load=False):
         
         # Initialize demand data extractors
         demand_extractors = [
-            #AustriaDemandExtractor(),
-            #DenmarkDemandExtractor(),
-            #FranceDemandExtractor(),
-            #GermanyDemandExtractor(),
+            AustriaDemandExtractor(),
+            DenmarkDemandExtractor(),
+            FranceDemandExtractor(),
+            GermanyDemandExtractor(),
             SpainDemandExtractor(),
-            #EntsogDemandExtractor(),
-            #EnergyChartsDemandExtractor(),
-            #GermanyHouseholdDemandExtractor(),
+            EntsogDemandExtractor(),
+            EnergyChartsDemandExtractor(),
+            GermanyHouseholdDemandExtractor(),
             #IrelandDemandExtractor(),
             #UKDemandExtractor(),
             #EurostatDemandExtractor(),
