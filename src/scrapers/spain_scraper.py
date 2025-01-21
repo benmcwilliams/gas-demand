@@ -17,7 +17,7 @@ class SpainScraper:
         """Initialize the scraper with end date and lookback period."""
         self.logger = logging.getLogger(__name__)
         self.base_url = "https://www.enagas.es/en/technical-management-system/energy-data/demand/forecast/"
-        self.output_dir = Path("src/data/raw")
+        self.output_dir = Path("src/data/raw/spain")
         self.end_date = datetime.strptime(end_date, '%d/%m/%Y') if end_date else datetime.now()
         self.start_date = self.end_date - timedelta(days=lookback_days)
         self.driver = None

@@ -3,6 +3,7 @@
 - add CBS extractor for historic Dutch power (and perhaps other) data
 - Ireland scraper not downloading properly (when adding Ireland back be sure to add the the daily_demand and monthly_demand
 analyzer files for industry_power calculations). Scraper downloads to *IE_flows_downloaded.csv* while extractor is trying to read from *src/data/raw/IE_flows.csv*
+Seems to be an issue that we cannot cleanly download the data from the website - we receive empty dataframes often.
 
 # Marie 
 

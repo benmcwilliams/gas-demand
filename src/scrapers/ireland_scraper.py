@@ -24,25 +24,35 @@ class IrelandScraper:
         """Setup Chrome driver with appropriate options"""
         try:
             chrome_options = webdriver.ChromeOptions()
-            chrome_options.add_argument('--headless')  # Run in headless mode
+            #chrome_options.add_argument('--headless')
             chrome_options.add_argument('--no-sandbox')
             chrome_options.add_argument('--disable-dev-shm-usage')
             
             # Set download preferences for CSV
+            download_path = str(self.output_dir.absolute())
+            self.logger.info(f"Setting Chrome download path to: {download_path}")
+            
+            # Check if directory exists and is writable
+            if not self.output_dir.exists():
+                self.logger.warning(f"Download directory does not exist: {download_path}")
+            elif not os.access(download_path, os.W_OK):
+                self.logger.error(f"Download directory is not writable: {download_path}")
+            
             prefs = {
-                "download.default_directory": str(self.output_dir.absolute()),
+                "download.default_directory": download_path,
                 "download.prompt_for_download": False,
                 "download.directory_upgrade": True,
                 "safebrowsing.enabled": True,
-                "download.default_directory": str(self.output_dir.absolute()),
-                # Ensure CSV files are downloaded automatically
                 "download.extensions_to_open": "csv"
             }
             chrome_options.add_experimental_option("prefs", prefs)
             
-            self.logger.info("Setting up Chrome driver with headless mode")
+            self.logger.info("Chrome preferences set: %s", prefs)
             driver = webdriver.Chrome(options=chrome_options)
-            driver.set_window_size(1920, 1080)  # Set a good window size
+            driver.set_window_size(1920, 1080)
+            
+            # Verify Chrome settings
+            self.logger.info("Chrome capabilities: %s", driver.capabilities)
             return driver
         except Exception as e:
             self.logger.error(f"Failed to setup Chrome driver: {str(e)}")
@@ -50,28 +60,45 @@ class IrelandScraper:
         
     def wait_for_download(self, timeout=30):
         """Wait for the CSV download to complete"""
+        self.logger.info(f"Starting download wait with timeout of {timeout} seconds")
         seconds = 0
         download_pattern = str(self.output_dir / "*.csv")
+        
+        # Get timestamp of newest file before download
+        csv_files = glob.glob(download_pattern)
+        before_download_time = 0
+        if csv_files:
+            newest_file = max(csv_files, key=os.path.getctime)
+            before_download_time = os.path.getctime(newest_file)
+            self.logger.info(f"Timestamp of newest file before download: {before_download_time}")
         
         while seconds < timeout:
             # Check for any CSV files in the directory
             csv_files = glob.glob(download_pattern)
-            if csv_files:
-                newest_file = max(csv_files, key=os.path.getctime)
-                # If file exists and is not empty
-                if os.path.exists(newest_file) and os.path.getsize(newest_file) > 0:
-                    self.logger.info(f"Download completed: {newest_file}")
-                    # Rename to our standard filename if different
-                    if newest_file != str(self.output_file):
-                        os.rename(newest_file, self.output_file)
-                        self.logger.info(f"Renamed file to {self.output_file}")
-                    else:
-                        self.logger.info(f"File already named correctly: {self.output_file}")
-                    return True
+            
+            for file in csv_files:
+                file_ctime = os.path.getctime(file)
+                # Only process files newer than our before_download_time
+                if file_ctime > before_download_time:
+                    self.logger.info(f"Found new file: {file} with timestamp {file_ctime}")
+                    if os.path.exists(file):
+                        size = os.path.getsize(file)
+                        self.logger.info(f"File size: {size} bytes")
+                        if size > 0:
+                            self.logger.info(f"Download completed: {file}")
+                            # Rename to our standard filename
+                            try:
+                                os.rename(file, self.output_file)
+                                self.logger.info(f"Renamed file to {self.output_file}")
+                            except Exception as e:
+                                self.logger.error(f"Failed to rename file: {str(e)}")
+                                return False
+                            return True
+        
             time.sleep(1)
             seconds += 1
         
-        self.logger.error("Download timed out")
+        self.logger.error("Download timed out - no new CSV file found")
         return False
         
     def input_date(self, driver, element_id, date_str):
@@ -89,20 +116,19 @@ class IrelandScraper:
             return False
         
     def scrape(self):
-        """
-        Scrapes Irish gas demand data and saves to CSV file.
-        Returns True if successful, False otherwise.
-        """
+        """Scrapes Irish gas demand data and saves to CSV file."""
         try:
             # Create output directory if it doesn't exist
             self.output_dir.mkdir(parents=True, exist_ok=True)
+            self.logger.info(f"Output directory confirmed: {self.output_dir}")
             
-            self.logger.info(f"Starting scrape from URL: {self.url}")
             driver = self.setup_driver()
+            self.logger.info("Driver setup successful")
             
             # Load the page
-            self.logger.info("Loading webpage...")
+            self.logger.info(f"Loading webpage: {self.url}")
             driver.get(self.url)
+            self.logger.info("Page loaded successfully")
             
             try:
                 # Click the "Select measures" button
@@ -110,34 +136,38 @@ class IrelandScraper:
                 button = WebDriverWait(driver, 10).until(
                     EC.element_to_be_clickable((By.CLASS_NAME, "transparency-section__filter-toggle"))
                 )
-                self.logger.info("Found 'Select measures' button, clicking...")
+                self.logger.info("Found button with text: %s", button.text)
                 button.click()
                 self.logger.info("Successfully clicked 'Select measures' button")
                 
-                # Input start date (01/01/2025)
+                # Input dates and verify they were set correctly
                 start_date = "01/01/2019"
-                self.logger.info(f"Setting start date to {start_date}")
-                if not self.input_date(driver, "date-from", start_date):
-                    return False
-                
-                # Input end date (today's date)
                 end_date = datetime.now().strftime("%d/%m/%Y")
-                self.logger.info(f"Setting end date to {end_date}")
-                if not self.input_date(driver, "date-to", end_date):
-                    return False
+                
+                if self.input_date(driver, "date-from", start_date):
+                    actual_start = driver.find_element(By.ID, "date-from").get_attribute("value")
+                    self.logger.info(f"Start date verification - Expected: {start_date}, Actual: {actual_start}")
+                
+                if self.input_date(driver, "date-to", end_date):
+                    actual_end = driver.find_element(By.ID, "date-to").get_attribute("value")
+                    self.logger.info(f"End date verification - Expected: {end_date}, Actual: {actual_end}")
                 
                 # Click export button
                 self.logger.info("Looking for export button...")
                 export_button = WebDriverWait(driver, 10).until(
                     EC.element_to_be_clickable((By.CSS_SELECTOR, "button.btn-primary.btn-lg.btn--with-arrow"))
                 )
-                self.logger.info("Found export button, clicking...")
-                export_button.click()
-                self.logger.info("Successfully clicked export button")
+                self.logger.info(f"Found export button with text: {export_button.text}")
                 
-                # Wait for download to complete with better file handling
-                self.logger.info("Waiting for CSV download to complete...")
+                # Take screenshot before clicking (useful for debugging)
+                driver.save_screenshot(str(self.output_dir / "before_export.png"))
+                
+                export_button.click()
+                self.logger.info("Export button clicked")
+                
+                # Wait for download
                 if not self.wait_for_download():
+                    self.logger.error("Download process failed")
                     return False
                 
             except TimeoutException as e:
