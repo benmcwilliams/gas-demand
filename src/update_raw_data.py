@@ -7,7 +7,7 @@ from src.scrapers.germany_scraper import GermanyScraper
 from src.scrapers.energy_charts_scraper import EnergyChartsScraper
 from src.scrapers.ireland_scraper import IrelandScraper
 from src.scrapers.spain_scraper import SpainScraper
-#from src.scrapers.uk_scraper import UKScraper
+from src.scrapers.uk_scraper import UKScraper
 
 def update_raw_data(initial_load=False):
     # Initialize logging
@@ -16,14 +16,14 @@ def update_raw_data(initial_load=False):
     
     # Initialize scrapers
     scrapers = [
-        AustriaScraper(),
+        #AustriaScraper(),
         #DenmarkScraper(),
         #EntsogScraper(),
         #FranceScraper(),
-        GermanyScraper(),
+        #GermanyScraper(),
         #IrelandScraper(),
         #EnergyChartsScraper(),
-        #UKScraper()
+        UKScraper()
         #SpainScraper()
     ]
     

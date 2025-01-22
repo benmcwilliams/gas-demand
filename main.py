@@ -11,10 +11,10 @@ from src.extractors.eurostat_demand import EurostatDemandExtractor
 from src.extractors.france_demand import FranceDemandExtractor
 from src.extractors.germany_demand import GermanyDemandExtractor
 from src.extractors.germany_household_demand import GermanyHouseholdDemandExtractor
-from src.extractors.ireland_demand import IrelandDemandExtractor
+#from src.extractors.ireland_demand import IrelandDemandExtractor
 from src.extractors.energy_charts_demand import EnergyChartsDemandExtractor 
 from src.extractors.spain_demand import SpainDemandExtractor
-#from src.extractors.uk_demand import UKDemandExtractor
+from src.extractors.uk_demand import UKDemandExtractor
 #from src.extractors.cbs_demand import CBSDemandExtractor
 from src.analyzers.clean_daily_demand import DailyDemandAnalyzer
 from src.analyzers.clean_monthly_demand import MonthlyDemandAnalyzer
@@ -42,7 +42,7 @@ def main(update_raw=False, initial_load=False):
             EnergyChartsDemandExtractor(),
             GermanyHouseholdDemandExtractor(),
             #IrelandDemandExtractor(),
-            #UKDemandExtractor(),
+            UKDemandExtractor(),
             #EurostatDemandExtractor(),
             #CBSDemandExtractor(),
         ]

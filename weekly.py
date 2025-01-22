@@ -2,9 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 df = pd.read_csv("src/data/analyzed/daily_demand_clean.csv")
-
-#dropping UK for now
-df = df[df['country'] != 'UK']
 df['demand'] = df['demand'] / 1000000000   #convert to TWh
 df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d', errors='coerce')
 

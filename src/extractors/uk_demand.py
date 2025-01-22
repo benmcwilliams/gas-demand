@@ -9,7 +9,7 @@ class UKDemandExtractor:
         
     def get_demand_data(self) -> pd.DataFrame:
         """
-        Retrieves UK gas demand data from multiple CSV files and processes
+        Retrieves UK gas demand data from consolidated CSV files and processes
         it into the standard format.
         
         Returns:
@@ -21,23 +21,16 @@ class UKDemandExtractor:
                 - source (str): Always 'national-grid'
         """
         try:
-            # Read all CSV files
+            # Read consolidated CSV files
             dfs = []
-            years = ['2019', '2020', '2021']
-            half_years = [
-                ('2022', 'H1'), ('2022', 'H2'),
-                ('2023', 'H1'), ('2023', 'H2'),
-                ('2024', 'H1')
+            file_paths = [
+                'src/data/raw/uk/UK_gas_data_2019_2022.csv',
+                'src/data/raw/uk/UK_gas_data_2023_2024.csv',
+                'src/data/raw/uk/UK_gas_data_2025.csv'
             ]
             
-            # Load full year files
-            for year in years:
-                df = pd.read_csv(f'src/data/raw/uk/all_{year}.csv')
-                dfs.append(df)
-            
-            # Load half year files
-            for year, half in half_years:
-                df = pd.read_csv(f'src/data/raw/uk/all_{year}_{half}.csv')
+            for file_path in file_paths:
+                df = pd.read_csv(file_path)
                 dfs.append(df)
             
             # Combine all data
@@ -52,7 +45,16 @@ class UKDemandExtractor:
                 values='Value',
                 columns='Data Item'
             )
-            df_pivot.columns = ['industry', 'household', 'power']
+
+            # Define a mapping from original column names to new names
+            column_mapping = {
+                'NTS Energy Offtaken, Industrial Offtake Total': 'industry',
+                'NTS Energy Offtaken, LDZ Offtake Total': 'household',
+                'NTS Energy Offtaken, Powerstations Total': 'power'
+            }
+            
+            # Rename the columns using the mapping
+            df_pivot.rename(columns=column_mapping, inplace=True)
             
             # Create separate rows for each type including total
             result_dfs = []

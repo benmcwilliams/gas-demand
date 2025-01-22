@@ -1,5 +1,5 @@
 # Ben
-- UK Scraper from National Grid (hopefully an API)
+- preFeb2020 data not downloaded from UK National Grid (may have to use old data)
 - add CBS extractor for historic Dutch power (and perhaps other) data
 - Ireland scraper not downloading properly (when adding Ireland back be sure to add the the daily_demand and monthly_demand
 analyzer files for industry_power calculations). Scraper downloads to *IE_flows_downloaded.csv* while extractor is trying to read from *src/data/raw/IE_flows.csv*
