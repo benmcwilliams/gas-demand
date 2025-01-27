@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthky natural gas demand</title>
+    
+    
+    <!-- pym.js for responsive resizing in iframe -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/1.3.2/pym.v1.min.js"></script>
+      <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <!-- Highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+<!-- optional -->
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles/styles-gas-monthly-indexed.css"> 
+
+    <!-- External script for chart creation and custom legend -->
+    <script src="scripts/scripts-gas-monthly-indexed.js"></script>
+    
+</head>
+
+<body>
+    <!-- Main container with modified styles -->
+    <div id="main-container">
+        <!-- Flex container for chart and legend -->
+        <div id="chart-legend-container">
+            <!-- Chart container -->
+            <div id="chart-container"></div>
+
+            <!-- Legend container with modified styles -->
+            <div id="legend-container">
+                <!-- Buttons for Show All / Hide All -->
+                <div id="legend-actions">
+                    <button class="toggle-button" id="show-all">Show All</button>
+                    <button class="toggle-button" id="hide-all">Hide all</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Note and Source container with modified styles -->
+        <div class="note-container">
+        </div>
+    </div> 
+</body>
+</html>
