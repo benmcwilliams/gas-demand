@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function() {  
     let pymChild;
 
     function initializePym() {
@@ -20,43 +20,43 @@ $(document).ready(function() {
     }
 
     function fetchData(filePath, callback) {
-        const selectedTrade = $('#trade-select').val() || "Net exports"; // Default to "Net exports"
+        const selectedGroupBValue = $('#trade-select').val() || "Net exports"; // Default to "Net exports"
         $.getJSON(filePath, function(data) {
-            const filteredData = data.filter(entry => entry.trade === selectedTrade); // Filter by trade
-            const groupedData = groupDataByTech(filteredData);
+            const filteredData = data.filter(entry => entry.group_b_value === selectedGroupBValue); // Filter by group_b_value
+            const groupedData = groupDataByGroupValue(filteredData);
             callback(groupedData);
         }).fail(function() {
             console.error("Error loading the JSON file from:", filePath);
         });
     }
 
-    function groupDataByTech(data) {
+    function groupDataByGroupValue(data) {
         const groupedData = {};
         data.forEach(entry => {
-            const tech = entry.Tech.trim();
-            if (!groupedData[tech]) {
-                groupedData[tech] = [];
+            const groupValue = entry.group_value.trim();
+            if (!groupedData[groupValue]) {
+                groupedData[groupValue] = [];
             }
-            groupedData[tech].push({
-                month: entry.month,
-                Value: entry.Value
+            groupedData[groupValue].push({
+                x_value: entry.x_value,
+                y_value: entry.y_value
             });
         });
         return groupedData;
     }
 
     function createChart(data, subtitleText = 'Europe (2022 to 2025 vs 2019-21 monthly average)') {
-        const selectedTrade = $('#trade-select').val() || ""; // Get selected trade
-        const isNetExports = selectedTrade === ""; // Check if "Net exports" is selected
+        const selectedGroupBValue = $('#trade-select').val() || ""; // Get selected group_b_value
+        const isNetExports = selectedGroupBValue === ""; // Check if "Net exports" is selected
     
-        const series = Object.keys(data).map((tech, index) => {
+        const series = Object.keys(data).map((groupValue, index) => {
             const color = getColorFromCSS(cssColorVars[index]);
             return {
-                name: tech,
-                data: formatSeriesData(data[tech]),
+                name: groupValue,
+                data: formatSeriesData(data[groupValue]),
                 visible: index < 7, // Default visibility for first 7 series
                 color: color,
-                stack: 'techs'
+                stack: 'groupValues'
             };
         });
     
@@ -180,12 +180,12 @@ $(document).ready(function() {
         }
     }
 
-    function formatSeriesData(techData) {
-        return techData.map(entry => {
-            const [month, year] = entry.month.split('/');
+    function formatSeriesData(groupValueData) {
+        return groupValueData.map(entry => {
+            const [xValueMonth, xValueYear] = entry.x_value.split('/');
             return {
-                x: Date.UTC(year, month - 1, 1), // Use Date.UTC to avoid timezone issues
-                y: parseFloat(entry.Value)
+                x: Date.UTC(xValueYear, xValueMonth - 1, 1), // Use Date.UTC to avoid timezone issues
+                y: parseFloat(entry.y_value)
             };
         });
     }
@@ -203,43 +203,37 @@ $(document).ready(function() {
         const $legendContainer = $('#legend-container');
         reorderLegendItems(chart);
     }
+    
     function reorderLegendItems(chart) {
         const $legendContainer = jQuery('#legend-container');
         $legendContainer.empty();
-    
-        const $showAllButton = jQuery('<button id="show-all" class="toggle-button">').text('Show All').appendTo($legendContainer);
-        const $hideAllButton = jQuery('<button id="hide-all" class="toggle-button">').text('Hide All').appendTo($legendContainer);
-    
-        $showAllButton.click(function() {
-            chart.series.forEach(series => series.setVisible(true, false));
-            chart.redraw(); // Ensure the chart is redrawn
-            reorderLegendItems(chart);
-        });
-    
+
+        const $hideAllButton = jQuery('<button id="hide-all" class="toggle-button">').text('Reset').appendTo($legendContainer);
+
         $hideAllButton.click(function() {
             chart.series.forEach(series => series.setVisible(false, false));
             chart.redraw(); // Ensure the chart is redrawn
             reorderLegendItems(chart);
         });
-    
+
         // Sort the series based on visibility and legendIndex
         const sortedSeries = chart.series.slice().sort((a, b) => {
             return b.visible - a.visible || b.legendIndex - a.legendIndex;
         });
-    
+
         jQuery.each(sortedSeries, function(i, series) {
             const $legendItem = jQuery('<div>')
                 .addClass('legend-item')
                 .css({ cursor: 'pointer' })
                 .appendTo($legendContainer);
-    
+
             const $checkbox = jQuery('<input type="checkbox" />')
                 .prop('checked', series.visible)
                 .css({ marginRight: '10px' })
                 .appendTo($legendItem);
-    
+
             jQuery('<span>').html(series.name).appendTo($legendItem);
-    
+
             // Attach a click handler to the entire legend item
             $legendItem.click(function() {
                 const isVisible = !series.visible;
@@ -250,7 +244,7 @@ $(document).ready(function() {
                 assignColorsToSeries(chart.series);
                 chart.redraw(); // Ensure the chart is redrawn and bars are re-stacked
             });
-    
+
             // Prevent checkbox click event from triggering the parent click handler
             $checkbox.click(function(event) {
                 event.stopPropagation();
@@ -261,25 +255,24 @@ $(document).ready(function() {
                 chart.redraw(); // Ensure the chart is redrawn and bars are re-stacked
             });
         });
-    
+
         // Redraw the chart to recalculate stacking and visibility
         chart.redraw();
-    
+
         if (typeof pymChild !== 'undefined') pymChild.sendHeight();
     }
-    
 
     $('#trade-select').on('change', function() {
-        const selectedTrade = $('#trade-select').val() || "Net exports"; // Get the selected value
-        const subtitleText = `${selectedTrade} (2021-2025 vs 2019-2021 monthly average)`; // Dynamic subtitle
+        const selectedGroupBValue = $('#trade-select').val() || "Net exports"; // Get the selected value
+        const subtitleText = `${selectedGroupBValue} (2021-2025 vs 2019-2021 monthly average)`; // Dynamic subtitle
     
         // Fetch the data and recreate the chart
-        fetchData('highcharts/data/monthly_demand_sector.json', function(groupedData) {
+        fetchData('data/monthly_demand_sector.json', function(groupedData) {
             createChart(groupedData, subtitleText);
         });
     });
 
     // Initial chart rendering
-    fetchData('highcharts/data/monthly_demand_sector.json', createChart);
+    fetchData('data/monthly_demand_sector.json', createChart);
     initializePym();
 });
