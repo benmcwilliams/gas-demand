@@ -1,4 +1,4 @@
-$(document).ready(function() {  
+$(document).ready(function() { 
     let pymChild;
 
     function initializePym() {
@@ -203,37 +203,43 @@ $(document).ready(function() {
         const $legendContainer = $('#legend-container');
         reorderLegendItems(chart);
     }
-    
     function reorderLegendItems(chart) {
         const $legendContainer = jQuery('#legend-container');
         $legendContainer.empty();
-
-        const $hideAllButton = jQuery('<button id="hide-all" class="toggle-button">').text('Reset').appendTo($legendContainer);
-
+    
+        const $showAllButton = jQuery('<button id="show-all" class="toggle-button">').text('Show All').appendTo($legendContainer);
+        const $hideAllButton = jQuery('<button id="hide-all" class="toggle-button">').text('Hide All').appendTo($legendContainer);
+    
+        $showAllButton.click(function() {
+            chart.series.forEach(series => series.setVisible(true, false));
+            chart.redraw(); // Ensure the chart is redrawn
+            reorderLegendItems(chart);
+        });
+    
         $hideAllButton.click(function() {
             chart.series.forEach(series => series.setVisible(false, false));
             chart.redraw(); // Ensure the chart is redrawn
             reorderLegendItems(chart);
         });
-
+    
         // Sort the series based on visibility and legendIndex
         const sortedSeries = chart.series.slice().sort((a, b) => {
             return b.visible - a.visible || b.legendIndex - a.legendIndex;
         });
-
+    
         jQuery.each(sortedSeries, function(i, series) {
             const $legendItem = jQuery('<div>')
                 .addClass('legend-item')
                 .css({ cursor: 'pointer' })
                 .appendTo($legendContainer);
-
+    
             const $checkbox = jQuery('<input type="checkbox" />')
                 .prop('checked', series.visible)
                 .css({ marginRight: '10px' })
                 .appendTo($legendItem);
-
+    
             jQuery('<span>').html(series.name).appendTo($legendItem);
-
+    
             // Attach a click handler to the entire legend item
             $legendItem.click(function() {
                 const isVisible = !series.visible;
@@ -244,7 +250,7 @@ $(document).ready(function() {
                 assignColorsToSeries(chart.series);
                 chart.redraw(); // Ensure the chart is redrawn and bars are re-stacked
             });
-
+    
             // Prevent checkbox click event from triggering the parent click handler
             $checkbox.click(function(event) {
                 event.stopPropagation();
@@ -255,12 +261,13 @@ $(document).ready(function() {
                 chart.redraw(); // Ensure the chart is redrawn and bars are re-stacked
             });
         });
-
+    
         // Redraw the chart to recalculate stacking and visibility
         chart.redraw();
-
+    
         if (typeof pymChild !== 'undefined') pymChild.sendHeight();
     }
+    
 
     $('#trade-select').on('change', function() {
         const selectedGroupBValue = $('#trade-select').val() || "Net exports"; // Get the selected value
