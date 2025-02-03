@@ -24,7 +24,7 @@ jQuery(document).ready(function () {
 
     function fetchData(callback) {
         console.log("Fetching data from JSON file");
-        jQuery.getJSON("highcharts/data/weekly_demand_clean.json", function (data) {
+        jQuery.getJSON("data/weekly_demand.json", function (data) {
             console.log("Data fetched successfully", data);
             fullData = groupDataByCountryAndType(data);
             callback(fullData);
@@ -34,75 +34,70 @@ jQuery(document).ready(function () {
     }
 
     function groupDataByCountryAndType(data) {
-        console.log("Grouping data by country and type");
+        console.log("Grouping data by group_b_value and group_value");
         return data.reduce((acc, entry) => {
-            const { country, type, year, week, demand } = entry;
-            if (!acc[country]) acc[country] = {};
-            if (!acc[country][type]) acc[country][type] = {};
-            if (!acc[country][type][year]) acc[country][type][year] = [];
-            acc[country][type][year].push({ week: parseInt(week, 10), demand });
+            const { group_b_value, group_value, x_value, x_b_value, y_value } = entry;
+            if (!acc[group_b_value]) acc[group_b_value] = {};
+            if (!acc[group_b_value][group_value]) acc[group_b_value][group_value] = {};
+            if (!acc[group_b_value][group_value][x_value]) acc[group_b_value][group_value][x_value] = [];
+            acc[group_b_value][group_value][x_value].push({ x_b_value: parseInt(x_b_value, 10), y_value });
             return acc;
         }, {});
     }
 
     function populateSelectors(data) {
         console.log("Populating selectors");
-        const $countrySelector = jQuery("#country-select");
-        const $typeSelector = jQuery("#type-select");
+        const $groupBSelector = jQuery("#country-select");
+        const $groupSelector = jQuery("#type-select");
     
-        // Collect unique combinations of country and type
-        const countries = Object.keys(data);
-        const types = new Set();
-        countries.forEach(country => {
-            Object.keys(data[country]).forEach(type => types.add(type));
+        const groupBValues = Object.keys(data);
+        const groupValues = new Set();
+        groupBValues.forEach(group_b_value => {
+            Object.keys(data[group_b_value]).forEach(group_value => groupValues.add(group_value));
         });
     
-        // Populate country selector
-        countries.forEach(country => {
-            $countrySelector.append(`<option value="${country}">${country}</option>`);
+        groupBValues.forEach(group_b_value => {
+            $groupBSelector.append(`<option value="${group_b_value}">${group_b_value}</option>`);
         });
     
-        // Set default country to "Europe" if it exists
-        const defaultCountry = "Europe*"; // Replace with your desired default
-        if (countries.includes(defaultCountry)) {
-            $countrySelector.val(defaultCountry);
+        const defaultGroupBValue = "Europe*";
+        if (groupBValues.includes(defaultGroupBValue)) {
+            $groupBSelector.val(defaultGroupBValue);
         }
     
-        // Populate type selector
-        types.forEach(type => {
-            $typeSelector.append(`<option value="${type}">${type}</option>`);
+        groupValues.forEach(group_value => {
+            $groupSelector.append(`<option value="${group_value}">${group_value}</option>`);
         });
     
-        $countrySelector.change(() => filterTypeSelector(data));
-        $typeSelector.change(() => updateChart());
+        $groupBSelector.change(() => filterGroupSelector(data));
+        $groupSelector.change(() => updateChart());
     
-        // Trigger the initial filter for the default country
-        filterTypeSelector(data);
+        filterGroupSelector(data);
     }
     
 
-    function filterTypeSelector(data) {
-        const selectedCountry = jQuery("#country-select").val();
-        const $typeSelector = jQuery("#type-select");
-        $typeSelector.empty(); // Clear current options
+    function filterGroupSelector(data) {
+        const selectedGroupBValue = jQuery("#country-select").val();
+        const $groupSelector = jQuery("#type-select");
+        $groupSelector.empty();
 
-        if (selectedCountry && data[selectedCountry]) {
-            const types = Object.keys(data[selectedCountry]);
-            types.forEach(type => {
-                $typeSelector.append(`<option value="${type}">${type}</option>`);
+        if (selectedGroupBValue && data[selectedGroupBValue]) {
+            const groupValues = Object.keys(data[selectedGroupBValue]);
+            groupValues.forEach(group_value => {
+                $groupSelector.append(`<option value="${group_value}">${group_value}</option>`);
             });
         }
 
-        updateChart(); // Update the chart based on new selection
+        updateChart();
     }
 
-    function formatSeriesData(country, type) {
-        console.log("Formatting series data for", { country, type });
-        if (!country || !type || !fullData[country] || !fullData[country][type]) {
+    function formatSeriesData(group_b_value, group_value) {
+        console.log("Formatting series data for", { group_b_value, group_value });
+        if (!group_b_value || !group_value || !fullData[group_b_value] || !fullData[group_b_value][group_value]) {
             return [];
         }
 
-        const data = fullData[country][type];
+        const data = fullData[group_b_value][group_value];
         const colorMap = {
             "2025": "#880E4F",
             "2024": "#a21636",
@@ -111,37 +106,36 @@ jQuery(document).ready(function () {
             "AVG-2019-2021": "#A6A6A6",
         };
 
-        return Object.keys(data).map(year => ({
-            name: `${year}`,
-            data: data[year].map(entry => ({ x: entry.week, y: entry.demand })),
-            color: colorMap[year] || "#999",
+        return Object.keys(data).map(x_value => ({
+            name: `${x_value}`,
+            data: data[x_value].map(entry => ({ x: entry.x_b_value, y: entry.y_value })),
+            color: colorMap[x_value] || "#999",
             marker: { enabled: false },
         }));
     }
 
     function updateChart() {
-        const country = jQuery("#country-select").val();
-        const type = jQuery("#type-select").val();
-        console.log("Updating chart for", { country, type });
+        const group_b_value = jQuery("#country-select").val();
+        const group_value = jQuery("#type-select").val();
+        console.log("Updating chart for", { group_b_value, group_value });
     
-        const series = formatSeriesData(country, type);
+        const series = formatSeriesData(group_b_value, group_value);
     
-        // Construct the subtitle text dynamically based on the selected country
-        const subtitleText = country
-            ? `${country} - ${type} (2019-21 average, 2021 to 2025)`
+        const subtitleText = group_b_value
+            ? `${group_b_value} - ${group_value} (2019-21 average, 2021 to 2025)`
             : "2019-2021 Average, 2022 to 2025";
     
         if (!chart) {
             chart = Highcharts.stockChart("chart-container", {
                 rangeSelector: {
-                    selected: 0, // Automatically selects the "All" button on initialization
+                    selected: 0,
                     buttons: [
                         {
                             type: "all",
-                            text: "-", // Default to "All" view
+                            text: "-",
                         },
                     ],
-                    inputEnabled: false, // Disable date input fields
+                    inputEnabled: false,
                 },
                 chart: {
                     type: "line",
@@ -171,21 +165,26 @@ jQuery(document).ready(function () {
                         enabled: true,
                     },
                     labelFormatter: function () {
-                        return this.name.split(" - ").pop(); // Extract year from series name
+                        return this.name.split(" - ").pop();
                     },
-                    symbolRadius: 10, // Circular legend symbols
+                    symbolRadius: 10,
                 },
                 xAxis: {
-                    type: "datetime",
-                    tickInterval: 3 * 30 * 24 * 3600 * 1000, // 3-month intervals
+                    type: "linear",  
                     labels: {
                         formatter: function () {
-                            return Highcharts.dateFormat("%b %Y", this.value); // Display as "Jan 2022"
+                            return this.value; // Ensure x_b_value is shown as is
                         },
                     },
-                    tickPixelInterval: 150,
+                    tickInterval: 1, // Reduce tick interval to show more graduations
+                    minTickInterval: 1, // Ensures at least one tick per value
+                    tickPixelInterval: 50, // Reduce spacing between ticks
                 },
+                
                 yAxis: {
+                    title: {
+                        text: "TWh"
+                    },
                     labels: {
                         align: "left",
                     },
@@ -208,7 +207,7 @@ jQuery(document).ready(function () {
                     series: {
                         showInNavigator: true,
                         marker: {
-                            enabled: false, // Disable points globally
+                            enabled: false,
                         },
                     },
                 },
@@ -236,13 +235,13 @@ jQuery(document).ready(function () {
                 series: series,
             });
         } else {
-            // Update existing chart
             while (chart.series.length > 0) chart.series[0].remove(false);
             series.forEach((s) => chart.addSeries(s, false));
-            chart.setTitle(null, { text: subtitleText }); // Update the subtitle
+            chart.setTitle(null, { text: subtitleText });
             chart.redraw();
         }
     }
+
     
 
     fetchData(data => {
