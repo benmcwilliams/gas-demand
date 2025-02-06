@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Gas Demand by</title>
+    
+    <!-- pym.js for responsive resizing in iframe -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/1.3.2/pym.v1.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles/styles-gas-monthly-sector.css">
+
+    <!-- External script for chart creation and custom legend -->
+    <script src="scripts/scripts-gas-monthly-sector.js"></script>
+</head>
+
+<body>
+    <!-- Main container -->
+    <div id="main-container">
+
+        <!-- Flex container for chart and legend -->
+        <div id="chart-legend-container">
+            <!-- Chart container -->
+            <div id="chart-container"></div>
+
+            <!-- Legend container parent -->
+            <div id="legend-container-parent">
+                <!-- New Legend Header Container -->
+                <div id="legend-header-container">
+                    <select id="trade-select">
+                        <option value="xEU">Europe*</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Czech Republic">Czech Republic</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Finland">Finland</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Hungary">Hungary</option> 
+                        <option value="Italy">Italy</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Slovakia">Slovakia</option>
+                        <option value="Slovenia">Slovenia</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Sweden">Sweden</option>
+                    </select>
+                </div>
+
+                <!-- Existing Legend Container -->
+                <div id="legend-container">
+      
+                    <!-- Buttons for Show All / Hide All -->
+                    <div id="legend-actions">
+                        <button class="toggle-button" id="show-all">Show All</button>
+                        <button class="toggle-button" id="hide-all">Hide All</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Note and Source container -->
+        <div class="note-container">
+            <p>
+                    blablabla
+            </p>
+        </div>
+    </div>
+</body>
+</html>
