@@ -244,7 +244,7 @@ if __name__ == "__main__":
     )
     
     # Initialize and run scraper
-    scraper = SpainGasScraper(end_date="07/01/2025", lookback_days=2000)  # ~5 years
+    scraper = SpainScraper(end_date="07/01/2025", lookback_days=2000)  # ~5 years
     df = scraper.scrape()
     
     if df is not None:

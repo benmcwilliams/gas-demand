@@ -1,8 +1,4 @@
-Figures for Marie 
-
-**src/data/analyzed/daily_demand_clean.csv** is the file we are working with
-
-# European Gas Demand Data Pipeline
+# European Natural Gas Demand
 
 This project collects, processes, and standardizes natural gas demand data from different sources into a consistent output. It handles data from multiple countries and sources, including national transmission system operators and European-wide aggregators.
 
@@ -18,17 +14,27 @@ main.py calls the extractors and processes the data. The output is a csv file wi
 
 ### Update data
 
-We have defined scrapers for country data where necessary.
-Scrapers are for: 
+We call APIs or define scrapers to download national level data.
 - Austria: Downloads the csv from WIFO (consumption-aggm.csv)
+saves file to consumption-aggm.csv
 - Denmark: Downloads the xlsx from the Danish energidata service (Gasflow.xlsx)
+saves file to denmark_gasflow.json
+- Energy Charts: defines class EnergyChartsScraper,
+takes lookup_days as a parameter, defaults to 30
+saves file to power_data.csv
+- entsog: queries the entsog API and writes to csv
+takes lookup_days as a parameter, defaults to 30
+saves file to entsog_data.csv
 - France: Downloads xls files for each year from the GRTGaz website
+saves files to france_demand/
 - Germany: Downloads csv file from Trading Hub Europe
+saves file to THE_demand.csv
 - Ireland: Downloads file from Gas Networks Ireland and writes to JSON
-- ENTSOG: Downloads data from the ENTSOG API and writes to csv
-- UPDATE. Energy Charts: Downloads data from the Energy Charts API and writes to csv
+saves file to IE_flows_downloaded.csv
+- Spain: defines the class SpainScraper, initialised with an end_date and lookback_days which defaults to 30
+saves file to spain_gas_demand_{date}.csv
 
-- Spain: to be defined
+
 - UK: to be defined
 
 ### Extract data
