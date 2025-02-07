@@ -87,7 +87,9 @@ def main(update_raw=False, initial_load=False):
             monthly_analyzer = MonthlyDemandAnalyzer()
             monthly_analyzer.analyze()
             logger.info("Monthly demand analysis completed")
-            
+
+            #insert individual scripts per graph that clean data to a JSON file for plotting in HighCharts
+
         else:
             logger.error("No demand data was successfully extracted")
             

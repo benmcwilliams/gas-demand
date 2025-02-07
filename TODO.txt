@@ -1,17 +1,11 @@
 # Ben
-- preFeb2020 data not downloaded from UK National Grid (may have to use old data)
 - add CBS extractor for historic Dutch power (and perhaps other) data
 - Ireland scraper not downloading properly (when adding Ireland back be sure to add the the daily_demand and monthly_demand
 analyzer files for industry_power calculations). Scraper downloads to *IE_flows_downloaded.csv* while extractor is trying to read from *src/data/raw/IE_flows.csv*
 Seems to be an issue that we cannot cleanly download the data from the website - we receive empty dataframes often.
 
-# Marie 
-
-The clean_data_files for plotting are the two below:
-- src/data/analyzed/daily_demand_clean.csv
-- src/data/analyzed/monthly_demand_clean.csv
-
-TO-CREATE, calculating weekofyear 1-52 and years from the daily_demand.csv
+# Marie
+- monthly and daily demand analyzers. 
 
 Pre-processing script
 - weekly sums
