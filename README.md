@@ -33,13 +33,16 @@ saves file to THE_demand.csv
 saves file to IE_flows_downloaded.csv
 - Spain: defines the class SpainScraper, initialised with an end_date and lookback_days which defaults to 30
 saves file to spain_gas_demand_{date}.csv
+- UK: queries the national grid API
+saves file to src/data/raw/uk/{date_from}_to_{date_to}.csv
 
-
-- UK: to be defined
+### exceptions
+- the germany_household_demand.py scraper is not a scraper, it is a function that queries the BNetzA website and returns a dataframe in the required format, with type == 'household
+- eurostat_demand.py queries the eurostat API and returns a dataframe in the required format, with type == 'total'
 
 ### Extract data
 
-main.py runs the logic whereby data are extracted and processed into a consistent format from the raw data.
+These scripts extract the data from the raw data source and clean the data into a consistent format.
 
 AustriaDemandExtractor: 
 - Returns a dataframe in required format, type is only == 'total'
@@ -77,6 +80,10 @@ IrelandDemandExtractor:
 EnergyChartsDemandExtractor:
 - Returns a dataframe in required format
 - frequency is daily; type is == 'power'
+
+SpainDemandExtractor:
+- Returns a dataframe in required format
+- frequency is daily; type is == 'total', 'power'
 
 UKDemandExtractor:
 - Returns a dataframe in required format, type is == 'total', 'industry', 'household', 'power'
