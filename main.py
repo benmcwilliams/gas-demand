@@ -7,16 +7,14 @@ from src.update_raw_data import update_raw_data
 from src.extractors.austria_demand import AustriaDemandExtractor
 from src.extractors.denmark_demand import DenmarkDemandExtractor
 from src.extractors.entsog_demand import EntsogDemandExtractor
-from src.extractors.eurostat_demand import EurostatDemandExtractor
 from src.extractors.france_demand import FranceDemandExtractor
 from src.extractors.germany_demand import GermanyDemandExtractor
-from src.extractors.germany_household_demand import GermanyHouseholdDemandExtractor
 from src.extractors.energy_charts_demand import EnergyChartsDemandExtractor 
 from src.extractors.spain_demand import SpainDemandExtractor
 from src.extractors.uk_demand import UKDemandExtractor
 #from src.extractors.cbs_demand import CBSDemandExtractor
-from src.analyzers.clean_daily_demand import DailyDemandAnalyzer
-from src.analyzers.clean_monthly_demand import MonthlyDemandAnalyzer
+#from src.analyzers.clean_daily_demand import DailyDemandAnalyzer
+#from src.analyzers.clean_monthly_demand import MonthlyDemandAnalyzer
 
 def main(update_raw=False, initial_load=False):
     # Initialize config and logging
@@ -39,10 +37,8 @@ def main(update_raw=False, initial_load=False):
             SpainDemandExtractor(),
             EntsogDemandExtractor(),
             EnergyChartsDemandExtractor(),
-            GermanyHouseholdDemandExtractor(),
             UKDemandExtractor(),
             #IrelandDemandExtractor(),
-            #EurostatDemandExtractor(),
             #CBSDemandExtractor(),
         ]
 

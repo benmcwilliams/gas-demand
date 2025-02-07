@@ -4,10 +4,12 @@ from src.scrapers.denmark_scraper import DenmarkScraper
 from src.scrapers.entsog_scraper import EntsogScraper
 from src.scrapers.france_scraper import FranceScraper
 from src.scrapers.germany_scraper import GermanyScraper
+from src.scrapers.bnetza_scraper import BnetzaScraper
 from src.scrapers.energy_charts_scraper import EnergyChartsScraper
 from src.scrapers.ireland_scraper import IrelandScraper
 from src.scrapers.spain_scraper import SpainScraper
 from src.scrapers.uk_scraper import UKScraper
+from src.scrapers.eurostat_scraper import EurostatScraper
 
 def update_raw_data(initial_load=False):
     # Initialize logging
@@ -21,10 +23,12 @@ def update_raw_data(initial_load=False):
         #EntsogScraper(),
         #FranceScraper(),
         #GermanyScraper(),
+        BnetzaScraper(),
         #IrelandScraper(),
         #EnergyChartsScraper(),
-        UKScraper()
+        #UKScraper()
         #SpainScraper()
+        EurostatScraper()
     ]
     
     # Run all scrapers

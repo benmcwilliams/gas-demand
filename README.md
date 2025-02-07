@@ -17,6 +17,8 @@ main.py calls the extractors and processes the data. The output is a csv file wi
 We call APIs or define scrapers to download national level data.
 - Austria: Downloads the csv from WIFO (consumption-aggm.csv)
 saves file to consumption-aggm.csv
+- Bnetza: defines class BnetzaScraper,
+saves file to src/data/raw/germany_household/latest_data.csv
 - Denmark: Downloads the xlsx from the Danish energidata service (Gasflow.xlsx)
 saves file to denmark_gasflow.json
 - Energy Charts: defines class EnergyChartsScraper,
@@ -36,8 +38,8 @@ saves file to spain_gas_demand_{date}.csv
 - UK: queries the national grid API
 saves file to src/data/raw/uk/{date_from}_to_{date_to}.csv
 
+
 ### exceptions
-- the germany_household_demand.py scraper is not a scraper, it is a function that queries the BNetzA website and returns a dataframe in the required format, with type == 'household
 - eurostat_demand.py queries the eurostat API and returns a dataframe in the required format, with type == 'total'
 
 ### Extract data
