@@ -77,16 +77,16 @@ def main(update_raw=False, initial_load=False):
             logger.info("All data saved successfully")
 
             # Add daily demand analysis step
-            logger.info("Performing daily demand analysis...")
-            daily_analyzer = DailyDemandAnalyzer()
-            daily_analyzer.analyze()
-            logger.info("Daily demand analysis completed")
+            #logger.info("Performing daily demand analysis...")
+            #daily_analyzer = DailyDemandAnalyzer()
+            #daily_analyzer.analyze()
+            #logger.info("Daily demand analysis completed")
             
             # Add monthly demand analysis step
-            logger.info("Performing monthly demand analysis...")
-            monthly_analyzer = MonthlyDemandAnalyzer()
-            monthly_analyzer.analyze()
-            logger.info("Monthly demand analysis completed")
+            #logger.info("Performing monthly demand analysis...")
+            #monthly_analyzer = MonthlyDemandAnalyzer()
+            #monthly_analyzer.analyze()
+            #logger.info("Monthly demand analysis completed")
 
             #insert individual scripts per graph that clean data to a JSON file for plotting in HighCharts
 
