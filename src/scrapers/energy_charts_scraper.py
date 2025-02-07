@@ -10,9 +10,10 @@ from typing import Dict
 logger = logging.getLogger(__name__)
 
 class EnergyChartsScraper:
-    def __init__(self):
+    def __init__(self, lookup_days: int = 30):
         self.output_file = Path('src/data/raw/power_data.csv')
         self.temp_file = Path('src/data/raw/power_temp.csv')
+        self.lookup_days = lookup_days
         self.countries = [
             'at', 'be', 'bg', 'hr', 'cz', 'dk', 'ee', 'fi', 'fr',
             'de', 'gr', 'hu', 'ie', 'it', 'lv', 'lt', 'lu', 'nl',
@@ -34,8 +35,8 @@ class EnergyChartsScraper:
                 start_date = '2019-01-01'
                 logger.info("Performing initial power demand load from 2019")
             else:
-                start_date = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
-                logger.info("Performing regular 7-day power demand update")
+                start_date = (datetime.now() - timedelta(days=self.lookup_days)).strftime('%Y-%m-%d')
+                logger.info(f"Performing regular {self.lookup_days}-day power demand update")
             
             new_dfs = []
             for i, country in enumerate(self.countries):

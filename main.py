@@ -11,7 +11,6 @@ from src.extractors.eurostat_demand import EurostatDemandExtractor
 from src.extractors.france_demand import FranceDemandExtractor
 from src.extractors.germany_demand import GermanyDemandExtractor
 from src.extractors.germany_household_demand import GermanyHouseholdDemandExtractor
-#from src.extractors.ireland_demand import IrelandDemandExtractor
 from src.extractors.energy_charts_demand import EnergyChartsDemandExtractor 
 from src.extractors.spain_demand import SpainDemandExtractor
 from src.extractors.uk_demand import UKDemandExtractor
@@ -41,8 +40,8 @@ def main(update_raw=False, initial_load=False):
             EntsogDemandExtractor(),
             EnergyChartsDemandExtractor(),
             GermanyHouseholdDemandExtractor(),
-            #IrelandDemandExtractor(),
             UKDemandExtractor(),
+            #IrelandDemandExtractor(),
             #EurostatDemandExtractor(),
             #CBSDemandExtractor(),
         ]
@@ -64,6 +63,15 @@ def main(update_raw=False, initial_load=False):
         # Save all data
         if demand_data:
             final_data = pd.concat(demand_data, ignore_index=True)
+            
+            # Filter out future dates and empty values
+            today = pd.Timestamp.today().strftime('%Y-%m-%d')
+            final_data['date'] = pd.to_datetime(final_data['date'])
+            final_data = final_data[
+                (final_data['date'] <= today) & 
+                (final_data['demand'].notna())
+            ]
+            
             logger.info(f"Found demand data for {len(final_data['country'].unique())} countries")
             final_data.to_csv('src/data/processed/daily_demand_all.csv', index=False)
             logger.info("All data saved successfully")

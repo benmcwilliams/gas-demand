@@ -798,8 +798,9 @@ DE,household,2024,7,6.7,bundesnetzagentur
 DE,household,2024,8,5.89,bundesnetzagentur
 DE,household,2024,9,10.59,bundesnetzagentur
 DE,household,2024,10,23.96,bundesnetzagentur
-DE,household,2024,11,43.77,bundesnetzagentur
-DE,household,2024,12,53.82,bundesnetzagentur
+DE,household,2024,11,43.95,bundesnetzagentur
+DE,household,2024,12,54.62,bundesnetzagentur
+DE,household,2025,1,61.78,bundesnetzagentur
 DE,power,2019,1,11.8,energy-charts
 DE,power,2019,2,9.16,energy-charts
 DE,power,2019,3,6.97,energy-charts
@@ -1590,17 +1591,6 @@ FR,household,2024,10,13.43,"entsog, grtgaz"
 FR,household,2024,11,27.39,"entsog, grtgaz"
 FR,household,2024,12,36.67,"entsog, grtgaz"
 FR,household,2025,1,26.41,"entsog, grtgaz"
-FR,household,2025,2,0.0,grtgaz
-FR,household,2025,3,0.0,grtgaz
-FR,household,2025,4,0.0,grtgaz
-FR,household,2025,5,0.0,grtgaz
-FR,household,2025,6,0.0,grtgaz
-FR,household,2025,7,0.0,grtgaz
-FR,household,2025,8,0.0,grtgaz
-FR,household,2025,9,0.0,grtgaz
-FR,household,2025,10,0.0,grtgaz
-FR,household,2025,11,0.0,grtgaz
-FR,household,2025,12,0.0,grtgaz
 FR,industry,2019,1,15.43,"entsog, grtgaz"
 FR,industry,2019,2,12.85,"entsog, grtgaz"
 FR,industry,2019,3,13.25,"entsog, grtgaz"
@@ -1674,17 +1664,6 @@ FR,industry,2024,10,9.27,"entsog, grtgaz"
 FR,industry,2024,11,10.46,"entsog, grtgaz"
 FR,industry,2024,12,10.92,"entsog, grtgaz"
 FR,industry,2025,1,6.98,"entsog, grtgaz"
-FR,industry,2025,2,0.0,grtgaz
-FR,industry,2025,3,0.0,grtgaz
-FR,industry,2025,4,0.0,grtgaz
-FR,industry,2025,5,0.0,grtgaz
-FR,industry,2025,6,0.0,grtgaz
-FR,industry,2025,7,0.0,grtgaz
-FR,industry,2025,8,0.0,grtgaz
-FR,industry,2025,9,0.0,grtgaz
-FR,industry,2025,10,0.0,grtgaz
-FR,industry,2025,11,0.0,grtgaz
-FR,industry,2025,12,0.0,grtgaz
 FR,power,2019,1,6.6,grtgaz
 FR,power,2019,2,4.59,grtgaz
 FR,power,2019,3,2.17,grtgaz
@@ -1758,17 +1737,6 @@ FR,power,2024,10,0.62,grtgaz
 FR,power,2024,11,2.96,grtgaz
 FR,power,2024,12,2.38,grtgaz
 FR,power,2025,1,2.06,grtgaz
-FR,power,2025,2,0.0,grtgaz
-FR,power,2025,3,0.0,grtgaz
-FR,power,2025,4,0.0,grtgaz
-FR,power,2025,5,0.0,grtgaz
-FR,power,2025,6,0.0,grtgaz
-FR,power,2025,7,0.0,grtgaz
-FR,power,2025,8,0.0,grtgaz
-FR,power,2025,9,0.0,grtgaz
-FR,power,2025,10,0.0,grtgaz
-FR,power,2025,11,0.0,grtgaz
-FR,power,2025,12,0.0,grtgaz
 FR,total,2019,1,74.08,calculated
 FR,total,2019,2,55.75,calculated
 FR,total,2019,3,48.79,calculated
@@ -1842,17 +1810,6 @@ FR,total,2024,10,23.32,calculated
 FR,total,2024,11,40.8,calculated
 FR,total,2024,12,49.96,calculated
 FR,total,2025,1,35.44,calculated
-FR,total,2025,2,0.0,calculated
-FR,total,2025,3,0.0,calculated
-FR,total,2025,4,0.0,calculated
-FR,total,2025,5,0.0,calculated
-FR,total,2025,6,0.0,calculated
-FR,total,2025,7,0.0,calculated
-FR,total,2025,8,0.0,calculated
-FR,total,2025,9,0.0,calculated
-FR,total,2025,10,0.0,calculated
-FR,total,2025,11,0.0,calculated
-FR,total,2025,12,0.0,calculated
 GR,power,2019,1,4.33,energy-charts
 GR,power,2019,2,2.84,energy-charts
 GR,power,2019,3,1.95,energy-charts
@@ -5321,5 +5278,6 @@ DE,industry,2024,7,28.16,calculated
 DE,industry,2024,8,26.53,calculated
 DE,industry,2024,9,29.0,calculated
 DE,industry,2024,10,31.98,calculated
-DE,industry,2024,11,38.73,calculated
-DE,industry,2024,12,42.79,calculated
+DE,industry,2024,11,38.55,calculated
+DE,industry,2024,12,41.99,calculated
+DE,industry,2025,1,9.67,calculated
