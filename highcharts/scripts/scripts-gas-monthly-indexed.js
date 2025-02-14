@@ -24,14 +24,38 @@ jQuery(document).ready(function() {
     }
 
     function fetchData(callback) {
-        // Ensure the path to JSON file is correct for both local and embedded contexts
+        let demandData = {};
+        let targetData = {};
+    
         jQuery.getJSON('data/monthly_demand_indexed.json', function(data) {
-            const groupedData = groupDataByGroupValue(data);
-            callback(groupedData);
+            demandData = groupDataByGroupValue(data);
+    
+            // Fetch the fixed target lines separately
+            jQuery.getJSON('data/targets.json', function(targets) {
+                targetData = processTargetData(targets);
+                callback(demandData, targetData); // Pass both datasets to the chart function
+            }).fail(function() {
+                console.error("Error loading the targets JSON file.");
+            });
+    
         }).fail(function() {
-            console.error("Error loading the JSON file.");
+            console.error("Error loading the monthly demand JSON file.");
         });
     }
+
+    function processTargetData(targets) {
+        return {
+            "Fit for 55": targets.map(t => ({
+                x: new Date(t.year, t.month - 1).getTime(),
+                y: t.fit
+            })),
+            "REPowerEU": targets.map(t => ({
+                x: new Date(t.year, t.month - 1).getTime(),
+                y: t.REPowerEU
+            }))
+        };
+    }
+    
 
     function groupDataByGroupValue(data) {
         return data.reduce((acc, entry) => {
@@ -96,9 +120,10 @@ jQuery(document).ready(function() {
             reorderLegendItems(chart);
         });
     
-        const sortedSeries = chart.series.slice().sort((a, b) => {
+        const sortedSeries = chart.series.slice().filter(s => s.options.showInLegend !== false).sort((a, b) => {
             return b.visible - a.visible || b.legendIndex - a.legendIndex;
         });
+        
     
         jQuery.each(sortedSeries, function(i, series) {
             const $legendItem = jQuery('<div>')
@@ -133,86 +158,160 @@ jQuery(document).ready(function() {
             });
         });
     }
-
-    function createChart(data) {
+    function createChart(data, targetData) {
         const series = Object.keys(data).map((groupValue, i) => ({
             name: groupValue,
             data: formatSeriesData(data[groupValue]),
             visible: groupValue === "Europe* - total",
             color: getColorFromCSS(cssColorVars[i]),
-            marker: {
-                symbol: 'circle',
-                radius: 2.5,
-                lineWidth: 1,
-                lineColor: getColorFromCSS(cssColorVars[i]),
-                fillColor: getColorFromCSS(cssColorVars[i])
-            },
+            marker: { enabled: false }, // No points on the line
             dataLabels: {
                 enabled: true,
                 align: 'left',
-                style: { fontWeight: 'bold', fontFamily: 'Roboto', textOutline: 'none', fontSize: '10px', color: getColorFromCSS(cssColorVars[i]) },
+                style: { 
+                    fontWeight: 'bold', 
+                    fontFamily: 'Roboto', 
+                    textOutline: 'none', 
+                    fontSize: '12px', 
+                    color: getColorFromCSS(cssColorVars[i]) 
+                },
                 formatter: function() {
                     return this.point.index === this.series.data.length - 1 ? this.series.name : null;
                 },
-                x: 10, y: 0, crop: false, overflow: 'allow', connectorColor: 'grey', connectorWidth: 1, allowOverlap: true
-            }            
+                x: 10, 
+                y: 0, 
+                crop: false, 
+                overflow: 'allow', 
+                allowOverlap: true
+            }
         }));
-
+    
+        // Always include "Fit for 55" and "REPowerEU" (hidden from selector)
+        series.push(
+            {
+                name: "Fit for 55",
+                data: targetData["Fit for 55"],
+                color: "#FFC000", // Fixed RED color
+                visible: true,
+                enableMouseTracking: true, // Enable tooltips
+                lineWidth: 2,
+                dashStyle: "Dash",
+                marker: { enabled: false }, // No points on the line
+                showInLegend: false, // Hide from selector
+                dataLabels: {
+                    enabled: true,
+                    align: 'left',
+                    style: {
+                        fontWeight: 'bold',
+                        fontFamily: 'Roboto',
+                        textOutline: 'none',
+                        fontSize: '12px',
+                        color: "#FFC000"
+                    },
+                    formatter: function() {
+                        return this.point.index === this.series.data.length - 1 ? this.series.name : null;
+                    },
+                    x: 10,
+                    y: 10,
+                    crop: false,
+                    overflow: 'allow',
+                    allowOverlap: true
+                }
+            },
+            {
+                name: "REPowerEU",
+                data: targetData["REPowerEU"],
+                color: "#a21636", // Fixed BLUE color
+                visible: true,
+                enableMouseTracking: true, // Enable tooltips
+                lineWidth: 2,
+                dashStyle: "Dash",
+                marker: { enabled: false }, // No points on the line
+                showInLegend: false, // Hide from selector
+                dataLabels: {
+                    enabled: true,
+                    align: 'left',
+                    style: {
+                        fontWeight: 'bold',
+                        fontFamily: 'Roboto',
+                        textOutline: 'none',
+                        fontSize: '12px',
+                        color: "#a21636"
+                    },
+                    formatter: function() {
+                        return this.point.index === this.series.data.length - 1 ? this.series.name : null;
+                    },
+                    x: 10,
+                    y: 10,
+                    crop: false,
+                    overflow: 'allow',
+                    allowOverlap: true
+                }
+            }
+        );
+    
         const longestLabelLength = Math.max(...series.map(s => s.name.length));
         const additionalMargin = longestLabelLength * 4;
-
+    
         const chart = Highcharts.chart('chart-container', {
-            chart: { type: 'line', height: 'auto', spacingRight: additionalMargin, marginRight: additionalMargin },
-            title: { text: 'Monthly natural gas demand (%) ', align: 'left', style: { fontWeight: 'bold' } },
-            subtitle: { text: '2021 - 2025 indexed to 2019-2021 monthly average', align: 'left', style: {  color: 'grey' } },
+            chart: { 
+                type: 'line', 
+                height: 'auto', 
+                spacingRight: additionalMargin, 
+                marginRight: additionalMargin 
+            },
+            title: { 
+                text: 'Monthly natural gas demand (%) ', 
+                align: 'left', 
+                style: { fontWeight: 'bold' } 
+            },
+            subtitle: { 
+                text: '2021 - 2025 indexed to 2019-2021 monthly average', 
+                align: 'left', 
+                style: { color: 'grey' } 
+            },
             yAxis: {
                 title: { text: '%' },
+                min: 0, // Ensure Y-axis always starts at 0
                 plotLines: [{
-                    value: 100, // The value where the line will appear
-                    color: 'gray', // Line color
-                    width: 1, // Line width
-                    zIndex: 1, // Ensure it appears below the series
-                    dashStyle: 'Dash', // Optional: make it dashed
+                    value: 100, // Reference line at 100%
+                    color: 'gray',
+                    width: 2, // Match "Fit for 55" and "REPowerEU" line width
+                    zIndex: 2, // Ensure it's above other elements
+                    dashStyle: "Dash", // Match target lines
                     label: { 
-                        text: '100', // Label for the line
-                        align: 'left', // Align the label to the left
-                        x: -36, // Adjust the horizontal position (margin)
-                        y: 3, // Fine-tune vertical alignment
+                        text: '100%', 
+                        align: 'left',
+                        x: -36, 
+                        y: 3, 
                         style: {
-                            color: 'black', // Label color
-                            fontSize: '12px', // Optional: Adjust font size
+                            color: 'black',
+                            fontSize: '12px',
                             fontWeight: 'bold'
                         }
                     }
-                }]
+                }],
+                
             },
-            
             xAxis: {
                 type: 'datetime',
                 dateTimeLabelFormats: {
                     month: '%b %Y'
                 },
                 tickInterval: 3 * 30 * 24 * 60 * 60 * 1000, // 3 months in milliseconds
-                min: Date.UTC(2021, 11, 1)
+                min: Date.UTC(2019, 0, 1)
             },
             tooltip: {
                 formatter: function() {
-                    // Hide tooltip for the first point
-                    if (this.point.index === 0) {
-                        return false; // No tooltip for the first point
-                    }
-            
-                    // Tooltip for all other points
                     return `<b>${this.series.name}</b><br>${Highcharts.dateFormat('%b %Y', this.x)}: ${this.y.toFixed(2)} %`;
                 }
             },
-            
             plotOptions: {
                 series: {
-                    marker: { enabled: true, symbol: 'circle', lineWidth: 1 }
+                    marker: { enabled: false } // Remove markers from all lines
                 }
             },
-            legend: { enabled: false },
+            legend: { enabled: false }, // Hide legend
             series,
             exporting: {
                 enabled: true,
@@ -231,12 +330,20 @@ jQuery(document).ready(function() {
                     }
                 }
             },
-            responsive: { rules: [{ condition: { maxWidth: 500 }, chartOptions: { legend: { layout: 'horizontal', align: 'center', verticalAlign: 'bottom' } } }] }
+            responsive: { 
+                rules: [{ 
+                    condition: { maxWidth: 500 }, 
+                    chartOptions: { 
+                        legend: { layout: 'horizontal', align: 'center', verticalAlign: 'bottom' } 
+                    } 
+                }] 
+            }
         });
-
+    
         reorderLegendItems(chart);
         if (pymChild) pymChild.sendHeight();
     }
+    
 
     fetchData(createChart);
     initializePym();
