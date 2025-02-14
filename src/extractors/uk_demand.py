@@ -83,7 +83,7 @@ class UKDemandExtractor:
             result_df['country'] = 'UK'
             
             # Convert to KWh (values are in GWh)
-            result_df['demand'] = result_df['demand'] * 1000000  # GWh to KWh
+            #result_df['demand'] = result_df['demand'] * 1000000  # GWh to KWh
             
             return result_df[['country', 'date', 'demand', 'type', 'source']]
             

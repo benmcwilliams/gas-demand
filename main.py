@@ -13,8 +13,6 @@ from src.extractors.energy_charts_demand import EnergyChartsDemandExtractor
 from src.extractors.spain_demand import SpainDemandExtractor
 from src.extractors.uk_demand import UKDemandExtractor
 #from src.extractors.cbs_demand import CBSDemandExtractor
-#from src.analyzers.clean_daily_demand import DailyDemandAnalyzer
-#from src.analyzers.clean_monthly_demand import MonthlyDemandAnalyzer
 
 def main(update_raw=False, initial_load=False):
     # Initialize config and logging
@@ -72,20 +70,6 @@ def main(update_raw=False, initial_load=False):
             final_data.to_csv('src/data/processed/daily_demand_all.csv', index=False)
             logger.info("All data saved successfully")
 
-            # Add daily demand analysis step
-            #logger.info("Performing daily demand analysis...")
-            #daily_analyzer = DailyDemandAnalyzer()
-            #daily_analyzer.analyze()
-            #logger.info("Daily demand analysis completed")
-            
-            # Add monthly demand analysis step
-            #logger.info("Performing monthly demand analysis...")
-            #monthly_analyzer = MonthlyDemandAnalyzer()
-            #monthly_analyzer.analyze()
-            #logger.info("Monthly demand analysis completed")
-
-            #insert individual scripts per graph that clean data to a JSON file for plotting in HighCharts
-
         else:
             logger.error("No demand data was successfully extracted")
             
@@ -93,8 +77,8 @@ def main(update_raw=False, initial_load=False):
         logger.error(f"Critical error in main process: {str(e)}")
 
 if __name__ == "__main__":
-    # For regular updates:
-    main(update_raw=True, initial_load=False)
+
+    main(update_raw=False, initial_load=False)
     
     # For initial load of ENTSOG data (commented out):
     # main(update_raw=True, initial_load=True) 
