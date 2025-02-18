@@ -3,7 +3,6 @@
     --item-color1: #7BD1E3; /* Cyan */
     --item-color2: #F0AA7B; /* Light orange */
     --item-color3: #58a944; /* Medium green */
-    --item-color4: #155866; /* Dark teal */
     --item-color5: #98D08A; /* Olive green */
     --item-color6: #7974ff; /* Lighter purple */
     --item-color7: #E7E6E6; /* Light grey */
@@ -26,10 +25,8 @@
     --item-color24: #BFE9FF; /* Light cyan */
     --item-color25: #44546A; /* Dark grey-blue */
     --item-color26: #7361df; /* Light purple */
-    --item-color27: #a21636; /* Dark red */
     --item-color28: #FFE699; /* Pale yellow */
     --item-color29: #F8C5D0; /* Soft pink */
-    --item-color30: #FFC000; /* Bright yellow */
 }
 
 /* Root colors unchanged */
