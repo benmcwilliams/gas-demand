@@ -85,7 +85,7 @@ jQuery(document).ready(function() {
     function assignColorsToSeries(series) {
         const visibleSeries = series.filter(s => s.visible);
         visibleSeries.forEach((s, index) => {
-            if (s.name === "REPowerEU" || s.name === "Fit for 55" || s.name === "Europe* - total") return; // <<< Skip "REPowerEU", "Fit for 55", and "Europe*" to preserve their colors
+            if (s.name === "REPowerEU" || s.name === "Fit for 55" || s.name === "Europe*") return; // <<< Skip "REPowerEU", "Fit for 55", and "Europe*" to preserve their colors
     
             const colorVariable = cssColorVars[index % cssColorVars.length];
             const newColor = getColorFromCSS(colorVariable);
@@ -115,7 +115,7 @@ jQuery(document).ready(function() {
         
         $hideAllButton.click(function() {
             chart.series.forEach(series => {
-                if (series.name !== "Fit for 55" && series.name !== "REPowerEU" && series.name !== "Europe* - total") {
+                if (series.name !== "Fit for 55" && series.name !== "REPowerEU" && series.name !== "Europe*") {
                     series.setVisible(false, false);
                 } else {
                     series.setVisible(true, false); // Ensure "Europe* - total", "Fit for 55", and "REPowerEU" remain visible
@@ -169,12 +169,12 @@ jQuery(document).ready(function() {
     
     function createChart(data, targetData) {
         const series = Object.keys(data).map((groupValue, i) => {
-            const assignedColor = groupValue === "Europe* - total" ? "#155866" : getColorFromCSS(cssColorVars[i]); // Ensure "Europe*" gets its fixed color
+            const assignedColor = groupValue === "Europe*" ? "#155866" : getColorFromCSS(cssColorVars[i]); // Ensure "Europe*" gets its fixed color
         
             return {
                 name: groupValue,
                 data: formatSeriesData(data[groupValue]),
-                visible: groupValue === "Europe* - total",
+                visible: groupValue === "Europe*",
                 color: assignedColor, // <<< Fixed color for "Europe*"
                 marker: { enabled: false }, 
                 showInLegend: false, // Exclude from Highcharts legend (keeps it in checkboxes)

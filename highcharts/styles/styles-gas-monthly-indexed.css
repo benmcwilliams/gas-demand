@@ -71,7 +71,7 @@
   
   /* Legend container with vertical scroll */
   #legend-container {
-    flex: 0 0 25%; /* Fixed width on the right side */
+    flex: 0 0 15%; /* Fixed width on the right side */
     padding: 10px;
     overflow-y: auto; /* Allows vertical scrolling in legend */
     max-height: 100%; /* Matches container height */
