@@ -113,7 +113,7 @@ $(document).ready(function() {
                 enabled: true
             },
             series: series,
-            exporting: {
+             exporting: {
                 enabled: true,
                 csv: {
                     itemDelimiter: ';',
@@ -125,11 +125,13 @@ $(document).ready(function() {
                         menuItems: [
                             'viewFullscreen',
                             'printChart',
+                            'downloadPNG', // <<< ADD PNG DOWNLOAD BUTTON
                             'downloadCSV'
                         ]
                     }
                 }
-            }
+            },
+            
         });
     
         // Add custom legend for toggling series visibility
