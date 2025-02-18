@@ -210,7 +210,7 @@ jQuery(document).ready(function() {
                 visible: true,
                 enableMouseTracking: true,
                 lineWidth: 2,
-                dashStyle: "Dash",
+                dashStyle: "ShortDot",
                 marker: { enabled: false },
                 showInLegend: true, // <<< Keep it out of the Highcharts legend
                 dataLabels: {
@@ -224,7 +224,7 @@ jQuery(document).ready(function() {
                 visible: true,
                 enableMouseTracking: true,
                 lineWidth: 2,
-                dashStyle: "Dash",
+                dashStyle: "ShortDot",
                 marker: { enabled: false },
                 showInLegend: true, // <<< Only "REPowerEU" appears in the legend
                 dataLabels: {
@@ -259,10 +259,10 @@ jQuery(document).ready(function() {
                 min: 0, // Ensure Y-axis always starts at 0
                 plotLines: [{
                     value: 100, // Reference line at 100%
-                    color: 'gray',
+                    color: 'black',
                     width: 2, // Match "Fit for 55" and "REPowerEU" line width
                     zIndex: 2, // Ensure it's above other elements
-                    dashStyle: "Dash", // Match target lines
+                    dashStyle: "ShortDot", // Match target lines
                     label: { 
                         text: '100%', 
                         align: 'left',
