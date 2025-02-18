@@ -81,10 +81,12 @@ jQuery(document).ready(function() {
     }
 
     const cssColorVars = Array.from({ length: 30 }, (_, i) => `--item-color${i + 1}`);
-
+   
     function assignColorsToSeries(series) {
         const visibleSeries = series.filter(s => s.visible);
         visibleSeries.forEach((s, index) => {
+            if (s.name === "REPowerEU" || s.name === "Fit for 55" || s.name === "Europe* - total") return; // <<< Skip "REPowerEU", "Fit for 55", and "Europe*" to preserve their colors
+    
             const colorVariable = cssColorVars[index % cssColorVars.length];
             const newColor = getColorFromCSS(colorVariable);
             s.update({
@@ -100,29 +102,35 @@ jQuery(document).ready(function() {
         });
         series[0].chart.redraw();
     }
+    
+    
 
     function reorderLegendItems(chart) {
         const $legendContainer = jQuery('#legend-container');
         $legendContainer.empty();
     
-        const $showAllButton = jQuery('<button id="show-all" class="toggle-button">').text('Show All').appendTo($legendContainer);
-        const $hideAllButton = jQuery('<button id="hide-all" class="toggle-button">').text('Hide All').appendTo($legendContainer);
+        
+        const $hideAllButton = jQuery('<button id="hide-all" class="toggle-button">').text('Reset').appendTo($legendContainer);
     
-        $showAllButton.click(function() {
-            chart.series.forEach(series => series.setVisible(true, false));
-            chart.redraw();
-            reorderLegendItems(chart);
-        });
-    
+        
         $hideAllButton.click(function() {
-            chart.series.forEach(series => series.setVisible(false, false));
+            chart.series.forEach(series => {
+                if (series.name !== "Fit for 55" && series.name !== "REPowerEU" && series.name !== "Europe* - total") {
+                    series.setVisible(false, false);
+                } else {
+                    series.setVisible(true, false); // Ensure "Europe* - total", "Fit for 55", and "REPowerEU" remain visible
+                }
+            });
             chart.redraw();
             reorderLegendItems(chart);
         });
+        
+        
     
-        const sortedSeries = chart.series.slice().filter(s => s.options.showInLegend !== false).sort((a, b) => {
-            return b.visible - a.visible || b.legendIndex - a.legendIndex;
-        });
+        const sortedSeries = chart.series.slice()
+        .filter(s => s.options.showInLegend === false) // Only include series meant for checkboxes
+        .sort((a, b) => b.visible - a.visible || b.legendIndex - a.legendIndex);
+    
         
     
         jQuery.each(sortedSeries, function(i, series) {
@@ -158,97 +166,73 @@ jQuery(document).ready(function() {
             });
         });
     }
-    function createChart(data, targetData) {
-        const series = Object.keys(data).map((groupValue, i) => ({
-            name: groupValue,
-            data: formatSeriesData(data[groupValue]),
-            visible: groupValue === "Europe* - total",
-            color: getColorFromCSS(cssColorVars[i]),
-            marker: { enabled: false }, // No points on the line
-            dataLabels: {
-                enabled: true,
-                align: 'left',
-                style: { 
-                    fontWeight: 'bold', 
-                    fontFamily: 'Roboto', 
-                    textOutline: 'none', 
-                    fontSize: '12px', 
-                    color: getColorFromCSS(cssColorVars[i]) 
-                },
-                formatter: function() {
-                    return this.point.index === this.series.data.length - 1 ? this.series.name : null;
-                },
-                x: 10, 
-                y: 0, 
-                crop: false, 
-                overflow: 'allow', 
-                allowOverlap: true
-            }
-        }));
     
-        // Always include "Fit for 55" and "REPowerEU" (hidden from selector)
-        series.push(
-            {
-                name: "Fit for 55",
-                data: targetData["Fit for 55"],
-                color: "#FFC000", // Fixed RED color
-                visible: true,
-                enableMouseTracking: true, // Enable tooltips
-                lineWidth: 2,
-                dashStyle: "Dash",
-                marker: { enabled: false }, // No points on the line
-                showInLegend: false, // Hide from selector
+    function createChart(data, targetData) {
+        const series = Object.keys(data).map((groupValue, i) => {
+            const assignedColor = groupValue === "Europe* - total" ? "#155866" : getColorFromCSS(cssColorVars[i]); // Ensure "Europe*" gets its fixed color
+        
+            return {
+                name: groupValue,
+                data: formatSeriesData(data[groupValue]),
+                visible: groupValue === "Europe* - total",
+                color: assignedColor, // <<< Fixed color for "Europe*"
+                marker: { enabled: false }, 
+                showInLegend: false, // Exclude from Highcharts legend (keeps it in checkboxes)
                 dataLabels: {
                     enabled: true,
                     align: 'left',
-                    style: {
-                        fontWeight: 'bold',
-                        fontFamily: 'Roboto',
-                        textOutline: 'none',
-                        fontSize: '12px',
-                        color: "#FFC000"
+                    style: { 
+                        fontWeight: 'bold', 
+                        fontFamily: 'Roboto', 
+                        textOutline: 'none', 
+                        fontSize: '12px', 
+                        color: assignedColor // <<< Ensure data labels use the same color
                     },
                     formatter: function() {
                         return this.point.index === this.series.data.length - 1 ? this.series.name : null;
                     },
-                    x: 10,
-                    y: 10,
-                    crop: false,
-                    overflow: 'allow',
+                    x: 10, 
+                    y: 0, 
+                    crop: false, 
+                    overflow: 'allow', 
                     allowOverlap: true
+                }
+            };
+        });
+        
+        
+        
+        series.push(
+            {
+                name: "Fit for 55",
+                data: targetData["Fit for 55"],
+                color: "#FFC000", // <<< Fixed yellow color for "Fit for 55"
+                visible: true,
+                enableMouseTracking: true,
+                lineWidth: 2,
+                dashStyle: "Dash",
+                marker: { enabled: false },
+                showInLegend: true, // <<< Keep it out of the Highcharts legend
+                dataLabels: {
+                    enabled: false
                 }
             },
             {
                 name: "REPowerEU",
                 data: targetData["REPowerEU"],
-                color: "#a21636", // Fixed BLUE color
+                color: "#a21636", // <<< Fixed red color for "REPowerEU"
                 visible: true,
-                enableMouseTracking: true, // Enable tooltips
+                enableMouseTracking: true,
                 lineWidth: 2,
                 dashStyle: "Dash",
-                marker: { enabled: false }, // No points on the line
-                showInLegend: false, // Hide from selector
+                marker: { enabled: false },
+                showInLegend: true, // <<< Only "REPowerEU" appears in the legend
                 dataLabels: {
-                    enabled: true,
-                    align: 'left',
-                    style: {
-                        fontWeight: 'bold',
-                        fontFamily: 'Roboto',
-                        textOutline: 'none',
-                        fontSize: '12px',
-                        color: "#a21636"
-                    },
-                    formatter: function() {
-                        return this.point.index === this.series.data.length - 1 ? this.series.name : null;
-                    },
-                    x: 10,
-                    y: 10,
-                    crop: false,
-                    overflow: 'allow',
-                    allowOverlap: true
+                    enabled: false
                 }
             }
         );
+        
     
         const longestLabelLength = Math.max(...series.map(s => s.name.length));
         const additionalMargin = longestLabelLength * 4;
@@ -311,25 +295,37 @@ jQuery(document).ready(function() {
                     marker: { enabled: false } // Remove markers from all lines
                 }
             },
-            legend: { enabled: false }, // Hide legend
+            legend: {
+                enabled: true, // Enable the Highcharts legend
+                layout: 'horizontal', // Display at the bottom
+                align: 'center',
+                verticalAlign: 'bottom',
+                itemStyle: {
+                    fontWeight: 'bold',
+                    fontSize: '12px'
+                }
+            },
+            
             series,
             exporting: {
                 enabled: true,
                 csv: {
-                    itemDelimiter: ';', // Use semicolon as the field separator
-                    lineDelimiter: '\n', // Optional: Newline for line breaks
-                    decimalPoint: ',' // Use comma as the decimal separator
+                    itemDelimiter: ';',
+                    lineDelimiter: '\n',
+                    decimalPoint: ','
                 },
                 buttons: {
                     contextButton: {
                         menuItems: [
                             'viewFullscreen',
                             'printChart',
+                            'downloadPNG', // <<< ADD PNG DOWNLOAD BUTTON
                             'downloadCSV'
                         ]
                     }
                 }
             },
+            
             responsive: { 
                 rules: [{ 
                     condition: { maxWidth: 500 }, 
