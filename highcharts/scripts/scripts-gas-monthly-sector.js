@@ -45,20 +45,36 @@ $(document).ready(function() {
         return groupedData;
     }
 
+    function getTypeColor(type) {
+        const typeColors = {
+        // Brown
+            "industry": "#a21636",   
+            "household": "#78380E",   
+            "power": "#417e3c",   
+            "industry-household": "#44546A"   // Pink
+        };
+        return typeColors[type] || "#7f7f7f"; // Fallback color for unknown types
+    }
+    
     function createChart(data, subtitleText = 'Europe (2022 to 2025 vs 2019-21 monthly average)') {
         const selectedGroupBValue = $('#trade-select').val() || ""; // Get selected group_b_value
-        const isNetExports = selectedGroupBValue === ""; // Check if "Net exports" is selected
     
-        const series = Object.keys(data).map((groupValue, index) => {
-            const color = getColorFromCSS(cssColorVars[index]);
-            return {
-                name: groupValue,
-                data: formatSeriesData(data[groupValue]),
-                visible: index < 7, // Default visibility for first 7 series
-                color: color,
-                stack: 'groupValues'
-            };
-        });
+        // Convert object keys (group names) into an array and ensure "industry-household" is first
+        let sortedGroupValues = Object.keys(data).sort((a, b) => a.localeCompare(b));
+    
+        const series = sortedGroupValues.map(groupValue => ({
+            name: groupValue,
+            data: formatSeriesData(data[groupValue]),
+            visible: true,
+            color: getTypeColor(groupValue), // Use fixed color mapping
+            stack: 'groupValues'
+        }));
+    
+        // Move "industry-household" to the beginning of the stacking order
+        const industryHouseholdSeries = series.filter(s => s.name === "industry-household");
+        const otherSeries = series.filter(s => s.name !== "industry-household");
+        series.length = 0; // Clear array
+        series.push(...industryHouseholdSeries, ...otherSeries); // Prepend "industry-household" first
     
         const chart = Highcharts.chart('chart-container', {
             chart: {
@@ -74,7 +90,7 @@ $(document).ready(function() {
                 }                              
             },
             title: {
-                text: 'Monthly Gas Demand by sector (TWh) ',
+                text: 'Monthly Gas Demand by sector (TWh)',
                 align: 'left'
             },
             subtitle: {
@@ -113,7 +129,7 @@ $(document).ready(function() {
                 enabled: true
             },
             series: series,
-             exporting: {
+            exporting: {
                 enabled: true,
                 csv: {
                     itemDelimiter: ';',
@@ -125,18 +141,17 @@ $(document).ready(function() {
                         menuItems: [
                             'viewFullscreen',
                             'printChart',
-                            'downloadPNG', // <<< ADD PNG DOWNLOAD BUTTON
                             'downloadCSV'
                         ]
                     }
                 }
-            },
-            
+            }
         });
     
         // Add custom legend for toggling series visibility
         createCustomLegend(chart);
     }
+    
     
     function addExportsLabel(chart) {
         // Remove existing custom labels if any
@@ -224,10 +239,13 @@ $(document).ready(function() {
             reorderLegendItems(chart);
         });
     
-        // Sort the series based on visibility and legendIndex
+        // Ensure "industry-household" appears last in the checkboxes
         const sortedSeries = chart.series.slice().sort((a, b) => {
+            if (a.name === "industry-household") return 1;  // Move "industry-household" to the end
+            if (b.name === "industry-household") return -1;
             return b.visible - a.visible || b.legendIndex - a.legendIndex;
         });
+
     
         jQuery.each(sortedSeries, function(i, series) {
             const $legendItem = jQuery('<div>')

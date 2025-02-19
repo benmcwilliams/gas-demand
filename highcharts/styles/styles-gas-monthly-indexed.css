@@ -1,157 +1,156 @@
 /* Root colors unchanged */
 :root {
-    --item-color1: #7BD1E3; /* Cyan */
-    --item-color2: #F0AA7B; /* Light orange */
-    --item-color3: #58a944; /* Medium green */
-    --item-color5: #98D08A; /* Olive green */
-    --item-color6: #7974ff; /* Lighter purple */
-    --item-color7: #E7E6E6; /* Light grey */
-    --item-color8: #44BDFF; /* Brighter blue */
-    --item-color9: #BF8F00; /* Light blue */
-    --item-color10: #65499d; /* Medium purple */
-    --item-color11: #99FF66; /* Light green */
-    --item-color12: #E85375; /* Pinkish red */
-    --item-color13: #510B1B; /* Dark red */
-    --item-color14: #30368B; /* Dark blue */
-    --item-color15: #AC2FF2; /* Bright purple */
-    --item-color16: #F5C7A7; /* Light peach */
-    --item-color17: #692dc3; /* Dark purple */
-    --item-color18: #E67425; /* Dark orange */
-    --item-color19: #F8C5D0; /* Soft pink */
-    --item-color20: #417e3c; /* Dark green */
-    --item-color21: #78380E; /* Lighter purple (duplicate) */
-    --item-color22: #E7BC59; /* Mustard yellow */
-    --item-color23: #FFD966; /* Light yellow */
-    --item-color24: #BFE9FF; /* Light cyan */
-    --item-color25: #44546A; /* Dark grey-blue */
-    --item-color26: #7361df; /* Light purple */
-    --item-color28: #FFE699; /* Pale yellow */
-    --item-color29: #F8C5D0; /* Soft pink */
+  --item-color1: #7BD1E3; /* Cyan */
+  --item-color2: #F0AA7B; /* Light orange */
+  --item-color3: #58a944; /* Medium green */
+  --item-color5: #98D08A; /* Olive green */
+  --item-color6: #7974ff; /* Lighter purple */
+  --item-color7: #E7E6E6; /* Light grey */
+  --item-color8: #44BDFF; /* Brighter blue */
+  --item-color9: #BF8F00; /* Light blue */
+  --item-color10: #65499d; /* Medium purple */
+  --item-color11: #99FF66; /* Light green */
+  --item-color12: #E85375; /* Pinkish red */
+  --item-color13: #510B1B; /* Dark red */
+  --item-color14: #30368B; /* Dark blue */
+  --item-color15: #AC2FF2; /* Bright purple */
+  --item-color16: #F5C7A7; /* Light peach */
+  --item-color17: #692dc3; /* Dark purple */
+  --item-color18: #E67425; /* Dark orange */
+  --item-color19: #F8C5D0; /* Soft pink */
+  --item-color20: #417e3c; /* Dark green */
+  --item-color21: #78380E; /* Lighter purple (duplicate) */
+  --item-color22: #E7BC59; /* Mustard yellow */
+  --item-color23: #FFD966; /* Light yellow */
+  --item-color24: #BFE9FF; /* Light cyan */
+  --item-color25: #44546A; /* Dark grey-blue */
+  --item-color26: #7361df; /* Light purple */
+  --item-color28: #FFE699; /* Pale yellow */
+  --item-color29: #F8C5D0; /* Soft pink */
 }
 
 /* Root colors unchanged */
 :root {
-    --item-color1: #7BD1E3;
-    --item-color2: #F0AA7B;
-    /* Other color variables remain the same */
-  }/* Ensure that the body takes the full height of the screen */
-  body {
-    margin: 0;
-    padding: 0;
-    height: 700px;
-    overflow: hidden; /* Prevents body scrollbars */
-  }
-  
-  #main-container {
-    width: 1000px; /* Fixed width */
-    height: 700px; /* Fixed height */
-    margin: 1em auto; /* Centers the container horizontally with top/bottom margin */
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    overflow: hidden; /* Prevents scrollbars within the container */
-  }
-  
-  /* Container for chart and legend */
-  #chart-legend-container {
-    display: flex;
-    flex-direction: row; /* Ensures the legend stays on the right */
-    width: 100%;
-    height: 100%; /* Makes sure container takes full height */
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-  
-  /* Chart container */
-  #chart-container {
-    flex: 3;
-    height: 100%; /* Matches container height */
-    overflow: hidden;
-  }
-  
-  /* Legend container with vertical scroll */
-  #legend-container {
-    flex: 0 0 15%; /* Fixed width on the right side */
-    padding: 10px;
-    overflow-y: auto; /* Allows vertical scrolling in legend */
-    max-height: 100%; /* Matches container height */
-    max-width: 250px;
-    box-sizing: border-box;
-  }
-  
-  /* Note container at the bottom - no scrolling */
-  .note-container {
-    padding: 10px;
-    font-size: 14px;
-    font-family: 'Aptos', sans-serif;
-    font-weight: 400;
-    background-color: #ffffff;
-    border-top: 1px solid #ddd;
-    overflow: hidden; /* Prevents scrolling */
-    flex-shrink: 0;
-    height: 20vh; /* Fixed height for notes */
-    box-sizing: border-box;
-  }
-  
-  /* Legend item styles */
-  .legend-item {
-    cursor: pointer;
-    margin-bottom: 5px;
-    padding: 5px;
-    font-size: 11px;
-    font-family: 'Aptos', sans-serif;
-    font-weight: 400;
-    color: #000;
-    background-color: #ffffff;
-    border: 1px solid #E8E8E8;
-    border-radius: 5px;
-    display: block;
-    text-align: left;
-    width: 100%;
-    box-sizing: border-box;
-    white-space: nowrap;
-  }
-  
-  .legend-item.hidden {
-    text-decoration: line-through;
-    color: #E8E8E8;
-  }
- 
-  /* Hover effect for legend items, matching toggle-button */
-.legend-item:hover {
-  transform: scale(1); /* Ensures no scaling effect */
-  overflow: hidden; /* Prevents unintended overflow */
-  box-shadow: 0 1px 1px 1px #E8E8E8; /* Matches the shadow of toggle buttons */
-  transition: box-shadow 0.3s ease; /* Smooth transition */
+  --item-color1: #7BD1E3;
+  --item-color2: #F0AA7B;
+  /* Other color variables remain the same */
+}/* Ensure that the body takes the full height of the screen */
+body {
+  margin: 0;
+  padding: 0;
+  height: 700px;
+  overflow: hidden; /* Prevents body scrollbars */
 }
 
-  
-  /* Container for the Show All / Hide All buttons */
-  #legend-actions {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  .toggle-button {
-    cursor: pointer;
-    padding: 5px 10px;
-    font-size: 12px;
-    font-family: 'Aptos', sans-serif;
-    font-weight: 400;
-    color: #000;
-    background-color: #ffffff;
-    border: 1px solid #E8E8E8;
-    border-radius: 5px;
-    text-align: center;
-    box-sizing: border-box;
-    white-space: nowrap;
-  }
-  
-  .toggle-button:hover {
-   transform: scale(1) !important;
-    overflow: hidden !important;
-    box-shadow: 0 1px 1px 1px #E8E8E8 !important;
-  }
-  
+#main-container {
+  width: 1000px; /* Fixed width */
+  height: 700px; /* Fixed height */
+  margin: 1em auto; /* Centers the container horizontally with top/bottom margin */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevents scrollbars within the container */
+}
+
+/* Container for chart and legend */
+#chart-legend-container {
+  display: flex;
+  flex-direction: row; /* Ensures the legend stays on the right */
+  width: 100%;
+  height: 100%; /* Makes sure container takes full height */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Chart container */
+#chart-container {
+  flex: 3;
+  height: 100%; /* Matches container height */
+  overflow: hidden;
+}
+
+/* Legend container with vertical scroll */
+#legend-container {
+  flex: 0 0 15%; /* Fixed width on the right side */
+  padding: 10px;
+  overflow-y: auto; /* Allows vertical scrolling in legend */
+  max-height: 100%; /* Matches container height */
+  max-width: 250px;
+  box-sizing: border-box;
+}
+
+/* Note container at the bottom - no scrolling */
+.note-container {
+  padding: 10px;
+  font-size: 14px;
+  font-family: 'Aptos', sans-serif;
+  font-weight: 400;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  overflow: hidden; /* Prevents scrolling */
+  flex-shrink: 0;
+  height: 20vh; /* Fixed height for notes */
+  box-sizing: border-box;
+}
+
+/* Legend item styles */
+.legend-item {
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 11px;
+  font-family: 'Aptos', sans-serif;
+  font-weight: 400;
+  color: #000;
+  background-color: #ffffff;
+  border: 1px solid #E8E8E8;
+  border-radius: 5px;
+  display: block;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.legend-item.hidden {
+  text-decoration: line-through;
+  color: #E8E8E8;
+}
+
+/* Hover effect for legend items, matching toggle-button */
+.legend-item:hover {
+transform: scale(1); /* Ensures no scaling effect */
+overflow: hidden; /* Prevents unintended overflow */
+box-shadow: 0 1px 1px 1px #E8E8E8; /* Matches the shadow of toggle buttons */
+transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+
+/* Container for the Show All / Hide All buttons */
+#legend-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.toggle-button {
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-family: 'Aptos', sans-serif;
+  font-weight: 400;
+  color: #000;
+  background-color: #ffffff;
+  border: 1px solid #E8E8E8;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.toggle-button:hover {
+ transform: scale(1) !important;
+  overflow: hidden !important;
+  box-shadow: 0 1px 1px 1px #E8E8E8 !important;
+}

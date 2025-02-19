@@ -67,7 +67,7 @@
   
   /* Chart container */
   #chart-container {
-    flex: 3;
+    flex: 5;
     height: 100%; /* Matches container height */
     overflow: hidden;
   }

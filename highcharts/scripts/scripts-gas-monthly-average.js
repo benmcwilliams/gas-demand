@@ -224,10 +224,18 @@ jQuery(document).ready(function () {
                 tooltip: {
                     split: true,
                     valueDecimals: 2,
-                    headerFormat: "Week: {point.x}<br/>",
-                    pointFormat:
-                        "<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y:.2f} TWh</b><br/>",
+                    formatter: function () {
+                        const months = ["Jan", "Fev", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                        const monthIndex = this.x - 1; // Convert month number (1-12) to array index (0-11)
+                        const monthName = months[monthIndex] || this.x; // Use month name or fallback to number
+                
+                        return `<b>${monthName}</b><br/>` + // Show the month name
+                            this.points.map(point => 
+                                `<span style="color:${point.series.color}">${point.series.name}</span>: <b>${point.y.toFixed(2)} TWh</b><br/>`
+                            ).join('');
+                    }
                 },
+                
                 navigator: {
                     xAxis: { labels: { enabled: false }, tickLength: 0 },
                 },
