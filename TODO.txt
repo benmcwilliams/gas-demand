@@ -1,40 +1,12 @@
-# Ben
-- add CBS extractor for historic Dutch power (and perhaps other) data
-- Ireland scraper not downloading properly (when adding Ireland back be sure to add the the daily_demand and monthly_demand
-analyzer files for industry_power calculations). Scraper downloads to *IE_flows_downloaded.csv* while extractor is trying to read from *src/data/raw/IE_flows.csv*
-Seems to be an issue that we cannot cleanly download the data from the website - we receive empty dataframes often.
+- Ireland, we still wait for email feedback. 
+    Ireland scraper not downloading properly (when adding Ireland back be sure to add the the daily_demand and monthly_demand
+    analyzer files for industry_power calculations). Scraper downloads to *IE_flows_downloaded.csv* while extractor is trying to read from *src/data/raw/IE_flows.csv*
+    Seems to be an issue that we cannot cleanly download the data from the website - we receive empty dataframes often.
 
-# Marie
-- monthly and daily demand analyzers. 
+- Denmark, numbers are slightly off Eurostat. Not sure how to properly process the JSON (include storage flows?)
 
-Pre-processing script
-- weekly sums
-- monthly index
-- calculate European sums 
 
-European averages (sum of countries). 
 
-Fig1 - Weekly Gas demand
-current python script is *weekly.py* 
-- pre-processing, generating weekly sums from daily data. 
-y-lines are 2025, 2024, 2023, 2022, 2019-21 AVG
-x is weekofyear
-highcharts filter component (like EV deployment) where use can select from any (country, type) options. 
-eg (Europe, Total) or (France, Industry)
-
-Fig2 - Indexed monthly demand
-current python script is called *monthly-index.py*
-pre-processing, indexed monthly demand is calculated as monthly average from 2019-21. 
-x-axis is months from Jan 19 to latest month. So we plot also 19-21 which should be around the 100 line. 
-y-axis is the indexed value. 
-highcharts filer component (exactly like EV deployment) where user can select any (country, type) options. 
-
-Fig 3 - Monthly (or quarterly) stacked bar demand
-src data = same as figure 2. 
-start monthly, revent to quarterly if too noist
-Filter the dataframe only for countries which have the decomposed data & caclulate aggregate European. 
-[BE, FR, IT, DE, NL, ES, sum of these countries]
-Copying the current fig3 - https://www.bruegel.org/dataset/european-natural-gas-demand-tracker
 
 
 
