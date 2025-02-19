@@ -1,0 +1,158 @@
+/* Root colors */
+  /* Root colors unchanged */
+  :root {
+    --item-color1: #7BD1E3;
+    --item-color2: #F0AA7B;
+    /* Other color variables remain the same */
+  }/* Ensure that the body takes the full height of the screen */
+  body {
+    margin: 0;
+    padding: 0;
+    height: 700px;
+    overflow: hidden; /* Prevents body scrollbars */
+  }
+  
+  #main-container {
+    width: 1000px; /* Fixed width */
+    height: 700px; /* Fixed height */
+    margin: 1em auto; /* Centers the container horizontally with top/bottom margin */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevents scrollbars within the container */
+  }
+  
+  /* Container for chart and legend */
+  #chart-legend-container {
+    display: flex;
+    flex-direction: row; /* Ensures the legend stays on the right */
+    width: 100%;
+    height: 100%; /* Makes sure container takes full height */
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  /* Chart container */
+  #chart-container {
+    flex: 3;
+    height: 100%; /* Matches container height */
+    overflow: hidden;
+  }
+    /* New parent container for legend-header and legend-container */
+#legend-container-parent {
+    display: flex;
+    flex-direction: column; /* Stack the header and legend vertically */
+    flex: 0 0 20%; /* Matches the width of the legend-container */
+    max-width: 250px;
+    height: 100%; /* Matches the height of the chart-legend-container */
+    box-sizing: border-box;
+    padding: 0;
+    overflow: hidden; /* Prevents scrollbars */
+  }
+  
+  
+
+/* Legend container */
+#legend-container {
+    flex: 1; /* Expands legend container (2 parts out of 5) */
+    padding: 16px; /* Increases padding for better spacing */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+    max-height: 100%; /* Matches container height */
+    box-sizing: border-box;
+}
+
+/* Legend items */
+.legend-item-with-color {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px; /* Minimize vertical spacing */
+    padding: 2px; /* Tighten padding */
+    font-size: 10px; /* Smaller font size */
+    font-family: 'Aptos', sans-serif;
+    font-weight: 400;
+    color: #000;
+    background-color: #ffffff;
+    border: 1px solid #E8E8E8;
+    border-radius: 3px; /* Smaller border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.legend-item-with-color .color-box {
+    width: 12px; /* Reduce size of color box */
+    height: 12px;
+    margin-right: 5px; /* Minimize spacing between color box and text */
+    border-radius: 2px;
+    flex-shrink: 0;
+    border: 1px solid #ccc;
+}
+
+.legend-item-with-color:hover {
+    background-color: #f0f0f0;
+}
+
+/* Note container */
+.note-container {
+    padding: 10px;
+    font-size: 12px; /* Adjust font size for consistency */
+    font-family: 'Aptos', sans-serif;
+    font-weight: 400;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    overflow: hidden;
+    flex-shrink: 0;
+    height: 20vh;
+    box-sizing: border-box;
+}
+
+/* Dropdown styles */
+#country-select {
+    cursor: pointer;
+    padding: 8px;
+    font-size: 12px; /* Smaller font size */
+    font-family: 'Aptos', sans-serif;
+    font-weight: 00;
+    color: #000;
+    background-color: #ffffff;
+    border: 1px solid #E8E8E8;
+    border-radius: 3px;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+#country-select:hover {
+    background-color: #f0f0f0;
+}
+
+/* Dropdown styles */
+#type-select {
+    cursor: pointer;
+    padding: 8px;
+    font-size: 12px; /* Smaller font size */
+    font-family: 'Aptos', sans-serif;
+    font-weight: 400;
+    color: #000;
+    background-color: #ffffff;
+    border: 1px solid #E8E8E8;
+    border-radius: 3px;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+#type-select:hover {
+    background-color: #f0f0f0;
+}
+
+/* Styling for instructional text */
+#filters label {
+    font-family: Arial, sans-serif;
+    font-size: 12px; 
+    font-weight: normal; /* No bold */
+    margin-bottom: 5px;
+    display: block;
+    color: grey; /* Light grey text */
+}
