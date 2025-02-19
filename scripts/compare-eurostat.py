@@ -13,7 +13,7 @@ df['month'] = df['date'].dt.month
 df = df[df['date'] >= "2019-01-01"] 
 
 #read in monthly eurostat data
-df_eurostat = pd.read_csv("src/data/processed/eurostat_historic.csv")
+df_eurostat = pd.read_csv("src/data/raw/eurostat/latest_data.csv")
 df_eurostat['date'] = pd.to_datetime(df_eurostat['date'], format='%Y-%m-%d', errors='coerce')
 df_eurostat['year'] = df_eurostat['date'].dt.year
 df_eurostat['month'] = df_eurostat['date'].dt.month
