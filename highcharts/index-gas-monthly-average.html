@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Gas Demand</title>
+
+    <!-- pym.js for responsive resizing in iframe -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/1.3.2/pym.v1.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Highcharts and modules -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles/styles-gas-montly-average.css">
+
+    <!-- External script for chart creation and custom legend -->
+    <script src="scripts/scripts-gas-monthly-average.js"></script>
+</head>
+
+<body> 
+    <!-- Main container with modified styles -->
+    <div id="main-container">
+        <div id="chart-legend-container">
+            <div id="chart-container"></div>
+
+            <!-- Legend container with modified styles -->
+            <div id="legend-container-parent">
+                <div id="controls"></div>
+
+                <label for="country-select" style="color: grey; font-family: Arial, sans-serif; font-size: 12px; display: block; margin-bottom: 5px;">
+                    Select a country to visualise:
+                </label>
+                <select id="country-select" style="margin-bottom: 10px;">
+                    <!-- Options dynamically populated -->
+                </select>
+
+                <label for="type-select" style="color: grey; font-family: Arial, sans-serif; font-size: 12px; display: block; margin-bottom: 5px;">
+                    Select a type to visualise:
+                </label>
+                <select id="type-select" style="margin-bottom: 10px;">
+                    <!-- Options dynamically populated -->
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Note and Source container with modified styles -->
+    <div class="note-container">
+        <p>
+
+        </p>
+    </div>
+</body>
+
+</html>
