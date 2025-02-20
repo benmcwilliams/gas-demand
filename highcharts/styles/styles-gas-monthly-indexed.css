@@ -11,7 +11,7 @@
   --item-color10: #65499d; /* Medium purple */
   --item-color11: #99FF66; /* Light green */
   --item-color12: #E85375; /* Pinkish red */
-  --item-color13: #510B1B; /* Dark red */
+  --item-color13: #9a082a; /* Dark red */
   --item-color14: #30368B; /* Dark blue */
   --item-color15: #AC2FF2; /* Bright purple */
   --item-color16: #F5C7A7; /* Light peach */
@@ -89,7 +89,7 @@ body {
   border-top: 1px solid #ddd;
   overflow: hidden; /* Prevents scrolling */
   flex-shrink: 0;
-  height: 20vh; /* Fixed height for notes */
+  height: 1vh; /* Fixed height for notes */
   box-sizing: border-box;
 }
 

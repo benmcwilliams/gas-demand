@@ -34,7 +34,7 @@
   
   /* Chart container */
   #chart-container {
-    flex: 3;
+    flex: 7;
     height: 100%; /* Matches container height */
     overflow: hidden;
   }
@@ -42,7 +42,7 @@
 #legend-container-parent {
     display: flex;
     flex-direction: column; /* Stack the header and legend vertically */
-    flex: 0 0 20%; /* Matches the width of the legend-container */
+    flex: 0 0 15%; /* Matches the width of the legend-container */
     max-width: 250px;
     height: 100%; /* Matches the height of the chart-legend-container */
     box-sizing: border-box;

@@ -7,9 +7,20 @@
 
 
 
+Highcarts:
+All figures
+        done -drop spanish data before 07/2019, in highchart pynb before eu total
+        done -drop UK data for Jan 2020 => start Feb 2020
+
+        done - no footnote
+        done -color as in Fig stacked
 
 
 
-
-
-
+Average:
+done - no range selector
+done - EU first
+ done - average ShortDot
+ -buttons 
+ done - 2022/2023 shades of red and 2024 in blue 
+ done - Fev

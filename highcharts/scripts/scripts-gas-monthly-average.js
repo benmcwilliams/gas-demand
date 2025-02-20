@@ -59,24 +59,35 @@ jQuery(document).ready(function () {
         });
     
         // Populate country selector
+        $groupBSelector.empty();
         groupBValues.forEach(group_b_value => {
             $groupBSelector.append(`<option value="${group_b_value}">${group_b_value}</option>`);
         });
     
         // Set default selected country
-        const defaultGroupBValue = "Europe*";
+        const defaultGroupBValue = "EU";
         if (groupBValues.includes(defaultGroupBValue)) {
             $groupBSelector.val(defaultGroupBValue);
         }
     
-        // Convert set to array and move "industry-household" to the end
+// Convert set to array and sort alphabetically
         let sortedGroupValues = [...groupValues].sort((a, b) => a.localeCompare(b));
-        
-        // Ensure "industry-household" is last
-        sortedGroupValues = sortedGroupValues.filter(value => value !== "industry-household");
-        sortedGroupValues.push("industry-household");
+
+// Ensure "Total" is first
+        if (sortedGroupValues.includes("total")) {
+            sortedGroupValues = sortedGroupValues.filter(value => value !== "total");
+            sortedGroupValues.unshift("total");
+        }
+
+// Ensure "industry-household" is last
+        if (sortedGroupValues.includes("industry-household")) {
+            sortedGroupValues = sortedGroupValues.filter(value => value !== "industry-household");
+            sortedGroupValues.push("industry-household");
+        }
+
     
         // Populate type selector
+        $groupSelector.empty();
         sortedGroupValues.forEach(group_value => {
             $groupSelector.append(`<option value="${group_value}">${group_value}</option>`);
         });
@@ -89,7 +100,6 @@ jQuery(document).ready(function () {
         filterGroupSelector(data);
     }
     
-    
     function filterGroupSelector(data) {
         const selectedGroupBValue = jQuery("#country-select").val();
         const $groupSelector = jQuery("#type-select");
@@ -97,21 +107,25 @@ jQuery(document).ready(function () {
     
         if (selectedGroupBValue && data[selectedGroupBValue]) {
             let groupValues = Object.keys(data[selectedGroupBValue]).sort((a, b) => a.localeCompare(b));
-    
-            // Check if "industry-household" exists for the selected country
-            const hasIndustryHousehold = groupValues.includes("industry-household");
-    
-            // Remove "industry-household" from its current position if it exists
-            if (hasIndustryHousehold) {
-                groupValues = groupValues.filter(value => value !== "industry-household");
-                groupValues.push("industry-household"); // Append it to the end
+        
+            // Ensure "Total" is first
+            if (groupValues.includes("total")) {
+                groupValues = groupValues.filter(value => value !== "total");
+                groupValues.unshift("total");
             }
-    
+        
+            // Ensure "industry-household" is last
+            if (groupValues.includes("industry-household")) {
+                groupValues = groupValues.filter(value => value !== "industry-household");
+                groupValues.push("industry-household");
+            }
+        
             // Populate the type selector
             groupValues.forEach(group_value => {
                 $groupSelector.append(`<option value="${group_value}">${group_value}</option>`);
             });
         }
+        
     
         updateChart();
     }
@@ -122,23 +136,25 @@ jQuery(document).ready(function () {
         if (!group_b_value || !group_value || !fullData[group_b_value] || !fullData[group_b_value][group_value]) {
             return [];
         }
-
+    
         const data = fullData[group_b_value][group_value];
         const colorMap = {
             "2025": "#880E4F",
-            "2024": "#a21636",
-            "2023": "#EF9A9A",
-            "2022": "#F2D1D3",
+            "2024": "#5E8FE0",
+            "2023": "#C0392B",
+            "2022": "#C0392B80",
             "AVG-2019-2021": "#A6A6A6",
         };
-
+    
         return Object.keys(data).map(x_value => ({
             name: `${x_value}`,
             data: data[x_value].map(entry => ({ x: entry.x_b_value, y: entry.y_value })),
             color: colorMap[x_value] || "#999",
+            dashStyle: x_value === "AVG-2019-2021" ? "ShortDot" : "Solid", // Apply ShortDot for AVG line
             marker: { enabled: false },
         }));
     }
+    
 
     function updateChart() {
         const group_b_value = jQuery("#country-select").val();
@@ -154,14 +170,13 @@ jQuery(document).ready(function () {
         if (!chart) {
             chart = Highcharts.stockChart("chart-container", {
                 rangeSelector: {
-                    selected: 0,
-                    buttons: [
-                        {
-                            type: "all",
-                            text: "-",
-                        },
-                    ],
-                    inputEnabled: false,
+                    enabled: false, // ❌ Removes the range selector
+                },
+                navigator: {
+                    enabled: false, // ❌ Removes the zooming navigator
+                },
+                scrollbar: {
+                    enabled: false, // ❌ Removes the bottom scrollbar
                 },
                 chart: {
                     type: "line",
@@ -169,12 +184,16 @@ jQuery(document).ready(function () {
                 title: {
                     text: "Monthly natural gas demand (TWh)",
                     align: "left",
-                    style: { fontWeight: "bold" },
+                    style: { fontWeight: "bold",
+                        fontSize: '20px'
+                     },
                 },
                 subtitle: {
                     text: subtitleText,
                     align: "left",
-                    style: { color: "grey" },
+                    style: { color: "grey",
+                        fontSize: '15px'
+                     },
                 },
                 legend: {
                     enabled: true,
@@ -182,10 +201,11 @@ jQuery(document).ready(function () {
                     verticalAlign: "top",
                     layout: "horizontal",
                     itemStyle: {
-                        fontSize: "9px",
-                        fontWeight: "normal",
+                        fontSize: "15px", 
+
+                        color: "#333", 
                     },
-                    itemMarginBottom: 0,
+                    itemMarginBottom: 5,
                     maxHeight: 200,
                     navigation: {
                         enabled: true,
@@ -193,22 +213,38 @@ jQuery(document).ready(function () {
                     labelFormatter: function () {
                         return this.name.split(" - ").pop();
                     },
-                    symbolRadius: 10,
+                    symbolHeight: 10,   // Ensure symbols have a proper height
+                    symbolWidth: 10,    // Make them square
+                    symbolRadius: 50,   // Increase radius to make it look like a bubble
+                    itemDistance: 15,  
+                    backgroundColor: "rgba(255, 255, 255, 0.7)", 
+                    borderRadius: 10, 
+                    padding: 8,
                 },
+                
+                plotOptions: {
+                    series: {
+                        showInLegend: true,
+                        marker: {
+                            enabled: true,   // 🔹 Ensures the legend uses markers instead of line styles
+                            radius: 6,       // 🔹 Sets a fixed radius for the "bubble" effect
+                            symbol: "circle" // 🔹 Forces a circular marker
+                        },
+                    },
+                },
+                               
                 xAxis: {
                     type: "linear",
                     labels: {
                         formatter: function () {
-                            const months = ["Jan", "Fev", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                            const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
                             return months[this.value - 1] || this.value; // Convert numbers to month names
                         },
                     },
-                    tickInterval: 1, // Ensure each tick represents a month
+                    tickInterval: 1,
                     minTickInterval: 1,
                     tickPixelInterval: 50,
                 },
-                
-                
                 yAxis: {
                     title: {
                         text: "TWh"
@@ -216,32 +252,30 @@ jQuery(document).ready(function () {
                     labels: {
                         align: "left",
                     },
-                    height: "80%",
+                    min: 0, // 🔹 Ensures the y-axis starts at zero
+                    height: "100%",
                     resize: {
                         enabled: true,
                     },
                 },
+                
                 tooltip: {
                     split: true,
                     valueDecimals: 2,
                     formatter: function () {
                         const months = ["Jan", "Fev", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                        const monthIndex = this.x - 1; // Convert month number (1-12) to array index (0-11)
-                        const monthName = months[monthIndex] || this.x; // Use month name or fallback to number
+                        const monthIndex = this.x - 1;
+                        const monthName = months[monthIndex] || this.x;
                 
-                        return `<b>${monthName}</b><br/>` + // Show the month name
+                        return `<b>${monthName}</b><br/>` +
                             this.points.map(point => 
-                                `<span style="color:${point.series.color}">${point.series.name}</span>: <b>${point.y.toFixed(2)} TWh</b><br/>`
+                                `<span style="color:${point.series.color}">${point.series.name}</span>: <b>${point.y.toFixed(0)} TWh</b><br/>`
                             ).join('');
                     }
                 },
-                
-                navigator: {
-                    xAxis: { labels: { enabled: false }, tickLength: 0 },
-                },
                 plotOptions: {
                     series: {
-                        showInNavigator: true,
+                        showInNavigator: false, // ❌ Ensure series don't show in navigator
                         marker: {
                             enabled: false,
                         },
@@ -277,7 +311,7 @@ jQuery(document).ready(function () {
             chart.redraw();
         }
     }
-
+    
     
 
     fetchData(data => {

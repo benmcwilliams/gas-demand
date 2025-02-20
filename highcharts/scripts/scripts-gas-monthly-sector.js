@@ -48,10 +48,10 @@ $(document).ready(function() {
     function getTypeColor(type) {
         const typeColors = {
         // Brown
-            "industry": "#a21636",   
-            "household": "#78380E",   
-            "power": "#417e3c",   
-            "industry-household": "#44546A"   // Pink
+            "industry": "#da8e33",   
+            "household": "#60bbce",   
+            "power": "#a21636",   
+            "industry-household": "#c9da33"   // Pink
         };
         return typeColors[type] || "#7f7f7f"; // Fallback color for unknown types
     }
@@ -112,7 +112,7 @@ $(document).ready(function() {
             },
             tooltip: {
                 headerFormat: '<b>{series.name}</b><br>',
-                pointFormat: '{point.x:%b %Y}: {point.y:.3f} TWh'
+                pointFormat: '{point.x:%b %Y}: {point.y:.0f} TWh'
             },
             plotOptions: {
                 column: {

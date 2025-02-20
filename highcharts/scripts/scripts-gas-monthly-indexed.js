@@ -85,7 +85,7 @@ jQuery(document).ready(function() {
     function assignColorsToSeries(series) {
         const visibleSeries = series.filter(s => s.visible);
         visibleSeries.forEach((s, index) => {
-            if (s.name === "REPowerEU" || s.name === "Fit for 55" || s.name === "Europe*") return; // <<< Skip "REPowerEU", "Fit for 55", and "Europe*" to preserve their colors
+            if (s.name === "REPowerEU" || s.name === "Fit for 55" || s.name === "EU") return; // <<< Skip "REPowerEU", "Fit for 55", and "EU" to preserve their colors
     
             const colorVariable = cssColorVars[index % cssColorVars.length];
             const newColor = getColorFromCSS(colorVariable);
@@ -115,10 +115,10 @@ jQuery(document).ready(function() {
         
         $hideAllButton.click(function() {
             chart.series.forEach(series => {
-                if (series.name !== "Fit for 55" && series.name !== "REPowerEU" && series.name !== "Europe*") {
+                if (series.name !== "Fit for 55" && series.name !== "REPowerEU" && series.name !== "EU") {
                     series.setVisible(false, false);
                 } else {
-                    series.setVisible(true, false); // Ensure "Europe* - total", "Fit for 55", and "REPowerEU" remain visible
+                    series.setVisible(true, false); // Ensure "EU - total", "Fit for 55", and "REPowerEU" remain visible
                 }
             });
             chart.redraw();
@@ -169,13 +169,13 @@ jQuery(document).ready(function() {
     
     function createChart(data, targetData) {
         const series = Object.keys(data).map((groupValue, i) => {
-            const assignedColor = groupValue === "Europe*" ? "#155866" : getColorFromCSS(cssColorVars[i]); // Ensure "Europe*" gets its fixed color
+            const assignedColor = groupValue === "EU" ? "#155866" : getColorFromCSS(cssColorVars[i]); // Ensure "EU" gets its fixed color
         
             return {
                 name: groupValue,
                 data: formatSeriesData(data[groupValue]),
-                visible: groupValue === "Europe*",
-                color: assignedColor, // <<< Fixed color for "Europe*"
+                visible: groupValue === "EU",
+                color: assignedColor, // <<< Fixed color for "EU"
                 marker: { enabled: false }, 
                 showInLegend: false, // Exclude from Highcharts legend (keeps it in checkboxes)
                 dataLabels: {
@@ -247,12 +247,16 @@ jQuery(document).ready(function() {
             title: { 
                 text: 'Monthly natural gas demand (%) ', 
                 align: 'left', 
-                style: { fontWeight: 'bold' } 
+                style: { fontWeight: 'bold',
+                    fontSize: '20px'
+                 }
             },
             subtitle: { 
                 text: '2021 - 2025 indexed to 2019-2021 monthly average', 
                 align: 'left', 
-                style: { color: 'grey' } 
+                style: { color: 'grey',
+                    fontSize: '15px'
+                 } 
             },
             yAxis: {
                 title: { text: '%' },
