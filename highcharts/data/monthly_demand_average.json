@@ -11845,258 +11845,6 @@
     },
     {
         "x_value": "2022",
-        "y_value": 0.0,
-        "x_b_value": "01",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.0,
-        "x_b_value": "02",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.0,
-        "x_b_value": "03",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.0,
-        "x_b_value": "04",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.0,
-        "x_b_value": "05",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.0,
-        "x_b_value": "06",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.0,
-        "x_b_value": "07",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.0,
-        "x_b_value": "08",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.0,
-        "x_b_value": "09",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.0,
-        "x_b_value": "10",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.0,
-        "x_b_value": "11",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.0,
-        "x_b_value": "12",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.0,
-        "x_b_value": "01",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.0,
-        "x_b_value": "02",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.0,
-        "x_b_value": "03",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.0,
-        "x_b_value": "04",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.0,
-        "x_b_value": "05",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.0,
-        "x_b_value": "06",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.0,
-        "x_b_value": "07",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.0,
-        "x_b_value": "08",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.0,
-        "x_b_value": "09",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.0,
-        "x_b_value": "10",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.0,
-        "x_b_value": "11",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.0,
-        "x_b_value": "12",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.0,
-        "x_b_value": "01",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.0,
-        "x_b_value": "02",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.0,
-        "x_b_value": "03",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.0,
-        "x_b_value": "04",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.0,
-        "x_b_value": "05",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.0,
-        "x_b_value": "06",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.0,
-        "x_b_value": "07",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.0,
-        "x_b_value": "08",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.0,
-        "x_b_value": "09",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.0,
-        "x_b_value": "10",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.0,
-        "x_b_value": "11",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.0,
-        "x_b_value": "12",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
         "y_value": 1.2,
         "x_b_value": "01",
         "group_value": "total",
@@ -20665,258 +20413,6 @@
     },
     {
         "x_value": "2022",
-        "y_value": 1.19,
-        "x_b_value": "01",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.92,
-        "x_b_value": "02",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.65,
-        "x_b_value": "03",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.61,
-        "x_b_value": "04",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.55,
-        "x_b_value": "05",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.35,
-        "x_b_value": "06",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.59,
-        "x_b_value": "07",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.61,
-        "x_b_value": "08",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.48,
-        "x_b_value": "09",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.62,
-        "x_b_value": "10",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.6,
-        "x_b_value": "11",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
-        "y_value": 0.92,
-        "x_b_value": "12",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.89,
-        "x_b_value": "01",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.77,
-        "x_b_value": "02",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.98,
-        "x_b_value": "03",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.55,
-        "x_b_value": "04",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.61,
-        "x_b_value": "05",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.61,
-        "x_b_value": "06",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.56,
-        "x_b_value": "07",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.59,
-        "x_b_value": "08",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.74,
-        "x_b_value": "09",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.73,
-        "x_b_value": "10",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 0.94,
-        "x_b_value": "11",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2023",
-        "y_value": 1.05,
-        "x_b_value": "12",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 1.44,
-        "x_b_value": "01",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 1.02,
-        "x_b_value": "02",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.81,
-        "x_b_value": "03",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.92,
-        "x_b_value": "04",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.68,
-        "x_b_value": "05",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.59,
-        "x_b_value": "06",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.59,
-        "x_b_value": "07",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.7,
-        "x_b_value": "08",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.68,
-        "x_b_value": "09",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.56,
-        "x_b_value": "10",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.91,
-        "x_b_value": "11",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2024",
-        "y_value": 0.84,
-        "x_b_value": "12",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "2022",
         "y_value": 1.12,
         "x_b_value": "01",
         "group_value": "industry-household",
@@ -24634,13 +24130,6 @@
     },
     {
         "x_value": "AVG-2019-2021",
-        "y_value": 1.68,
-        "x_b_value": "01",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "AVG-2019-2021",
         "y_value": 8.0,
         "x_b_value": "02",
         "group_value": "industry-household",
@@ -24743,13 +24232,6 @@
         "x_b_value": "02",
         "group_value": "industry-household",
         "group_b_value": "Spain"
-    },
-    {
-        "x_value": "AVG-2019-2021",
-        "y_value": 1.45,
-        "x_b_value": "02",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
     },
     {
         "x_value": "AVG-2019-2021",
@@ -24858,13 +24340,6 @@
     },
     {
         "x_value": "AVG-2019-2021",
-        "y_value": 1.31,
-        "x_b_value": "03",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "AVG-2019-2021",
         "y_value": 5.77,
         "x_b_value": "04",
         "group_value": "industry-household",
@@ -24967,13 +24442,6 @@
         "x_b_value": "04",
         "group_value": "industry-household",
         "group_b_value": "Spain"
-    },
-    {
-        "x_value": "AVG-2019-2021",
-        "y_value": 1.06,
-        "x_b_value": "04",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
     },
     {
         "x_value": "AVG-2019-2021",
@@ -25082,13 +24550,6 @@
     },
     {
         "x_value": "AVG-2019-2021",
-        "y_value": 0.93,
-        "x_b_value": "05",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "AVG-2019-2021",
         "y_value": 3.72,
         "x_b_value": "06",
         "group_value": "industry-household",
@@ -25191,13 +24652,6 @@
         "x_b_value": "06",
         "group_value": "industry-household",
         "group_b_value": "Spain"
-    },
-    {
-        "x_value": "AVG-2019-2021",
-        "y_value": 0.98,
-        "x_b_value": "06",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
     },
     {
         "x_value": "AVG-2019-2021",
@@ -25306,13 +24760,6 @@
     },
     {
         "x_value": "AVG-2019-2021",
-        "y_value": 0.79,
-        "x_b_value": "07",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "AVG-2019-2021",
         "y_value": 3.61,
         "x_b_value": "08",
         "group_value": "industry-household",
@@ -25415,13 +24862,6 @@
         "x_b_value": "08",
         "group_value": "industry-household",
         "group_b_value": "Spain"
-    },
-    {
-        "x_value": "AVG-2019-2021",
-        "y_value": 0.93,
-        "x_b_value": "08",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
     },
     {
         "x_value": "AVG-2019-2021",
@@ -25530,13 +24970,6 @@
     },
     {
         "x_value": "AVG-2019-2021",
-        "y_value": 0.84,
-        "x_b_value": "09",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "AVG-2019-2021",
         "y_value": 6.15,
         "x_b_value": "10",
         "group_value": "industry-household",
@@ -25639,13 +25072,6 @@
         "x_b_value": "10",
         "group_value": "industry-household",
         "group_b_value": "Spain"
-    },
-    {
-        "x_value": "AVG-2019-2021",
-        "y_value": 1.23,
-        "x_b_value": "10",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
     },
     {
         "x_value": "AVG-2019-2021",
@@ -25754,13 +25180,6 @@
     },
     {
         "x_value": "AVG-2019-2021",
-        "y_value": 1.3,
-        "x_b_value": "11",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "AVG-2019-2021",
         "y_value": 8.9,
         "x_b_value": "12",
         "group_value": "industry-household",
@@ -25863,13 +25282,6 @@
         "x_b_value": "12",
         "group_value": "industry-household",
         "group_b_value": "Spain"
-    },
-    {
-        "x_value": "AVG-2019-2021",
-        "y_value": 1.57,
-        "x_b_value": "12",
-        "group_value": "industry-household",
-        "group_b_value": "Sweden"
     },
     {
         "x_value": "AVG-2019-2021",
@@ -26038,13 +25450,6 @@
         "x_b_value": "01",
         "group_value": "power",
         "group_b_value": "Spain"
-    },
-    {
-        "x_value": "AVG-2019-2021",
-        "y_value": 0.0,
-        "x_b_value": "01",
-        "group_value": "power",
-        "group_b_value": "Sweden"
     },
     {
         "x_value": "AVG-2019-2021",
@@ -26223,13 +25628,6 @@
     },
     {
         "x_value": "AVG-2019-2021",
-        "y_value": 0.0,
-        "x_b_value": "02",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "AVG-2019-2021",
         "y_value": 13.88,
         "x_b_value": "02",
         "group_value": "power",
@@ -26402,13 +25800,6 @@
         "x_b_value": "03",
         "group_value": "power",
         "group_b_value": "Spain"
-    },
-    {
-        "x_value": "AVG-2019-2021",
-        "y_value": 0.0,
-        "x_b_value": "03",
-        "group_value": "power",
-        "group_b_value": "Sweden"
     },
     {
         "x_value": "AVG-2019-2021",
@@ -26587,13 +25978,6 @@
     },
     {
         "x_value": "AVG-2019-2021",
-        "y_value": 0.0,
-        "x_b_value": "04",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "AVG-2019-2021",
         "y_value": 15.48,
         "x_b_value": "04",
         "group_value": "power",
@@ -26766,13 +26150,6 @@
         "x_b_value": "05",
         "group_value": "power",
         "group_b_value": "Spain"
-    },
-    {
-        "x_value": "AVG-2019-2021",
-        "y_value": 0.0,
-        "x_b_value": "05",
-        "group_value": "power",
-        "group_b_value": "Sweden"
     },
     {
         "x_value": "AVG-2019-2021",
@@ -26951,13 +26328,6 @@
     },
     {
         "x_value": "AVG-2019-2021",
-        "y_value": 0.0,
-        "x_b_value": "06",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "AVG-2019-2021",
         "y_value": 13.75,
         "x_b_value": "06",
         "group_value": "power",
@@ -27130,13 +26500,6 @@
         "x_b_value": "07",
         "group_value": "power",
         "group_b_value": "Spain"
-    },
-    {
-        "x_value": "AVG-2019-2021",
-        "y_value": 0.0,
-        "x_b_value": "07",
-        "group_value": "power",
-        "group_b_value": "Sweden"
     },
     {
         "x_value": "AVG-2019-2021",
@@ -27315,13 +26678,6 @@
     },
     {
         "x_value": "AVG-2019-2021",
-        "y_value": 0.0,
-        "x_b_value": "08",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "AVG-2019-2021",
         "y_value": 15.85,
         "x_b_value": "08",
         "group_value": "power",
@@ -27494,13 +26850,6 @@
         "x_b_value": "09",
         "group_value": "power",
         "group_b_value": "Spain"
-    },
-    {
-        "x_value": "AVG-2019-2021",
-        "y_value": 0.0,
-        "x_b_value": "09",
-        "group_value": "power",
-        "group_b_value": "Sweden"
     },
     {
         "x_value": "AVG-2019-2021",
@@ -27679,13 +27028,6 @@
     },
     {
         "x_value": "AVG-2019-2021",
-        "y_value": 0.0,
-        "x_b_value": "10",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "AVG-2019-2021",
         "y_value": 15.2,
         "x_b_value": "10",
         "group_value": "power",
@@ -27861,13 +27203,6 @@
     },
     {
         "x_value": "AVG-2019-2021",
-        "y_value": 0.0,
-        "x_b_value": "11",
-        "group_value": "power",
-        "group_b_value": "Sweden"
-    },
-    {
-        "x_value": "AVG-2019-2021",
         "y_value": 17.2,
         "x_b_value": "11",
         "group_value": "power",
@@ -28040,13 +27375,6 @@
         "x_b_value": "12",
         "group_value": "power",
         "group_b_value": "Spain"
-    },
-    {
-        "x_value": "AVG-2019-2021",
-        "y_value": 0.0,
-        "x_b_value": "12",
-        "group_value": "power",
-        "group_b_value": "Sweden"
     },
     {
         "x_value": "AVG-2019-2021",
