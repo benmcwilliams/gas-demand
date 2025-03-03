@@ -12,7 +12,6 @@ from src.extractors.germany_demand import GermanyDemandExtractor
 from src.extractors.energy_charts_demand import EnergyChartsDemandExtractor 
 from src.extractors.spain_demand import SpainDemandExtractor
 from src.extractors.uk_demand import UKDemandExtractor
-#from src.extractors.cbs_demand import CBSDemandExtractor
 
 def main(update_raw=False, initial_load=False):
     # Initialize config and logging
@@ -54,8 +53,8 @@ def main(update_raw=False, initial_load=False):
                 logger.error(f"Error extracting data from {extractor.__class__.__name__}: {str(e)}")
                 continue
         
-        # Save all data
-        if demand_data:
+        # Fix: Check length of demand_data list instead of the DataFrame directly
+        if len(demand_data) > 0:
             final_data = pd.concat(demand_data, ignore_index=True)
             
             # Filter out future dates and empty values
@@ -69,7 +68,6 @@ def main(update_raw=False, initial_load=False):
             logger.info(f"Found demand data for {len(final_data['country'].unique())} countries")
             final_data.to_csv('src/data/processed/daily_demand_all.csv', index=False)
             logger.info("All data saved successfully")
-
         else:
             logger.error("No demand data was successfully extracted")
             
@@ -78,7 +76,7 @@ def main(update_raw=False, initial_load=False):
 
 if __name__ == "__main__":
 
-    main(update_raw=True, initial_load=False)
+    main(update_raw=False, initial_load=False)
     
     # For initial load of ENTSOG data (commented out):
     # main(update_raw=True, initial_load=True) 
