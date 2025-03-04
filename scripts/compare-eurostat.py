@@ -12,6 +12,9 @@ df['month'] = df['date'].dt.month
 # filter for after Jan 2019
 df = df[df['date'] >= "2019-01-01"] 
 
+#filter for before Feb 2025
+df = df[df['date'] < "2025-02-01"]
+
 #read in monthly eurostat data
 df_eurostat = pd.read_csv("src/data/raw/eurostat/latest_data.csv")
 df_eurostat['date'] = pd.to_datetime(df_eurostat['date'], format='%Y-%m-%d', errors='coerce')
