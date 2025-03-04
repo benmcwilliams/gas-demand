@@ -35,8 +35,7 @@ def main(update_raw=False, initial_load=False):
             EntsogDemandExtractor(),
             EnergyChartsDemandExtractor(),
             UKDemandExtractor(),
-            #IrelandDemandExtractor(),
-            #CBSDemandExtractor(),
+            #IrelandDemandExtractor()
         ]
 
         # Get demand data from all sources

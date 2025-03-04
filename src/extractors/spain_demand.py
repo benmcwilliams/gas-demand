@@ -29,10 +29,11 @@ class SpainDemandExtractor:
                 return pd.DataFrame()
                 
             latest_file = max(files, key=lambda x: x.stat().st_mtime)
+            print(f"Latest file: {latest_file}")
             df = pd.read_csv(latest_file)
 
-            # Convert date column
-            df['date'] = pd.to_datetime(df['date'])
+            # Convert date column with dayfirst=True for European date format
+            df['date'] = pd.to_datetime(df['date'], dayfirst=True)
             df = df[['date', 'power_generation', 'total_demand']].copy()
             
             # Create separate dataframes for each type

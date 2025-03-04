@@ -11,9 +11,12 @@ from datetime import datetime, timedelta
 import pandas as pd
 from pathlib import Path
 import random
+import sys
+sys.path.append(str(Path(__file__).parent.parent.parent))
+from src.utils.spain import accept_cookies, change_date, extract_demand_data
 
 class SpainScraper:
-    def __init__(self, end_date=None, lookback_days=60, historic_mode=False):
+    def __init__(self, end_date=None, lookback_days=20, historic_mode=False):
         """Initialize the scraper with end date and lookback period."""
         self.logger = logging.getLogger(__name__)
         self.base_url = "https://www.enagas.es/en/technical-management-system/energy-data/demand/forecast/"
@@ -26,9 +29,9 @@ class SpainScraper:
         self.request_count = 0
         
         # Constants for rate limiting
-        self.SAVE_INTERVAL = 30  # Save every 30 days
+        self.SAVE_INTERVAL = 10  # Save every 30 days
         self.PAUSE_INTERVAL = 100  # Take a longer break every 100 requests
-        self.SHORT_PAUSE = 5  # Regular pause between requests (seconds)
+        self.SHORT_PAUSE = 2  # Regular pause between requests (seconds)
         self.LONG_PAUSE = 60  # Longer pause after PAUSE_INTERVAL requests (seconds)
 
     def setup_driver(self):
@@ -78,10 +81,11 @@ class SpainScraper:
             latest_file = max(progress_files, key=lambda x: x.stat().st_mtime)
             self.logger.info(f"Found progress file: {latest_file}")
             
-            # Load the progress file
+            # Load the progress file with dayfirst=True to handle DD/MM/YYYY format
             existing_data = pd.read_csv(latest_file)
             if not existing_data.empty:
-                last_date = pd.to_datetime(existing_data['date']).max()
+                last_date = pd.to_datetime(existing_data['date'], dayfirst=True)  # Added dayfirst=True here
+                last_date = last_date.max()
                 self.logger.info(f"Found last processed date: {last_date.date()}")
                 
                 # Load existing data into self.data
@@ -156,6 +160,8 @@ class SpainScraper:
             # If not in historic mode, merge with existing data
             if not self.historic_mode and output_file.exists():
                 existing_df = pd.read_csv(output_file)
+                # Convert dates with dayfirst=True
+                existing_df['date'] = pd.to_datetime(existing_df['date'], dayfirst=True)
                 # Combine existing and new data
                 combined_df = pd.concat([existing_df, df])
                 # Remove duplicates based on date, keeping the most recent entry
@@ -183,80 +189,15 @@ class SpainScraper:
 
     def accept_cookies(self):
         """Accept cookies by clicking the appropriate button."""
-        try:
-            accept_button = WebDriverWait(self.driver, 10).until(
-                EC.element_to_be_clickable((By.ID, "onetrust-accept-btn-handler"))
-            )
-            accept_button.click()
-            self.logger.info("Accepted cookies.")
-        except Exception as e:
-            self.logger.error(f"Error accepting cookies: {str(e)}")
+        accept_cookies(self.driver, self.logger)
 
     def change_date(self, date):
         """Change the date using the date picker."""
-        try:
-            # Format date as dd/mm/yyyy
-            date_str = date.strftime('%d/%m/%Y')
-            
-            # Wait for the date input field to be visible
-            date_input = WebDriverWait(self.driver, 10).until(
-                EC.visibility_of_element_located((By.ID, "datepicker-intraday"))
-            )
-            
-            # Clear the existing date and enter the new date
-            date_input.clear()
-            date_input.send_keys(date_str)
-            
-            # Click the submit button
-            submit_button = WebDriverWait(self.driver, 10).until(
-                EC.element_to_be_clickable((By.CLASS_NAME, "arrow-submit"))
-            )
-            submit_button.click()
-            
-            # Wait for the page to load after changing the date
-            time.sleep(5)  # Adjust this as necessary
-            
-            return True
-        except Exception as e:
-            self.logger.error(f"Error changing date to {date_str}: {str(e)}")
-            return False
+        return change_date(self.driver, date, self.logger)
 
     def extract_demand_data(self, date):
         """Extract demand data from the table for a specific date."""
-        try:
-            # Wait for the table to be present
-            table = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.CLASS_NAME, "table-row"))
-            )
-            
-            # Initialize data dictionary with the date
-            data = {'date': date.strftime('%Y-%m-%d')}
-            
-            # Find all rows in the table
-            rows = table.find_elements(By.TAG_NAME, "tr")
-            
-            # Process each row
-            for row in rows:
-                cells = row.find_elements(By.TAG_NAME, "td")
-                if len(cells) == 2:
-                    label = cells[0].text.strip()
-                    value = cells[1].text.strip().replace('GWh', '').strip()
-                    value = float(value.replace(',', ''))
-                    
-                    if "Final Demand" in label:
-                        data['final_demand'] = value
-                    elif "Natural gas for power generation" in label:
-                        data['power_generation'] = value
-                    elif "LNG trucks" in label:
-                        data['lng_trucks'] = value
-                    elif "Total demand" in label:
-                        data['total_demand'] = value
-            
-            return data
-            
-        except Exception as e:
-            self.logger.error(f"Error extracting data for date {date}: {str(e)}")
-            return None
+        return extract_demand_data(self.driver, date, self.logger)
 
 if __name__ == "__main__":
     # Configure logging
@@ -266,7 +207,7 @@ if __name__ == "__main__":
     )
     
     # Initialize and run scraper with historic mode enabled
-    scraper = SpainScraper(lookback_days=2, historic_mode=False)
+    scraper = SpainScraper(lookback_days=20, historic_mode=False)
     print(f"Scraping from {scraper.start_date.date()} to {scraper.end_date.date()}")
     df = scraper.scrape()
     
