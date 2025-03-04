@@ -13,13 +13,14 @@ from pathlib import Path
 import random
 
 class SpainScraper:
-    def __init__(self, end_date=None, lookback_days=30):
+    def __init__(self, end_date=None, lookback_days=60, historic_mode=False):
         """Initialize the scraper with end date and lookback period."""
         self.logger = logging.getLogger(__name__)
         self.base_url = "https://www.enagas.es/en/technical-management-system/energy-data/demand/forecast/"
         self.output_dir = Path("src/data/raw/spain")
         self.end_date = datetime.strptime(end_date, '%d/%m/%Y') if end_date else datetime.now()
         self.start_date = self.end_date - timedelta(days=lookback_days)
+        self.historic_mode = historic_mode
         self.driver = None
         self.data = []
         self.request_count = 0
@@ -60,6 +61,11 @@ class SpainScraper:
 
     def get_last_processed_date(self):
         """Get the last processed date from progress files."""
+        # If in historic mode, ignore existing progress files
+        if self.historic_mode:
+            self.logger.info("Historic mode enabled - ignoring existing progress files")
+            return None
+        
         try:
             # Look for progress files in the output directory
             progress_files = list(self.output_dir.glob("spain_gas_demand_progress_*.csv"))
@@ -100,7 +106,7 @@ class SpainScraper:
             
             # Check for existing progress and update start_date if necessary
             last_processed_date = self.get_last_processed_date()
-            if last_processed_date:
+            if last_processed_date and not self.historic_mode:
                 self.start_date = last_processed_date + timedelta(days=1)
                 self.logger.info(f"Resuming scraping from {self.start_date.date()}")
             else:
@@ -143,11 +149,27 @@ class SpainScraper:
             
             # Final save of the complete dataset
             df = pd.DataFrame(self.data)
-            output_file = self.output_dir / f"spain_gas_demand_{self.start_date.date()}_{self.end_date.date()}.csv"
-            df.to_csv(output_file, index=False)
-            self.logger.info(f"Complete dataset saved to {output_file}")
             
-            return df
+            # Handle potential duplicates when saving final dataset
+            output_file = self.output_dir / f"spain_gas_demand_{self.start_date.date()}_{self.end_date.date()}.csv"
+            
+            # If not in historic mode, merge with existing data
+            if not self.historic_mode and output_file.exists():
+                existing_df = pd.read_csv(output_file)
+                # Combine existing and new data
+                combined_df = pd.concat([existing_df, df])
+                # Remove duplicates based on date, keeping the most recent entry
+                final_df = combined_df.drop_duplicates(subset=['date'], keep='last')
+                # Sort by date
+                final_df = final_df.sort_values('date')
+                final_df.to_csv(output_file, index=False)
+                self.logger.info(f"Merged dataset saved to {output_file}")
+            else:
+                # In historic mode or no existing file, just save the new data
+                df.to_csv(output_file, index=False)
+                self.logger.info(f"Complete dataset saved to {output_file}")
+            
+            return df if self.historic_mode else final_df
             
         except Exception as e:
             self.logger.error(f"Error during scraping: {str(e)}")
@@ -243,8 +265,9 @@ if __name__ == "__main__":
         format='%(asctime)s - %(levelname)s - %(message)s'
     )
     
-    # Initialize and run scraper
-    scraper = SpainScraper(end_date="07/01/2025", lookback_days=2000)  # ~5 years
+    # Initialize and run scraper with historic mode enabled
+    scraper = SpainScraper(lookback_days=2, historic_mode=False)
+    print(f"Scraping from {scraper.start_date.date()} to {scraper.end_date.date()}")
     df = scraper.scrape()
     
     if df is not None:
