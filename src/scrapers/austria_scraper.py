@@ -33,7 +33,7 @@ class AustriaScraper:
             # Debug information
             self.logger.info(f"Response status code: {response.status_code}")
             self.logger.info(f"Response headers: {dict(response.headers)}")
-            self.logger.info(f"First 500 characters of response: {response.text[:500]}")
+            self.logger.debug(f"First 500 characters of response: {response.text[:500]}")
             
             # Check if response is successful
             response.raise_for_status()
@@ -48,16 +48,3 @@ class AustriaScraper:
         except Exception as e:
             self.logger.error(f"Error scraping Austrian data: {str(e)}")
             return False 
-
-def get_austria_data():
-    """Get Austria gas consumption data from WIFO"""
-    url = "https://energie.wifo.ac.at/data/gas/consumption-aggm.csv"
-    
-    try:
-        # Read CSV directly from URL
-        df = pd.read_csv(url)
-        return df
-        
-    except Exception as e:
-        print(f"Error fetching Austria data: {e}")
-        return None 

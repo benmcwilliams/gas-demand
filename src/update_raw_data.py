@@ -12,23 +12,21 @@ from src.scrapers.uk_scraper import UKScraper
 from src.scrapers.eurostat_scraper import EurostatScraper
 
 def update_raw_data(initial_load=False):
-    # Initialize logging
-    logging.basicConfig(level=logging.INFO)
+
     logger = logging.getLogger(__name__)
     
     # Initialize scrapers
     scrapers = [
         #AustriaScraper(),
-        #DenmarkScraper(),
-        #EntsogScraper(),
-        #FranceScraper(),
-        #GermanyScraper(),
         #BnetzaScraper(),
-        #IrelandScraper(),
+        #DenmarkScraper(),
         #EnergyChartsScraper(),
+        EntsogScraper(),
+        #EurostatScraper(),
+        FranceScraper(),
+        #GermanyScraper(),
         #UKScraper(),
-        SpainScraper(),
-        #EurostatScraper()
+        #SpainScraper(),
     ]
     
     # Run all scrapers

@@ -1,0 +1,14 @@
+2025-04-25 17:55:39,585 - INFO - main.py:54 - Successfully extracted data for AustriaDemandExtractor
+2025-04-25 17:55:39,614 - INFO - main.py:54 - Successfully extracted data for DenmarkDemandExtractor
+2025-04-25 17:55:41,763 - INFO - main.py:54 - Successfully extracted data for FranceDemandExtractor
+2025-04-25 17:55:41,769 - INFO - germany_demand.py:79 - Successfully processed THE data
+2025-04-25 17:55:41,789 - INFO - germany_demand.py:117 - Successfully processed GASPOOL/NCG data
+2025-04-25 17:55:41,791 - INFO - main.py:54 - Successfully extracted data for GermanyDemandExtractor
+2025-04-25 17:55:41,791 - INFO - spain_demand.py:31 - Reading historic file: src/data/raw/spain/spain_gas_demand_2019_2024.csv
+2025-04-25 17:55:41,796 - INFO - spain_demand.py:35 - Reading current file: src/data/raw/spain/spain_gas_demand_2025-01-01_2025-04-23.csv
+2025-04-25 17:55:41,800 - INFO - main.py:54 - Successfully extracted data for SpainDemandExtractor
+2025-04-25 17:55:41,884 - INFO - main.py:54 - Successfully extracted data for EntsogDemandExtractor
+2025-04-25 17:55:41,919 - INFO - main.py:54 - Successfully extracted data for EnergyChartsDemandExtractor
+2025-04-25 17:55:41,942 - INFO - main.py:54 - Successfully extracted data for UKDemandExtractor
+2025-04-25 17:55:42,048 - INFO - main.py:72 - Found demand data for 26 countries
+2025-04-25 17:55:42,357 - INFO - main.py:74 - All data saved successfully
