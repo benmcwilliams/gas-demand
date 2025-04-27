@@ -14,9 +14,14 @@ from src.extractors.spain_demand import SpainDemandExtractor
 from src.extractors.uk_demand import UKDemandExtractor
 
 def main(update_raw=False, initial_load=False):
-    # Initialize config and logging
+    # initialize config and logging
     config = Config()
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(level=logging.INFO,
+                        format="%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s",
+                        handlers=[
+                            logging.FileHandler("src/logs/logs.log"),
+                            logging.StreamHandler()  # still prints to terminal
+                        ])
     logger = logging.getLogger(__name__)
     
     try:

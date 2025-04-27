@@ -18,8 +18,8 @@ class UKScraper:
             self.root_dir = root_dir
         
         if date_from is None:
-            # Default to 1 year ago
-            self.date_from = (datetime.now() - timedelta(days=365)).strftime('%Y-%m-%d')
+            # Default to 1st Jan 2025
+            self.date_from = '2025-01-01'
         else:
             self.date_from = date_from
         
@@ -37,18 +37,22 @@ class UKScraper:
         # Check if the request was successful
         if response.status_code == 200:
             # Create data directory in root
+            self.logger.info("Succesful response from the Nat Grid API")
             data_dir = os.path.join(self.root_dir, 'data/raw/uk')
             os.makedirs(data_dir, exist_ok=True)
             
             # Create a dynamic filename based on the date range
-            filename = os.path.join(data_dir, f'{self.date_from}_to_{self.date_to}.csv')
+            #filename = os.path.join(data_dir, f'{self.date_from}_to_{self.date_to}.csv')
+            filename = os.path.join(data_dir, 'UK_gas_data_2025.csv')
             
             # Write the content to a CSV file
             with open(filename, 'wb') as file:
                 file.write(response.content)
             self.logger.info(f"CSV file downloaded successfully to {filename}")
+            return True
         else:
             self.logger.error(f"Failed to download the file. Status code: {response.status_code}")
+            return False
 
 # Configure basic logging when run as main
 if __name__ == "__main__":

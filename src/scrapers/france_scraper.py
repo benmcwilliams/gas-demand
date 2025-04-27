@@ -41,7 +41,7 @@ class FranceScraper:
                     # Save the XLS file (updated file extension)
                     output_file = self.output_dir / f"france_demand_{year}.xls"
                     output_file.write_bytes(response.content)
-                    self.logger.info(f"Successfully downloaded data for {year}")
+                    self.logger.info(f"Successfully downloaded data for {year}, saved to {self.output_dir}")
                     
                 except requests.RequestException as e:
                     self.logger.error(f"Request error while downloading data for {year}: {str(e)}")

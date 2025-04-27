@@ -68,16 +68,19 @@ class BnetzaScraper:
                 - source (str): Always 'bundesnetzagentur'
         """
         try:
-            # Get historical data first
             historical_df = self._read_historical_data()
-            
-            # Get current data (existing code remains the same until result_df creation)
-            # Get the main page
+            self.logger.info("Stored data on BNetzA German household consumption returned.")
+
             base_url = "https://www.bundesnetzagentur.de"
             page_url = base_url + "/DE/Gasversorgung/aktuelle_gasversorgung/_svg/GasverbrauchSLP_monatlich/Gasverbrauch_SLP_M_2023_2.html"
+
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
+            }
             
-            response = requests.get(page_url)
+            response = requests.get(page_url, headers=headers)
             response.raise_for_status()
+            self.logger.debug(response.text[:1000])
             
             # Parse HTML and find CSV link
             soup = BeautifulSoup(response.content, 'html.parser')
@@ -94,6 +97,7 @@ class BnetzaScraper:
             csv_url = urljoin(base_url, csv_link)
             csv_response = requests.get(csv_url)
             csv_response.raise_for_status()
+            self.logger.info("New BNetzA csv file downloaded")
             
             # Process the CSV data
             content = csv_response.content.decode('utf-8')
@@ -109,7 +113,6 @@ class BnetzaScraper:
             
             # Get all column names
             all_columns = df.columns.tolist()
-            print(all_columns)
             
             # Identify year columns (those that are 4-digit numbers)
             year_columns = [col for col in all_columns if str(col).strip().isdigit() and len(str(col).strip()) == 4]
@@ -187,7 +190,7 @@ class BnetzaScraper:
         try:
             df = self.get_demand_data()
             self._save_historic_data(df)
-            self.logger.info("Successfully scraped German household demand data")
+            self.logger.info(f"Successfully saved updated German household demand data to {self.historic_file}")
             return True
         except Exception as e:
             self.logger.error(f"Error scraping German household demand data: {str(e)}")

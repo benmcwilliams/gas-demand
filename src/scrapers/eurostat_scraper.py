@@ -112,7 +112,7 @@ class EurostatScraper:
 
 if __name__ == "__main__":
     # Add test section
-    extractor = EurostatDemandExtractor()
+    extractor = EurostatScraper()
     df = extractor.get_demand_data()
     
     print("\nSample of extracted Eurostat demand data:")

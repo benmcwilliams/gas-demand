@@ -22,19 +22,23 @@ class SpainDemandExtractor:
                 - source (str): Always 'enagas'
         """
         try:
-            # Read the most recent complete dataset
-            files = list(Path("src/data/raw/spain").glob("spain_gas_demand_*.csv"))
-            if not files:
-                self.logger.error("No Spain gas demand data files found")
-                return pd.DataFrame()
-                
-            latest_file = max(files, key=lambda x: x.stat().st_mtime)
-            print(f"Latest file: {latest_file}")
-            df = pd.read_csv(latest_file)
+            data_dir = Path("src/data/raw/spain")
 
-            # Convert date column with dayfirst=True for European date format
-            df['date'] = pd.to_datetime(df['date'], dayfirst=True)
-            df = df[['date', 'power_generation', 'total_demand']].copy()
+            # Define the two expected file paths
+            historic_file = data_dir / "spain_gas_demand_2019_2024.csv"
+            current_file = max(data_dir.glob("spain_gas_demand_2025-*.csv"), key=lambda x: x.stat().st_mtime)
+            
+            self.logger.info(f"Reading historic file: {historic_file}")
+            df_hist = pd.read_csv(historic_file)
+            df_hist['date'] = pd.to_datetime(df_hist['date'], dayfirst=True) #NOTE different date formats.
+
+            self.logger.info(f"Reading current file: {current_file}")
+            df_current = pd.read_csv(current_file)
+            df_current['date'] = pd.to_datetime(df_current['date'], format='%Y-%m-%d')
+            
+            # Combine both datasets
+            df_combined = pd.concat([df_hist, df_current], ignore_index=True)
+            df_combined = df_combined[['date', 'power_generation', 'total_demand']].copy()
             
             # Create separate dataframes for each type
             result_dfs = []
@@ -47,11 +51,11 @@ class SpainDemandExtractor:
             
             # Process each demand type
             for original_col, standardized_type in type_mapping.items():
-                if original_col in df.columns:
+                if original_col in df_combined.columns:
                     type_df = pd.DataFrame({
                         'country': 'ES',
-                        'date': df['date'],
-                        'demand': df[original_col] * 1000000,  # Convert GWh to KWh
+                        'date': df_combined['date'],
+                        'demand': df_combined[original_col] * 1000000,  # Convert GWh to KWh
                         'type': standardized_type,
                         'source': self.source
                     })

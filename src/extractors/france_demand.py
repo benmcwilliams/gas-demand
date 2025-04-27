@@ -31,8 +31,8 @@ class FranceDemandExtractor:
                     # Updated file path to match new naming convention and extension
                     df = pd.read_excel(f'src/data/raw/france_demand/france_demand_{year}.xls', 
                                      skiprows=2,
-                                     usecols=[0,1,2,3,4],
-                                     names=['dates','total','industry','household','power'])
+                                     usecols=[0,1,2,3,4,5],
+                                     names=['dates','total','industry','power','pirr','household'])
                     dfs.append(df)
                 except Exception as e:
                     self.logger.warning(f"Could not read data for {year}: {str(e)}")
