@@ -1,25 +1,169 @@
 Applicable At,Applicable For,Data Item,Value,Generated Time,Quality Indicator
+10/06/2025 01:00:00,10/06/2025,"NTS Energy Offtaken, Industrial Offtake Total",24877287,11/06/2025 12:01:01,L
+10/06/2025 01:00:00,10/06/2025,"NTS Energy Offtaken, LDZ Offtake Total",642974278,12/06/2025 14:01:00,A
+10/06/2025 01:00:00,10/06/2025,"NTS Energy Offtaken, Powerstations Total",298396824,12/06/2025 15:01:00,A
+09/06/2025 01:00:00,09/06/2025,"NTS Energy Offtaken, Industrial Offtake Total",23954927,11/06/2025 14:01:01,A
+09/06/2025 01:00:00,09/06/2025,"NTS Energy Offtaken, LDZ Offtake Total",701719763,11/06/2025 16:01:00,A
+09/06/2025 01:00:00,09/06/2025,"NTS Energy Offtaken, Powerstations Total",267900905,12/06/2025 14:01:00,A
+08/06/2025 01:00:00,08/06/2025,"NTS Energy Offtaken, Industrial Offtake Total",21398043,10/06/2025 12:01:01,A
+08/06/2025 01:00:00,08/06/2025,"NTS Energy Offtaken, LDZ Offtake Total",675172669,10/06/2025 12:01:01,A
+08/06/2025 01:00:00,08/06/2025,"NTS Energy Offtaken, Powerstations Total",174710946,11/06/2025 12:01:01,A
+07/06/2025 01:00:00,07/06/2025,"NTS Energy Offtaken, Industrial Offtake Total",26083433,10/06/2025 14:01:00,A
+07/06/2025 01:00:00,07/06/2025,"NTS Energy Offtaken, LDZ Offtake Total",683515848,09/06/2025 14:01:00,A
+07/06/2025 01:00:00,07/06/2025,"NTS Energy Offtaken, Powerstations Total",255711681,09/06/2025 12:01:00,A
+06/06/2025 01:00:00,06/06/2025,"NTS Energy Offtaken, Industrial Offtake Total",22931389,10/06/2025 14:01:00,A
+06/06/2025 01:00:00,06/06/2025,"NTS Energy Offtaken, LDZ Offtake Total",685681541,09/06/2025 14:01:00,A
+06/06/2025 01:00:00,06/06/2025,"NTS Energy Offtaken, Powerstations Total",246842779,10/06/2025 12:01:01,A
+05/06/2025 01:00:00,05/06/2025,"NTS Energy Offtaken, Industrial Offtake Total",30485164,09/06/2025 12:01:00,A
+05/06/2025 01:00:00,05/06/2025,"NTS Energy Offtaken, LDZ Offtake Total",714201333,09/06/2025 16:01:00,A
+05/06/2025 01:00:00,05/06/2025,"NTS Energy Offtaken, Powerstations Total",231632103,09/06/2025 12:01:00,A
+04/06/2025 01:00:00,04/06/2025,"NTS Energy Offtaken, Industrial Offtake Total",23639738,05/06/2025 16:01:00,A
+04/06/2025 01:00:00,04/06/2025,"NTS Energy Offtaken, LDZ Offtake Total",680900938,06/06/2025 14:01:01,A
+04/06/2025 01:00:00,04/06/2025,"NTS Energy Offtaken, Powerstations Total",253098010,06/06/2025 12:01:00,A
+03/06/2025 01:00:00,03/06/2025,"NTS Energy Offtaken, Industrial Offtake Total",21602328,04/06/2025 17:01:01,A
+03/06/2025 01:00:00,03/06/2025,"NTS Energy Offtaken, LDZ Offtake Total",665670360,05/06/2025 13:01:01,A
+03/06/2025 01:00:00,03/06/2025,"NTS Energy Offtaken, Powerstations Total",191055460,05/06/2025 16:01:00,A
+02/06/2025 01:00:00,02/06/2025,"NTS Energy Offtaken, Industrial Offtake Total",29843126,03/06/2025 12:01:01,L
+02/06/2025 01:00:00,02/06/2025,"NTS Energy Offtaken, LDZ Offtake Total",602980195,05/06/2025 14:01:00,A
+02/06/2025 01:00:00,02/06/2025,"NTS Energy Offtaken, Powerstations Total",225710135,03/06/2025 12:01:01,A
+01/06/2025 01:00:00,01/06/2025,"NTS Energy Offtaken, Industrial Offtake Total",28430373,02/06/2025 16:01:00,A
+01/06/2025 01:00:00,01/06/2025,"NTS Energy Offtaken, LDZ Offtake Total",551454155,02/06/2025 14:01:01,A
+01/06/2025 01:00:00,01/06/2025,"NTS Energy Offtaken, Powerstations Total",145911267,02/06/2025 12:01:01,A
+31/05/2025 01:00:00,31/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",28619842,02/06/2025 12:01:01,A
+31/05/2025 01:00:00,31/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",527694508,02/06/2025 14:01:01,A
+31/05/2025 01:00:00,31/05/2025,"NTS Energy Offtaken, Powerstations Total",162206668,02/06/2025 12:01:01,A
+30/05/2025 01:00:00,30/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",30423344,02/06/2025 14:01:01,A
+30/05/2025 01:00:00,30/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",572982133,02/06/2025 14:01:01,A
+30/05/2025 01:00:00,30/05/2025,"NTS Energy Offtaken, Powerstations Total",251967571,04/06/2025 12:01:01,A
+29/05/2025 01:00:00,29/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",27109971,30/05/2025 16:01:01,A
+29/05/2025 01:00:00,29/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",606875613,30/05/2025 16:01:01,A
+29/05/2025 01:00:00,29/05/2025,"NTS Energy Offtaken, Powerstations Total",95586820,30/05/2025 16:01:01,A
+28/05/2025 01:00:00,28/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",31358183,30/05/2025 16:01:01,A
+28/05/2025 01:00:00,28/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",669782066,30/05/2025 14:01:01,A
+28/05/2025 01:00:00,28/05/2025,"NTS Energy Offtaken, Powerstations Total",248032396,30/05/2025 14:01:01,A
+27/05/2025 01:00:00,27/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",33181520,29/05/2025 14:01:01,A
+27/05/2025 01:00:00,27/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",771562155,29/05/2025 14:01:01,A
+27/05/2025 01:00:00,27/05/2025,"NTS Energy Offtaken, Powerstations Total",248150705,30/05/2025 16:01:01,A
+26/05/2025 01:00:00,26/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",28331982,29/05/2025 12:01:00,A
+26/05/2025 01:00:00,26/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",673181405,29/05/2025 12:01:00,A
+26/05/2025 01:00:00,26/05/2025,"NTS Energy Offtaken, Powerstations Total",137143775,30/05/2025 14:01:01,A
+25/05/2025 01:00:00,25/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",29048075,28/05/2025 12:01:00,A
+25/05/2025 01:00:00,25/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",581576680,28/05/2025 14:01:01,A
+25/05/2025 01:00:00,25/05/2025,"NTS Energy Offtaken, Powerstations Total",148578538,28/05/2025 12:01:00,A
+24/05/2025 01:00:00,24/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",26426517,27/05/2025 12:01:01,A
+24/05/2025 01:00:00,24/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",567477743,27/05/2025 14:01:01,A
+24/05/2025 01:00:00,24/05/2025,"NTS Energy Offtaken, Powerstations Total",126835443,27/05/2025 14:01:01,A
+23/05/2025 01:00:00,23/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",31773980,27/05/2025 12:01:01,A
+23/05/2025 01:00:00,23/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",674570876,27/05/2025 14:01:01,A
+23/05/2025 01:00:00,23/05/2025,"NTS Energy Offtaken, Powerstations Total",273102689,27/05/2025 12:01:01,A
+22/05/2025 01:00:00,22/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",32777865,23/05/2025 12:01:01,L
+22/05/2025 01:00:00,22/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",733728530,26/05/2025 12:01:00,A
+22/05/2025 01:00:00,22/05/2025,"NTS Energy Offtaken, Powerstations Total",295897494,27/05/2025 12:01:01,A
+21/05/2025 01:00:00,21/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",31863901,23/05/2025 12:01:01,A
+21/05/2025 01:00:00,21/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",661659051,23/05/2025 16:01:00,A
+21/05/2025 01:00:00,21/05/2025,"NTS Energy Offtaken, Powerstations Total",278035570,22/05/2025 16:01:00,A
+20/05/2025 01:00:00,20/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",29325584,22/05/2025 12:01:00,A
+20/05/2025 01:00:00,20/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",653418205,22/05/2025 12:01:00,A
+20/05/2025 01:00:00,20/05/2025,"NTS Energy Offtaken, Powerstations Total",421125269,21/05/2025 14:01:01,A
+19/05/2025 01:00:00,19/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",32449552,20/05/2025 14:01:00,A
+19/05/2025 01:00:00,19/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",689359015,21/05/2025 16:01:00,A
+19/05/2025 01:00:00,19/05/2025,"NTS Energy Offtaken, Powerstations Total",415072368,20/05/2025 12:01:00,A
+18/05/2025 01:00:00,18/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",26749931,19/05/2025 14:01:00,A
+18/05/2025 01:00:00,18/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",632101877,20/05/2025 12:01:00,A
+18/05/2025 01:00:00,18/05/2025,"NTS Energy Offtaken, Powerstations Total",279213913,19/05/2025 14:01:00,A
+17/05/2025 01:00:00,17/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",26110049,21/05/2025 12:01:01,A
+17/05/2025 01:00:00,17/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",618649617,20/05/2025 12:01:00,A
+17/05/2025 01:00:00,17/05/2025,"NTS Energy Offtaken, Powerstations Total",215642230,19/05/2025 14:01:00,A
+16/05/2025 01:00:00,16/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",26631960,19/05/2025 14:01:00,A
+16/05/2025 01:00:00,16/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",673636605,19/05/2025 14:01:00,A
+16/05/2025 01:00:00,16/05/2025,"NTS Energy Offtaken, Powerstations Total",207177082,19/05/2025 16:01:00,A
+15/05/2025 01:00:00,15/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",30616187,16/05/2025 12:01:01,L
+15/05/2025 01:00:00,15/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",777987227,19/05/2025 14:01:00,A
+15/05/2025 01:00:00,15/05/2025,"NTS Energy Offtaken, Powerstations Total",298527808,16/05/2025 16:01:01,A
+14/05/2025 01:00:00,14/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",26736268,16/05/2025 14:01:01,A
+14/05/2025 01:00:00,14/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",643174588,16/05/2025 14:01:01,A
+14/05/2025 01:00:00,14/05/2025,"NTS Energy Offtaken, Powerstations Total",185328566,16/05/2025 12:01:01,A
+13/05/2025 01:00:00,13/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",28083127,14/05/2025 16:01:01,A
+13/05/2025 01:00:00,13/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",617846199,14/05/2025 16:01:01,A
+13/05/2025 01:00:00,13/05/2025,"NTS Energy Offtaken, Powerstations Total",314078396,14/05/2025 16:01:01,A
+12/05/2025 01:00:00,12/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",27566794,15/05/2025 12:01:01,A
+12/05/2025 01:00:00,12/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",607446484,14/05/2025 16:01:01,A
+12/05/2025 01:00:00,12/05/2025,"NTS Energy Offtaken, Powerstations Total",301502992,14/05/2025 12:01:00,A
+11/05/2025 01:00:00,11/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",23826295,12/05/2025 18:20:00,A
+11/05/2025 01:00:00,11/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",564329451,13/05/2025 14:01:00,A
+11/05/2025 01:00:00,11/05/2025,"NTS Energy Offtaken, Powerstations Total",173912781,12/05/2025 18:20:00,A
+10/05/2025 01:00:00,10/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",27271889,12/05/2025 18:20:00,A
+10/05/2025 01:00:00,10/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",599461635,13/05/2025 12:01:01,A
+10/05/2025 01:00:00,10/05/2025,"NTS Energy Offtaken, Powerstations Total",184090043,12/05/2025 18:20:00,A
+09/05/2025 01:00:00,09/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",29377476,12/05/2025 18:20:00,A
+09/05/2025 01:00:00,09/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",777485032,13/05/2025 12:01:01,A
+09/05/2025 01:00:00,09/05/2025,"NTS Energy Offtaken, Powerstations Total",344637210,12/05/2025 18:20:00,A
+08/05/2025 01:00:00,08/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",30396750,09/05/2025 14:01:00,A
+08/05/2025 01:00:00,08/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",925708941,13/05/2025 12:01:01,A
+08/05/2025 01:00:00,08/05/2025,"NTS Energy Offtaken, Powerstations Total",537021599,12/05/2025 18:20:00,A
+07/05/2025 01:00:00,07/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",29275162,09/05/2025 16:01:01,A
+07/05/2025 01:00:00,07/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",909297498,09/05/2025 16:01:01,A
+07/05/2025 01:00:00,07/05/2025,"NTS Energy Offtaken, Powerstations Total",506877223,10/05/2025 12:01:00,A
+06/05/2025 01:00:00,06/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",29504397,09/05/2025 14:01:00,A
+06/05/2025 01:00:00,06/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",971305776,08/05/2025 19:01:01,A
+06/05/2025 01:00:00,06/05/2025,"NTS Energy Offtaken, Powerstations Total",463697310,09/05/2025 14:01:00,A
+05/05/2025 01:00:00,05/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",28900405,06/05/2025 12:01:01,L
+05/05/2025 01:00:00,05/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",985508943,07/05/2025 14:01:00,A
+05/05/2025 01:00:00,05/05/2025,"NTS Energy Offtaken, Powerstations Total",281467749,08/05/2025 14:01:01,A
+04/05/2025 01:00:00,04/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",26202358,06/05/2025 12:01:01,A
+04/05/2025 01:00:00,04/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",774176204,06/05/2025 14:01:01,A
+04/05/2025 01:00:00,04/05/2025,"NTS Energy Offtaken, Powerstations Total",161599786,08/05/2025 14:01:01,A
+03/05/2025 01:00:00,03/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",26190276,06/05/2025 12:01:01,A
+03/05/2025 01:00:00,03/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",611234318,06/05/2025 14:01:01,A
+03/05/2025 01:00:00,03/05/2025,"NTS Energy Offtaken, Powerstations Total",152813552,06/05/2025 16:01:01,A
+02/05/2025 01:00:00,02/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",28690552,06/05/2025 14:01:01,A
+02/05/2025 01:00:00,02/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",603212930,06/05/2025 14:01:01,A
+02/05/2025 01:00:00,02/05/2025,"NTS Energy Offtaken, Powerstations Total",333275412,06/05/2025 16:01:01,A
+01/05/2025 01:00:00,01/05/2025,"NTS Energy Offtaken, Industrial Offtake Total",26839274,02/05/2025 12:01:00,L
+01/05/2025 01:00:00,01/05/2025,"NTS Energy Offtaken, LDZ Offtake Total",592484622,06/05/2025 14:01:01,A
+01/05/2025 01:00:00,01/05/2025,"NTS Energy Offtaken, Powerstations Total",437023447,06/05/2025 14:01:01,A
+30/04/2025 01:00:00,30/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",28475702,02/05/2025 12:01:00,A
+30/04/2025 01:00:00,30/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",631272173,03/05/2025 14:01:01,A
+30/04/2025 01:00:00,30/04/2025,"NTS Energy Offtaken, Powerstations Total",496408944,02/05/2025 12:01:00,A
+29/04/2025 01:00:00,29/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",29109104,02/05/2025 12:01:00,A
+29/04/2025 01:00:00,29/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",674116631,02/05/2025 14:01:01,A
+29/04/2025 01:00:00,29/04/2025,"NTS Energy Offtaken, Powerstations Total",525109850,02/05/2025 12:01:00,A
+28/04/2025 01:00:00,28/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",32728519,02/05/2025 12:01:00,A
+28/04/2025 01:00:00,28/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",720080989,02/05/2025 12:01:00,A
+28/04/2025 01:00:00,28/04/2025,"NTS Energy Offtaken, Powerstations Total",480004533,02/05/2025 12:01:00,A
+27/04/2025 01:00:00,27/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",33094562,02/05/2025 12:01:00,A
+27/04/2025 01:00:00,27/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",762201492,02/05/2025 14:01:01,A
+27/04/2025 01:00:00,27/04/2025,"NTS Energy Offtaken, Powerstations Total",212781012,02/05/2025 12:01:00,A
+26/04/2025 01:00:00,26/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",34938663,02/05/2025 12:01:00,A
+26/04/2025 01:00:00,26/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",894730383,02/05/2025 12:01:00,A
+26/04/2025 01:00:00,26/04/2025,"NTS Energy Offtaken, Powerstations Total",271853136,02/05/2025 12:01:00,A
+25/04/2025 01:00:00,25/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",37845341,30/04/2025 17:16:01,L
+25/04/2025 01:00:00,25/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",1015040639,02/05/2025 07:58:00,A
+25/04/2025 01:00:00,25/04/2025,"NTS Energy Offtaken, Powerstations Total",462932068,02/05/2025 07:58:00,A
+24/04/2025 01:00:00,24/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",36338562,25/04/2025 16:01:00,A
+24/04/2025 01:00:00,24/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",1025531980,29/04/2025 16:01:01,A
+24/04/2025 01:00:00,24/04/2025,"NTS Energy Offtaken, Powerstations Total",537535265,29/04/2025 10:01:00,A
 23/04/2025 01:00:00,23/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",36354133,25/04/2025 12:01:01,A
 23/04/2025 01:00:00,23/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",1098266767,25/04/2025 14:01:01,A
-23/04/2025 01:00:00,23/04/2025,"NTS Energy Offtaken, Powerstations Total",638084575,24/04/2025 14:01:01,A
+23/04/2025 01:00:00,23/04/2025,"NTS Energy Offtaken, Powerstations Total",638063286,28/04/2025 16:01:01,A
 22/04/2025 01:00:00,22/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",34714979,23/04/2025 12:01:01,L
 22/04/2025 01:00:00,22/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",997206803,24/04/2025 14:01:01,A
 22/04/2025 01:00:00,22/04/2025,"NTS Energy Offtaken, Powerstations Total",527237367,23/04/2025 12:01:01,A
 21/04/2025 01:00:00,21/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",35902248,23/04/2025 11:30:00,
 21/04/2025 01:00:00,21/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",1088827491,25/04/2025 14:01:01,A
 21/04/2025 01:00:00,21/04/2025,"NTS Energy Offtaken, Powerstations Total",502125393,23/04/2025 15:01:01,A
-20/04/2025 01:00:00,20/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",36303522,21/04/2025 14:01:00,A
+20/04/2025 01:00:00,20/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",36185298,21/04/2025 14:01:00,A
 20/04/2025 01:00:00,20/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",997258288,24/04/2025 14:01:01,A
-20/04/2025 01:00:00,20/04/2025,"NTS Energy Offtaken, Powerstations Total",314917006,21/04/2025 14:01:00,A
-19/04/2025 01:00:00,19/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",33859606,20/04/2025 12:01:01,L
+20/04/2025 01:00:00,20/04/2025,"NTS Energy Offtaken, Powerstations Total",314920377,21/04/2025 14:01:00,A
+19/04/2025 01:00:00,19/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",33722904,20/04/2025 12:01:01,L
 19/04/2025 01:00:00,19/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",1024721050,22/04/2025 14:01:01,A
 19/04/2025 01:00:00,19/04/2025,"NTS Energy Offtaken, Powerstations Total",196180876,23/04/2025 16:01:01,A
-18/04/2025 01:00:00,18/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",30553781,21/04/2025 12:01:00,A
+18/04/2025 01:00:00,18/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",30504429,21/04/2025 12:01:00,A
 18/04/2025 01:00:00,18/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",1116298506,23/04/2025 14:01:00,A
 18/04/2025 01:00:00,18/04/2025,"NTS Energy Offtaken, Powerstations Total",159947598,23/04/2025 16:01:01,A
-17/04/2025 01:00:00,17/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",28566827,20/04/2025 12:01:01,A
+17/04/2025 01:00:00,17/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",28535568,20/04/2025 12:01:01,A
 17/04/2025 01:00:00,17/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",1145112378,22/04/2025 14:01:01,A
-17/04/2025 01:00:00,17/04/2025,"NTS Energy Offtaken, Powerstations Total",431531043,18/04/2025 12:01:01,A
+17/04/2025 01:00:00,17/04/2025,"NTS Energy Offtaken, Powerstations Total",431319768,18/04/2025 12:01:01,A
 16/04/2025 01:00:00,16/04/2025,"NTS Energy Offtaken, Industrial Offtake Total",27226659,17/04/2025 18:01:00,A
 16/04/2025 01:00:00,16/04/2025,"NTS Energy Offtaken, LDZ Offtake Total",1249599486,18/04/2025 14:01:01,A
 16/04/2025 01:00:00,16/04/2025,"NTS Energy Offtaken, Powerstations Total",231130625,17/04/2025 18:01:00,A
@@ -133,7 +277,7 @@ Applicable At,Applicable For,Data Item,Value,Generated Time,Quality Indicator
 11/03/2025 00:00:00,11/03/2025,"NTS Energy Offtaken, Powerstations Total",658171072,13/03/2025 14:01:00,A
 10/03/2025 00:00:00,10/03/2025,"NTS Energy Offtaken, Industrial Offtake Total",29192761,15/03/2025 12:01:01,A
 10/03/2025 00:00:00,10/03/2025,"NTS Energy Offtaken, LDZ Offtake Total",1552156210,13/03/2025 16:01:00,A
-10/03/2025 00:00:00,10/03/2025,"NTS Energy Offtaken, Powerstations Total",498684555,13/03/2025 14:01:00,A
+10/03/2025 00:00:00,10/03/2025,"NTS Energy Offtaken, Powerstations Total",533179400,13/03/2025 14:01:00,A
 09/03/2025 00:00:00,09/03/2025,"NTS Energy Offtaken, Industrial Offtake Total",29739947,14/03/2025 12:01:00,A
 09/03/2025 00:00:00,09/03/2025,"NTS Energy Offtaken, LDZ Offtake Total",1203535299,12/03/2025 12:01:01,A
 09/03/2025 00:00:00,09/03/2025,"NTS Energy Offtaken, Powerstations Total",484849755,11/03/2025 16:01:01,A
@@ -256,7 +400,7 @@ Applicable At,Applicable For,Data Item,Value,Generated Time,Quality Indicator
 29/01/2025 00:00:00,29/01/2025,"NTS Energy Offtaken, Powerstations Total",465266588,31/01/2025 11:30:00,
 28/01/2025 00:00:00,28/01/2025,"NTS Energy Offtaken, Industrial Offtake Total",49504610,29/01/2025 16:01:01,A
 28/01/2025 00:00:00,28/01/2025,"NTS Energy Offtaken, LDZ Offtake Total",2043807112,29/01/2025 16:01:01,A
-28/01/2025 00:00:00,28/01/2025,"NTS Energy Offtaken, Powerstations Total",413014752,29/01/2025 14:01:01,A
+28/01/2025 00:00:00,28/01/2025,"NTS Energy Offtaken, Powerstations Total",413010472,29/01/2025 14:01:01,A
 27/01/2025 00:00:00,27/01/2025,"NTS Energy Offtaken, Industrial Offtake Total",45068451,28/01/2025 12:01:00,L
 27/01/2025 00:00:00,27/01/2025,"NTS Energy Offtaken, LDZ Offtake Total",2139046102,29/01/2025 16:01:01,A
 27/01/2025 00:00:00,27/01/2025,"NTS Energy Offtaken, Powerstations Total",308794868,29/01/2025 12:01:01,A
@@ -328,7 +472,7 @@ Applicable At,Applicable For,Data Item,Value,Generated Time,Quality Indicator
 05/01/2025 00:00:00,05/01/2025,"NTS Energy Offtaken, Powerstations Total",363409794,09/01/2025 16:01:00,A
 04/01/2025 00:00:00,04/01/2025,"NTS Energy Offtaken, Industrial Offtake Total",56103099,07/01/2025 12:01:00,A
 04/01/2025 00:00:00,04/01/2025,"NTS Energy Offtaken, LDZ Offtake Total",2469608442,06/01/2025 14:01:01,A
-04/01/2025 00:00:00,04/01/2025,"NTS Energy Offtaken, Powerstations Total",636056855,09/01/2025 16:01:00,A
+04/01/2025 00:00:00,04/01/2025,"NTS Energy Offtaken, Powerstations Total",616917993,09/01/2025 16:01:00,A
 03/01/2025 00:00:00,03/01/2025,"NTS Energy Offtaken, Industrial Offtake Total",45376975,06/01/2025 12:01:00,A
 03/01/2025 00:00:00,03/01/2025,"NTS Energy Offtaken, LDZ Offtake Total",2538022581,06/01/2025 16:01:01,A
 03/01/2025 00:00:00,03/01/2025,"NTS Energy Offtaken, Powerstations Total",633134403,06/01/2025 14:01:01,A

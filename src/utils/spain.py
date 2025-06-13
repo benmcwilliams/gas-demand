@@ -5,14 +5,45 @@ import time
 
 def accept_cookies(driver, logger):
     """Accept cookies by clicking the appropriate button."""
-    try:
-        accept_button = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "onetrust-accept-btn-handler"))
-        )
-        accept_button.click()
-        logger.info("Accepted cookies.")
-    except Exception as e:
-        logger.error(f"Error accepting cookies: {str(e)}")
+    max_retries = 3
+    retry_delay = 2
+    
+    for attempt in range(max_retries):
+        try:
+            # Wait for the cookie banner to be visible
+            cookie_banner = WebDriverWait(driver, 15).until(
+                EC.presence_of_element_located((By.ID, "onetrust-banner-sdk"))
+            )
+            
+            # Wait for the accept button to be clickable
+            accept_button = WebDriverWait(driver, 15).until(
+                EC.element_to_be_clickable((By.ID, "onetrust-accept-btn-handler"))
+            )
+            
+            # Scroll the button into view if needed
+            driver.execute_script("arguments[0].scrollIntoView(true);", accept_button)
+            time.sleep(1)  # Small delay to ensure the button is fully visible
+            
+            # Try to click the button
+            accept_button.click()
+            
+            # Wait for the banner to disappear
+            WebDriverWait(driver, 10).until(
+                EC.invisibility_of_element_located((By.ID, "onetrust-banner-sdk"))
+            )
+            
+            logger.info("Successfully accepted cookies.")
+            return True
+            
+        except Exception as e:
+            logger.warning(f"Attempt {attempt + 1}/{max_retries} failed to accept cookies: {str(e)}")
+            if attempt < max_retries - 1:
+                time.sleep(retry_delay)
+            else:
+                logger.error("Failed to accept cookies after all attempts")
+                return False
+    
+    return False
 
 def change_date(driver, date, logger):
     """Change the date using the date picker."""
