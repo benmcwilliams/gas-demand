@@ -20,13 +20,13 @@ def update_raw_data(initial_load=False):
         #AustriaScraper(),
         #BnetzaScraper(),
         #DenmarkScraper(),
-        #EnergyChartsScraper(),
+        EnergyChartsScraper(),
         #EntsogScraper(),
         #EurostatScraper(),
         #FranceScraper(),
         #GermanyScraper(),
         #UKScraper(),
-        SpainScraper(),
+        #SpainScraper(),
     ]
     
     # Run all scrapers
