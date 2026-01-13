@@ -6,7 +6,7 @@ from src.scrapers.france_scraper import FranceScraper
 from src.scrapers.germany_scraper import GermanyScraper
 from src.scrapers.bnetza_scraper import BnetzaScraper
 from src.scrapers.energy_charts_scraper import EnergyChartsScraper
-from src.scrapers.ireland_scraper import IrelandScraper
+#from src.scrapers.ireland_scraper import IrelandScraper
 from src.scrapers.spain_scraper import SpainScraper
 from src.scrapers.uk_scraper import UKScraper
 from src.scrapers.eurostat_scraper import EurostatScraper
@@ -17,16 +17,16 @@ def update_raw_data(initial_load=False):
     
     # Initialize scrapers
     scrapers = [
-        #AustriaScraper(),
-        #BnetzaScraper(),
-        #DenmarkScraper(),
+        AustriaScraper(),
+        BnetzaScraper(),
+        DenmarkScraper(),
         EnergyChartsScraper(),
-        #EntsogScraper(),
-        #EurostatScraper(),
-        #FranceScraper(),
-        #GermanyScraper(),
-        #UKScraper(),
-        #SpainScraper(),
+        EntsogScraper(),
+        EurostatScraper(),
+        FranceScraper(),
+        GermanyScraper(),
+        UKScraper(),
+        SpainScraper(),
     ]
     
     # Run all scrapers

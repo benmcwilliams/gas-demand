@@ -60,7 +60,7 @@ class SpainScraper:
             # Create output directory if it doesn't exist
             self.output_dir.mkdir(parents=True, exist_ok=True)
             
-            self.start_date = datetime.strptime("2025-01-01", "%Y-%m-%d")
+            self.start_date = datetime.strptime("2026-01-01", "%Y-%m-%d")
             self.end_date = datetime.now() - timedelta(days=2)
             self.logger.info(f"Scraping from {self.start_date.date()} to {self.end_date.date()}")
 

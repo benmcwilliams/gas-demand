@@ -10,7 +10,7 @@ from typing import Dict
 logger = logging.getLogger(__name__)
 
 class EnergyChartsScraper:
-    def __init__(self, lookup_days: int = 180):
+    def __init__(self, lookup_days: int = 60):
         self.output_file = Path('src/data/raw/power_data.csv')
         self.temp_file = Path('src/data/raw/power_temp.csv')
         self.lookup_days = lookup_days

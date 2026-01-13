@@ -25,8 +25,8 @@ class SpainDemandExtractor:
             data_dir = Path("src/data/raw/spain")
 
             # Define the two expected file paths
-            historic_file = data_dir / "spain_gas_demand_2019_2024.csv"
-            current_file = max(data_dir.glob("spain_gas_demand_2025-*.csv"), key=lambda x: x.stat().st_mtime)
+            historic_file = data_dir / "spain_gas_demand_2019_2025.csv"
+            current_file = max(data_dir.glob("spain_gas_demand_2026-*.csv"), key=lambda x: x.stat().st_mtime)
             
             self.logger.info(f"Reading historic file: {historic_file}")
             df_hist = pd.read_csv(historic_file)

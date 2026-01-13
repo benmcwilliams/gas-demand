@@ -15,19 +15,19 @@ class BnetzaScraper:
         self.historic_file = 'src/data/raw/germany_household/latest_data.csv'
         
     def _read_historical_data(self) -> pd.DataFrame:
-        """Read and process historical data from 2018-2021."""
+        """Read and process historical data from 2018-2023."""
         try:
             # Read the historical CSV file
-            hist_df = pd.read_csv('src/data/raw/germany_household/SLP_2018_2021.csv', 
+            hist_df = pd.read_csv('src/data/raw/germany_household/SLP_2018_2023.csv', 
                                 delimiter=',')
             
             # Clean column names
-            hist_df.columns = ['month'] + [str(year) for year in range(2018, 2023)]
+            hist_df.columns = ['month'] + [str(year) for year in range(2018, 2024)]
             
             # Melt years into rows
             demand_df = hist_df.melt(
                 id_vars=['month'],
-                value_vars=['2018', '2019', '2020', '2021', '2022'],
+                value_vars=['2018', '2019', '2020', '2021', '2022', '2023'],
                 var_name='year',
                 value_name='demand'
             )

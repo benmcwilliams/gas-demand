@@ -15,7 +15,7 @@ class EntsogScraper:
         """
         Scrapes ENTSOG data for all points in points_filter.xlsx.
         Args:
-            initial_load (bool): If True, loads data since 2019, otherwise last 7 days.
+            initial_load (bool): If True, loads data since 2019, otherwise last 90 days.
         Returns:
             bool: True if successful, False otherwise.
         """
