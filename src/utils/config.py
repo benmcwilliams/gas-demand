@@ -19,4 +19,33 @@ class Config:
 
     @property
     def data_sources(self) -> Dict[str, str]:
-        return self.config_data.get('data_sources', {}) 
+        return self.config_data.get('data_sources', {})
+    
+    @property
+    def country_cutoffs(self) -> Dict:
+        """
+        Get country-specific cutoff dates.
+        Returns a dict with 'default' and country-specific cutoffs.
+        """
+        return self.config_data.get('country_cutoffs', {})
+    
+    def get_cutoff_for_country(self, country: str) -> tuple:
+        """
+        Get cutoff date (year, month) for a specific country.
+        Falls back to default if country-specific cutoff not found.
+        
+        Args:
+            country: Country code (e.g., 'FR', 'ES')
+            
+        Returns:
+            tuple: (year, month) cutoff date
+        """
+        cutoffs = self.country_cutoffs
+        default = cutoffs.get('default', {'year': 2026, 'month': 1})
+        
+        if country in cutoffs:
+            country_cutoff = cutoffs[country]
+            return (country_cutoff.get('year', default['year']), 
+                   country_cutoff.get('month', default['month']))
+        
+        return (default['year'], default['month']) 

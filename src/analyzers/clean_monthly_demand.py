@@ -1,6 +1,8 @@
 import pandas as pd
 from src.utils.filter_conditions_monthly import filter_conditions_monthly
 from src.utils.functions import calculate_industry_demand_from_industry_power, calculate_totals_for_countries, calculate_totals_monthly, calculate_industry_from_power_monthly
+from src.utils.config import Config
+from src.utils.country_cutoffs import apply_country_cutoffs
 
 class MonthlyDemandAnalyzer:
     def __init__(self):
@@ -104,6 +106,10 @@ class MonthlyDemandAnalyzer:
         #only export from year 2019 onwards
         updated_df = updated_df[updated_df['year'] >= 2019]
         updated_df['demand'] = updated_df['demand'].round(2)
+        
+        # Apply country-specific cutoff dates from config
+        config = Config()
+        updated_df = apply_country_cutoffs(updated_df, config)
 
         try:
             updated_df.to_csv("src/data/analyzed/monthly_demand_clean.csv", index=False)

@@ -41,4 +41,21 @@ output:
 # Logging settings
 logging:
   level: "INFO"
-  format: "%(asctime)s - %(levelname)s - %(message)s" 
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+
+# Country-specific cutoff dates for monthly data
+# Countries not listed here will use the default cutoff
+country_cutoffs:
+  default:
+    year: 2026
+    month: 1
+  # Country-specific overrides (example format - update with actual dates)
+  GR:
+    year: 2025
+    month: 12
+  SK:
+    year: 2025
+    month: 12
+  # FR:
+  #   year: 2025
+  #   month: 11 
