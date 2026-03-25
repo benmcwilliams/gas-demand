@@ -6190,3 +6190,385 @@ Scraping Results:
 2026-02-18 19:28:33,435 - INFO - main.py:54 - Successfully extracted data for UKDemandExtractor
 2026-02-18 19:28:33,489 - INFO - main.py:72 - Found demand data for 26 countries
 2026-02-18 19:28:33,676 - INFO - main.py:74 - All data saved successfully
+2026-03-25 19:48:03,937 - INFO - main.py:30 - Updating raw data files...
+2026-03-25 19:48:04,149 - INFO - update_raw_data.py:36 - Running AustriaScraper...
+2026-03-25 19:48:04,149 - INFO - austria_scraper.py:30 - Fetching data from https://energie.wifo.ac.at/data/gas/consumption-aggm.csv
+2026-03-25 19:48:04,971 - INFO - austria_scraper.py:34 - Response status code: 200
+2026-03-25 19:48:04,972 - INFO - austria_scraper.py:35 - Response headers: {'Date': 'Wed, 25 Mar 2026 18:48:04 GMT', 'Server': 'Apache/2.4.58 (Ubuntu) OpenSSL/3.0.13', 'Strict-Transport-Security': 'max-age=15768000; includeSubDomains', 'Last-Modified': 'Wed, 25 Mar 2026 05:00:16 GMT', 'ETag': '"5c210-64dd224cdd8be"', 'Accept-Ranges': 'bytes', 'Content-Length': '377360', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/csv'}
+2026-03-25 19:48:04,973 - INFO - austria_scraper.py:44 - Successfully saved raw Austrian data to src/data/raw/consumption-aggm.csv
+2026-03-25 19:48:04,973 - INFO - update_raw_data.py:36 - Running BnetzaScraper...
+2026-03-25 19:48:04,990 - INFO - bnetza_scraper.py:72 - Stored data on BNetzA German household consumption returned.
+2026-03-25 19:48:05,925 - INFO - bnetza_scraper.py:100 - New BNetzA csv file downloaded
+2026-03-25 19:48:05,942 - INFO - bnetza_scraper.py:193 - Successfully saved updated German household demand data to src/data/raw/germany_household/latest_data.csv
+2026-03-25 19:48:05,942 - INFO - update_raw_data.py:36 - Running DenmarkScraper...
+2026-03-25 19:48:05,942 - INFO - denmark_scraper.py:27 - Fetching data from https://api.energidataservice.dk/dataset/Gasflow since 2015
+2026-03-25 19:48:06,380 - INFO - denmark_scraper.py:38 - Successfully saved Danish gas flow data to src/data/raw/denmark_gasflow.json
+2026-03-25 19:48:06,381 - INFO - update_raw_data.py:36 - Running EnergyChartsScraper...
+2026-03-25 19:48:06,401 - INFO - energy_charts_scraper.py:39 - Performing regular 60-day power demand update
+2026-03-25 19:48:08,488 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for AT
+2026-03-25 19:48:08,490 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for AT (1/26)
+2026-03-25 19:48:11,095 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for BE
+2026-03-25 19:48:11,095 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for BE (2/26)
+2026-03-25 19:48:13,862 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for BG
+2026-03-25 19:48:13,863 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for BG (3/26)
+2026-03-25 19:48:16,837 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for HR
+2026-03-25 19:48:16,838 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for HR (4/26)
+2026-03-25 19:48:23,817 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for CZ
+2026-03-25 19:48:23,819 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for CZ (5/26)
+2026-03-25 19:48:26,849 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for DK
+2026-03-25 19:48:26,850 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for DK (6/26)
+2026-03-25 19:48:29,354 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for EE
+2026-03-25 19:48:29,355 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for EE (7/26)
+2026-03-25 19:48:33,545 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for FI
+2026-03-25 19:48:33,546 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for FI (8/26)
+2026-03-25 19:48:36,596 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for FR
+2026-03-25 19:48:36,597 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for FR (9/26)
+2026-03-25 19:48:39,821 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for DE
+2026-03-25 19:48:39,821 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for DE (10/26)
+2026-03-25 19:48:42,948 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for GR
+2026-03-25 19:48:42,949 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for GR (11/26)
+2026-03-25 19:48:46,561 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for HU
+2026-03-25 19:48:46,563 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for HU (12/26)
+2026-03-25 19:48:49,186 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for IE
+2026-03-25 19:48:49,186 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for IE (13/26)
+2026-03-25 19:48:51,930 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for IT
+2026-03-25 19:48:51,931 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for IT (14/26)
+2026-03-25 19:48:54,648 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for LV
+2026-03-25 19:48:54,649 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for LV (15/26)
+2026-03-25 19:48:57,788 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for LT
+2026-03-25 19:48:57,789 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for LT (16/26)
+2026-03-25 19:49:00,529 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for LU
+2026-03-25 19:49:00,530 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for LU (17/26)
+2026-03-25 19:49:03,937 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for NL
+2026-03-25 19:49:03,938 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for NL (18/26)
+2026-03-25 19:49:07,029 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for PL
+2026-03-25 19:49:07,030 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for PL (19/26)
+2026-03-25 19:49:09,514 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for PT
+2026-03-25 19:49:09,514 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for PT (20/26)
+2026-03-25 19:49:12,343 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for RO
+2026-03-25 19:49:12,344 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for RO (21/26)
+2026-03-25 19:49:14,991 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for SK
+2026-03-25 19:49:14,992 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for SK (22/26)
+2026-03-25 19:49:17,776 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for SI
+2026-03-25 19:49:17,777 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for SI (23/26)
+2026-03-25 19:49:20,665 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for ES
+2026-03-25 19:49:20,667 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for ES (24/26)
+2026-03-25 19:49:23,423 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for SE
+2026-03-25 19:49:23,424 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for SE (25/26)
+2026-03-25 19:49:27,032 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for UK
+2026-03-25 19:49:27,033 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for UK (26/26)
+2026-03-25 19:49:29,150 - INFO - update_raw_data.py:36 - Running EntsogScraper...
+2026-03-25 19:49:29,150 - INFO - entsog_scraper.py:32 - Performing multi-day ENTSOG update
+2026-03-25 19:49:29,150 - INFO - entsog_scraper.py:115 - Found existing data at src/data/raw/entsog_data.csv
+2026-03-25 19:49:29,173 - INFO - entsog_scraper.py:118 - Loaded 87438 records with 39 unique points
+2026-03-25 19:49:29,175 - INFO - entsog_scraper.py:47 - Point pt-tso-0001fnc-00001exit: Found 2606 existing dates
+2026-03-25 19:49:29,461 - INFO - entsog_scraper.py:89 - Point 1/39 (pt-tso-0001fnc-00001exit): Added 35 new records
+2026-03-25 19:49:31,477 - INFO - entsog_scraper.py:47 - Point pt-tso-0001dis-00001exit: Found 2606 existing dates
+2026-03-25 19:49:31,675 - INFO - entsog_scraper.py:89 - Point 2/39 (pt-tso-0001dis-00001exit): Added 35 new records
+2026-03-25 19:49:33,689 - INFO - entsog_scraper.py:47 - Point hr-tso-0001fnc-00018exit: Found 2605 existing dates
+2026-03-25 19:49:33,870 - INFO - entsog_scraper.py:89 - Point 3/39 (hr-tso-0001fnc-00018exit): Added 35 new records
+2026-03-25 19:49:35,885 - INFO - entsog_scraper.py:47 - Point fr-tso-0002dis-00188exit: Found 2605 existing dates
+2026-03-25 19:49:36,054 - INFO - entsog_scraper.py:89 - Point 4/39 (fr-tso-0002dis-00188exit): Added 35 new records
+2026-03-25 19:49:38,069 - INFO - entsog_scraper.py:47 - Point fr-tso-0002fnc-00015exit: Found 2605 existing dates
+2026-03-25 19:49:38,284 - INFO - entsog_scraper.py:89 - Point 5/39 (fr-tso-0002fnc-00015exit): Added 35 new records
+2026-03-25 19:49:40,296 - INFO - entsog_scraper.py:47 - Point it-tso-0001dis-00005exit: Found 2602 existing dates
+2026-03-25 19:49:40,480 - INFO - entsog_scraper.py:89 - Point 6/39 (it-tso-0001dis-00005exit): Added 38 new records
+2026-03-25 19:49:42,492 - INFO - entsog_scraper.py:47 - Point it-tso-0001fnc-00006exit: Found 2602 existing dates
+2026-03-25 19:49:42,674 - INFO - entsog_scraper.py:89 - Point 7/39 (it-tso-0001fnc-00006exit): Added 38 new records
+2026-03-25 19:49:44,688 - INFO - entsog_scraper.py:47 - Point it-tso-0001fnc-00005exit: Found 2602 existing dates
+2026-03-25 19:49:44,877 - INFO - entsog_scraper.py:89 - Point 8/39 (it-tso-0001fnc-00005exit): Added 38 new records
+2026-03-25 19:49:46,893 - INFO - entsog_scraper.py:47 - Point lu-tso-0001dis-00194exit: Found 2573 existing dates
+2026-03-25 19:49:47,110 - INFO - entsog_scraper.py:89 - Point 9/39 (lu-tso-0001dis-00194exit): Added 35 new records
+2026-03-25 19:49:49,125 - INFO - entsog_scraper.py:47 - Point lu-tso-0001fnc-00041exit: Found 2573 existing dates
+2026-03-25 19:49:49,322 - INFO - entsog_scraper.py:89 - Point 10/39 (lu-tso-0001fnc-00041exit): Added 35 new records
+2026-03-25 19:49:51,336 - INFO - entsog_scraper.py:47 - Point lv-tso-0001fnc-00205exit: Found 2239 existing dates
+2026-03-25 19:49:51,500 - INFO - entsog_scraper.py:89 - Point 11/39 (lv-tso-0001fnc-00205exit): Added 35 new records
+2026-03-25 19:49:53,513 - INFO - entsog_scraper.py:47 - Point ee-tso-0001fnc-00037exit: Found 2601 existing dates
+2026-03-25 19:49:53,731 - INFO - entsog_scraper.py:89 - Point 12/39 (ee-tso-0001fnc-00037exit): Added 35 new records
+2026-03-25 19:49:55,744 - INFO - entsog_scraper.py:47 - Point hu-tso-0001fnc-00200exit: Found 2606 existing dates
+2026-03-25 19:49:55,904 - INFO - entsog_scraper.py:89 - Point 13/39 (hu-tso-0001fnc-00200exit): Added 35 new records
+2026-03-25 19:49:57,919 - INFO - entsog_scraper.py:47 - Point hu-tso-0001dis-00196exit: Found 2606 existing dates
+2026-03-25 19:49:58,087 - INFO - entsog_scraper.py:89 - Point 14/39 (hu-tso-0001dis-00196exit): Added 35 new records
+2026-03-25 19:50:00,102 - INFO - entsog_scraper.py:47 - Point ro-tso-0001fnc-00010exit: Found 2605 existing dates
+2026-03-25 19:50:00,279 - INFO - entsog_scraper.py:89 - Point 15/39 (ro-tso-0001fnc-00010exit): Added 35 new records
+2026-03-25 19:50:02,290 - INFO - entsog_scraper.py:47 - Point ro-tso-0001dis-00058exit: Found 2605 existing dates
+2026-03-25 19:50:02,691 - INFO - entsog_scraper.py:89 - Point 16/39 (ro-tso-0001dis-00058exit): Added 35 new records
+2026-03-25 19:50:04,702 - INFO - entsog_scraper.py:47 - Point si-tso-0001dis-00059exit: Found 2606 existing dates
+2026-03-25 19:50:04,885 - INFO - entsog_scraper.py:89 - Point 17/39 (si-tso-0001dis-00059exit): Added 35 new records
+2026-03-25 19:50:06,901 - INFO - entsog_scraper.py:47 - Point nl-tso-0001dis-00187exit: Found 1277 existing dates
+2026-03-25 19:50:07,009 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001dis-00187exit: Expecting value: line 1 column 1 (char 0)
+2026-03-25 19:50:07,017 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00014exit: Found 1277 existing dates
+2026-03-25 19:50:07,124 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001fnc-00014exit: Expecting value: line 1 column 1 (char 0)
+2026-03-25 19:50:07,128 - INFO - entsog_scraper.py:47 - Point nl-tso-0001dis-00201exit: Found 1328 existing dates
+2026-03-25 19:50:07,309 - INFO - entsog_scraper.py:89 - Point 20/39 (nl-tso-0001dis-00201exit): Added 35 new records
+2026-03-25 19:50:09,324 - INFO - entsog_scraper.py:47 - Point nl-tso-0001dis-00202exit: Found 1328 existing dates
+2026-03-25 19:50:09,476 - INFO - entsog_scraper.py:89 - Point 21/39 (nl-tso-0001dis-00202exit): Added 35 new records
+2026-03-25 19:50:11,487 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00013exit: Found 1277 existing dates
+2026-03-25 19:50:11,691 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001fnc-00013exit: Expecting value: line 1 column 1 (char 0)
+2026-03-25 19:50:11,699 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00208exit: Found 1328 existing dates
+2026-03-25 19:50:11,894 - INFO - entsog_scraper.py:89 - Point 23/39 (nl-tso-0001fnc-00208exit): Added 35 new records
+2026-03-25 19:50:13,906 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00209exit: Found 1328 existing dates
+2026-03-25 19:50:14,087 - INFO - entsog_scraper.py:89 - Point 24/39 (nl-tso-0001fnc-00209exit): Added 35 new records
+2026-03-25 19:50:16,096 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00210exit: Found 1328 existing dates
+2026-03-25 19:50:16,321 - INFO - entsog_scraper.py:89 - Point 25/39 (nl-tso-0001fnc-00210exit): Added 35 new records
+2026-03-25 19:50:18,333 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00211exit: Found 1328 existing dates
+2026-03-25 19:50:18,520 - INFO - entsog_scraper.py:89 - Point 26/39 (nl-tso-0001fnc-00211exit): Added 35 new records
+2026-03-25 19:50:20,537 - INFO - entsog_scraper.py:47 - Point be-tso-0001dis-00192exit: Found 2070 existing dates
+2026-03-25 19:50:20,646 - ERROR - entsog_scraper.py:93 - Error processing point be-tso-0001dis-00192exit: Expecting value: line 1 column 1 (char 0)
+2026-03-25 19:50:20,655 - INFO - entsog_scraper.py:47 - Point be-tso-0001dis-00191exit: Found 2603 existing dates
+2026-03-25 19:50:20,850 - INFO - entsog_scraper.py:89 - Point 28/39 (be-tso-0001dis-00191exit): Added 35 new records
+2026-03-25 19:50:22,865 - INFO - entsog_scraper.py:47 - Point be-tso-0001fnc-00034exit: Found 2070 existing dates
+2026-03-25 19:50:23,098 - ERROR - entsog_scraper.py:93 - Error processing point be-tso-0001fnc-00034exit: Expecting value: line 1 column 1 (char 0)
+2026-03-25 19:50:23,107 - INFO - entsog_scraper.py:47 - Point be-tso-0001fnc-00033exit: Found 2603 existing dates
+2026-03-25 19:50:23,311 - INFO - entsog_scraper.py:89 - Point 30/39 (be-tso-0001fnc-00033exit): Added 35 new records
+2026-03-25 19:50:25,326 - INFO - entsog_scraper.py:47 - Point be-tso-0001fnc-00035exit: Found 2603 existing dates
+2026-03-25 19:50:25,627 - INFO - entsog_scraper.py:89 - Point 31/39 (be-tso-0001fnc-00035exit): Added 35 new records
+2026-03-25 19:50:27,642 - INFO - entsog_scraper.py:47 - Point bg-tso-0001fnc-00207exit: Found 1601 existing dates
+2026-03-25 19:50:27,936 - INFO - entsog_scraper.py:89 - Point 32/39 (bg-tso-0001fnc-00207exit): Added 35 new records
+2026-03-25 19:50:29,952 - INFO - entsog_scraper.py:47 - Point bg-tso-0001fnc-00017exit: Found 2606 existing dates
+2026-03-25 19:50:30,176 - INFO - entsog_scraper.py:89 - Point 33/39 (bg-tso-0001fnc-00017exit): Added 35 new records
+2026-03-25 19:50:32,192 - INFO - entsog_scraper.py:47 - Point bg-tso-0001fnc-00016exit: Found 2606 existing dates
+2026-03-25 19:50:32,437 - INFO - entsog_scraper.py:89 - Point 34/39 (bg-tso-0001fnc-00016exit): Added 35 new records
+2026-03-25 19:50:34,450 - INFO - entsog_scraper.py:47 - Point pl-tso-0002fnc-00040exit: Found 2606 existing dates
+2026-03-25 19:50:34,697 - INFO - entsog_scraper.py:89 - Point 35/39 (pl-tso-0002fnc-00040exit): Added 35 new records
+2026-03-25 19:50:36,712 - INFO - entsog_scraper.py:47 - Point pl-tso-0002fnc-00002exit: Found 2606 existing dates
+2026-03-25 19:50:36,993 - INFO - entsog_scraper.py:89 - Point 36/39 (pl-tso-0002fnc-00002exit): Added 35 new records
+2026-03-25 19:50:39,011 - INFO - entsog_scraper.py:47 - Point pl-tso-0002dis-00193exit: Found 2606 existing dates
+2026-03-25 19:50:39,300 - INFO - entsog_scraper.py:89 - Point 37/39 (pl-tso-0002dis-00193exit): Added 35 new records
+2026-03-25 19:50:41,316 - INFO - entsog_scraper.py:47 - Point pl-tso-0002dis-00013exit: Found 2606 existing dates
+2026-03-25 19:50:41,563 - INFO - entsog_scraper.py:89 - Point 38/39 (pl-tso-0002dis-00013exit): Added 35 new records
+2026-03-25 19:50:43,578 - INFO - entsog_scraper.py:47 - Point cz-sso-0002dis-00195exit,pl-tso-0002dis-00195entry: Found 2606 existing dates
+2026-03-25 19:50:43,982 - INFO - entsog_scraper.py:89 - Point 39/39 (cz-sso-0002dis-00195exit,pl-tso-0002dis-00195entry): Added 35 new records
+2026-03-25 19:50:46,105 - INFO - entsog_scraper.py:103 - Successfully saved ENTSOG data to src/data/raw/entsog_data.csv
+2026-03-25 19:50:46,105 - INFO - update_raw_data.py:36 - Running EurostatScraper...
+2026-03-25 19:50:56,127 - INFO - eurostat_scraper.py:37 - Successfully saved Eurostat demand data to src/data/raw/eurostat/latest_data.csv
+2026-03-25 19:50:56,128 - INFO - update_raw_data.py:36 - Running FranceScraper...
+2026-03-25 19:50:56,128 - INFO - france_scraper.py:23 - Fetching French gas demand data for years 2010-2026
+2026-03-25 19:50:57,105 - INFO - france_scraper.py:44 - Successfully downloaded data for 2010, saved to src/data/raw/france_demand
+2026-03-25 19:50:57,874 - INFO - france_scraper.py:44 - Successfully downloaded data for 2011, saved to src/data/raw/france_demand
+2026-03-25 19:50:58,016 - INFO - france_scraper.py:44 - Successfully downloaded data for 2012, saved to src/data/raw/france_demand
+2026-03-25 19:50:58,256 - INFO - france_scraper.py:44 - Successfully downloaded data for 2013, saved to src/data/raw/france_demand
+2026-03-25 19:50:58,508 - INFO - france_scraper.py:44 - Successfully downloaded data for 2014, saved to src/data/raw/france_demand
+2026-03-25 19:50:58,690 - INFO - france_scraper.py:44 - Successfully downloaded data for 2015, saved to src/data/raw/france_demand
+2026-03-25 19:50:58,843 - INFO - france_scraper.py:44 - Successfully downloaded data for 2016, saved to src/data/raw/france_demand
+2026-03-25 19:50:59,026 - INFO - france_scraper.py:44 - Successfully downloaded data for 2017, saved to src/data/raw/france_demand
+2026-03-25 19:50:59,217 - INFO - france_scraper.py:44 - Successfully downloaded data for 2018, saved to src/data/raw/france_demand
+2026-03-25 19:50:59,393 - INFO - france_scraper.py:44 - Successfully downloaded data for 2019, saved to src/data/raw/france_demand
+2026-03-25 19:50:59,509 - INFO - france_scraper.py:44 - Successfully downloaded data for 2020, saved to src/data/raw/france_demand
+2026-03-25 19:50:59,658 - INFO - france_scraper.py:44 - Successfully downloaded data for 2021, saved to src/data/raw/france_demand
+2026-03-25 19:50:59,769 - INFO - france_scraper.py:44 - Successfully downloaded data for 2022, saved to src/data/raw/france_demand
+2026-03-25 19:51:00,067 - INFO - france_scraper.py:44 - Successfully downloaded data for 2023, saved to src/data/raw/france_demand
+2026-03-25 19:51:03,869 - INFO - france_scraper.py:44 - Successfully downloaded data for 2024, saved to src/data/raw/france_demand
+2026-03-25 19:51:06,888 - INFO - france_scraper.py:44 - Successfully downloaded data for 2025, saved to src/data/raw/france_demand
+2026-03-25 19:51:08,922 - INFO - france_scraper.py:44 - Successfully downloaded data for 2026, saved to src/data/raw/france_demand
+2026-03-25 19:51:08,923 - INFO - update_raw_data.py:36 - Running GermanyScraper...
+2026-03-25 19:51:08,923 - INFO - germany_scraper.py:42 - Fetching German gas demand data from 2020-01-01 to 2026-03-25...
+2026-03-25 19:51:09,493 - INFO - germany_scraper.py:58 - Successfully saved German data to src/data/raw/THE_demand.csv
+2026-03-25 19:51:09,493 - INFO - update_raw_data.py:36 - Running UKScraper...
+2026-03-25 19:51:10,203 - INFO - uk_scraper.py:40 - Succesful response from the Nat Grid API
+2026-03-25 19:51:10,204 - INFO - uk_scraper.py:51 - CSV file downloaded successfully to /Users/benjamin_mcwilliams/Documents/bruegel/data_new/WORKING/ENERGY/gas-demand/src/data/raw/uk/UK_gas_data_2025.csv
+2026-03-25 19:51:10,205 - INFO - update_raw_data.py:36 - Running SpainScraper...
+2026-03-25 19:51:10,205 - INFO - spain_scraper.py:65 - Scraping from 2026-01-01 to 2026-03-23
+2026-03-25 19:51:10,206 - INFO - logger.py:11 - ====== WebDriver manager ======
+2026-03-25 19:51:13,806 - INFO - logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-03-25 19:51:13,857 - INFO - logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-03-25 19:51:13,895 - INFO - logger.py:11 - There is no [mac64] chromedriver "146.0.7680.165" for browser google-chrome "146.0.7680" in cache
+2026-03-25 19:51:13,899 - INFO - logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-03-25 19:51:13,987 - INFO - logger.py:11 - WebDriver version 146.0.7680.165 selected
+2026-03-25 19:51:13,989 - INFO - logger.py:11 - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/146.0.7680.165/mac-arm64/chromedriver-mac-arm64.zip
+2026-03-25 19:51:13,989 - INFO - logger.py:11 - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/146.0.7680.165/mac-arm64/chromedriver-mac-arm64.zip
+2026-03-25 19:51:14,173 - INFO - logger.py:11 - Driver downloading response is 200
+2026-03-25 19:51:15,186 - INFO - logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-03-25 19:51:15,264 - INFO - logger.py:11 - Driver has been saved in cache [/Users/benjamin_mcwilliams/.wdm/drivers/chromedriver/mac64/146.0.7680.165]
+2026-03-25 19:51:20,088 - INFO - spain.py:35 - Successfully accepted cookies.
+2026-03-25 19:51:20,088 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-01
+2026-03-25 19:51:25,292 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-01
+2026-03-25 19:51:28,658 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-02
+2026-03-25 19:51:33,828 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-02
+2026-03-25 19:51:36,027 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-03
+2026-03-25 19:51:41,195 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-03
+2026-03-25 19:51:44,708 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-04
+2026-03-25 19:51:49,874 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-04
+2026-03-25 19:51:53,847 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-05
+2026-03-25 19:51:59,018 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-05
+2026-03-25 19:52:01,974 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-06
+2026-03-25 19:52:07,140 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-06
+2026-03-25 19:52:10,514 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-07
+2026-03-25 19:52:15,687 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-07
+2026-03-25 19:52:17,733 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-08
+2026-03-25 19:52:22,903 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-08
+2026-03-25 19:52:26,263 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-09
+2026-03-25 19:52:31,436 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-09
+2026-03-25 19:52:35,319 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-10
+2026-03-25 19:52:40,493 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-10
+2026-03-25 19:52:44,283 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-11
+2026-03-25 19:52:49,457 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-11
+2026-03-25 19:52:52,815 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-12
+2026-03-25 19:52:57,991 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-12
+2026-03-25 19:53:00,522 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-13
+2026-03-25 19:53:05,695 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-13
+2026-03-25 19:53:09,679 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-14
+2026-03-25 19:53:14,833 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-14
+2026-03-25 19:53:17,505 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-15
+2026-03-25 19:53:22,678 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-15
+2026-03-25 19:53:25,409 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-16
+2026-03-25 19:53:30,590 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-16
+2026-03-25 19:53:33,662 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-17
+2026-03-25 19:53:38,815 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-17
+2026-03-25 19:53:41,944 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-18
+2026-03-25 19:53:47,105 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-18
+2026-03-25 19:53:50,201 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-19
+2026-03-25 19:53:55,380 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-19
+2026-03-25 19:53:57,879 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-20
+2026-03-25 19:54:03,058 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-20
+2026-03-25 19:54:06,255 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-21
+2026-03-25 19:54:11,435 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-21
+2026-03-25 19:54:13,591 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-22
+2026-03-25 19:54:18,770 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-22
+2026-03-25 19:54:21,266 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-23
+2026-03-25 19:54:26,419 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-23
+2026-03-25 19:54:30,422 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-24
+2026-03-25 19:54:35,598 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-24
+2026-03-25 19:54:39,432 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-25
+2026-03-25 19:54:44,611 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-25
+2026-03-25 19:54:47,079 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-26
+2026-03-25 19:54:52,256 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-26
+2026-03-25 19:54:54,351 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-27
+2026-03-25 19:54:59,533 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-27
+2026-03-25 19:55:03,414 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-28
+2026-03-25 19:55:08,594 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-28
+2026-03-25 19:55:12,149 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-29
+2026-03-25 19:55:17,329 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-29
+2026-03-25 19:55:19,788 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-30
+2026-03-25 19:55:24,971 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-30
+2026-03-25 19:55:27,262 - INFO - spain_scraper.py:79 - Scraping data for 2026-01-31
+2026-03-25 19:55:32,443 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-01-31
+2026-03-25 19:55:35,220 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-01
+2026-03-25 19:55:40,402 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-01
+2026-03-25 19:55:43,811 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-02
+2026-03-25 19:55:48,990 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-02
+2026-03-25 19:55:51,420 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-03
+2026-03-25 19:55:56,608 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-03
+2026-03-25 19:55:59,800 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-04
+2026-03-25 19:56:04,983 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-04
+2026-03-25 19:56:08,419 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-05
+2026-03-25 19:56:13,608 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-05
+2026-03-25 19:56:16,475 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-06
+2026-03-25 19:56:21,656 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-06
+2026-03-25 19:56:25,481 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-07
+2026-03-25 19:56:30,665 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-07
+2026-03-25 19:56:32,792 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-08
+2026-03-25 19:56:37,959 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-08
+2026-03-25 19:56:41,560 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-09
+2026-03-25 19:56:46,742 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-09
+2026-03-25 19:56:49,105 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-10
+2026-03-25 19:56:54,292 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-10
+2026-03-25 19:56:57,870 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-11
+2026-03-25 19:57:03,036 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-11
+2026-03-25 19:57:05,804 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-12
+2026-03-25 19:57:10,992 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-12
+2026-03-25 19:57:13,811 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-13
+2026-03-25 19:57:18,998 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-13
+2026-03-25 19:57:22,862 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-14
+2026-03-25 19:57:28,025 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-14
+2026-03-25 19:57:30,317 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-15
+2026-03-25 19:57:35,504 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-15
+2026-03-25 19:57:37,824 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-16
+2026-03-25 19:57:42,968 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-16
+2026-03-25 19:57:45,165 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-17
+2026-03-25 19:57:50,324 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-17
+2026-03-25 19:57:53,937 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-18
+2026-03-25 19:57:59,123 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-18
+2026-03-25 19:58:02,572 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-19
+2026-03-25 19:58:07,758 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-19
+2026-03-25 19:58:10,517 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-20
+2026-03-25 19:58:15,705 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-20
+2026-03-25 19:58:18,103 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-21
+2026-03-25 19:58:23,297 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-21
+2026-03-25 19:58:26,645 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-22
+2026-03-25 19:58:31,830 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-22
+2026-03-25 19:58:34,856 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-23
+2026-03-25 19:58:40,047 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-23
+2026-03-25 19:58:42,810 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-24
+2026-03-25 19:58:47,984 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-24
+2026-03-25 19:58:51,761 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-25
+2026-03-25 19:58:56,948 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-25
+2026-03-25 19:58:59,974 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-26
+2026-03-25 19:59:05,166 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-26
+2026-03-25 19:59:08,545 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-27
+2026-03-25 19:59:13,732 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-27
+2026-03-25 19:59:16,093 - INFO - spain_scraper.py:79 - Scraping data for 2026-02-28
+2026-03-25 19:59:21,287 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-02-28
+2026-03-25 19:59:23,994 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-01
+2026-03-25 19:59:29,187 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-01
+2026-03-25 19:59:32,860 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-02
+2026-03-25 19:59:38,042 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-02
+2026-03-25 19:59:41,791 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-03
+2026-03-25 19:59:46,955 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-03
+2026-03-25 19:59:50,655 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-04
+2026-03-25 19:59:55,830 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-04
+2026-03-25 19:59:59,615 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-05
+2026-03-25 20:00:04,811 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-05
+2026-03-25 20:00:07,466 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-06
+2026-03-25 20:00:12,659 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-06
+2026-03-25 20:00:15,171 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-07
+2026-03-25 20:00:20,373 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-07
+2026-03-25 20:00:23,074 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-08
+2026-03-25 20:00:28,233 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-08
+2026-03-25 20:00:30,471 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-09
+2026-03-25 20:00:35,666 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-09
+2026-03-25 20:00:38,478 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-10
+2026-03-25 20:00:43,670 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-10
+2026-03-25 20:00:46,480 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-11
+2026-03-25 20:00:51,679 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-11
+2026-03-25 20:00:54,957 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-12
+2026-03-25 20:01:00,148 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-12
+2026-03-25 20:01:03,486 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-13
+2026-03-25 20:01:08,663 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-13
+2026-03-25 20:01:11,089 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-14
+2026-03-25 20:01:16,277 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-14
+2026-03-25 20:01:18,368 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-15
+2026-03-25 20:01:23,556 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-15
+2026-03-25 20:01:26,202 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-16
+2026-03-25 20:01:31,387 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-16
+2026-03-25 20:01:33,706 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-17
+2026-03-25 20:01:38,890 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-17
+2026-03-25 20:01:42,548 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-18
+2026-03-25 20:01:47,732 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-18
+2026-03-25 20:01:51,321 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-19
+2026-03-25 20:01:56,507 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-19
+2026-03-25 20:01:59,380 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-20
+2026-03-25 20:02:04,563 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-20
+2026-03-25 20:02:08,179 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-21
+2026-03-25 20:02:13,343 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-21
+2026-03-25 20:02:16,284 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-22
+2026-03-25 20:02:21,459 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-22
+2026-03-25 20:02:24,692 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-23
+2026-03-25 20:02:29,874 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-23
+2026-03-25 20:02:33,810 - INFO - spain_scraper.py:101 - Dataset saved to src/data/raw/spain/spain_gas_demand_2026-01-01_2026-03-23.csv
+2026-03-25 20:02:33,909 - INFO - update_raw_data.py:47 - 
+Scraping Results:
+2026-03-25 20:02:33,910 - INFO - update_raw_data.py:50 - AustriaScraper: Success
+2026-03-25 20:02:33,910 - INFO - update_raw_data.py:50 - BnetzaScraper: Success
+2026-03-25 20:02:33,910 - INFO - update_raw_data.py:50 - DenmarkScraper: Success
+2026-03-25 20:02:33,910 - INFO - update_raw_data.py:50 - EnergyChartsScraper: Success
+2026-03-25 20:02:33,910 - INFO - update_raw_data.py:50 - EntsogScraper: Success
+2026-03-25 20:02:33,910 - INFO - update_raw_data.py:50 - EurostatScraper: Success
+2026-03-25 20:02:33,910 - INFO - update_raw_data.py:50 - FranceScraper: Success
+2026-03-25 20:02:33,910 - INFO - update_raw_data.py:50 - GermanyScraper: Success
+2026-03-25 20:02:33,910 - INFO - update_raw_data.py:50 - UKScraper: Success
+2026-03-25 20:02:33,910 - INFO - update_raw_data.py:50 - SpainScraper: Success
+2026-03-25 20:02:33,935 - INFO - main.py:54 - Successfully extracted data for AustriaDemandExtractor
+2026-03-25 20:02:33,944 - INFO - main.py:54 - Successfully extracted data for DenmarkDemandExtractor
+2026-03-25 20:02:34,885 - INFO - main.py:54 - Successfully extracted data for FranceDemandExtractor
+2026-03-25 20:02:34,890 - INFO - germany_demand.py:79 - Successfully processed THE data
+2026-03-25 20:02:34,900 - INFO - germany_demand.py:117 - Successfully processed GASPOOL/NCG data
+2026-03-25 20:02:34,902 - INFO - main.py:54 - Successfully extracted data for GermanyDemandExtractor
+2026-03-25 20:02:34,904 - INFO - spain_demand.py:31 - Reading historic file: src/data/raw/spain/spain_gas_demand_2019_2025.csv
+2026-03-25 20:02:34,923 - INFO - spain_demand.py:35 - Reading current file: src/data/raw/spain/spain_gas_demand_2026-01-01_2026-03-23.csv
+2026-03-25 20:02:34,925 - INFO - main.py:54 - Successfully extracted data for SpainDemandExtractor
+2026-03-25 20:02:34,975 - INFO - main.py:54 - Successfully extracted data for EntsogDemandExtractor
+2026-03-25 20:02:34,999 - INFO - main.py:54 - Successfully extracted data for EnergyChartsDemandExtractor
+2026-03-25 20:02:35,012 - INFO - main.py:54 - Successfully extracted data for UKDemandExtractor
+2026-03-25 20:02:35,072 - INFO - main.py:72 - Found demand data for 26 countries
+2026-03-25 20:02:35,246 - INFO - main.py:74 - All data saved successfully
