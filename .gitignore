@@ -1,1 +1,4 @@
 venv/
+
+# Generated Highcharts bundle (large; regenerate with python3 -m src.exporters.daily_rolling_highcharts)
+highcharts/data/daily_demand_rolling30.json

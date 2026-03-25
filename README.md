@@ -106,8 +106,20 @@ we read in daily data and groupby to get monthly data
 we then add in any extra data (eg Eurostat, BNetzA)
 we then apply different filter_conditions to return a final monthly dataset
 
+### Daily rolling chart (Highcharts)
 
+After `daily_demand_clean.csv` exists, build the JSON for the interactive daily chart (30-day trailing averages, TWh):
 
+```bash
+python3 -m src.exporters.daily_rolling_highcharts
+```
+
+Optional: `--recent-lag-days N` (default **2**) trims the solid “current plot year” line after `today − N` calendar days so the latest (often revised) observations are hidden.
+
+- **Input:** `src/data/analyzed/daily_demand_clean.csv`
+- **Output:** `highcharts/data/daily_demand_rolling30.json` (large file; you may prefer not to commit it)
+
+Open `highcharts/index-gas-daily-rolling.html` in a browser (from the `highcharts/` directory so data paths resolve). Typical order: run `main.py` (or your extractors) → `DailyDemandAnalyzer` / `clean_daily_demand.py` → exporter above.
 
 
 

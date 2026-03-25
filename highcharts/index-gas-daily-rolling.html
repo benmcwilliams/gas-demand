@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily gas demand (30-day rolling)</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/1.3.2/pym.v1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- code.highcharts.com is often blocked (403); use jsDelivr mirror -->
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@11.4.8/highcharts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@11.4.8/modules/exporting.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@11.4.8/modules/export-data.js"></script>
+
+    <link rel="stylesheet" href="styles/styles-gas-daily-rolling.css">
+    <script src="scripts/scripts-gas-daily-rolling.js"></script>
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="chart-legend-container">
+            <div id="chart-container"></div>
+            <div id="controls-panel">
+                <label class="control-label" for="category-select">Category</label>
+                <select id="category-select">
+                    <option value="total">total</option>
+                    <option value="power">power</option>
+                    <option value="household">household</option>
+                    <option value="industry">industry</option>
+                </select>
+
+                <label class="control-label">Countries (sum of selection)</label>
+                <div class="country-actions">
+                    <button type="button" id="select-all-countries">Select all</button>
+                    <button type="button" id="clear-countries">Clear</button>
+                </div>
+                <div id="country-checkboxes"></div>
+            </div>
+        </div>
+    </div>
+    <div class="note-container">
+        <p>
+            Values are trailing 30-day averages of daily demand, in TWh. The two dashed lines are
+            calendar-day averages of those rolling series for 2019–2021 and 2022–2025, aligned to the
+            displayed year axis. The solid recent-year line stops a short lag before today so provisional
+            daily prints are excluded (see subtitle for the date through which it is shown).
+        </p>
+    </div>
+</body>
+
+</html>
