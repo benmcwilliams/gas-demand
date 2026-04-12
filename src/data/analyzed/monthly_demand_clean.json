@@ -766,6 +766,24 @@
     },
     {
         "country":"AT",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":2.59,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"AT",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":1.23,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"AT",
         "type":"total",
         "year":2019,
         "month":1,
@@ -1525,7 +1543,25 @@
         "type":"total",
         "year":2026,
         "month":1,
-        "demand":13.25,
+        "demand":13.21,
+        "source":"aggm",
+        "country_contributions":null
+    },
+    {
+        "country":"AT",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":9.73,
+        "source":"aggm",
+        "country_contributions":null
+    },
+    {
+        "country":"AT",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":7.69,
         "source":"aggm",
         "country_contributions":null
     },
@@ -2296,6 +2332,24 @@
     },
     {
         "country":"BE",
+        "type":"household",
+        "year":2026,
+        "month":2,
+        "demand":9.93,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"BE",
+        "type":"household",
+        "year":2026,
+        "month":3,
+        "demand":8.15,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"BE",
         "type":"industry",
         "year":2019,
         "month":1,
@@ -3056,6 +3110,24 @@
         "year":2026,
         "month":1,
         "demand":4.02,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"BE",
+        "type":"industry",
+        "year":2026,
+        "month":2,
+        "demand":3.5,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"BE",
+        "type":"industry",
+        "year":2026,
+        "month":3,
+        "demand":3.7,
         "source":"entsog",
         "country_contributions":null
     },
@@ -3825,6 +3897,24 @@
         "country_contributions":null
     },
     {
+        "country":"BE",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":2.27,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"BE",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":1.48,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
         "country":"BG",
         "type":"power",
         "year":2019,
@@ -4585,6 +4675,24 @@
         "type":"power",
         "year":2026,
         "month":1,
+        "demand":0.47,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"BG",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":0.43,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"BG",
+        "type":"power",
+        "year":2026,
+        "month":3,
         "demand":0.47,
         "source":"energy-charts",
         "country_contributions":null
@@ -5355,6 +5463,24 @@
         "country_contributions":null
     },
     {
+        "country":"BG",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":3.27,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"BG",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":3.2,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
         "country":"CZ",
         "type":"power",
         "year":2019,
@@ -6121,6 +6247,24 @@
     },
     {
         "country":"CZ",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":1.23,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"CZ",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":0.76,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"CZ",
         "type":"total",
         "year":2019,
         "month":1,
@@ -6880,7 +7024,16 @@
         "type":"total",
         "year":2026,
         "month":1,
-        "demand":11.37,
+        "demand":13.53,
+        "source":"eurostat",
+        "country_contributions":null
+    },
+    {
+        "country":"CZ",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":10.16,
         "source":"eurostat",
         "country_contributions":null
     },
@@ -7618,7 +7771,7 @@
         "type":"household",
         "year":2025,
         "month":10,
-        "demand":27.34,
+        "demand":27.4,
         "source":"bundesnetzagentur",
         "country_contributions":null
     },
@@ -7636,7 +7789,7 @@
         "type":"household",
         "year":2025,
         "month":12,
-        "demand":53.16,
+        "demand":53.32,
         "source":"bundesnetzagentur",
         "country_contributions":null
     },
@@ -7645,7 +7798,25 @@
         "type":"household",
         "year":2026,
         "month":1,
-        "demand":65.1,
+        "demand":68.17,
+        "source":"bundesnetzagentur",
+        "country_contributions":null
+    },
+    {
+        "country":"DE",
+        "type":"household",
+        "year":2026,
+        "month":2,
+        "demand":48.64,
+        "source":"bundesnetzagentur",
+        "country_contributions":null
+    },
+    {
+        "country":"DE",
+        "type":"household",
+        "year":2026,
+        "month":3,
+        "demand":33.7,
         "source":"bundesnetzagentur",
         "country_contributions":null
     },
@@ -8416,6 +8587,24 @@
     },
     {
         "country":"DE",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":16.07,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"DE",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":9.33,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"DE",
         "type":"total",
         "year":2019,
         "month":1,
@@ -9175,7 +9364,25 @@
         "type":"total",
         "year":2026,
         "month":1,
-        "demand":135.38,
+        "demand":135.48,
+        "source":"the",
+        "country_contributions":null
+    },
+    {
+        "country":"DE",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":106.19,
+        "source":"the",
+        "country_contributions":null
+    },
+    {
+        "country":"DE",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":84.33,
         "source":"the",
         "country_contributions":null
     },
@@ -9940,7 +10147,25 @@
         "type":"power",
         "year":2026,
         "month":1,
-        "demand":0.52,
+        "demand":0.47,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"DK",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":0.26,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"DK",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":0.14,
         "source":"energy-charts",
         "country_contributions":null
     },
@@ -10710,6 +10935,24 @@
         "country_contributions":null
     },
     {
+        "country":"DK",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":3.51,
+        "source":"energinet",
+        "country_contributions":null
+    },
+    {
+        "country":"DK",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":1.86,
+        "source":"energinet",
+        "country_contributions":null
+    },
+    {
         "country":"EE",
         "type":"power",
         "year":2019,
@@ -11470,6 +11713,24 @@
         "type":"power",
         "year":2026,
         "month":1,
+        "demand":0.01,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"EE",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":0.01,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"EE",
+        "type":"power",
+        "year":2026,
+        "month":3,
         "demand":0.01,
         "source":"energy-charts",
         "country_contributions":null
@@ -12240,6 +12501,24 @@
         "country_contributions":null
     },
     {
+        "country":"EE",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":0.66,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"EE",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":0.32,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
         "country":"ES",
         "type":"power",
         "year":2019,
@@ -13000,7 +13279,25 @@
         "type":"power",
         "year":2026,
         "month":1,
-        "demand":9.03,
+        "demand":6.11,
+        "source":"enagas",
+        "country_contributions":null
+    },
+    {
+        "country":"ES",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":4.5,
+        "source":"enagas",
+        "country_contributions":null
+    },
+    {
+        "country":"ES",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":8.42,
         "source":"enagas",
         "country_contributions":null
     },
@@ -13765,7 +14062,25 @@
         "type":"total",
         "year":2026,
         "month":1,
-        "demand":36.17,
+        "demand":24.27,
+        "source":"enagas",
+        "country_contributions":null
+    },
+    {
+        "country":"ES",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":17.78,
+        "source":"enagas",
+        "country_contributions":null
+    },
+    {
+        "country":"ES",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":30.94,
         "source":"enagas",
         "country_contributions":null
     },
@@ -14536,6 +14851,24 @@
     },
     {
         "country":"FI",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":1.0,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"FI",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":0.07,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"FI",
         "type":"total",
         "year":2019,
         "month":1,
@@ -15295,7 +15628,16 @@
         "type":"total",
         "year":2026,
         "month":1,
-        "demand":0.0,
+        "demand":0.74,
+        "source":"eurostat",
+        "country_contributions":null
+    },
+    {
+        "country":"FI",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":2.49,
         "source":"eurostat",
         "country_contributions":null
     },
@@ -16066,6 +16408,24 @@
     },
     {
         "country":"FR",
+        "type":"household",
+        "year":2026,
+        "month":2,
+        "demand":26.59,
+        "source":"entsog, grtgaz",
+        "country_contributions":null
+    },
+    {
+        "country":"FR",
+        "type":"household",
+        "year":2026,
+        "month":3,
+        "demand":23.7,
+        "source":"entsog, grtgaz",
+        "country_contributions":null
+    },
+    {
+        "country":"FR",
         "type":"industry",
         "year":2019,
         "month":1,
@@ -16816,7 +17176,7 @@
         "type":"industry",
         "year":2025,
         "month":12,
-        "demand":10.02,
+        "demand":10.01,
         "source":"entsog, grtgaz",
         "country_contributions":null
     },
@@ -16826,6 +17186,24 @@
         "year":2026,
         "month":1,
         "demand":11.0,
+        "source":"entsog, grtgaz",
+        "country_contributions":null
+    },
+    {
+        "country":"FR",
+        "type":"industry",
+        "year":2026,
+        "month":2,
+        "demand":8.98,
+        "source":"entsog, grtgaz",
+        "country_contributions":null
+    },
+    {
+        "country":"FR",
+        "type":"industry",
+        "year":2026,
+        "month":3,
+        "demand":8.97,
         "source":"entsog, grtgaz",
         "country_contributions":null
     },
@@ -17591,6 +17969,24 @@
         "year":2026,
         "month":1,
         "demand":4.69,
+        "source":"grtgaz",
+        "country_contributions":null
+    },
+    {
+        "country":"FR",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":0.7,
+        "source":"grtgaz",
+        "country_contributions":null
+    },
+    {
+        "country":"FR",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":0.6,
         "source":"grtgaz",
         "country_contributions":null
     },
@@ -19873,6 +20269,24 @@
     },
     {
         "country":"HR",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":0.62,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"HR",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":0.39,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"HR",
         "type":"total",
         "year":2019,
         "month":1,
@@ -20633,6 +21047,24 @@
         "year":2026,
         "month":1,
         "demand":4.31,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"HR",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":3.04,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"HR",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":2.7,
         "source":"entsog",
         "country_contributions":null
     },
@@ -21403,6 +21835,24 @@
     },
     {
         "country":"HU",
+        "type":"household",
+        "year":2026,
+        "month":2,
+        "demand":9.37,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"HU",
+        "type":"household",
+        "year":2026,
+        "month":3,
+        "demand":6.99,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"HU",
         "type":"power",
         "year":2019,
         "month":1,
@@ -22163,6 +22613,24 @@
         "year":2026,
         "month":1,
         "demand":2.6,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"HU",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":1.77,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"HU",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":0.91,
         "source":"energy-charts",
         "country_contributions":null
     },
@@ -22933,6 +23401,24 @@
     },
     {
         "country":"IT",
+        "type":"household",
+        "year":2026,
+        "month":2,
+        "demand":37.56,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"IT",
+        "type":"household",
+        "year":2026,
+        "month":3,
+        "demand":32.17,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"IT",
         "type":"industry",
         "year":2019,
         "month":1,
@@ -23698,6 +24184,24 @@
     },
     {
         "country":"IT",
+        "type":"industry",
+        "year":2026,
+        "month":2,
+        "demand":10.38,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"IT",
+        "type":"industry",
+        "year":2026,
+        "month":3,
+        "demand":11.46,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"IT",
         "type":"power",
         "year":2019,
         "month":1,
@@ -24458,6 +24962,24 @@
         "year":2026,
         "month":1,
         "demand":28.61,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"IT",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":20.57,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"IT",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":18.22,
         "source":"entsog",
         "country_contributions":null
     },
@@ -25228,6 +25750,24 @@
     },
     {
         "country":"LT",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":0.34,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"LT",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":0.06,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"LT",
         "type":"total",
         "year":2019,
         "month":1,
@@ -25988,6 +26528,15 @@
         "year":2026,
         "month":1,
         "demand":3.06,
+        "source":"eurostat",
+        "country_contributions":null
+    },
+    {
+        "country":"LT",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":2.57,
         "source":"eurostat",
         "country_contributions":null
     },
@@ -26758,6 +27307,24 @@
     },
     {
         "country":"LU",
+        "type":"household",
+        "year":2026,
+        "month":2,
+        "demand":0.53,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"LU",
+        "type":"household",
+        "year":2026,
+        "month":3,
+        "demand":0.46,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"LU",
         "type":"power",
         "year":2019,
         "month":1,
@@ -27517,6 +28084,24 @@
         "type":"power",
         "year":2026,
         "month":1,
+        "demand":0.01,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"LU",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":0.01,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"LU",
+        "type":"power",
+        "year":2026,
+        "month":3,
         "demand":0.01,
         "source":"energy-charts",
         "country_contributions":null
@@ -28288,6 +28873,24 @@
     },
     {
         "country":"LV",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":1.0,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"LV",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":0.12,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"LV",
         "type":"total",
         "year":2020,
         "month":1,
@@ -28940,6 +29543,24 @@
         "year":2026,
         "month":1,
         "demand":2.34,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"LV",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":2.14,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"LV",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":0.7,
         "source":"entsog",
         "country_contributions":null
     },
@@ -29710,6 +30331,24 @@
     },
     {
         "country":"NL",
+        "type":"household",
+        "year":2026,
+        "month":2,
+        "demand":18.53,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"NL",
+        "type":"household",
+        "year":2026,
+        "month":3,
+        "demand":13.47,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"NL",
         "type":"industry",
         "year":2019,
         "month":1,
@@ -30475,6 +31114,24 @@
     },
     {
         "country":"NL",
+        "type":"industry",
+        "year":2026,
+        "month":2,
+        "demand":6.75,
+        "source":"entsog, CBS",
+        "country_contributions":null
+    },
+    {
+        "country":"NL",
+        "type":"industry",
+        "year":2026,
+        "month":3,
+        "demand":6.74,
+        "source":"entsog, CBS",
+        "country_contributions":null
+    },
+    {
+        "country":"NL",
         "type":"power",
         "year":2019,
         "month":1,
@@ -31235,6 +31892,24 @@
         "year":2026,
         "month":1,
         "demand":10.2,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"NL",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":6.79,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"NL",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":3.77,
         "source":"entsog",
         "country_contributions":null
     },
@@ -32005,6 +32680,24 @@
     },
     {
         "country":"PL",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":4.71,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"PL",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":3.64,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"PL",
         "type":"total",
         "year":2019,
         "month":1,
@@ -32765,6 +33458,24 @@
         "year":2026,
         "month":1,
         "demand":29.55,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"PL",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":26.12,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"PL",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":18.98,
         "source":"entsog",
         "country_contributions":null
     },
@@ -33535,6 +34246,24 @@
     },
     {
         "country":"PT",
+        "type":"household",
+        "year":2026,
+        "month":2,
+        "demand":1.76,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"PT",
+        "type":"household",
+        "year":2026,
+        "month":3,
+        "demand":1.76,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"PT",
         "type":"power",
         "year":2019,
         "month":1,
@@ -34295,6 +35024,24 @@
         "year":2026,
         "month":1,
         "demand":1.5,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"PT",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":1.9,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"PT",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":1.34,
         "source":"energy-charts",
         "country_contributions":null
     },
@@ -35065,6 +35812,24 @@
     },
     {
         "country":"RO",
+        "type":"household",
+        "year":2026,
+        "month":2,
+        "demand":10.97,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"RO",
+        "type":"household",
+        "year":2026,
+        "month":3,
+        "demand":8.55,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"RO",
         "type":"power",
         "year":2019,
         "month":1,
@@ -35825,6 +36590,24 @@
         "year":2026,
         "month":1,
         "demand":2.57,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"RO",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":2.06,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"RO",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":2.03,
         "source":"energy-charts",
         "country_contributions":null
     },
@@ -36595,6 +37378,24 @@
     },
     {
         "country":"SE",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":0.0,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"SE",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":0.01,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"SE",
         "type":"total",
         "year":2019,
         "month":1,
@@ -37354,6 +38155,15 @@
         "type":"total",
         "year":2026,
         "month":1,
+        "demand":0.95,
+        "source":"eurostat",
+        "country_contributions":null
+    },
+    {
+        "country":"SE",
+        "type":"total",
+        "year":2026,
+        "month":2,
         "demand":0.95,
         "source":"eurostat",
         "country_contributions":null
@@ -38125,6 +38935,24 @@
     },
     {
         "country":"SI",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":0.23,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"SI",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":0.23,
+        "source":"energy-charts",
+        "country_contributions":null
+    },
+    {
+        "country":"SI",
         "type":"total",
         "year":2019,
         "month":1,
@@ -38885,6 +39713,24 @@
         "year":2026,
         "month":1,
         "demand":1.41,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"SI",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":1.06,
+        "source":"entsog",
+        "country_contributions":null
+    },
+    {
+        "country":"SI",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":1.01,
         "source":"entsog",
         "country_contributions":null
     },
@@ -41059,6 +41905,24 @@
     },
     {
         "country":"UK",
+        "type":"household",
+        "year":2026,
+        "month":2,
+        "demand":53.91,
+        "source":"national-grid",
+        "country_contributions":null
+    },
+    {
+        "country":"UK",
+        "type":"household",
+        "year":2026,
+        "month":3,
+        "demand":47.98,
+        "source":"national-grid",
+        "country_contributions":null
+    },
+    {
+        "country":"UK",
         "type":"industry",
         "year":2020,
         "month":1,
@@ -41711,6 +42575,24 @@
         "year":2026,
         "month":1,
         "demand":1.16,
+        "source":"national-grid",
+        "country_contributions":null
+    },
+    {
+        "country":"UK",
+        "type":"industry",
+        "year":2026,
+        "month":2,
+        "demand":0.95,
+        "source":"national-grid",
+        "country_contributions":null
+    },
+    {
+        "country":"UK",
+        "type":"industry",
+        "year":2026,
+        "month":3,
+        "demand":0.83,
         "source":"national-grid",
         "country_contributions":null
     },
@@ -42373,6 +43255,24 @@
     },
     {
         "country":"UK",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":14.28,
+        "source":"national-grid",
+        "country_contributions":null
+    },
+    {
+        "country":"UK",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":11.34,
+        "source":"national-grid",
+        "country_contributions":null
+    },
+    {
+        "country":"UK",
         "type":"total",
         "year":2020,
         "month":1,
@@ -43025,6 +43925,24 @@
         "year":2026,
         "month":1,
         "demand":88.76,
+        "source":"national-grid",
+        "country_contributions":null
+    },
+    {
+        "country":"UK",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":69.15,
+        "source":"national-grid",
+        "country_contributions":null
+    },
+    {
+        "country":"UK",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":60.14,
         "source":"national-grid",
         "country_contributions":null
     },
@@ -43762,7 +44680,7 @@
         "type":"industry",
         "year":2025,
         "month":10,
-        "demand":32.05,
+        "demand":31.98,
         "source":"calculated",
         "country_contributions":null
     },
@@ -43780,7 +44698,7 @@
         "type":"industry",
         "year":2025,
         "month":12,
-        "demand":40.56,
+        "demand":40.41,
         "source":"calculated",
         "country_contributions":null
     },
@@ -43789,7 +44707,25 @@
         "type":"industry",
         "year":2026,
         "month":1,
-        "demand":50.65,
+        "demand":47.68,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"DE",
+        "type":"industry",
+        "year":2026,
+        "month":2,
+        "demand":41.48,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"DE",
+        "type":"industry",
+        "year":2026,
+        "month":3,
+        "demand":41.3,
         "source":"calculated",
         "country_contributions":null
     },
@@ -44559,6 +45495,24 @@
         "country_contributions":null
     },
     {
+        "country":"HU",
+        "type":"industry",
+        "year":2026,
+        "month":2,
+        "demand":0.44,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"HU",
+        "type":"industry",
+        "year":2026,
+        "month":3,
+        "demand":0.83,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
         "country":"LU",
         "type":"industry",
         "year":2019,
@@ -45320,6 +46274,24 @@
         "year":2026,
         "month":1,
         "demand":0.21,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"LU",
+        "type":"industry",
+        "year":2026,
+        "month":2,
+        "demand":0.21,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"LU",
+        "type":"industry",
+        "year":2026,
+        "month":3,
+        "demand":0.22,
         "source":"calculated",
         "country_contributions":null
     },
@@ -46089,6 +47061,24 @@
         "country_contributions":null
     },
     {
+        "country":"PT",
+        "type":"industry",
+        "year":2026,
+        "month":2,
+        "demand":0.65,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"PT",
+        "type":"industry",
+        "year":2026,
+        "month":3,
+        "demand":0.57,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
         "country":"RO",
         "type":"industry",
         "year":2019,
@@ -46850,6 +47840,24 @@
         "year":2026,
         "month":1,
         "demand":0.49,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"RO",
+        "type":"industry",
+        "year":2026,
+        "month":2,
+        "demand":0.29,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"RO",
+        "type":"industry",
+        "year":2026,
+        "month":3,
+        "demand":0.25,
         "source":"calculated",
         "country_contributions":null
     },
@@ -47619,6 +48627,42 @@
         "country_contributions":null
     },
     {
+        "country":"BE",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":15.71,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"BE",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":13.33,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"CZ",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":0.76,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"FI",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":0.07,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
         "country":"FR",
         "type":"total",
         "year":2019,
@@ -48380,6 +49424,24 @@
         "year":2026,
         "month":1,
         "demand":54.97,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"FR",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":36.26,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"FR",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":33.26,
         "source":"calculated",
         "country_contributions":null
     },
@@ -49149,6 +50211,24 @@
         "country_contributions":null
     },
     {
+        "country":"HU",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":11.59,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"HU",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":8.73,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
         "country":"IT",
         "type":"total",
         "year":2019,
@@ -49914,6 +50994,33 @@
         "country_contributions":null
     },
     {
+        "country":"IT",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":68.51,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"IT",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":61.85,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"LT",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":0.06,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
         "country":"LU",
         "type":"total",
         "year":2019,
@@ -50675,6 +51782,24 @@
         "year":2026,
         "month":1,
         "demand":0.96,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"LU",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":0.75,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"LU",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":0.69,
         "source":"calculated",
         "country_contributions":null
     },
@@ -51552,6 +52677,24 @@
         "country_contributions":null
     },
     {
+        "country":"NL",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":32.07,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"NL",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":23.98,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
         "country":"PT",
         "type":"total",
         "year":2019,
@@ -52313,6 +53456,24 @@
         "year":2026,
         "month":1,
         "demand":4.05,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"PT",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":4.32,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"PT",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":3.67,
         "source":"calculated",
         "country_contributions":null
     },
@@ -53082,6 +54243,33 @@
         "country_contributions":null
     },
     {
+        "country":"RO",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":13.31,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"RO",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":10.84,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"SE",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":0.01,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
         "country":"AT",
         "type":"industry-household",
         "year":2019,
@@ -53842,7 +55030,25 @@
         "type":"industry-household",
         "year":2026,
         "month":1,
-        "demand":10.2,
+        "demand":10.15,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"AT",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":7.14,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"AT",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":6.45,
         "source":"calculated",
         "country_contributions":null
     },
@@ -54612,6 +55818,24 @@
         "country_contributions":null
     },
     {
+        "country":"BG",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":2.84,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"BG",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":2.73,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
         "country":"CZ",
         "type":"industry-household",
         "year":2019,
@@ -55372,7 +56596,25 @@
         "type":"industry-household",
         "year":2026,
         "month":1,
-        "demand":9.71,
+        "demand":11.87,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"CZ",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":8.93,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"CZ",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":0.0,
         "source":"calculated",
         "country_contributions":null
     },
@@ -56137,7 +57379,25 @@
         "type":"industry-household",
         "year":2026,
         "month":1,
-        "demand":3.4,
+        "demand":3.46,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"DK",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":3.25,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"DK",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":1.72,
         "source":"calculated",
         "country_contributions":null
     },
@@ -56907,6 +58167,24 @@
         "country_contributions":null
     },
     {
+        "country":"EE",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":0.65,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"EE",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":0.31,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
         "country":"ES",
         "type":"industry-household",
         "year":2019,
@@ -57667,7 +58945,25 @@
         "type":"industry-household",
         "year":2026,
         "month":1,
-        "demand":27.14,
+        "demand":18.16,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"ES",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":13.27,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"ES",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":22.52,
         "source":"calculated",
         "country_contributions":null
     },
@@ -58432,7 +59728,25 @@
         "type":"industry-household",
         "year":2026,
         "month":1,
-        "demand":-0.97,
+        "demand":-0.23,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"FI",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":1.49,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"FI",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":0.0,
         "source":"calculated",
         "country_contributions":null
     },
@@ -59958,6 +61272,24 @@
         "country_contributions":null
     },
     {
+        "country":"HR",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":2.41,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"HR",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":2.32,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
         "country":"LT",
         "type":"industry-household",
         "year":2019,
@@ -60719,6 +62051,24 @@
         "year":2026,
         "month":1,
         "demand":2.66,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"LT",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":2.22,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"LT",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":0.0,
         "source":"calculated",
         "country_contributions":null
     },
@@ -61488,6 +62838,24 @@
         "country_contributions":null
     },
     {
+        "country":"LV",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":1.14,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"LV",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":0.58,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
         "country":"PL",
         "type":"industry-household",
         "year":2019,
@@ -62249,6 +63617,24 @@
         "year":2026,
         "month":1,
         "demand":24.39,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"PL",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":21.42,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"PL",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":15.34,
         "source":"calculated",
         "country_contributions":null
     },
@@ -63018,6 +64404,24 @@
         "country_contributions":null
     },
     {
+        "country":"SE",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":0.94,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"SE",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":0.0,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
         "country":"SI",
         "type":"industry-household",
         "year":2019,
@@ -63779,6 +65183,24 @@
         "year":2026,
         "month":1,
         "demand":1.11,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"SI",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":0.84,
+        "source":"calculated",
+        "country_contributions":null
+    },
+    {
+        "country":"SI",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":0.78,
         "source":"calculated",
         "country_contributions":null
     },
@@ -66082,18 +67504,18 @@
         "type":"household",
         "year":2025,
         "month":10,
-        "demand":89.29,
+        "demand":89.35,
         "source":"calculated",
         "country_contributions":{
-            "BE":6.8623047635,
-            "DE":30.6205736379,
-            "FR":16.4063655088,
-            "HU":6.5596370696,
-            "IT":19.6804614093,
-            "LU":0.3808002323,
-            "NL":10.7991292347,
-            "PT":1.8925124938,
-            "RO":6.7982156501
+            "BE":6.8575432689,
+            "DE":30.6687134058,
+            "FR":16.3949817504,
+            "HU":6.5550855848,
+            "IT":19.6668058792,
+            "LU":0.3805360093,
+            "NL":10.7916361261,
+            "PT":1.8911993508,
+            "RO":6.7934986246
         }
     },
     {
@@ -66120,18 +67542,18 @@
         "type":"household",
         "year":2025,
         "month":12,
-        "demand":183.39,
+        "demand":183.55,
         "source":"calculated",
         "country_contributions":{
-            "BE":6.1556534135,
-            "DE":28.9899546918,
-            "FR":17.8960136331,
-            "HU":5.6524449185,
-            "IT":23.6031974282,
-            "LU":0.3218631632,
-            "NL":10.3221428647,
-            "PT":0.9668753305,
-            "RO":6.0918545565
+            "BE":6.1504551215,
+            "DE":29.0499208603,
+            "FR":17.8809009069,
+            "HU":5.6476715732,
+            "IT":23.5832651311,
+            "LU":0.321591358,
+            "NL":10.3134260789,
+            "PT":0.966058829,
+            "RO":6.086710141
         }
     },
     {
@@ -66139,18 +67561,56 @@
         "type":"household",
         "year":2026,
         "month":1,
-        "demand":226.24,
+        "demand":229.3,
         "source":"calculated",
         "country_contributions":{
-            "BE":6.0690054145,
-            "DE":28.7752704037,
-            "FR":17.3660902505,
-            "HU":5.8426091888,
-            "IT":23.6297701162,
-            "LU":0.3240662311,
-            "NL":11.0746969263,
-            "PT":0.8412604969,
-            "RO":6.077230972
+            "BE":5.9877783001,
+            "DE":29.7285368562,
+            "FR":17.1336637978,
+            "HU":5.7644121445,
+            "IT":23.3135110408,
+            "LU":0.319728953,
+            "NL":10.9264740112,
+            "PT":0.8300011293,
+            "RO":5.9958937673
+        }
+    },
+    {
+        "country":"EU",
+        "type":"household",
+        "year":2026,
+        "month":2,
+        "demand":163.88,
+        "source":"calculated",
+        "country_contributions":{
+            "BE":6.0608070758,
+            "DE":29.6775831649,
+            "FR":16.2242272757,
+            "HU":5.7189619264,
+            "IT":22.9201202372,
+            "LU":0.3221528434,
+            "NL":11.3096002738,
+            "PT":1.0755897285,
+            "RO":6.6909574743
+        }
+    },
+    {
+        "country":"EU",
+        "type":"household",
+        "year":2026,
+        "month":3,
+        "demand":128.94,
+        "source":"calculated",
+        "country_contributions":{
+            "BE":6.3215088763,
+            "DE":26.1338553337,
+            "FR":18.3778954923,
+            "HU":5.4212263222,
+            "IT":24.9488200842,
+            "LU":0.3562275264,
+            "NL":10.4440808565,
+            "PT":1.3663433842,
+            "RO":6.6300421242
         }
     },
     {
@@ -67472,15 +68932,15 @@
         "demand":66.04,
         "source":"calculated",
         "country_contributions":{
-            "BE":5.3525263426,
-            "FR":14.0321882302,
-            "IT":16.9636073708,
-            "NL":11.5502299068,
-            "DE":48.3838440282,
-            "HU":1.8073903437,
-            "LU":0.3157137438,
-            "PT":1.0229699585,
-            "RO":0.5715300753
+            "BE":5.3525194067,
+            "FR":14.0322996296,
+            "IT":16.9635853889,
+            "NL":11.5502149397,
+            "DE":48.3837813312,
+            "HU":1.8073880016,
+            "LU":0.3157133347,
+            "PT":1.0229686329,
+            "RO":0.5715293347
         }
     },
     {
@@ -67488,18 +68948,18 @@
         "type":"industry",
         "year":2024,
         "month":11,
-        "demand":72.76,
+        "demand":72.77,
         "source":"calculated",
         "country_contributions":{
-            "BE":5.2076525701,
-            "FR":14.3621669842,
-            "IT":14.8270761231,
-            "NL":10.395788417,
-            "DE":53.0215511574,
-            "HU":0.6134982041,
-            "LU":0.2969030953,
-            "PT":0.8643069925,
-            "RO":0.4110564563
+            "BE":5.2075685621,
+            "FR":14.3635484644,
+            "IT":14.8268369378,
+            "NL":10.3956207157,
+            "DE":53.0206958319,
+            "HU":0.6134883073,
+            "LU":0.2968983058,
+            "PT":0.8642930498,
+            "RO":0.4110498253
         }
     },
     {
@@ -67510,15 +68970,15 @@
         "demand":74.99,
         "source":"calculated",
         "country_contributions":{
-            "BE":5.242776217,
-            "FR":14.5582654621,
-            "IT":12.2989070104,
-            "NL":10.5812639849,
-            "DE":54.7617104409,
-            "HU":0.9558220973,
-            "LU":0.2325386107,
-            "PT":0.9351340956,
-            "RO":0.4335820812
+            "BE":5.2427229525,
+            "FR":14.5591335143,
+            "IT":12.2987820587,
+            "NL":10.5811564837,
+            "DE":54.7611540849,
+            "HU":0.9558123865,
+            "LU":0.2325362482,
+            "PT":0.935124595,
+            "RO":0.4335776762
         }
     },
     {
@@ -67529,15 +68989,15 @@
         "demand":80.32,
         "source":"calculated",
         "country_contributions":{
-            "BE":4.5072876377,
-            "FR":13.9173529245,
-            "IT":13.0203555215,
-            "NL":9.8432534923,
-            "DE":56.4256480954,
-            "HU":0.7697785546,
-            "LU":0.2758341917,
-            "PT":0.611506959,
-            "RO":0.6289826234
+            "BE":4.5072806829,
+            "FR":13.917485752,
+            "IT":13.0203354308,
+            "NL":9.8432383039,
+            "DE":56.4255610293,
+            "HU":0.7697773668,
+            "LU":0.2758337661,
+            "PT":0.6115060154,
+            "RO":0.6289816528
         }
     },
     {
@@ -67697,18 +69157,18 @@
         "type":"industry",
         "year":2025,
         "month":10,
-        "demand":64.59,
+        "demand":64.53,
         "source":"calculated",
         "country_contributions":{
-            "BE":5.5203947527,
-            "FR":13.6429254176,
-            "IT":17.0379180988,
-            "NL":10.865120525,
-            "DE":49.6155170521,
-            "HU":1.2994110978,
-            "LU":0.3247121294,
-            "PT":0.9850377026,
-            "RO":0.7089632238
+            "BE":5.525698855,
+            "FR":13.6560338048,
+            "IT":17.0542884607,
+            "NL":10.8755599434,
+            "DE":49.5671066644,
+            "HU":1.3006595972,
+            "LU":0.3250241191,
+            "PT":0.985984146,
+            "RO":0.7096444094
         }
     },
     {
@@ -67735,18 +69195,18 @@
         "type":"industry",
         "year":2025,
         "month":12,
-        "demand":72.81,
+        "demand":72.66,
         "source":"calculated",
         "country_contributions":{
-            "BE":5.2134760519,
-            "FR":13.754973069,
-            "IT":12.8442015211,
-            "NL":10.1714773019,
-            "DE":55.7060788621,
-            "HU":0.7066531711,
-            "LU":0.2320658476,
-            "PT":0.9542763226,
-            "RO":0.4167978529
+            "BE":5.2246197419,
+            "FR":13.7839605442,
+            "IT":12.8716557186,
+            "NL":10.1932186103,
+            "DE":55.6118150588,
+            "HU":0.7081636266,
+            "LU":0.2325618832,
+            "PT":0.9563160672,
+            "RO":0.4176887491
         }
     },
     {
@@ -67754,18 +69214,56 @@
         "type":"industry",
         "year":2026,
         "month":1,
-        "demand":85.22,
+        "demand":82.25,
         "source":"calculated",
         "country_contributions":{
-            "BE":4.7130735882,
-            "FR":12.9028013227,
-            "IT":12.1923396392,
-            "NL":9.0270502338,
-            "DE":59.4340022052,
-            "HU":0.1598402971,
-            "LU":0.2501802254,
-            "PT":0.7485632018,
-            "RO":0.5721492865
+            "BE":4.8832592869,
+            "FR":13.3685725318,
+            "IT":12.6325962574,
+            "NL":9.3530105274,
+            "DE":57.969322405,
+            "HU":0.1656120153,
+            "LU":0.2592140535,
+            "PT":0.7756037368,
+            "RO":0.5928091858
+        }
+    },
+    {
+        "country":"EU",
+        "type":"industry",
+        "year":2026,
+        "month":2,
+        "demand":72.68,
+        "source":"calculated",
+        "country_contributions":{
+            "BE":4.8163933319,
+            "FR":12.3537348975,
+            "IT":14.2847920467,
+            "NL":9.2810080736,
+            "DE":57.0736077574,
+            "HU":0.6110119755,
+            "LU":0.2857330791,
+            "PT":0.8997936694,
+            "RO":0.3939251689
+        }
+    },
+    {
+        "country":"EU",
+        "type":"industry",
+        "year":2026,
+        "month":3,
+        "demand":74.04,
+        "source":"calculated",
+        "country_contributions":{
+            "BE":4.9972685202,
+            "FR":12.1085163468,
+            "IT":15.4796973183,
+            "NL":9.1037606406,
+            "DE":55.7810403098,
+            "HU":1.1206124838,
+            "LU":0.2946581772,
+            "PT":0.7725002602,
+            "RO":0.3419459431
         }
     },
     {
@@ -69501,21 +70999,21 @@
         "demand":57.5,
         "source":"calculated",
         "country_contributions":{
-            "AT":8.6609326294,
-            "BG":3.3436251832,
-            "CZ":9.7759024696,
-            "DK":2.416628486,
-            "EE":0.4170329962,
-            "ES":31.4624428891,
-            "FI":2.4967326742,
-            "GR":3.2498416456,
-            "HR":3.3920031789,
-            "LT":2.6815696644,
-            "LV":0.7602679118,
-            "PL":23.3092958188,
-            "SE":0.9798191509,
-            "SI":1.0303447977,
-            "SK":6.0235605041
+            "AT":8.661069151,
+            "BG":3.3436201856,
+            "CZ":9.7758878578,
+            "DK":2.4166248739,
+            "EE":0.4170323729,
+            "ES":31.4623958632,
+            "FI":2.4967289424,
+            "GR":3.2498367882,
+            "HR":3.391998109,
+            "LT":2.6815656564,
+            "LV":0.7602667755,
+            "PL":23.3092609792,
+            "SE":0.9798176863,
+            "SI":1.0303432577,
+            "SK":6.0235515009
         }
     },
     {
@@ -69526,21 +71024,21 @@
         "demand":75.35,
         "source":"calculated",
         "country_contributions":{
-            "AT":9.7990240536,
-            "BG":3.5570796163,
-            "CZ":11.1881919218,
-            "DK":2.4953240065,
-            "EE":0.4662198998,
-            "ES":28.0139496412,
-            "FI":1.2928798591,
-            "GR":3.2247956568,
-            "HR":3.2150839156,
-            "LT":2.6715681734,
-            "LV":0.8288694878,
-            "PL":23.8238054015,
-            "SE":1.2135473762,
-            "SI":1.140655892,
-            "SK":7.0690050983
+            "AT":9.7990952285,
+            "BG":3.5570768095,
+            "CZ":11.1881830936,
+            "DK":2.4953220375,
+            "EE":0.4662195319,
+            "ES":28.0139275362,
+            "FI":1.2928788389,
+            "GR":3.2247931123,
+            "HR":3.2150813787,
+            "LT":2.6715660653,
+            "LV":0.8288688338,
+            "PL":23.8237866029,
+            "SE":1.2135464187,
+            "SI":1.140654992,
+            "SK":7.0689995204
         }
     },
     {
@@ -69551,21 +71049,21 @@
         "demand":84.3,
         "source":"calculated",
         "country_contributions":{
-            "AT":9.4752844916,
-            "BG":3.1245307305,
-            "CZ":11.329104265,
-            "DK":2.4268556385,
-            "EE":0.5643823446,
-            "ES":29.28019722,
-            "FI":1.9471449962,
-            "GR":3.3697894548,
-            "HR":3.1546493998,
-            "LT":2.1502409602,
-            "LV":0.9019724375,
-            "PL":23.0118871271,
-            "SE":0.9917321517,
-            "SI":1.137182228,
-            "SK":7.1350465544
+            "AT":9.4754121239,
+            "BG":3.1245263252,
+            "CZ":11.3290882919,
+            "DK":2.4268522168,
+            "EE":0.5643815489,
+            "ES":29.2801559373,
+            "FI":1.9471422509,
+            "GR":3.3697847036,
+            "HR":3.154644952,
+            "LT":2.1502379285,
+            "LV":0.9019711658,
+            "PL":23.0118546823,
+            "SE":0.9917307534,
+            "SI":1.1371806247,
+            "SK":7.1350364946
         }
     },
     {
@@ -69848,24 +71346,24 @@
         "type":"industry-household",
         "year":2025,
         "month":12,
-        "demand":82.7,
+        "demand":82.71,
         "source":"calculated",
         "country_contributions":{
-            "AT":9.9972497997,
-            "BG":3.4037122384,
-            "CZ":11.2565662625,
-            "DK":2.1780867611,
-            "EE":0.5259362931,
-            "ES":26.7459612578,
-            "FI":1.4328898313,
-            "GR":3.4722406049,
-            "HR":3.8536994211,
-            "LT":2.3563977493,
-            "LV":0.8919187295,
-            "PL":24.7488124156,
-            "SE":1.0416387901,
-            "SI":1.1082006019,
-            "SK":6.9866892435
+            "AT":9.9996572588,
+            "BG":3.4036211935,
+            "CZ":11.2562651636,
+            "DK":2.1780285001,
+            "EE":0.525922225,
+            "ES":26.7452458374,
+            "FI":1.4328515033,
+            "GR":3.4721477269,
+            "HR":3.8535963395,
+            "LT":2.3563347187,
+            "LV":0.8918948718,
+            "PL":24.7481504163,
+            "SE":1.0416109276,
+            "SI":1.1081709589,
+            "SK":6.9865023585
         }
     },
     {
@@ -69873,24 +71371,74 @@
         "type":"industry-household",
         "year":2026,
         "month":1,
-        "demand":81.77,
+        "demand":91.8,
         "source":"calculated",
         "country_contributions":{
-            "AT":12.47109917,
-            "BG":3.8970081023,
-            "CZ":11.8692807403,
-            "DK":4.1632503719,
-            "EE":0.8959195143,
-            "ES":33.1872685258,
-            "FI":-1.186956127,
-            "GR":-5.779939151,
-            "HR":4.3340874945,
-            "LT":3.2499243264,
-            "LV":1.5544437176,
-            "PL":29.8255061692,
-            "SE":1.1562705184,
-            "SI":1.3591614109,
-            "SK":-0.9963247838
+            "AT":11.0610366331,
+            "BG":3.4713774348,
+            "CZ":12.9295895271,
+            "DK":3.7658997508,
+            "EE":0.7980673131,
+            "ES":19.7870102337,
+            "FI":-0.2506476466,
+            "GR":3.720738102,
+            "HR":3.8607190783,
+            "LT":2.8949680563,
+            "LV":1.3846490781,
+            "PL":26.5679686514,
+            "SE":1.0299828177,
+            "SI":1.210713996,
+            "SK":7.7679269741
+        }
+    },
+    {
+        "country":"EU",
+        "type":"industry-household",
+        "year":2026,
+        "month":2,
+        "demand":74.64,
+        "source":"calculated",
+        "country_contributions":{
+            "AT":9.5637486697,
+            "BG":3.7989151202,
+            "CZ":11.9657088532,
+            "DK":4.3532456622,
+            "EE":0.8707026892,
+            "ES":17.7847601795,
+            "FI":1.9942746215,
+            "GR":3.5260258647,
+            "HR":3.2336230035,
+            "LT":2.9789779817,
+            "LV":1.5212062664,
+            "PL":28.6939794814,
+            "SE":1.2657411052,
+            "SI":1.1196389981,
+            "SK":7.3294515035
+        }
+    },
+    {
+        "country":"EU",
+        "type":"industry-household",
+        "year":2026,
+        "month":3,
+        "demand":52.77,
+        "source":"calculated",
+        "country_contributions":{
+            "AT":12.2303809573,
+            "BG":5.1792154041,
+            "CZ":0.0,
+            "DK":3.2667906831,
+            "EE":0.593989713,
+            "ES":42.684035492,
+            "FI":0.0,
+            "GR":0.0,
+            "HR":4.3897440329,
+            "LT":0.0,
+            "LV":1.0943315761,
+            "PL":29.0762214182,
+            "SE":0.0,
+            "SI":1.4852907232,
+            "SK":0.0
         }
     },
     {
@@ -72754,33 +74302,101 @@
         "type":"power",
         "year":2026,
         "month":1,
-        "demand":103.64,
+        "demand":100.66,
         "source":"calculated",
         "country_contributions":{
-            "AT":2.9446123899,
-            "BE":4.6948866162,
-            "BG":0.4568578643,
-            "CZ":1.6068928766,
-            "DE":18.9416864079,
-            "DK":0.5012545285,
-            "EE":0.0087560576,
-            "ES":8.7169116797,
-            "FI":0.9365181347,
-            "FR":4.5236665371,
-            "GR":4.5604194708,
-            "HR":0.7362240174,
-            "HU":2.5073404946,
-            "IT":27.6048727436,
-            "LT":0.3835467963,
-            "LU":0.0132910751,
-            "LV":1.031425873,
-            "NL":9.8428724306,
-            "PL":4.9846310461,
-            "PT":1.452066315,
-            "RO":2.4788457569,
-            "SE":0.0013743998,
-            "SI":0.2849380494,
-            "SK":0.7861084389
+            "AT":3.031773132,
+            "BE":4.8338584546,
+            "BG":0.4703811679,
+            "CZ":1.6544579992,
+            "DE":19.5023732144,
+            "DK":0.4637824147,
+            "EE":0.0090152428,
+            "ES":6.0671731841,
+            "FI":0.9642397087,
+            "FR":4.6575701448,
+            "GR":4.6954109902,
+            "HR":0.7580167493,
+            "HU":2.5815594794,
+            "IT":28.4219957604,
+            "LT":0.3949000425,
+            "LU":0.0136845,
+            "LV":1.0619736695,
+            "NL":10.1342281521,
+            "PL":5.1321795168,
+            "PT":1.4950399222,
+            "RO":2.5522212781,
+            "SE":0.001415083,
+            "SI":0.2933724096,
+            "SK":0.8093777836
+        }
+    },
+    {
+        "country":"EU",
+        "type":"power",
+        "year":2026,
+        "month":2,
+        "demand":72.87,
+        "source":"calculated",
+        "country_contributions":{
+            "AT":3.5531848809,
+            "BE":3.1195511641,
+            "BG":0.5916731997,
+            "CZ":1.689584622,
+            "DE":22.0515147998,
+            "DK":0.3540793438,
+            "EE":0.0108262171,
+            "ES":6.1768669385,
+            "FI":1.3685404343,
+            "FR":0.9548151118,
+            "GR":4.318586923,
+            "HR":0.8556846692,
+            "HU":2.4346403112,
+            "IT":28.2218982044,
+            "LT":0.4687915088,
+            "LU":0.0154821676,
+            "LV":1.3718269069,
+            "NL":9.3183381861,
+            "PL":6.461941953,
+            "PT":2.613062703,
+            "RO":2.8309352533,
+            "SE":0.003059507,
+            "SI":0.3113001739,
+            "SK":0.9038148204
+        }
+    },
+    {
+        "country":"EU",
+        "type":"power",
+        "year":2026,
+        "month":3,
+        "demand":57.5,
+        "source":"calculated",
+        "country_contributions":{
+            "AT":2.1435739836,
+            "BE":2.5703914418,
+            "BG":0.8190279382,
+            "CZ":1.3133453278,
+            "DE":16.2302599855,
+            "DK":0.2446094487,
+            "EE":0.011533933,
+            "ES":14.6358106384,
+            "FI":0.1253751848,
+            "FR":1.047988257,
+            "GR":6.6488413794,
+            "HR":0.670741843,
+            "HU":1.5910160627,
+            "IT":31.6824203238,
+            "LT":0.1005429812,
+            "LU":0.0160924283,
+            "LV":0.2114631195,
+            "NL":6.5614000543,
+            "PL":6.3238135283,
+            "PT":2.3226515521,
+            "RO":3.5366765583,
+            "SE":0.0097849866,
+            "SI":0.392800501,
+            "SK":0.7898385426
         }
     },
     {
@@ -75137,30 +76753,30 @@
         "demand":254.35,
         "source":"calculated",
         "country_contributions":{
-            "AT":2.2750548761,
-            "BG":0.8654597741,
-            "CZ":2.4380867263,
-            "DE":25.0257984786,
-            "DK":0.6513321588,
-            "EE":0.0969946158,
-            "ES":9.5141505629,
-            "FI":0.6167167191,
-            "GR":1.8702081395,
-            "HR":0.925526061,
-            "LT":0.648060388,
-            "LV":0.2221826864,
-            "PL":6.5525938776,
-            "SE":0.2217710919,
-            "SI":0.2561650054,
-            "SK":1.5353054056,
-            "BE":4.3737571368,
-            "FR":9.16617222,
-            "HU":2.8193920643,
-            "IT":17.2465398995,
-            "LU":0.2021510255,
-            "NL":8.4843562961,
-            "PT":1.2872692293,
-            "RO":2.7049555615
+            "AT":2.2750871287,
+            "BG":0.8654591906,
+            "CZ":2.4380850823,
+            "DE":25.0257816038,
+            "DK":0.6513317196,
+            "EE":0.0969945504,
+            "ES":9.5141441475,
+            "FI":0.6167163032,
+            "GR":1.8702068784,
+            "HR":0.925525437,
+            "LT":0.648059951,
+            "LV":0.2221825366,
+            "PL":6.5525894592,
+            "SE":0.2217709424,
+            "SI":0.2561648326,
+            "SK":1.5353043703,
+            "BE":4.3737541876,
+            "FR":9.166199682,
+            "HU":2.8193901632,
+            "IT":17.2465282702,
+            "LU":0.2021508892,
+            "NL":8.4843505751,
+            "PT":1.2872683613,
+            "RO":2.7049537376
         }
     },
     {
@@ -75171,30 +76787,30 @@
         "demand":379.43,
         "source":"calculated",
         "country_contributions":{
-            "AT":2.702109763,
-            "BG":0.8003086627,
-            "CZ":2.4914007882,
-            "DE":25.4655935311,
-            "DK":0.6035778241,
-            "EE":0.0946300985,
-            "ES":7.7573500438,
-            "FI":0.3003814144,
-            "GR":1.7746454895,
-            "HR":0.7293178369,
-            "LT":0.5735286377,
-            "LV":0.2461381866,
-            "PL":5.7661215097,
-            "SE":0.2411933908,
-            "SI":0.2580336843,
-            "SK":1.5806221571,
-            "BE":4.48896406,
-            "FR":10.7514216805,
-            "HU":3.0692651217,
-            "IT":17.6092275032,
-            "LU":0.1962673827,
-            "NL":8.3312798758,
-            "PT":0.9210771487,
-            "RO":3.247544209
+            "AT":2.7021166509,
+            "BG":0.8003060614,
+            "CZ":2.4913926901,
+            "DE":25.4655107576,
+            "DK":0.6035758623,
+            "EE":0.094629791,
+            "ES":7.7573248292,
+            "FI":0.300380438,
+            "GR":1.7746397212,
+            "HR":0.7293154663,
+            "LT":0.5735267735,
+            "LV":0.2461373866,
+            "PL":5.7661027675,
+            "SE":0.2411926068,
+            "SI":0.2580328456,
+            "SK":1.5806170194,
+            "BE":4.4889494691,
+            "FR":10.7516961037,
+            "HU":3.0692551454,
+            "IT":17.609170266,
+            "LU":0.1962667447,
+            "NL":8.3312527958,
+            "PT":0.9210741548,
+            "RO":3.2475336532
         }
     },
     {
@@ -75205,30 +76821,30 @@
         "demand":434.19,
         "source":"calculated",
         "country_contributions":{
-            "AT":2.4671639959,
-            "BG":0.7088489334,
-            "CZ":2.3812372144,
-            "DE":25.3204608231,
-            "DK":0.5658847821,
-            "EE":0.1113365012,
-            "ES":8.0873475784,
-            "FI":0.4204475301,
-            "GR":1.6501334667,
-            "HR":0.7601545163,
-            "LT":0.4794330175,
-            "LV":0.2344246063,
-            "PL":5.3164993251,
-            "SE":0.1928194637,
-            "SI":0.2644144011,
-            "SK":1.5247929527,
-            "BE":4.2444195813,
-            "FR":11.5067652372,
-            "HU":3.0607747073,
-            "IT":18.7420688519,
-            "LU":0.1966260582,
-            "NL":7.6295751602,
-            "PT":0.9039803309,
-            "RO":3.2303909652
+            "AT":2.4671863663,
+            "BG":0.7088474956,
+            "CZ":2.3812323844,
+            "DE":25.3204094651,
+            "DK":0.5658836343,
+            "EE":0.1113362754,
+            "ES":8.0873311747,
+            "FI":0.4204466773,
+            "GR":1.6501301197,
+            "HR":0.7601529745,
+            "LT":0.479432045,
+            "LV":0.2344241308,
+            "PL":5.3164885415,
+            "SE":0.1928190726,
+            "SI":0.2644138648,
+            "SK":1.5247898599,
+            "BE":4.2444109722,
+            "FR":11.5069173554,
+            "HU":3.060768499,
+            "IT":18.742030837,
+            "LU":0.1966256594,
+            "NL":7.6295596849,
+            "PT":0.9039784973,
+            "RO":3.2303844129
         }
     },
     {
@@ -75239,30 +76855,30 @@
         "demand":461.34,
         "source":"calculated",
         "country_contributions":{
-            "AT":2.5536967769,
-            "BG":0.6681525813,
-            "CZ":2.4872765339,
-            "DE":26.6172049123,
-            "DK":0.6644484491,
-            "EE":0.0979511344,
-            "ES":6.9684225516,
-            "FI":0.363673839,
-            "GR":1.6753194751,
-            "HR":0.7141628249,
-            "LT":0.4863234432,
-            "LV":0.198403594,
-            "PL":4.8587979319,
-            "SE":0.201128492,
-            "SI":0.2584754622,
-            "SK":1.5187530103,
-            "BE":4.273910174,
-            "FR":12.0401307245,
-            "HU":2.8552448727,
-            "IT":17.8970925186,
-            "LU":0.2074805484,
-            "NL":8.4759601655,
-            "PT":0.7956246496,
-            "RO":3.122365335
+            "AT":2.5536960908,
+            "BG":0.6681524018,
+            "CZ":2.4872758658,
+            "DE":26.6171977619,
+            "DK":0.6644482706,
+            "EE":0.097951108,
+            "ES":6.9684206796,
+            "FI":0.3636737413,
+            "GR":1.675319025,
+            "HR":0.714162633,
+            "LT":0.4863233126,
+            "LV":0.1984035407,
+            "PL":4.8587966266,
+            "SE":0.201128438,
+            "SI":0.2584753927,
+            "SK":1.5187526023,
+            "BE":4.2739090259,
+            "FR":12.0401543537,
+            "HU":2.8552441057,
+            "IT":17.8970877108,
+            "LU":0.2074804926,
+            "NL":8.4759578886,
+            "PT":0.7956244358,
+            "RO":3.1223644962
         }
     },
     {
@@ -75613,30 +77229,30 @@
         "demand":426.68,
         "source":"calculated",
         "country_contributions":{
-            "AT":2.4834659894,
-            "BG":0.7639770657,
-            "CZ":2.4097378952,
-            "DE":25.492540368,
-            "DK":0.526261707,
-            "EE":0.1029150566,
-            "ES":7.5186484158,
-            "FI":0.3203710353,
-            "GR":1.8181704024,
-            "HR":0.8911870081,
-            "LT":0.4804588986,
-            "LV":0.2372835709,
-            "PL":5.9972297306,
-            "SE":0.2022828966,
-            "SI":0.2782195248,
-            "SK":1.5168579607,
-            "BE":4.2647032137,
-            "FR":10.6162232014,
-            "HU":3.0310892643,
-            "IT":18.6280887718,
-            "LU":0.1817005026,
-            "NL":8.1510519539,
-            "PT":0.8663322768,
-            "RO":3.2212032896
+            "AT":2.4839733498,
+            "BG":0.7639736425,
+            "CZ":2.4097270977,
+            "DE":25.492426141,
+            "DK":0.5262593489,
+            "EE":0.1029145954,
+            "ES":7.5186147262,
+            "FI":0.3203695997,
+            "GR":1.8181622555,
+            "HR":0.8911830149,
+            "LT":0.4804567458,
+            "LV":0.2372825077,
+            "PL":5.9972028582,
+            "SE":0.2022819903,
+            "SI":0.2782182782,
+            "SK":1.516851164,
+            "BE":4.2646841045,
+            "FR":10.6161052242,
+            "HU":3.0310756826,
+            "IT":18.6280053029,
+            "LU":0.1816996885,
+            "NL":8.1510154307,
+            "PT":0.8663283949,
+            "RO":3.221188856
         }
     },
     {
@@ -75644,33 +77260,101 @@
         "type":"total",
         "year":2026,
         "month":1,
-        "demand":496.86,
+        "demand":504.01,
         "source":"calculated",
         "country_contributions":{
-            "AT":2.6666216706,
-            "BG":0.7366407687,
-            "CZ":2.2885511261,
-            "DE":27.2469008752,
-            "DK":0.7897178456,
-            "EE":0.1492717504,
-            "ES":7.2799802404,
-            "FI":0.0,
-            "GR":0.0,
-            "HR":0.8668440918,
-            "LT":0.6148558686,
-            "LV":0.4709603377,
-            "PL":5.9482269615,
-            "SE":0.1905791552,
-            "SI":0.2831165863,
-            "SK":0.0,
-            "BE":4.5510212962,
-            "FR":11.0638346761,
-            "HU":3.2107029762,
-            "IT":18.6083684927,
-            "LU":0.1932380167,
-            "NL":8.6439452417,
-            "PT":0.8143158442,
-            "RO":3.3823061779
+            "AT":2.6200784648,
+            "BG":0.7261971255,
+            "CZ":2.6853345632,
+            "DE":26.8802787233,
+            "DK":0.7785217079,
+            "EE":0.1471554667,
+            "ES":4.8155875069,
+            "FI":0.1469217002,
+            "GR":1.6154157781,
+            "HR":0.8545545053,
+            "LT":0.6061388173,
+            "LV":0.4642833495,
+            "PL":5.8638966297,
+            "SE":0.1878772402,
+            "SI":0.2791027321,
+            "SK":1.5764464753,
+            "BE":4.4864996937,
+            "FR":10.9069555873,
+            "HU":3.1651835888,
+            "IT":18.3445504005,
+            "LU":0.1904984061,
+            "NL":8.5213966613,
+            "PT":0.8027709711,
+            "RO":3.3343539051
+        }
+    },
+    {
+        "country":"EU",
+        "type":"total",
+        "year":2026,
+        "month":2,
+        "demand":384.07,
+        "source":"calculated",
+        "country_contributions":{
+            "AT":2.5327006603,
+            "BG":0.850502913,
+            "CZ":2.6458637426,
+            "DE":27.6475528869,
+            "DK":0.9131431783,
+            "EE":0.1712564034,
+            "ES":4.6281024328,
+            "FI":0.6472155599,
+            "GR":1.5046300438,
+            "HR":0.7907450708,
+            "LT":0.6678499089,
+            "LV":0.5559085625,
+            "PL":6.8021639101,
+            "SE":0.2465498775,
+            "SI":0.276644728,
+            "SK":1.5958129646,
+            "BE":4.0894557616,
+            "FR":9.4417153795,
+            "HU":3.0178478166,
+            "IT":17.8380021536,
+            "LU":0.1944689585,
+            "NL":8.3501243759,
+            "PT":1.1250315458,
+            "RO":3.4667111652
+        }
+    },
+    {
+        "country":"EU",
+        "type":"total",
+        "year":2026,
+        "month":3,
+        "demand":313.25,
+        "source":"calculated",
+        "country_contributions":{
+            "AT":2.4536520654,
+            "BG":1.0227667365,
+            "DE":26.9214199516,
+            "DK":0.5951828484,
+            "EE":0.1021731279,
+            "ES":9.8765818076,
+            "HR":0.862562812,
+            "LV":0.2231536673,
+            "PL":6.0586192476,
+            "SI":0.3222962461,
+            "BE":4.2550981581,
+            "CZ":0.2410797781,
+            "FI":0.0230140703,
+            "FR":10.6191999204,
+            "GR":1.2204720043,
+            "HU":2.788426372,
+            "IT":19.7440877226,
+            "LT":0.0184558311,
+            "LU":0.2192331749,
+            "NL":7.6552834217,
+            "PT":1.1713622333,
+            "RO":3.4590986233,
+            "SE":0.0017961479,
+            "SK":0.1449840317
         }
     }
 ]

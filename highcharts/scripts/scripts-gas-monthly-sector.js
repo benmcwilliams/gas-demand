@@ -1,4 +1,8 @@
-$(document).ready(function() { 
+$(document).ready(function () {
+    (function waitHighcharts(ready) {
+        if (typeof Highcharts !== 'undefined') return ready();
+        window.addEventListener('highcharts:ready', ready, { once: true });
+    })(function () {
     let pymChild;
 
     function initializePym() {
@@ -302,4 +306,5 @@ $(document).ready(function() {
     // Initial chart rendering
     fetchData('data/monthly_demand_sector.json', createChart);
     initializePym();
+    });
 });

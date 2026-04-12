@@ -1,4 +1,8 @@
-jQuery(document).ready(function() { 
+jQuery(document).ready(function () {
+    (function waitHighcharts(ready) {
+        if (typeof Highcharts !== 'undefined') return ready();
+        window.addEventListener('highcharts:ready', ready, { once: true });
+    })(function () {
     let pymChild;
 
     function initializePym() {
@@ -347,4 +351,5 @@ jQuery(document).ready(function() {
 
     fetchData(createChart);
     initializePym();
+    });
 });

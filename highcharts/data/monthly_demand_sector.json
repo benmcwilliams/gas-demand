@@ -510,6 +510,18 @@
         "group_b_value": "Austria"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 0.33,
+        "group_value": "power",
+        "group_b_value": "Austria"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.58,
+        "group_value": "power",
+        "group_b_value": "Austria"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.56,
         "group_value": "household",
@@ -1020,6 +1032,18 @@
         "group_b_value": "Belgium"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -2.05,
+        "group_value": "household",
+        "group_b_value": "Belgium"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -2.85,
+        "group_value": "household",
+        "group_b_value": "Belgium"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.01,
         "group_value": "industry",
@@ -1525,6 +1549,18 @@
     },
     {
         "x_value": "01/2026",
+        "y_value": -0.62,
+        "group_value": "industry",
+        "group_b_value": "Belgium"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -0.82,
+        "group_value": "industry",
+        "group_b_value": "Belgium"
+    },
+    {
+        "x_value": "03/2026",
         "y_value": -0.62,
         "group_value": "industry",
         "group_b_value": "Belgium"
@@ -2040,6 +2076,18 @@
         "group_b_value": "Belgium"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -1.67,
+        "group_value": "power",
+        "group_b_value": "Belgium"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -2.44,
+        "group_value": "power",
+        "group_b_value": "Belgium"
+    },
+    {
         "x_value": "01/2019",
         "y_value": -0.04,
         "group_value": "power",
@@ -2546,6 +2594,18 @@
     {
         "x_value": "01/2026",
         "y_value": -0.11,
+        "group_value": "power",
+        "group_b_value": "Bulgaria"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -0.09,
+        "group_value": "power",
+        "group_b_value": "Bulgaria"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.03,
         "group_value": "power",
         "group_b_value": "Bulgaria"
     },
@@ -3060,6 +3120,18 @@
         "group_b_value": "Czech Republic"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 0.23,
+        "group_value": "power",
+        "group_b_value": "Czech Republic"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.2,
+        "group_value": "power",
+        "group_b_value": "Czech Republic"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 3.52,
         "group_value": "household",
@@ -3547,7 +3619,7 @@
     },
     {
         "x_value": "10/2025",
-        "y_value": -3.05,
+        "y_value": -2.99,
         "group_value": "household",
         "group_b_value": "Germany"
     },
@@ -3559,13 +3631,25 @@
     },
     {
         "x_value": "12/2025",
-        "y_value": -7.59,
+        "y_value": -7.43,
         "group_value": "household",
         "group_b_value": "Germany"
     },
     {
         "x_value": "01/2026",
-        "y_value": -2.43,
+        "y_value": 0.64,
+        "group_value": "household",
+        "group_b_value": "Germany"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -5.66,
+        "group_value": "household",
+        "group_b_value": "Germany"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -15.31,
         "group_value": "household",
         "group_b_value": "Germany"
     },
@@ -4080,6 +4164,18 @@
         "group_b_value": "Germany"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 6.09,
+        "group_value": "power",
+        "group_b_value": "Germany"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.04,
+        "group_value": "power",
+        "group_b_value": "Germany"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.12,
         "group_value": "power",
@@ -4585,7 +4681,19 @@
     },
     {
         "x_value": "01/2026",
-        "y_value": -0.14,
+        "y_value": -0.19,
+        "group_value": "power",
+        "group_b_value": "Denmark"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -0.29,
+        "group_value": "power",
+        "group_b_value": "Denmark"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.36,
         "group_value": "power",
         "group_b_value": "Denmark"
     },
@@ -5100,6 +5208,18 @@
         "group_b_value": "Estonia"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 0.01,
+        "group_value": "power",
+        "group_b_value": "Estonia"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": 0.01,
+        "group_value": "power",
+        "group_b_value": "Estonia"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.18,
         "group_value": "power",
@@ -5599,7 +5719,19 @@
     },
     {
         "x_value": "01/2026",
-        "y_value": 2.33,
+        "y_value": -0.59,
+        "group_value": "power",
+        "group_b_value": "Spain"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -0.27,
+        "group_value": "power",
+        "group_b_value": "Spain"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": 4.07,
         "group_value": "power",
         "group_b_value": "Spain"
     },
@@ -6114,6 +6246,18 @@
         "group_b_value": "Finland"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -0.06,
+        "group_value": "power",
+        "group_b_value": "Finland"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.93,
+        "group_value": "power",
+        "group_b_value": "Finland"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 2.84,
         "group_value": "household",
@@ -6624,6 +6768,18 @@
         "group_b_value": "France"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -10.92,
+        "group_value": "household",
+        "group_b_value": "France"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -10.82,
+        "group_value": "household",
+        "group_b_value": "France"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.82,
         "group_value": "industry",
@@ -7123,13 +7279,25 @@
     },
     {
         "x_value": "12/2025",
-        "y_value": -3.65,
+        "y_value": -3.66,
         "group_value": "industry",
         "group_b_value": "France"
     },
     {
         "x_value": "01/2026",
         "y_value": -3.61,
+        "group_value": "industry",
+        "group_b_value": "France"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -3.56,
+        "group_value": "industry",
+        "group_b_value": "France"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -3.64,
         "group_value": "industry",
         "group_b_value": "France"
     },
@@ -7640,6 +7808,18 @@
     {
         "x_value": "01/2026",
         "y_value": -1.15,
+        "group_value": "power",
+        "group_b_value": "France"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -3.08,
+        "group_value": "power",
+        "group_b_value": "France"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -2.35,
         "group_value": "power",
         "group_b_value": "France"
     },
@@ -8658,6 +8838,18 @@
         "group_b_value": "Croatia"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 0.16,
+        "group_value": "power",
+        "group_b_value": "Croatia"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": 0.02,
+        "group_value": "power",
+        "group_b_value": "Croatia"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.41,
         "group_value": "household",
@@ -9168,6 +9360,18 @@
         "group_b_value": "Hungary"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -1.69,
+        "group_value": "household",
+        "group_b_value": "Hungary"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -2.55,
+        "group_value": "household",
+        "group_b_value": "Hungary"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.09,
         "group_value": "power",
@@ -9674,6 +9878,18 @@
     {
         "x_value": "01/2026",
         "y_value": 0.72,
+        "group_value": "power",
+        "group_b_value": "Hungary"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": 0.37,
+        "group_value": "power",
+        "group_b_value": "Hungary"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.29,
         "group_value": "power",
         "group_b_value": "Hungary"
     },
@@ -10188,6 +10404,18 @@
         "group_b_value": "Italy"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -8.48,
+        "group_value": "household",
+        "group_b_value": "Italy"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -6.24,
+        "group_value": "household",
+        "group_b_value": "Italy"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.53,
         "group_value": "industry",
@@ -10694,6 +10922,18 @@
     {
         "x_value": "01/2026",
         "y_value": -2.84,
+        "group_value": "industry",
+        "group_b_value": "Italy"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -2.52,
+        "group_value": "industry",
+        "group_b_value": "Italy"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -1.66,
         "group_value": "industry",
         "group_b_value": "Italy"
     },
@@ -11208,6 +11448,18 @@
         "group_b_value": "Italy"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -0.34,
+        "group_value": "power",
+        "group_b_value": "Italy"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -2.79,
+        "group_value": "power",
+        "group_b_value": "Italy"
+    },
+    {
         "x_value": "01/2019",
         "y_value": -0.06,
         "group_value": "power",
@@ -11718,6 +11970,18 @@
         "group_b_value": "Lithuania"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 0.2,
+        "group_value": "power",
+        "group_b_value": "Lithuania"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.07,
+        "group_value": "power",
+        "group_b_value": "Lithuania"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.04,
         "group_value": "household",
@@ -12228,6 +12492,18 @@
         "group_b_value": "Luxembourg"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -0.12,
+        "group_value": "household",
+        "group_b_value": "Luxembourg"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.15,
+        "group_value": "household",
+        "group_b_value": "Luxembourg"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.01,
         "group_value": "power",
@@ -12733,6 +13009,18 @@
     },
     {
         "x_value": "01/2026",
+        "y_value": -0.04,
+        "group_value": "power",
+        "group_b_value": "Luxembourg"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -0.04,
+        "group_value": "power",
+        "group_b_value": "Luxembourg"
+    },
+    {
+        "x_value": "03/2026",
         "y_value": -0.04,
         "group_value": "power",
         "group_b_value": "Luxembourg"
@@ -13248,6 +13536,18 @@
         "group_b_value": "Latvia"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 0.6,
+        "group_value": "power",
+        "group_b_value": "Latvia"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.16,
+        "group_value": "power",
+        "group_b_value": "Latvia"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 2.06,
         "group_value": "household",
@@ -13754,6 +14054,18 @@
     {
         "x_value": "01/2026",
         "y_value": -3.21,
+        "group_value": "household",
+        "group_b_value": "Netherlands"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -4.71,
+        "group_value": "household",
+        "group_b_value": "Netherlands"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -7.64,
         "group_value": "household",
         "group_b_value": "Netherlands"
     },
@@ -14268,6 +14580,18 @@
         "group_b_value": "Netherlands"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -3.11,
+        "group_value": "industry",
+        "group_b_value": "Netherlands"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -4.0,
+        "group_value": "industry",
+        "group_b_value": "Netherlands"
+    },
+    {
         "x_value": "01/2019",
         "y_value": -0.27,
         "group_value": "power",
@@ -14774,6 +15098,18 @@
     {
         "x_value": "01/2026",
         "y_value": 0.76,
+        "group_value": "power",
+        "group_b_value": "Netherlands"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -1.38,
+        "group_value": "power",
+        "group_b_value": "Netherlands"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -4.05,
         "group_value": "power",
         "group_b_value": "Netherlands"
     },
@@ -15288,6 +15624,18 @@
         "group_b_value": "Poland"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 2.96,
+        "group_value": "power",
+        "group_b_value": "Poland"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": 1.79,
+        "group_value": "power",
+        "group_b_value": "Poland"
+    },
+    {
         "x_value": "01/2019",
         "y_value": -0.0,
         "group_value": "household",
@@ -15794,6 +16142,18 @@
     {
         "x_value": "01/2026",
         "y_value": -0.6,
+        "group_value": "household",
+        "group_b_value": "Portugal"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -0.4,
+        "group_value": "household",
+        "group_b_value": "Portugal"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.49,
         "group_value": "household",
         "group_b_value": "Portugal"
     },
@@ -16308,6 +16668,18 @@
         "group_b_value": "Portugal"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 0.15,
+        "group_value": "power",
+        "group_b_value": "Portugal"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.39,
+        "group_value": "power",
+        "group_b_value": "Portugal"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.68,
         "group_value": "household",
@@ -16814,6 +17186,18 @@
     {
         "x_value": "01/2026",
         "y_value": 0.28,
+        "group_value": "household",
+        "group_b_value": "Romania"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": 0.12,
+        "group_value": "household",
+        "group_b_value": "Romania"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.86,
         "group_value": "household",
         "group_b_value": "Romania"
     },
@@ -17328,6 +17712,18 @@
         "group_b_value": "Romania"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -0.02,
+        "group_value": "power",
+        "group_b_value": "Romania"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": 0.24,
+        "group_value": "power",
+        "group_b_value": "Romania"
+    },
+    {
         "x_value": "01/2019",
         "y_value": -0.15,
         "group_value": "total",
@@ -17838,6 +18234,12 @@
         "group_b_value": "Sweden"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -0.5,
+        "group_value": "total",
+        "group_b_value": "Sweden"
+    },
+    {
         "x_value": "01/2019",
         "y_value": -0.01,
         "group_value": "power",
@@ -18344,6 +18746,18 @@
     {
         "x_value": "01/2026",
         "y_value": 0.2,
+        "group_value": "power",
+        "group_b_value": "Slovenia"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": 0.14,
+        "group_value": "power",
+        "group_b_value": "Slovenia"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": 0.14,
         "group_value": "power",
         "group_b_value": "Slovenia"
     },
@@ -19284,6 +19698,18 @@
         "group_b_value": "United Kingdom"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -13.64,
+        "group_value": "household",
+        "group_b_value": "United Kingdom"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -14.74,
+        "group_value": "household",
+        "group_b_value": "United Kingdom"
+    },
+    {
         "x_value": "02/2020",
         "y_value": 0.19,
         "group_value": "industry",
@@ -19716,6 +20142,18 @@
         "group_b_value": "United Kingdom"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -2.52,
+        "group_value": "industry",
+        "group_b_value": "United Kingdom"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -2.89,
+        "group_value": "industry",
+        "group_b_value": "United Kingdom"
+    },
+    {
         "x_value": "02/2020",
         "y_value": -1.16,
         "group_value": "power",
@@ -20144,6 +20582,18 @@
     {
         "x_value": "01/2026",
         "y_value": -3.74,
+        "group_value": "power",
+        "group_b_value": "United Kingdom"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": 0.4,
+        "group_value": "power",
+        "group_b_value": "United Kingdom"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -5.29,
         "group_value": "power",
         "group_b_value": "United Kingdom"
     },
@@ -20635,7 +21085,7 @@
     },
     {
         "x_value": "10/2025",
-        "y_value": -6.46,
+        "y_value": -6.53,
         "group_value": "industry",
         "group_b_value": "Germany"
     },
@@ -20647,13 +21097,25 @@
     },
     {
         "x_value": "12/2025",
-        "y_value": -6.83,
+        "y_value": -6.98,
         "group_value": "industry",
         "group_b_value": "Germany"
     },
     {
         "x_value": "01/2026",
-        "y_value": -1.23,
+        "y_value": -4.2,
+        "group_value": "industry",
+        "group_b_value": "Germany"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -3.34,
+        "group_value": "industry",
+        "group_b_value": "Germany"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -5.25,
         "group_value": "industry",
         "group_b_value": "Germany"
     },
@@ -21168,6 +21630,18 @@
         "group_b_value": "Hungary"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -0.4,
+        "group_value": "industry",
+        "group_b_value": "Hungary"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.13,
+        "group_value": "industry",
+        "group_b_value": "Hungary"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.02,
         "group_value": "industry",
@@ -21674,6 +22148,18 @@
     {
         "x_value": "01/2026",
         "y_value": -0.07,
+        "group_value": "industry",
+        "group_b_value": "Luxembourg"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -0.05,
+        "group_value": "industry",
+        "group_b_value": "Luxembourg"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.04,
         "group_value": "industry",
         "group_b_value": "Luxembourg"
     },
@@ -22188,6 +22674,18 @@
         "group_b_value": "Portugal"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 0.0,
+        "group_value": "industry",
+        "group_b_value": "Portugal"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.21,
+        "group_value": "industry",
+        "group_b_value": "Portugal"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.01,
         "group_value": "industry",
@@ -22698,6 +23196,24 @@
         "group_b_value": "Romania"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -1.14,
+        "group_value": "industry",
+        "group_b_value": "Romania"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -1.16,
+        "group_value": "industry",
+        "group_b_value": "Romania"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -1.3,
+        "group_value": "total",
+        "group_b_value": "Sweden"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.47,
         "group_value": "industry-household",
@@ -23203,7 +23719,19 @@
     },
     {
         "x_value": "01/2026",
-        "y_value": 0.03,
+        "y_value": -0.02,
+        "group_value": "industry-household",
+        "group_b_value": "Austria"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -0.86,
+        "group_value": "industry-household",
+        "group_b_value": "Austria"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.5,
         "group_value": "industry-household",
         "group_b_value": "Austria"
     },
@@ -23718,6 +24246,18 @@
         "group_b_value": "Bulgaria"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -0.13,
+        "group_value": "industry-household",
+        "group_b_value": "Bulgaria"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.14,
+        "group_value": "industry-household",
+        "group_b_value": "Bulgaria"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.44,
         "group_value": "industry-household",
@@ -24223,7 +24763,19 @@
     },
     {
         "x_value": "01/2026",
-        "y_value": -2.57,
+        "y_value": -0.41,
+        "group_value": "industry-household",
+        "group_b_value": "Czech Republic"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -1.31,
+        "group_value": "industry-household",
+        "group_b_value": "Czech Republic"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -9.2,
         "group_value": "industry-household",
         "group_b_value": "Czech Republic"
     },
@@ -24733,7 +25285,19 @@
     },
     {
         "x_value": "01/2026",
-        "y_value": 0.39,
+        "y_value": 0.45,
+        "group_value": "industry-household",
+        "group_b_value": "Denmark"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": 0.51,
+        "group_value": "industry-household",
+        "group_b_value": "Denmark"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.75,
         "group_value": "industry-household",
         "group_b_value": "Denmark"
     },
@@ -25248,6 +25812,18 @@
         "group_b_value": "Estonia"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 0.04,
+        "group_value": "industry-household",
+        "group_b_value": "Estonia"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.23,
+        "group_value": "industry-household",
+        "group_b_value": "Estonia"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.4,
         "group_value": "industry-household",
@@ -25747,7 +26323,19 @@
     },
     {
         "x_value": "01/2026",
-        "y_value": -5.81,
+        "y_value": -14.79,
+        "group_value": "industry-household",
+        "group_b_value": "Spain"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -13.0,
+        "group_value": "industry-household",
+        "group_b_value": "Spain"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -4.1,
         "group_value": "industry-household",
         "group_b_value": "Spain"
     },
@@ -26257,7 +26845,19 @@
     },
     {
         "x_value": "01/2026",
-        "y_value": -3.27,
+        "y_value": -2.53,
+        "group_value": "industry-household",
+        "group_b_value": "Finland"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -0.53,
+        "group_value": "industry-household",
+        "group_b_value": "Finland"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -1.75,
         "group_value": "industry-household",
         "group_b_value": "Finland"
     },
@@ -27276,6 +27876,18 @@
         "group_b_value": "Croatia"
     },
     {
+        "x_value": "02/2026",
+        "y_value": -0.17,
+        "group_value": "industry-household",
+        "group_b_value": "Croatia"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.22,
+        "group_value": "industry-household",
+        "group_b_value": "Croatia"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.02,
         "group_value": "industry-household",
@@ -27782,6 +28394,18 @@
     {
         "x_value": "01/2026",
         "y_value": -0.3,
+        "group_value": "industry-household",
+        "group_b_value": "Lithuania"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -0.21,
+        "group_value": "industry-household",
+        "group_b_value": "Lithuania"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -2.07,
         "group_value": "industry-household",
         "group_b_value": "Lithuania"
     },
@@ -28296,6 +28920,18 @@
         "group_b_value": "Latvia"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 0.36,
+        "group_value": "industry-household",
+        "group_b_value": "Latvia"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.12,
+        "group_value": "industry-household",
+        "group_b_value": "Latvia"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.19,
         "group_value": "industry-household",
@@ -28806,6 +29442,18 @@
         "group_b_value": "Poland"
     },
     {
+        "x_value": "02/2026",
+        "y_value": 2.5,
+        "group_value": "industry-household",
+        "group_b_value": "Poland"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -3.05,
+        "group_value": "industry-household",
+        "group_b_value": "Poland"
+    },
+    {
         "x_value": "01/2019",
         "y_value": 0.04,
         "group_value": "industry-household",
@@ -29312,6 +29960,18 @@
     {
         "x_value": "01/2026",
         "y_value": -0.03,
+        "group_value": "industry-household",
+        "group_b_value": "Slovenia"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -0.09,
+        "group_value": "industry-household",
+        "group_b_value": "Slovenia"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -0.12,
         "group_value": "industry-household",
         "group_b_value": "Slovenia"
     },
@@ -30307,7 +30967,7 @@
     },
     {
         "x_value": "10/2025",
-        "y_value": -15.66,
+        "y_value": -15.6,
         "group_value": "household",
         "group_b_value": "EU"
     },
@@ -30319,13 +30979,25 @@
     },
     {
         "x_value": "12/2025",
-        "y_value": -38.81,
+        "y_value": -38.65,
         "group_value": "household",
         "group_b_value": "EU"
     },
     {
         "x_value": "01/2026",
-        "y_value": -28.08,
+        "y_value": -25.02,
+        "group_value": "household",
+        "group_b_value": "EU"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -33.9,
+        "group_value": "household",
+        "group_b_value": "EU"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -46.92,
         "group_value": "household",
         "group_b_value": "EU"
     },
@@ -30751,7 +31423,7 @@
     },
     {
         "x_value": "11/2024",
-        "y_value": -13.88,
+        "y_value": -13.87,
         "group_value": "industry",
         "group_b_value": "EU"
     },
@@ -30817,7 +31489,7 @@
     },
     {
         "x_value": "10/2025",
-        "y_value": -14.71,
+        "y_value": -14.77,
         "group_value": "industry",
         "group_b_value": "EU"
     },
@@ -30829,13 +31501,25 @@
     },
     {
         "x_value": "12/2025",
-        "y_value": -17.72,
+        "y_value": -17.87,
         "group_value": "industry",
         "group_b_value": "EU"
     },
     {
         "x_value": "01/2026",
-        "y_value": -13.36,
+        "y_value": -16.33,
+        "group_value": "industry",
+        "group_b_value": "EU"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -14.94,
+        "group_value": "industry",
+        "group_b_value": "EU"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -16.71,
         "group_value": "industry",
         "group_b_value": "EU"
     },
@@ -31339,13 +32023,25 @@
     },
     {
         "x_value": "12/2025",
-        "y_value": -12.32,
+        "y_value": -12.31,
         "group_value": "industry-household",
         "group_b_value": "EU"
     },
     {
         "x_value": "01/2026",
-        "y_value": -24.9,
+        "y_value": -14.87,
+        "group_value": "industry-household",
+        "group_b_value": "EU"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": -13.98,
+        "group_value": "industry-household",
+        "group_b_value": "EU"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -31.51,
         "group_value": "industry-household",
         "group_b_value": "EU"
     },
@@ -31855,7 +32551,19 @@
     },
     {
         "x_value": "01/2026",
-        "y_value": 15.18,
+        "y_value": 12.2,
+        "group_value": "power",
+        "group_b_value": "EU"
+    },
+    {
+        "x_value": "02/2026",
+        "y_value": 4.81,
+        "group_value": "power",
+        "group_b_value": "EU"
+    },
+    {
+        "x_value": "03/2026",
+        "y_value": -7.21,
         "group_value": "power",
         "group_b_value": "EU"
     }

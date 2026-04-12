@@ -48,7 +48,7 @@ logging:
 country_cutoffs:
   default:
     year: 2026
-    month: 1
+    month: 3
   # Country-specific overrides (example format - update with actual dates)
   GR:
     year: 2025

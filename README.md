@@ -119,8 +119,12 @@ Optional: `--recent-lag-days N` (default **2**) trims the solid “current plot 
 - **Input:** `src/data/analyzed/daily_demand_clean.csv`
 - **Output:** `highcharts/data/daily_demand_rolling30.json` (large file; you may prefer not to commit it)
 
-Open `highcharts/index-gas-daily-rolling.html` in a browser (from the `highcharts/` directory so data paths resolve). Typical order: run `main.py` (or your extractors) → `DailyDemandAnalyzer` / `clean_daily_demand.py` → exporter above.
+Open `highcharts/index-gas-daily-rolling.html` in a browser (from the `highcharts/` directory so data paths resolve). 
+**`main.py` runs `DailyDemandAnalyzer` after writing `daily_demand_all.csv`,** producing `daily_demand_clean.csv`. 
 
+To run the analyzer alone (from repo root): `python -m src.analyzers.clean_daily_demand`. Then run the exporter above.
+
+The **`monthly-to-highcharts.ipynb`** notebook builds **`highcharts/data/monthly_demand_average.json`** (and related chart JSON) from **`monthly_demand_clean.json`**.
 
 
 

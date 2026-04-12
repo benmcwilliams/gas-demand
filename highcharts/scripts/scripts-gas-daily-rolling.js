@@ -1,4 +1,8 @@
 jQuery(document).ready(function () {
+    (function waitHighcharts(ready) {
+        if (typeof Highcharts !== 'undefined') return ready();
+        window.addEventListener('highcharts:ready', ready, { once: true });
+    })(function () {
     const CATEGORY_ORDER = ["total", "power", "household", "industry"];
 
     const COUNTRY_LABELS = {
@@ -268,4 +272,5 @@ jQuery(document).ready(function () {
     });
 
     initializePym();
+    });
 });

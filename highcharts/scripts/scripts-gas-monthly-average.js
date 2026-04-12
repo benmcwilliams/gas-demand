@@ -1,4 +1,8 @@
 jQuery(document).ready(function () {
+    (function waitHighcharts(ready) {
+        if (typeof Highcharts !== 'undefined') return ready();
+        window.addEventListener('highcharts:ready', ready, { once: true });
+    })(function () {
     let pymChild;
     let chart;
     let fullData = {}; // Store the fetched data globally
@@ -129,43 +133,66 @@ jQuery(document).ready(function () {
     
         updateChart();
     }
-    
 
+    /** Latest calendar year present in the grouped data (e.g. 2026). */
+    function getLatestCalendarYearKey(seriesByYear) {
+        const keys = Object.keys(seriesByYear).filter((k) => /^\d{4}$/.test(k));
+        if (!keys.length) return null;
+        return String(Math.max(...keys.map((k) => parseInt(k, 10))));
+    }
+
+    /**
+     * Plot three lines (same order, colours, dash styles as daily rolling chart).
+     * Individual years remain in JSON for other consumers; this chart does not draw them.
+     */
     function formatSeriesData(group_b_value, group_value) {
-        console.log("Formatting series data for", { group_b_value, group_value });
         if (!group_b_value || !group_value || !fullData[group_b_value] || !fullData[group_b_value][group_value]) {
             return [];
         }
-    
+
         const data = fullData[group_b_value][group_value];
-        const colorMap = {
-            "2025": "#880E4F",
-            "2024": "#5E8FE0",
-            "2023": "#C0392B",
-            "2022": "#C0392B80",
-            "AVG-2019-2021": "#A6A6A6",
+        const latestKey = getLatestCalendarYearKey(data);
+
+        const order = [];
+        if (latestKey && data[latestKey]) order.push(latestKey);
+        if (data["AVG-2019-2021"]) order.push("AVG-2019-2021");
+        if (data["AVG-2022-2025"]) order.push("AVG-2022-2025");
+
+        const displayName = (k) => {
+            if (k === "AVG-2019-2021") return "2019–2021 avg";
+            if (k === "AVG-2022-2025") return "2022–2025 avg";
+            return k;
         };
-    
-        return Object.keys(data).map(x_value => ({
-            name: `${x_value}`,
-            data: data[x_value].map(entry => ({ x: entry.x_b_value, y: entry.y_value })),
-            color: colorMap[x_value] || "#999",
-            dashStyle: x_value === "AVG-2019-2021" ? "ShortDot" : "Solid", // Apply ShortDot for AVG line
+
+        return order.map((x_value) => ({
+            name: displayName(x_value),
+            data: data[x_value]
+                .slice()
+                .sort((a, b) => a.x_b_value - b.x_b_value)
+                .map((entry) => ({ x: entry.x_b_value, y: entry.y_value })),
+            color:
+                x_value === "AVG-2019-2021"
+                    ? "#757575"
+                    : x_value === "AVG-2022-2025"
+                      ? "#1565C0"
+                      : "#880E4F",
+            dashStyle: /^\d{4}$/.test(x_value) ? "Solid" : "ShortDash",
             marker: { enabled: false },
         }));
     }
-    
 
     function updateChart() {
         const group_b_value = jQuery("#country-select").val();
         const group_value = jQuery("#type-select").val();
         console.log("Updating chart for", { group_b_value, group_value });
-    
+
         const series = formatSeriesData(group_b_value, group_value);
-    
+        const bucket = fullData[group_b_value]?.[group_value];
+        const latestKey = bucket ? getLatestCalendarYearKey(bucket) : null;
+
         const subtitleText = group_b_value
-            ? `${group_b_value} - ${group_value} (2019-21 average, 2021 to 2025)`
-            : "2019-2021 Average, 2022 to 2025";
+            ? `${group_b_value} - ${group_value} (2019–21 avg, 2022–25 avg${latestKey ? ", " + latestKey : ""})`
+            : "2019–21 avg, 2022–25 avg vs latest year";
     
         if (!chart) {
             chart = Highcharts.stockChart("chart-container", {
@@ -320,4 +347,5 @@ jQuery(document).ready(function () {
     });
 
     initializePym();
+    });
 });

@@ -12,6 +12,7 @@ from src.extractors.germany_demand import GermanyDemandExtractor
 from src.extractors.energy_charts_demand import EnergyChartsDemandExtractor 
 from src.extractors.spain_demand import SpainDemandExtractor
 from src.extractors.uk_demand import UKDemandExtractor
+from src.analyzers.clean_daily_demand import DailyDemandAnalyzer
 
 def main(update_raw=False, initial_load=False):
     # initialize config and logging
@@ -72,6 +73,11 @@ def main(update_raw=False, initial_load=False):
             logger.info(f"Found demand data for {len(final_data['country'].unique())} countries")
             final_data.to_csv('src/data/processed/daily_demand_all.csv', index=False)
             logger.info("All data saved successfully")
+            logger.info("Running DailyDemandAnalyzer...")
+            if DailyDemandAnalyzer().analyze():
+                logger.info("Wrote src/data/analyzed/daily_demand_clean.csv")
+            else:
+                logger.error("DailyDemandAnalyzer failed; daily_demand_clean.csv may be missing or stale")
         else:
             logger.error("No demand data was successfully extracted")
             
