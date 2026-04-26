@@ -44,6 +44,10 @@ jQuery(document).ready(function () {
         return name ? `${code} — ${name}` : code;
     }
 
+    function countryName(code) {
+        return COUNTRY_LABELS[code] || code;
+    }
+
     function initializePym() {
         pymChild = new pym.Child({ polling: 100, debug: false });
         const updateSize = () => {
@@ -168,7 +172,9 @@ jQuery(document).ready(function () {
 
         const thru = fullPayload.meta?.y2026_included_through;
         const lag = fullPayload.meta?.y2026_recent_lag_days ?? 2;
-        let subtitle = `${codes.length} countries — ${typeKey} (30-day trailing mean, TWh)`;
+        const selectionLabel =
+            codes.length === 1 ? countryName(codes[0]) : `${codes.length} countries`;
+        let subtitle = `${selectionLabel} — ${typeKey} (30-day trailing mean, TWh)`;
         if (thru) {
             subtitle += `. ${yLabel} through ${thru} (${lag}-day lag)`;
         }
@@ -201,6 +207,14 @@ jQuery(document).ready(function () {
                 xAxis: {
                   type: "datetime",
                   title: { text: null },
+                  labels: {
+                    format: "{value:%b}",
+                  },
+                  dateTimeLabelFormats: {
+                    day: "%b",
+                    week: "%b",
+                    month: "%b",
+                  },
                 },
                 yAxis: {
                   title: { text: "TWh" },

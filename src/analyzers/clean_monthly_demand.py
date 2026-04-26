@@ -1,16 +1,35 @@
 import pandas as pd
 from src.utils.filter_conditions_monthly import filter_conditions_monthly
-from src.utils.functions import calculate_industry_demand_from_industry_power, calculate_totals_for_countries, calculate_totals_monthly, calculate_industry_from_power_monthly
+from pathlib import Path
+from src.utils.functions import calculate_totals_monthly, calculate_industry_from_power_monthly
 from src.utils.config import Config
 from src.utils.country_cutoffs import apply_country_cutoffs
+from src.utils.mongo import MongoMonthlySeriesWriter
+
+
+EUROSTAT_MONTHLY_PATHS = [
+    Path("src/data/processed/eurostat_historic.csv"),
+    Path("src/data/raw/eurostat/latest_data.csv"),
+]
+BUNDESNETZAGENTUR_MONTHLY_PATHS = [
+    Path("src/data/processed/germany_household_historic.csv"),
+    Path("src/data/raw/germany_household/latest_data.csv"),
+]
 
 class MonthlyDemandAnalyzer:
     def __init__(self):
         self.calculate_industry_demand_countries = ['HU', 'LU', 'PT', 'RO'] #note we dropped IE.
         self.calculate_country_totals = ['BE', 'FR', 'HU', 'IT', 'LU', 'NL', 'PT', 'RO']
 
-    def analyze(self):
+    def _read_first_existing_csv(self, paths: list[Path]) -> pd.DataFrame:
+        for path in paths:
+            if path.exists():
+                return pd.read_csv(path)
 
+        tried_paths = ", ".join(str(path) for path in paths)
+        raise FileNotFoundError(f"No input file found. Tried: {tried_paths}")
+
+    def build_monthly_output(self) -> pd.DataFrame:
         #read in processed daily 
         df = pd.read_csv("src/data/processed/daily_demand_all.csv")
         df['date'] = df['date'].astype(str).str[:10]
@@ -24,18 +43,18 @@ class MonthlyDemandAnalyzer:
 
         #read in eurostat data
         try:
-            eurostat_df = pd.read_csv("src/data/processed/eurostat_historic.csv")
+            eurostat_df = self._read_first_existing_csv(EUROSTAT_MONTHLY_PATHS)
             eurostat_df['date'] = pd.to_datetime(eurostat_df['date'], format='%Y-%m-%d', errors='coerce')
             eurostat_df['month'] = eurostat_df['date'].dt.month
             eurostat_df['year'] = eurostat_df['date'].dt.year
             df = pd.concat([df, eurostat_df], ignore_index=True)
         except Exception as e:
             print("Error reading or processing Eurostat data:", e)
-            return
+            raise
 
         #read in bnetza data
         try:
-            bnetza_df = pd.read_csv("src/data/processed/germany_household_historic.csv")
+            bnetza_df = self._read_first_existing_csv(BUNDESNETZAGENTUR_MONTHLY_PATHS)
             bnetza_df['date'] = pd.to_datetime(bnetza_df['date'], format='%Y-%m-%d', errors='coerce')
             bnetza_df['month'] = bnetza_df['date'].dt.month
             bnetza_df['year'] = bnetza_df['date'].dt.year
@@ -43,14 +62,14 @@ class MonthlyDemandAnalyzer:
             df = pd.concat([df, bnetza_df], ignore_index=True)
         except Exception as e:
             print("Error reading or processing BNetzA data:", e)
-            return
+            raise
 
         try:
             conditions_df = pd.DataFrame(filter_conditions_monthly, columns=['country', 'type', 'source'])
             filtered_df = df.merge(conditions_df, on=['country', 'type', 'source'])
         except Exception as e:
             print("Error merging DataFrames:", e)
-            return
+            raise
 
         try:
             aggregated_df = (
@@ -62,13 +81,13 @@ class MonthlyDemandAnalyzer:
             )
         except Exception as e:
             print("Error during aggregation:", e)
-            return
+            raise
 
         try:
             industry_df = calculate_industry_from_power_monthly(aggregated_df, self.calculate_industry_demand_countries)
         except Exception as e:
             print("Error calculating industry demand:", e)
-            return
+            raise
 
         try:
             updated_df = pd.concat([aggregated_df, industry_df], ignore_index=True)
@@ -76,13 +95,13 @@ class MonthlyDemandAnalyzer:
             updated_df = updated_df.sort_values(by=['country', 'type', 'year', 'month']).reset_index(drop=True)
         except Exception as e:
             print("Error updating DataFrame:", e)
-            return
+            raise
 
         try:
             updated_df = calculate_totals_monthly(updated_df, self.calculate_country_totals)
         except Exception as e:
             print("Error calculating country totals:", e)
-            return
+            raise
         
         #calculate industry demand for Germany as total - household - power
         german_filter_df = updated_df[updated_df['country'] == 'DE']
@@ -111,10 +130,36 @@ class MonthlyDemandAnalyzer:
         config = Config()
         updated_df = apply_country_cutoffs(updated_df, config)
 
+        return updated_df
+
+    def analyze(self, publish_to_mongo: bool = True) -> bool:
+        try:
+            updated_df = self.build_monthly_output()
+        except Exception:
+            return False
+
         try:
             updated_df.to_csv("src/data/analyzed/monthly_demand_clean.csv", index=False)
         except Exception as e:
             print("Error writing to CSV file:", e)
-            return
+            return False
+
+        if publish_to_mongo:
+            writer = MongoMonthlySeriesWriter()
+            if writer.enabled:
+                try:
+                    written_count = writer.upsert_dataframe(updated_df)
+                    print(f"Upserted {written_count} monthly records into MongoDB.")
+                except Exception as e:
+                    print("Error writing monthly data to MongoDB:", e)
+                    return False
 
         print("Monthly demand analysis completed successfully.")
+        return True
+
+
+if __name__ == "__main__":
+    import sys
+
+    ok = MonthlyDemandAnalyzer().analyze()
+    sys.exit(0 if ok else 1)

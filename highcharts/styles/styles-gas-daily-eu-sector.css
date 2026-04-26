@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 720px;
+  overflow: auto;
+  background: #fff;
+}
+
+#main-container {
+  max-width: 1200px;
+  min-height: 700px;
+  margin: 1em auto;
+  box-sizing: border-box;
+}
+
+#chart-layout {
+  display: flex;
+  width: 100%;
+  min-height: 640px;
+}
+
+#chart-container {
+  flex: 1;
+  min-height: 640px;
+  min-width: 0;
+}
+
+#controls-panel {
+  flex: 0 0 220px;
+  max-width: 220px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border-left: 1px solid #e8e8e8;
+}
+
+.control-label {
+  color: #555;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+#country-select {
+  width: 100%;
+}
+
+.note-container {
+  max-width: 1200px;
+  margin: 0 auto 1em;
+  padding: 0 12px;
+  font-size: 12px;
+  color: #666;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}

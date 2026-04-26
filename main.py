@@ -13,6 +13,8 @@ from src.extractors.energy_charts_demand import EnergyChartsDemandExtractor
 from src.extractors.spain_demand import SpainDemandExtractor
 from src.extractors.uk_demand import UKDemandExtractor
 from src.analyzers.clean_daily_demand import DailyDemandAnalyzer
+from src.analyzers.clean_monthly_demand import MonthlyDemandAnalyzer
+from src.utils.mongo import MongoDailySeriesWriter
 
 def main(update_raw=False, initial_load=False):
     # initialize config and logging
@@ -24,6 +26,7 @@ def main(update_raw=False, initial_load=False):
                             logging.StreamHandler()  # still prints to terminal
                         ])
     logger = logging.getLogger(__name__)
+    mongo_writer = MongoDailySeriesWriter()
     
     try:
         # Optionally update raw data first
@@ -73,9 +76,32 @@ def main(update_raw=False, initial_load=False):
             logger.info(f"Found demand data for {len(final_data['country'].unique())} countries")
             final_data.to_csv('src/data/processed/daily_demand_all.csv', index=False)
             logger.info("All data saved successfully")
+            if mongo_writer.enabled:
+                try:
+                    written_count = mongo_writer.upsert_dataframe(final_data, is_calculated=False)
+                    logger.info(f"Upserted {written_count} extracted daily records into MongoDB")
+                except Exception as e:
+                    logger.error(f"Failed to write extracted daily records to MongoDB: {str(e)}")
+            else:
+                logger.info("MongoDB daily series publishing skipped because MONGO_URI is not configured")
+
             logger.info("Running DailyDemandAnalyzer...")
-            if DailyDemandAnalyzer().analyze():
+            daily_analyzer = DailyDemandAnalyzer()
+            if daily_analyzer.analyze(final_data):
                 logger.info("Wrote src/data/analyzed/daily_demand_clean.csv")
+                if mongo_writer.enabled:
+                    try:
+                        _, calculated_daily_data = daily_analyzer.build_daily_outputs(final_data)
+                        written_count = mongo_writer.upsert_dataframe(calculated_daily_data, is_calculated=True)
+                        logger.info(f"Upserted {written_count} calculated daily records into MongoDB")
+                    except Exception as e:
+                        logger.error(f"Failed to write calculated daily records to MongoDB: {str(e)}")
+
+                logger.info("Running MonthlyDemandAnalyzer...")
+                if MonthlyDemandAnalyzer().analyze():
+                    logger.info("Wrote src/data/analyzed/monthly_demand_clean.csv and published monthly MongoDB series")
+                else:
+                    logger.error("MonthlyDemandAnalyzer failed; monthly_demand_clean.csv may be missing or stale")
             else:
                 logger.error("DailyDemandAnalyzer failed; daily_demand_clean.csv may be missing or stale")
         else:

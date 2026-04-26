@@ -8622,3 +8622,468 @@ Scraping Results:
 2026-04-12 18:14:34,690 - INFO - main.py:54 - Successfully extracted data for UKDemandExtractor
 2026-04-12 18:14:34,750 - INFO - main.py:72 - Found demand data for 26 countries
 2026-04-12 18:14:34,921 - INFO - main.py:74 - All data saved successfully
+2026-04-19 17:37:24,973 - INFO - main.py:31 - Updating raw data files...
+2026-04-19 17:37:25,154 - INFO - update_raw_data.py:36 - Running AustriaScraper...
+2026-04-19 17:37:25,154 - INFO - austria_scraper.py:30 - Fetching data from https://energie.wifo.ac.at/data/gas/consumption-aggm.csv
+2026-04-19 17:37:25,157 - ERROR - austria_scraper.py:49 - Error scraping Austrian data: HTTPSConnectionPool(host='energie.wifo.ac.at', port=443): Max retries exceeded with url: /data/gas/consumption-aggm.csv (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10cd69400>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:25,157 - INFO - update_raw_data.py:36 - Running BnetzaScraper...
+2026-04-19 17:37:25,163 - INFO - bnetza_scraper.py:72 - Stored data on BNetzA German household consumption returned.
+2026-04-19 17:37:25,163 - ERROR - bnetza_scraper.py:177 - Error processing German household demand data: HTTPSConnectionPool(host='www.bundesnetzagentur.de', port=443): Max retries exceeded with url: /DE/Gasversorgung/aktuelle_gasversorgung/_svg/GasverbrauchSLP_monatlich/Gasverbrauch_SLP_M_2023_2.html (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb250>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:25,164 - ERROR - bnetza_scraper.py:196 - Error scraping German household demand data: HTTPSConnectionPool(host='www.bundesnetzagentur.de', port=443): Max retries exceeded with url: /DE/Gasversorgung/aktuelle_gasversorgung/_svg/GasverbrauchSLP_monatlich/Gasverbrauch_SLP_M_2023_2.html (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb250>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:25,164 - INFO - update_raw_data.py:36 - Running DenmarkScraper...
+2026-04-19 17:37:25,164 - INFO - denmark_scraper.py:27 - Fetching data from https://api.energidataservice.dk/dataset/Gasflow since 2015
+2026-04-19 17:37:25,165 - ERROR - denmark_scraper.py:43 - Error scraping Danish data: HTTPSConnectionPool(host='api.energidataservice.dk', port=443): Max retries exceeded with url: /dataset/Gasflow?start=2015-01-01&end=now&timezone=utc&limit=0 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccda850>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:25,165 - INFO - update_raw_data.py:36 - Running EnergyChartsScraper...
+2026-04-19 17:37:25,183 - INFO - energy_charts_scraper.py:39 - Performing regular 60-day power demand update
+2026-04-19 17:37:25,183 - ERROR - energy_charts_scraper.py:152 - Error querying at: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=at&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:27,190 - ERROR - energy_charts_scraper.py:152 - Error querying be: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=be&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:29,200 - ERROR - energy_charts_scraper.py:152 - Error querying bg: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=bg&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:31,206 - ERROR - energy_charts_scraper.py:152 - Error querying hr: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=hr&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:33,216 - ERROR - energy_charts_scraper.py:152 - Error querying cz: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=cz&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:35,224 - ERROR - energy_charts_scraper.py:152 - Error querying dk: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=dk&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:37,233 - ERROR - energy_charts_scraper.py:152 - Error querying ee: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=ee&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:39,242 - ERROR - energy_charts_scraper.py:152 - Error querying fi: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=fi&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:41,249 - ERROR - energy_charts_scraper.py:152 - Error querying fr: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=fr&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:43,254 - ERROR - energy_charts_scraper.py:152 - Error querying de: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=de&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:45,262 - ERROR - energy_charts_scraper.py:152 - Error querying gr: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=gr&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:47,271 - ERROR - energy_charts_scraper.py:152 - Error querying hu: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=hu&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:49,277 - ERROR - energy_charts_scraper.py:152 - Error querying ie: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=ie&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:51,282 - ERROR - energy_charts_scraper.py:152 - Error querying it: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=it&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:53,292 - ERROR - energy_charts_scraper.py:152 - Error querying lv: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=lv&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:55,299 - ERROR - energy_charts_scraper.py:152 - Error querying lt: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=lt&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:57,308 - ERROR - energy_charts_scraper.py:152 - Error querying lu: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=lu&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:37:59,316 - ERROR - energy_charts_scraper.py:152 - Error querying nl: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=nl&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:00,087 - INFO - main.py:31 - Updating raw data files...
+2026-04-19 17:38:00,127 - INFO - update_raw_data.py:36 - Running AustriaScraper...
+2026-04-19 17:38:00,127 - INFO - austria_scraper.py:30 - Fetching data from https://energie.wifo.ac.at/data/gas/consumption-aggm.csv
+2026-04-19 17:38:01,322 - ERROR - energy_charts_scraper.py:152 - Error querying pl: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=pl&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:02,677 - INFO - austria_scraper.py:34 - Response status code: 200
+2026-04-19 17:38:02,678 - INFO - austria_scraper.py:35 - Response headers: {'Date': 'Sun, 19 Apr 2026 15:38:01 GMT', 'Server': 'Apache/2.4.58 (Ubuntu) OpenSSL/3.0.13', 'Strict-Transport-Security': 'max-age=15768000; includeSubDomains', 'Last-Modified': 'Sun, 19 Apr 2026 04:00:10 GMT', 'ETag': '"5cf90-64fc837e761c3"', 'Accept-Ranges': 'bytes', 'Content-Length': '380816', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/csv'}
+2026-04-19 17:38:02,679 - INFO - austria_scraper.py:44 - Successfully saved raw Austrian data to src/data/raw/consumption-aggm.csv
+2026-04-19 17:38:02,681 - INFO - update_raw_data.py:36 - Running BnetzaScraper...
+2026-04-19 17:38:02,691 - INFO - bnetza_scraper.py:72 - Stored data on BNetzA German household consumption returned.
+2026-04-19 17:38:03,326 - ERROR - energy_charts_scraper.py:152 - Error querying pt: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=pt&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:04,931 - INFO - bnetza_scraper.py:100 - New BNetzA csv file downloaded
+2026-04-19 17:38:04,951 - INFO - bnetza_scraper.py:193 - Successfully saved updated German household demand data to src/data/raw/germany_household/latest_data.csv
+2026-04-19 17:38:04,951 - INFO - update_raw_data.py:36 - Running DenmarkScraper...
+2026-04-19 17:38:04,951 - INFO - denmark_scraper.py:27 - Fetching data from https://api.energidataservice.dk/dataset/Gasflow since 2015
+2026-04-19 17:38:05,335 - ERROR - energy_charts_scraper.py:152 - Error querying ro: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=ro&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:07,336 - INFO - denmark_scraper.py:38 - Successfully saved Danish gas flow data to src/data/raw/denmark_gasflow.json
+2026-04-19 17:38:07,338 - INFO - update_raw_data.py:36 - Running EnergyChartsScraper...
+2026-04-19 17:38:07,344 - ERROR - energy_charts_scraper.py:152 - Error querying sk: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=sk&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:07,358 - INFO - energy_charts_scraper.py:39 - Performing regular 60-day power demand update
+2026-04-19 17:38:09,352 - ERROR - energy_charts_scraper.py:152 - Error querying si: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=si&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:10,231 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for AT
+2026-04-19 17:38:10,234 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for AT (1/26)
+2026-04-19 17:38:11,358 - ERROR - energy_charts_scraper.py:152 - Error querying es: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=es&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:13,366 - ERROR - energy_charts_scraper.py:152 - Error querying se: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=se&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:14,878 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for BE
+2026-04-19 17:38:14,881 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for BE (2/26)
+2026-04-19 17:38:15,371 - ERROR - energy_charts_scraper.py:152 - Error querying uk: HTTPSConnectionPool(host='api.energy-charts.info', port=443): Max retries exceeded with url: /public_power?country=uk&start=2026-02-18T00%3A00%2B01%3A00&end=2026-04-19T23%3A45%2B01%3A00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,380 - INFO - update_raw_data.py:36 - Running EntsogScraper...
+2026-04-19 17:38:17,382 - INFO - entsog_scraper.py:32 - Performing multi-day ENTSOG update
+2026-04-19 17:38:17,382 - INFO - entsog_scraper.py:115 - Found existing data at src/data/raw/entsog_data.csv
+2026-04-19 17:38:17,428 - INFO - entsog_scraper.py:118 - Loaded 89246 records with 39 unique points
+2026-04-19 17:38:17,431 - INFO - entsog_scraper.py:47 - Point pt-tso-0001fnc-00001exit: Found 2659 existing dates
+2026-04-19 17:38:17,433 - ERROR - entsog_scraper.py:93 - Error processing point pt-tso-0001fnc-00001exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=pt-tso-0001fnc-00001exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,436 - INFO - entsog_scraper.py:47 - Point pt-tso-0001dis-00001exit: Found 2659 existing dates
+2026-04-19 17:38:17,438 - ERROR - entsog_scraper.py:93 - Error processing point pt-tso-0001dis-00001exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=pt-tso-0001dis-00001exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,441 - INFO - entsog_scraper.py:47 - Point hr-tso-0001fnc-00018exit: Found 2657 existing dates
+2026-04-19 17:38:17,442 - ERROR - entsog_scraper.py:93 - Error processing point hr-tso-0001fnc-00018exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=hr-tso-0001fnc-00018exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,445 - INFO - entsog_scraper.py:47 - Point fr-tso-0002dis-00188exit: Found 2658 existing dates
+2026-04-19 17:38:17,446 - ERROR - entsog_scraper.py:93 - Error processing point fr-tso-0002dis-00188exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=fr-tso-0002dis-00188exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,449 - INFO - entsog_scraper.py:47 - Point fr-tso-0002fnc-00015exit: Found 2658 existing dates
+2026-04-19 17:38:17,450 - ERROR - entsog_scraper.py:93 - Error processing point fr-tso-0002fnc-00015exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=fr-tso-0002fnc-00015exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,453 - INFO - entsog_scraper.py:47 - Point it-tso-0001dis-00005exit: Found 2658 existing dates
+2026-04-19 17:38:17,454 - ERROR - entsog_scraper.py:93 - Error processing point it-tso-0001dis-00005exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=it-tso-0001dis-00005exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,457 - INFO - entsog_scraper.py:47 - Point it-tso-0001fnc-00006exit: Found 2658 existing dates
+2026-04-19 17:38:17,457 - ERROR - entsog_scraper.py:93 - Error processing point it-tso-0001fnc-00006exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=it-tso-0001fnc-00006exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,460 - INFO - entsog_scraper.py:47 - Point it-tso-0001fnc-00005exit: Found 2658 existing dates
+2026-04-19 17:38:17,461 - ERROR - entsog_scraper.py:93 - Error processing point it-tso-0001fnc-00005exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=it-tso-0001fnc-00005exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,463 - INFO - entsog_scraper.py:47 - Point lu-tso-0001dis-00194exit: Found 2626 existing dates
+2026-04-19 17:38:17,464 - ERROR - entsog_scraper.py:93 - Error processing point lu-tso-0001dis-00194exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=lu-tso-0001dis-00194exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,466 - INFO - entsog_scraper.py:47 - Point lu-tso-0001fnc-00041exit: Found 2626 existing dates
+2026-04-19 17:38:17,467 - ERROR - entsog_scraper.py:93 - Error processing point lu-tso-0001fnc-00041exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=lu-tso-0001fnc-00041exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,470 - INFO - entsog_scraper.py:47 - Point lv-tso-0001fnc-00205exit: Found 2292 existing dates
+2026-04-19 17:38:17,471 - ERROR - entsog_scraper.py:93 - Error processing point lv-tso-0001fnc-00205exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=lv-tso-0001fnc-00205exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,473 - INFO - entsog_scraper.py:47 - Point ee-tso-0001fnc-00037exit: Found 2652 existing dates
+2026-04-19 17:38:17,474 - ERROR - entsog_scraper.py:93 - Error processing point ee-tso-0001fnc-00037exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=ee-tso-0001fnc-00037exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,476 - INFO - entsog_scraper.py:47 - Point hu-tso-0001fnc-00200exit: Found 2659 existing dates
+2026-04-19 17:38:17,477 - ERROR - entsog_scraper.py:93 - Error processing point hu-tso-0001fnc-00200exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=hu-tso-0001fnc-00200exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,479 - INFO - entsog_scraper.py:47 - Point hu-tso-0001dis-00196exit: Found 2659 existing dates
+2026-04-19 17:38:17,480 - ERROR - entsog_scraper.py:93 - Error processing point hu-tso-0001dis-00196exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=hu-tso-0001dis-00196exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,482 - INFO - entsog_scraper.py:47 - Point ro-tso-0001fnc-00010exit: Found 2658 existing dates
+2026-04-19 17:38:17,483 - ERROR - entsog_scraper.py:93 - Error processing point ro-tso-0001fnc-00010exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=ro-tso-0001fnc-00010exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,486 - INFO - entsog_scraper.py:47 - Point ro-tso-0001dis-00058exit: Found 2658 existing dates
+2026-04-19 17:38:17,487 - ERROR - entsog_scraper.py:93 - Error processing point ro-tso-0001dis-00058exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=ro-tso-0001dis-00058exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,490 - INFO - entsog_scraper.py:47 - Point si-tso-0001dis-00059exit: Found 2659 existing dates
+2026-04-19 17:38:17,490 - ERROR - entsog_scraper.py:93 - Error processing point si-tso-0001dis-00059exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=si-tso-0001dis-00059exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,492 - INFO - entsog_scraper.py:47 - Point nl-tso-0001dis-00187exit: Found 1277 existing dates
+2026-04-19 17:38:17,493 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001dis-00187exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=nl-tso-0001dis-00187exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,495 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00014exit: Found 1277 existing dates
+2026-04-19 17:38:17,496 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001fnc-00014exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=nl-tso-0001fnc-00014exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,498 - INFO - entsog_scraper.py:47 - Point nl-tso-0001dis-00201exit: Found 1381 existing dates
+2026-04-19 17:38:17,499 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001dis-00201exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=nl-tso-0001dis-00201exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,501 - INFO - entsog_scraper.py:47 - Point nl-tso-0001dis-00202exit: Found 1381 existing dates
+2026-04-19 17:38:17,502 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001dis-00202exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=nl-tso-0001dis-00202exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,505 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00013exit: Found 1277 existing dates
+2026-04-19 17:38:17,505 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001fnc-00013exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=nl-tso-0001fnc-00013exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,508 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00208exit: Found 1381 existing dates
+2026-04-19 17:38:17,509 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001fnc-00208exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=nl-tso-0001fnc-00208exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,511 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00209exit: Found 1381 existing dates
+2026-04-19 17:38:17,512 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001fnc-00209exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=nl-tso-0001fnc-00209exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdaad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,517 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00210exit: Found 1381 existing dates
+2026-04-19 17:38:17,520 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001fnc-00210exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=nl-tso-0001fnc-00210exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,527 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00211exit: Found 1381 existing dates
+2026-04-19 17:38:17,528 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001fnc-00211exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=nl-tso-0001fnc-00211exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,533 - INFO - entsog_scraper.py:47 - Point be-tso-0001dis-00192exit: Found 2070 existing dates
+2026-04-19 17:38:17,535 - ERROR - entsog_scraper.py:93 - Error processing point be-tso-0001dis-00192exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=be-tso-0001dis-00192exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9e50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,537 - INFO - entsog_scraper.py:47 - Point be-tso-0001dis-00191exit: Found 2656 existing dates
+2026-04-19 17:38:17,538 - ERROR - entsog_scraper.py:93 - Error processing point be-tso-0001dis-00191exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=be-tso-0001dis-00191exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,541 - INFO - entsog_scraper.py:47 - Point be-tso-0001fnc-00034exit: Found 2070 existing dates
+2026-04-19 17:38:17,541 - ERROR - entsog_scraper.py:93 - Error processing point be-tso-0001fnc-00034exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=be-tso-0001fnc-00034exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,544 - INFO - entsog_scraper.py:47 - Point be-tso-0001fnc-00033exit: Found 2656 existing dates
+2026-04-19 17:38:17,544 - ERROR - entsog_scraper.py:93 - Error processing point be-tso-0001fnc-00033exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=be-tso-0001fnc-00033exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9e50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,547 - INFO - entsog_scraper.py:47 - Point be-tso-0001fnc-00035exit: Found 2656 existing dates
+2026-04-19 17:38:17,547 - ERROR - entsog_scraper.py:93 - Error processing point be-tso-0001fnc-00035exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=be-tso-0001fnc-00035exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,550 - INFO - entsog_scraper.py:47 - Point bg-tso-0001fnc-00207exit: Found 1654 existing dates
+2026-04-19 17:38:17,550 - ERROR - entsog_scraper.py:93 - Error processing point bg-tso-0001fnc-00207exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=bg-tso-0001fnc-00207exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,553 - INFO - entsog_scraper.py:47 - Point bg-tso-0001fnc-00017exit: Found 2659 existing dates
+2026-04-19 17:38:17,554 - ERROR - entsog_scraper.py:93 - Error processing point bg-tso-0001fnc-00017exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=bg-tso-0001fnc-00017exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9e50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,557 - INFO - entsog_scraper.py:47 - Point bg-tso-0001fnc-00016exit: Found 2659 existing dates
+2026-04-19 17:38:17,557 - ERROR - entsog_scraper.py:93 - Error processing point bg-tso-0001fnc-00016exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=bg-tso-0001fnc-00016exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,560 - INFO - entsog_scraper.py:47 - Point pl-tso-0002fnc-00040exit: Found 2659 existing dates
+2026-04-19 17:38:17,561 - ERROR - entsog_scraper.py:93 - Error processing point pl-tso-0002fnc-00040exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=pl-tso-0002fnc-00040exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,563 - INFO - entsog_scraper.py:47 - Point pl-tso-0002fnc-00002exit: Found 2659 existing dates
+2026-04-19 17:38:17,564 - ERROR - entsog_scraper.py:93 - Error processing point pl-tso-0002fnc-00002exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=pl-tso-0002fnc-00002exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9e50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,568 - INFO - entsog_scraper.py:47 - Point pl-tso-0002dis-00193exit: Found 2659 existing dates
+2026-04-19 17:38:17,569 - ERROR - entsog_scraper.py:93 - Error processing point pl-tso-0002dis-00193exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=pl-tso-0002dis-00193exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,573 - INFO - entsog_scraper.py:47 - Point pl-tso-0002dis-00013exit: Found 2659 existing dates
+2026-04-19 17:38:17,574 - ERROR - entsog_scraper.py:93 - Error processing point pl-tso-0002dis-00013exit: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=pl-tso-0002dis-00013exit&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdafd0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,577 - INFO - entsog_scraper.py:47 - Point cz-sso-0002dis-00195exit,pl-tso-0002dis-00195entry: Found 2659 existing dates
+2026-04-19 17:38:17,578 - ERROR - entsog_scraper.py:93 - Error processing point cz-sso-0002dis-00195exit,pl-tso-0002dis-00195entry: HTTPSConnectionPool(host='transparency.entsog.eu', port=443): Max retries exceeded with url: /api/v1/operationalData?forceDownload=true&pointDirection=cz-sso-0002dis-00195exit%2Cpl-tso-0002dis-00195entry&from=2026-01-19&to=2026-04-19&indicator=Physical+Flow&periodType=day&timezone=CET&limit=-1&dataset=1&directDownload=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9e50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,663 - INFO - entsog_scraper.py:103 - Successfully saved ENTSOG data to src/data/raw/entsog_data.csv
+2026-04-19 17:38:17,664 - INFO - update_raw_data.py:36 - Running EurostatScraper...
+2026-04-19 17:38:17,669 - ERROR - eurostat_scraper.py:110 - Error processing Eurostat demand data: 
+2026-04-19 17:38:17,669 - ERROR - eurostat_scraper.py:42 - Error processing Eurostat demand data: 
+2026-04-19 17:38:17,670 - INFO - update_raw_data.py:36 - Running FranceScraper...
+2026-04-19 17:38:17,670 - INFO - france_scraper.py:23 - Fetching French gas demand data for years 2010-2026
+2026-04-19 17:38:17,671 - ERROR - france_scraper.py:47 - Request error while downloading data for 2010: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2010-01-01&endDate=2010-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9e50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,671 - ERROR - france_scraper.py:47 - Request error while downloading data for 2011: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2011-01-01&endDate=2011-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,671 - ERROR - france_scraper.py:47 - Request error while downloading data for 2012: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2012-01-01&endDate=2012-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,672 - ERROR - france_scraper.py:47 - Request error while downloading data for 2013: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2013-01-01&endDate=2013-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9e50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,672 - ERROR - france_scraper.py:47 - Request error while downloading data for 2014: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2014-01-01&endDate=2014-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,673 - ERROR - france_scraper.py:47 - Request error while downloading data for 2015: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2015-01-01&endDate=2015-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,673 - ERROR - france_scraper.py:47 - Request error while downloading data for 2016: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2016-01-01&endDate=2016-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9e50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,674 - ERROR - france_scraper.py:47 - Request error while downloading data for 2017: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2017-01-01&endDate=2017-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,674 - ERROR - france_scraper.py:47 - Request error while downloading data for 2018: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2018-01-01&endDate=2018-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,675 - ERROR - france_scraper.py:47 - Request error while downloading data for 2019: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2019-01-01&endDate=2019-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9e50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,675 - ERROR - france_scraper.py:47 - Request error while downloading data for 2020: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2020-01-01&endDate=2020-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,675 - ERROR - france_scraper.py:47 - Request error while downloading data for 2021: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2021-01-01&endDate=2021-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,676 - ERROR - france_scraper.py:47 - Request error while downloading data for 2022: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2022-01-01&endDate=2022-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9e50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,676 - ERROR - france_scraper.py:47 - Request error while downloading data for 2023: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2023-01-01&endDate=2023-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,677 - ERROR - france_scraper.py:47 - Request error while downloading data for 2024: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2024-01-01&endDate=2024-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,677 - ERROR - france_scraper.py:47 - Request error while downloading data for 2025: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2025-01-01&endDate=2025-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9e50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,678 - ERROR - france_scraper.py:47 - Request error while downloading data for 2026: HTTPSConnectionPool(host='smart.grtgaz.com', port=443): Max retries exceeded with url: /api/v1/en/consommation/export/Zone.xls?startDate=2026-01-01&endDate=2026-12-31&range=daily (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9d10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,678 - INFO - update_raw_data.py:36 - Running GermanyScraper...
+2026-04-19 17:38:17,678 - INFO - germany_scraper.py:42 - Fetching German gas demand data from 2020-01-01 to 2026-04-19...
+2026-04-19 17:38:17,679 - ERROR - germany_scraper.py:62 - Error scraping German data: HTTPSConnectionPool(host='datenservice-api.tradinghub.eu', port=443): Max retries exceeded with url: /api/evoq/GetAggregierteVerbrauchsdatenTabelle?DatumStart=01-01-2020&DatumEnde=04-19-2026&GasXType_Id=all (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccdb750>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:17,679 - INFO - update_raw_data.py:36 - Running UKScraper...
+2026-04-19 17:38:17,679 - ERROR - main.py:85 - Critical error in main process: HTTPSConnectionPool(host='data.nationalgas.com', port=443): Max retries exceeded with url: /api/find-gas-data-download?applicableFor=Y&dateFrom=2025-01-01&dateTo=2026-04-17&dateType=GASDAY&latestFlag=Y&ids=PUBOBJ1026,PUBOBJ1025,PUBOBJ1023&type=CSV (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10ccd9e50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-04-19 17:38:18,767 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for BG
+2026-04-19 17:38:18,770 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for BG (3/26)
+2026-04-19 17:38:22,982 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for HR
+2026-04-19 17:38:22,984 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for HR (4/26)
+2026-04-19 17:38:28,757 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for CZ
+2026-04-19 17:38:28,759 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for CZ (5/26)
+2026-04-19 17:38:34,145 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for DK
+2026-04-19 17:38:34,147 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for DK (6/26)
+2026-04-19 17:38:38,041 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for EE
+2026-04-19 17:38:38,044 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for EE (7/26)
+2026-04-19 17:38:43,054 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for FI
+2026-04-19 17:38:43,057 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for FI (8/26)
+2026-04-19 17:38:48,427 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for FR
+2026-04-19 17:38:48,429 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for FR (9/26)
+2026-04-19 17:38:53,911 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for DE
+2026-04-19 17:38:53,914 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for DE (10/26)
+2026-04-19 17:38:58,396 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for GR
+2026-04-19 17:38:58,398 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for GR (11/26)
+2026-04-19 17:39:03,020 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for HU
+2026-04-19 17:39:03,022 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for HU (12/26)
+2026-04-19 17:39:06,442 - INFO - energy_charts_scraper.py:145 - Found 50 days of data for IE
+2026-04-19 17:39:06,445 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for IE (13/26)
+2026-04-19 17:39:11,888 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for IT
+2026-04-19 17:39:11,891 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for IT (14/26)
+2026-04-19 17:39:16,575 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for LV
+2026-04-19 17:39:16,578 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for LV (15/26)
+2026-04-19 17:39:21,755 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for LT
+2026-04-19 17:39:21,757 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for LT (16/26)
+2026-04-19 17:39:25,795 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for LU
+2026-04-19 17:39:25,797 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for LU (17/26)
+2026-04-19 17:39:30,626 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for NL
+2026-04-19 17:39:30,628 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for NL (18/26)
+2026-04-19 17:39:35,630 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for PL
+2026-04-19 17:39:35,631 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for PL (19/26)
+2026-04-19 17:39:40,587 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for PT
+2026-04-19 17:39:40,590 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for PT (20/26)
+2026-04-19 17:39:46,139 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for RO
+2026-04-19 17:39:46,141 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for RO (21/26)
+2026-04-19 17:39:50,727 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for SK
+2026-04-19 17:39:50,729 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for SK (22/26)
+2026-04-19 17:39:55,379 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for SI
+2026-04-19 17:39:55,382 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for SI (23/26)
+2026-04-19 17:40:00,478 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for ES
+2026-04-19 17:40:00,480 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for ES (24/26)
+2026-04-19 17:40:07,323 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for SE
+2026-04-19 17:40:07,325 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for SE (25/26)
+2026-04-19 17:40:15,300 - INFO - energy_charts_scraper.py:145 - Found 62 days of data for UK
+2026-04-19 17:40:15,302 - INFO - energy_charts_scraper.py:52 - Successfully retrieved power data for UK (26/26)
+2026-04-19 17:40:17,423 - INFO - update_raw_data.py:36 - Running EntsogScraper...
+2026-04-19 17:40:17,423 - INFO - entsog_scraper.py:32 - Performing multi-day ENTSOG update
+2026-04-19 17:40:17,423 - INFO - entsog_scraper.py:115 - Found existing data at src/data/raw/entsog_data.csv
+2026-04-19 17:40:17,447 - INFO - entsog_scraper.py:118 - Loaded 89246 records with 39 unique points
+2026-04-19 17:40:17,450 - INFO - entsog_scraper.py:47 - Point pt-tso-0001fnc-00001exit: Found 2659 existing dates
+2026-04-19 17:40:18,315 - INFO - entsog_scraper.py:89 - Point 1/39 (pt-tso-0001fnc-00001exit): Added 7 new records
+2026-04-19 17:40:20,329 - INFO - entsog_scraper.py:47 - Point pt-tso-0001dis-00001exit: Found 2659 existing dates
+2026-04-19 17:40:21,488 - INFO - entsog_scraper.py:89 - Point 2/39 (pt-tso-0001dis-00001exit): Added 7 new records
+2026-04-19 17:40:23,502 - INFO - entsog_scraper.py:47 - Point hr-tso-0001fnc-00018exit: Found 2657 existing dates
+2026-04-19 17:40:24,113 - INFO - entsog_scraper.py:89 - Point 3/39 (hr-tso-0001fnc-00018exit): Added 7 new records
+2026-04-19 17:40:26,125 - INFO - entsog_scraper.py:47 - Point fr-tso-0002dis-00188exit: Found 2658 existing dates
+2026-04-19 17:40:27,908 - INFO - entsog_scraper.py:89 - Point 4/39 (fr-tso-0002dis-00188exit): Added 7 new records
+2026-04-19 17:40:29,923 - INFO - entsog_scraper.py:47 - Point fr-tso-0002fnc-00015exit: Found 2658 existing dates
+2026-04-19 17:40:31,231 - INFO - entsog_scraper.py:89 - Point 5/39 (fr-tso-0002fnc-00015exit): Added 7 new records
+2026-04-19 17:40:33,245 - INFO - entsog_scraper.py:47 - Point it-tso-0001dis-00005exit: Found 2658 existing dates
+2026-04-19 17:40:34,095 - INFO - entsog_scraper.py:89 - Point 6/39 (it-tso-0001dis-00005exit): Added 7 new records
+2026-04-19 17:40:36,111 - INFO - entsog_scraper.py:47 - Point it-tso-0001fnc-00006exit: Found 2658 existing dates
+2026-04-19 17:40:37,017 - INFO - entsog_scraper.py:89 - Point 7/39 (it-tso-0001fnc-00006exit): Added 7 new records
+2026-04-19 17:40:39,027 - INFO - entsog_scraper.py:47 - Point it-tso-0001fnc-00005exit: Found 2658 existing dates
+2026-04-19 17:40:39,677 - INFO - entsog_scraper.py:89 - Point 8/39 (it-tso-0001fnc-00005exit): Added 7 new records
+2026-04-19 17:40:41,694 - INFO - entsog_scraper.py:47 - Point lu-tso-0001dis-00194exit: Found 2626 existing dates
+2026-04-19 17:40:42,288 - INFO - entsog_scraper.py:89 - Point 9/39 (lu-tso-0001dis-00194exit): Added 7 new records
+2026-04-19 17:40:44,301 - INFO - entsog_scraper.py:47 - Point lu-tso-0001fnc-00041exit: Found 2626 existing dates
+2026-04-19 17:40:45,104 - INFO - entsog_scraper.py:89 - Point 10/39 (lu-tso-0001fnc-00041exit): Added 7 new records
+2026-04-19 17:40:47,119 - INFO - entsog_scraper.py:47 - Point lv-tso-0001fnc-00205exit: Found 2292 existing dates
+2026-04-19 17:40:48,124 - INFO - entsog_scraper.py:89 - Point 11/39 (lv-tso-0001fnc-00205exit): Added 7 new records
+2026-04-19 17:40:50,133 - INFO - entsog_scraper.py:47 - Point ee-tso-0001fnc-00037exit: Found 2652 existing dates
+2026-04-19 17:40:50,685 - INFO - entsog_scraper.py:89 - Point 12/39 (ee-tso-0001fnc-00037exit): Added 7 new records
+2026-04-19 17:40:52,694 - INFO - entsog_scraper.py:47 - Point hu-tso-0001fnc-00200exit: Found 2659 existing dates
+2026-04-19 17:40:53,341 - INFO - entsog_scraper.py:89 - Point 13/39 (hu-tso-0001fnc-00200exit): Added 7 new records
+2026-04-19 17:40:55,351 - INFO - entsog_scraper.py:47 - Point hu-tso-0001dis-00196exit: Found 2659 existing dates
+2026-04-19 17:40:55,954 - INFO - entsog_scraper.py:89 - Point 14/39 (hu-tso-0001dis-00196exit): Added 7 new records
+2026-04-19 17:40:57,964 - INFO - entsog_scraper.py:47 - Point ro-tso-0001fnc-00010exit: Found 2658 existing dates
+2026-04-19 17:40:58,519 - INFO - entsog_scraper.py:89 - Point 15/39 (ro-tso-0001fnc-00010exit): Added 7 new records
+2026-04-19 17:41:00,528 - INFO - entsog_scraper.py:47 - Point ro-tso-0001dis-00058exit: Found 2658 existing dates
+2026-04-19 17:41:01,173 - INFO - entsog_scraper.py:89 - Point 16/39 (ro-tso-0001dis-00058exit): Added 7 new records
+2026-04-19 17:41:03,181 - INFO - entsog_scraper.py:47 - Point si-tso-0001dis-00059exit: Found 2659 existing dates
+2026-04-19 17:41:03,946 - INFO - entsog_scraper.py:89 - Point 17/39 (si-tso-0001dis-00059exit): Added 7 new records
+2026-04-19 17:41:05,959 - INFO - entsog_scraper.py:47 - Point nl-tso-0001dis-00187exit: Found 1277 existing dates
+2026-04-19 17:41:06,592 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001dis-00187exit: Expecting value: line 1 column 1 (char 0)
+2026-04-19 17:41:06,599 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00014exit: Found 1277 existing dates
+2026-04-19 17:41:08,184 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001fnc-00014exit: Expecting value: line 1 column 1 (char 0)
+2026-04-19 17:41:08,192 - INFO - entsog_scraper.py:47 - Point nl-tso-0001dis-00201exit: Found 1381 existing dates
+2026-04-19 17:41:09,988 - INFO - entsog_scraper.py:89 - Point 20/39 (nl-tso-0001dis-00201exit): Added 7 new records
+2026-04-19 17:41:12,002 - INFO - entsog_scraper.py:47 - Point nl-tso-0001dis-00202exit: Found 1381 existing dates
+2026-04-19 17:41:12,699 - INFO - entsog_scraper.py:89 - Point 21/39 (nl-tso-0001dis-00202exit): Added 7 new records
+2026-04-19 17:41:14,714 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00013exit: Found 1277 existing dates
+2026-04-19 17:41:15,706 - ERROR - entsog_scraper.py:93 - Error processing point nl-tso-0001fnc-00013exit: Expecting value: line 1 column 1 (char 0)
+2026-04-19 17:41:15,710 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00208exit: Found 1381 existing dates
+2026-04-19 17:41:16,975 - INFO - entsog_scraper.py:89 - Point 23/39 (nl-tso-0001fnc-00208exit): Added 7 new records
+2026-04-19 17:41:18,989 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00209exit: Found 1381 existing dates
+2026-04-19 17:41:19,659 - INFO - entsog_scraper.py:89 - Point 24/39 (nl-tso-0001fnc-00209exit): Added 7 new records
+2026-04-19 17:41:21,664 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00210exit: Found 1381 existing dates
+2026-04-19 17:41:23,141 - INFO - entsog_scraper.py:89 - Point 25/39 (nl-tso-0001fnc-00210exit): Added 7 new records
+2026-04-19 17:41:25,155 - INFO - entsog_scraper.py:47 - Point nl-tso-0001fnc-00211exit: Found 1381 existing dates
+2026-04-19 17:41:26,214 - INFO - entsog_scraper.py:89 - Point 26/39 (nl-tso-0001fnc-00211exit): Added 7 new records
+2026-04-19 17:41:28,227 - INFO - entsog_scraper.py:47 - Point be-tso-0001dis-00192exit: Found 2070 existing dates
+2026-04-19 17:41:30,043 - ERROR - entsog_scraper.py:93 - Error processing point be-tso-0001dis-00192exit: Expecting value: line 1 column 1 (char 0)
+2026-04-19 17:41:30,052 - INFO - entsog_scraper.py:47 - Point be-tso-0001dis-00191exit: Found 2656 existing dates
+2026-04-19 17:41:31,539 - INFO - entsog_scraper.py:89 - Point 28/39 (be-tso-0001dis-00191exit): Added 7 new records
+2026-04-19 17:41:33,553 - INFO - entsog_scraper.py:47 - Point be-tso-0001fnc-00034exit: Found 2070 existing dates
+2026-04-19 17:41:34,776 - ERROR - entsog_scraper.py:93 - Error processing point be-tso-0001fnc-00034exit: Expecting value: line 1 column 1 (char 0)
+2026-04-19 17:41:34,785 - INFO - entsog_scraper.py:47 - Point be-tso-0001fnc-00033exit: Found 2656 existing dates
+2026-04-19 17:41:36,098 - INFO - entsog_scraper.py:89 - Point 30/39 (be-tso-0001fnc-00033exit): Added 7 new records
+2026-04-19 17:41:38,112 - INFO - entsog_scraper.py:47 - Point be-tso-0001fnc-00035exit: Found 2656 existing dates
+2026-04-19 17:41:39,789 - INFO - entsog_scraper.py:89 - Point 31/39 (be-tso-0001fnc-00035exit): Added 7 new records
+2026-04-19 17:41:41,805 - INFO - entsog_scraper.py:47 - Point bg-tso-0001fnc-00207exit: Found 1654 existing dates
+2026-04-19 17:41:42,802 - INFO - entsog_scraper.py:89 - Point 32/39 (bg-tso-0001fnc-00207exit): Added 7 new records
+2026-04-19 17:41:44,817 - INFO - entsog_scraper.py:47 - Point bg-tso-0001fnc-00017exit: Found 2659 existing dates
+2026-04-19 17:41:45,470 - INFO - entsog_scraper.py:89 - Point 33/39 (bg-tso-0001fnc-00017exit): Added 7 new records
+2026-04-19 17:41:47,485 - INFO - entsog_scraper.py:47 - Point bg-tso-0001fnc-00016exit: Found 2659 existing dates
+2026-04-19 17:41:48,285 - INFO - entsog_scraper.py:89 - Point 34/39 (bg-tso-0001fnc-00016exit): Added 7 new records
+2026-04-19 17:41:50,302 - INFO - entsog_scraper.py:47 - Point pl-tso-0002fnc-00040exit: Found 2659 existing dates
+2026-04-19 17:41:51,255 - INFO - entsog_scraper.py:89 - Point 35/39 (pl-tso-0002fnc-00040exit): Added 7 new records
+2026-04-19 17:41:53,271 - INFO - entsog_scraper.py:47 - Point pl-tso-0002fnc-00002exit: Found 2659 existing dates
+2026-04-19 17:41:56,428 - INFO - entsog_scraper.py:89 - Point 36/39 (pl-tso-0002fnc-00002exit): Added 7 new records
+2026-04-19 17:41:58,446 - INFO - entsog_scraper.py:47 - Point pl-tso-0002dis-00193exit: Found 2659 existing dates
+2026-04-19 17:41:59,303 - INFO - entsog_scraper.py:89 - Point 37/39 (pl-tso-0002dis-00193exit): Added 7 new records
+2026-04-19 17:42:01,319 - INFO - entsog_scraper.py:47 - Point pl-tso-0002dis-00013exit: Found 2659 existing dates
+2026-04-19 17:42:02,270 - INFO - entsog_scraper.py:89 - Point 38/39 (pl-tso-0002dis-00013exit): Added 7 new records
+2026-04-19 17:42:04,285 - INFO - entsog_scraper.py:47 - Point cz-sso-0002dis-00195exit,pl-tso-0002dis-00195entry: Found 2659 existing dates
+2026-04-19 17:42:05,235 - INFO - entsog_scraper.py:89 - Point 39/39 (cz-sso-0002dis-00195exit,pl-tso-0002dis-00195entry): Added 7 new records
+2026-04-19 17:42:07,348 - INFO - entsog_scraper.py:103 - Successfully saved ENTSOG data to src/data/raw/entsog_data.csv
+2026-04-19 17:42:07,350 - INFO - update_raw_data.py:36 - Running EurostatScraper...
+2026-04-19 17:42:37,562 - INFO - eurostat_scraper.py:37 - Successfully saved Eurostat demand data to src/data/raw/eurostat/latest_data.csv
+2026-04-19 17:42:37,562 - INFO - update_raw_data.py:36 - Running FranceScraper...
+2026-04-19 17:42:37,562 - INFO - france_scraper.py:23 - Fetching French gas demand data for years 2010-2026
+2026-04-19 17:42:39,267 - INFO - france_scraper.py:44 - Successfully downloaded data for 2010, saved to src/data/raw/france_demand
+2026-04-19 17:42:40,497 - INFO - france_scraper.py:44 - Successfully downloaded data for 2011, saved to src/data/raw/france_demand
+2026-04-19 17:42:42,137 - INFO - france_scraper.py:44 - Successfully downloaded data for 2012, saved to src/data/raw/france_demand
+2026-04-19 17:42:43,780 - INFO - france_scraper.py:44 - Successfully downloaded data for 2013, saved to src/data/raw/france_demand
+2026-04-19 17:42:45,107 - INFO - france_scraper.py:44 - Successfully downloaded data for 2014, saved to src/data/raw/france_demand
+2026-04-19 17:42:47,060 - INFO - france_scraper.py:44 - Successfully downloaded data for 2015, saved to src/data/raw/france_demand
+2026-04-19 17:42:48,642 - INFO - france_scraper.py:44 - Successfully downloaded data for 2016, saved to src/data/raw/france_demand
+2026-04-19 17:42:50,123 - INFO - france_scraper.py:44 - Successfully downloaded data for 2017, saved to src/data/raw/france_demand
+2026-04-19 17:42:51,357 - INFO - france_scraper.py:44 - Successfully downloaded data for 2018, saved to src/data/raw/france_demand
+2026-04-19 17:42:52,834 - INFO - france_scraper.py:44 - Successfully downloaded data for 2019, saved to src/data/raw/france_demand
+2026-04-19 17:42:54,271 - INFO - france_scraper.py:44 - Successfully downloaded data for 2020, saved to src/data/raw/france_demand
+2026-04-19 17:42:55,548 - INFO - france_scraper.py:44 - Successfully downloaded data for 2021, saved to src/data/raw/france_demand
+2026-04-19 17:42:56,577 - INFO - france_scraper.py:44 - Successfully downloaded data for 2022, saved to src/data/raw/france_demand
+2026-04-19 17:42:57,395 - INFO - france_scraper.py:44 - Successfully downloaded data for 2023, saved to src/data/raw/france_demand
+2026-04-19 17:43:01,539 - INFO - france_scraper.py:44 - Successfully downloaded data for 2024, saved to src/data/raw/france_demand
+2026-04-19 17:43:07,280 - INFO - france_scraper.py:44 - Successfully downloaded data for 2025, saved to src/data/raw/france_demand
+2026-04-19 17:43:13,164 - INFO - france_scraper.py:44 - Successfully downloaded data for 2026, saved to src/data/raw/france_demand
+2026-04-19 17:43:13,166 - INFO - update_raw_data.py:36 - Running GermanyScraper...
+2026-04-19 17:43:13,166 - INFO - germany_scraper.py:42 - Fetching German gas demand data from 2020-01-01 to 2026-04-19...
+2026-04-19 17:43:14,678 - INFO - germany_scraper.py:58 - Successfully saved German data to src/data/raw/THE_demand.csv
+2026-04-19 17:43:14,680 - INFO - update_raw_data.py:36 - Running UKScraper...
+2026-04-19 17:43:19,248 - INFO - uk_scraper.py:40 - Succesful response from the Nat Grid API
+2026-04-19 17:43:19,251 - INFO - uk_scraper.py:51 - CSV file downloaded successfully to /Users/benjamin_mcwilliams/Documents/bruegel/data_new/WORKING/ENERGY/gas-demand/src/data/raw/uk/UK_gas_data_2025.csv
+2026-04-19 17:43:19,253 - INFO - update_raw_data.py:36 - Running SpainScraper...
+2026-04-19 17:43:19,253 - INFO - spain_scraper.py:65 - Scraping from 2026-03-01 to 2026-04-17
+2026-04-19 17:43:19,254 - INFO - logger.py:11 - ====== WebDriver manager ======
+2026-04-19 17:43:20,156 - INFO - logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-04-19 17:43:21,305 - INFO - logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-04-19 17:43:21,924 - INFO - logger.py:11 - There is no [mac64] chromedriver "147.0.7727.57" for browser google-chrome "147.0.7727" in cache
+2026-04-19 17:43:21,939 - INFO - logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-04-19 17:43:23,945 - INFO - logger.py:11 - WebDriver version 147.0.7727.57 selected
+2026-04-19 17:43:23,950 - INFO - logger.py:11 - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/147.0.7727.57/mac-arm64/chromedriver-mac-arm64.zip
+2026-04-19 17:43:23,950 - INFO - logger.py:11 - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/147.0.7727.57/mac-arm64/chromedriver-mac-arm64.zip
+2026-04-19 17:43:24,835 - INFO - logger.py:11 - Driver downloading response is 200
+2026-04-19 17:43:31,243 - INFO - logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-04-19 17:43:32,112 - INFO - logger.py:11 - Driver has been saved in cache [/Users/benjamin_mcwilliams/.wdm/drivers/chromedriver/mac64/147.0.7727.57]
+2026-04-19 17:43:40,273 - INFO - spain.py:35 - Successfully accepted cookies.
+2026-04-19 17:43:40,274 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-01
+2026-04-19 17:43:45,474 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-01
+2026-04-19 17:43:49,321 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-02
+2026-04-19 17:43:54,486 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-02
+2026-04-19 17:43:57,450 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-03
+2026-04-19 17:44:02,619 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-03
+2026-04-19 17:44:05,074 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-04
+2026-04-19 17:44:10,227 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-04
+2026-04-19 17:44:13,530 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-05
+2026-04-19 17:44:18,697 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-05
+2026-04-19 17:44:21,856 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-06
+2026-04-19 17:44:27,021 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-06
+2026-04-19 17:44:29,942 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-07
+2026-04-19 17:44:35,107 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-07
+2026-04-19 17:44:37,677 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-08
+2026-04-19 17:44:42,842 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-08
+2026-04-19 17:44:45,878 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-09
+2026-04-19 17:44:51,038 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-09
+2026-04-19 17:44:54,316 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-10
+2026-04-19 17:44:59,459 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-10
+2026-04-19 17:45:02,276 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-11
+2026-04-19 17:45:07,426 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-11
+2026-04-19 17:45:10,988 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-12
+2026-04-19 17:45:16,150 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-12
+2026-04-19 17:45:19,005 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-13
+2026-04-19 17:45:24,168 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-13
+2026-04-19 17:45:26,830 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-14
+2026-04-19 17:45:31,983 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-14
+2026-04-19 17:45:35,961 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-15
+2026-04-19 17:45:41,130 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-15
+2026-04-19 17:45:44,222 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-16
+2026-04-19 17:45:49,391 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-16
+2026-04-19 17:45:51,602 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-17
+2026-04-19 17:45:56,767 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-17
+2026-04-19 17:45:59,021 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-18
+2026-04-19 17:46:04,199 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-18
+2026-04-19 17:46:08,174 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-19
+2026-04-19 17:46:13,337 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-19
+2026-04-19 17:46:16,089 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-20
+2026-04-19 17:46:21,254 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-20
+2026-04-19 17:46:25,077 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-21
+2026-04-19 17:46:30,251 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-21
+2026-04-19 17:46:33,248 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-22
+2026-04-19 17:46:38,413 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-22
+2026-04-19 17:46:41,234 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-23
+2026-04-19 17:46:46,399 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-23
+2026-04-19 17:46:48,750 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-24
+2026-04-19 17:46:53,921 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-24
+2026-04-19 17:46:56,655 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-25
+2026-04-19 17:47:01,819 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-25
+2026-04-19 17:47:05,219 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-26
+2026-04-19 17:47:10,391 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-26
+2026-04-19 17:47:13,129 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-27
+2026-04-19 17:47:18,301 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-27
+2026-04-19 17:47:20,659 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-28
+2026-04-19 17:47:25,829 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-28
+2026-04-19 17:47:29,786 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-29
+2026-04-19 17:47:34,958 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-29
+2026-04-19 17:47:38,795 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-30
+2026-04-19 17:47:43,974 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-30
+2026-04-19 17:47:46,291 - INFO - spain_scraper.py:79 - Scraping data for 2026-03-31
+2026-04-19 17:47:51,466 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-03-31
+2026-04-19 17:47:53,986 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-01
+2026-04-19 17:47:59,162 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-01
+2026-04-19 17:48:02,631 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-02
+2026-04-19 17:48:07,805 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-02
+2026-04-19 17:48:10,119 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-03
+2026-04-19 17:48:15,299 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-03
+2026-04-19 17:48:19,210 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-04
+2026-04-19 17:48:24,376 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-04
+2026-04-19 17:48:27,406 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-05
+2026-04-19 17:48:32,580 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-05
+2026-04-19 17:48:36,228 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-06
+2026-04-19 17:48:41,398 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-06
+2026-04-19 17:48:43,534 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-07
+2026-04-19 17:48:48,710 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-07
+2026-04-19 17:48:52,184 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-08
+2026-04-19 17:48:57,365 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-08
+2026-04-19 17:48:59,451 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-09
+2026-04-19 17:49:04,624 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-09
+2026-04-19 17:49:07,449 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-10
+2026-04-19 17:49:12,607 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-10
+2026-04-19 17:49:14,701 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-11
+2026-04-19 17:49:19,889 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-11
+2026-04-19 17:49:22,121 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-12
+2026-04-19 17:49:27,277 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-12
+2026-04-19 17:49:30,890 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-13
+2026-04-19 17:49:36,061 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-13
+2026-04-19 17:49:39,786 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-14
+2026-04-19 17:49:44,956 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-14
+2026-04-19 17:49:48,892 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-15
+2026-04-19 17:49:54,063 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-15
+2026-04-19 17:49:56,196 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-16
+2026-04-19 17:50:01,352 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-16
+2026-04-19 17:50:04,592 - INFO - spain_scraper.py:79 - Scraping data for 2026-04-17
+2026-04-19 17:50:09,772 - INFO - spain_scraper.py:86 - Successfully collected data for 2026-04-17
+2026-04-19 17:50:12,524 - INFO - spain_scraper.py:101 - Dataset saved to src/data/raw/spain/spain_gas_demand_2026-03-01_2026-04-17.csv
+2026-04-19 17:50:12,623 - INFO - update_raw_data.py:47 - 
+Scraping Results:
+2026-04-19 17:50:12,623 - INFO - update_raw_data.py:50 - AustriaScraper: Success
+2026-04-19 17:50:12,623 - INFO - update_raw_data.py:50 - BnetzaScraper: Success
+2026-04-19 17:50:12,623 - INFO - update_raw_data.py:50 - DenmarkScraper: Success
+2026-04-19 17:50:12,623 - INFO - update_raw_data.py:50 - EnergyChartsScraper: Success
+2026-04-19 17:50:12,623 - INFO - update_raw_data.py:50 - EntsogScraper: Success
+2026-04-19 17:50:12,623 - INFO - update_raw_data.py:50 - EurostatScraper: Success
+2026-04-19 17:50:12,623 - INFO - update_raw_data.py:50 - FranceScraper: Success
+2026-04-19 17:50:12,623 - INFO - update_raw_data.py:50 - GermanyScraper: Success
+2026-04-19 17:50:12,623 - INFO - update_raw_data.py:50 - UKScraper: Success
+2026-04-19 17:50:12,623 - INFO - update_raw_data.py:50 - SpainScraper: Success
+2026-04-19 17:50:12,642 - INFO - main.py:55 - Successfully extracted data for AustriaDemandExtractor
+2026-04-19 17:50:12,650 - INFO - main.py:55 - Successfully extracted data for DenmarkDemandExtractor
+2026-04-19 17:50:13,515 - INFO - main.py:55 - Successfully extracted data for FranceDemandExtractor
+2026-04-19 17:50:13,518 - INFO - germany_demand.py:79 - Successfully processed THE data
+2026-04-19 17:50:13,526 - INFO - germany_demand.py:117 - Successfully processed GASPOOL/NCG data
+2026-04-19 17:50:13,527 - INFO - main.py:55 - Successfully extracted data for GermanyDemandExtractor
+2026-04-19 17:50:13,527 - INFO - spain_demand.py:31 - Reading historic file: src/data/raw/spain/spain_gas_demand_2019_feb2026.csv
+2026-04-19 17:50:13,541 - INFO - spain_demand.py:35 - Reading current file: src/data/raw/spain/spain_gas_demand_2026-03-01_2026-04-17.csv
+2026-04-19 17:50:13,542 - INFO - main.py:55 - Successfully extracted data for SpainDemandExtractor
+2026-04-19 17:50:13,587 - INFO - main.py:55 - Successfully extracted data for EntsogDemandExtractor
+2026-04-19 17:50:13,610 - INFO - main.py:55 - Successfully extracted data for EnergyChartsDemandExtractor
+2026-04-19 17:50:13,621 - INFO - main.py:55 - Successfully extracted data for UKDemandExtractor
+2026-04-19 17:50:13,656 - INFO - main.py:73 - Found demand data for 26 countries
+2026-04-19 17:50:13,820 - INFO - main.py:75 - All data saved successfully
+2026-04-19 17:50:13,820 - INFO - main.py:76 - Running DailyDemandAnalyzer...
+2026-04-19 17:50:14,128 - INFO - main.py:78 - Wrote src/data/analyzed/daily_demand_clean.csv
