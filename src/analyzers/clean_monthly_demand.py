@@ -32,6 +32,33 @@ class MonthlyDemandAnalyzer:
         tried_paths = ", ".join(str(path) for path in paths)
         raise FileNotFoundError(f"No input file found. Tried: {tried_paths}")
 
+    def _calculate_industry_household(self, df: pd.DataFrame) -> pd.DataFrame:
+        pivot_df = df.pivot_table(
+            index=['country', 'year', 'month'],
+            columns='type',
+            values='demand',
+            aggfunc='sum',
+        ).reset_index()
+
+        required_columns = {'total', 'power'}
+        if not required_columns.issubset(set(pivot_df.columns)):
+            return pd.DataFrame(columns=['country', 'year', 'month', 'demand', 'type', 'source'])
+
+        mask = pivot_df['total'].notna() & pivot_df['power'].notna()
+        if 'industry' in pivot_df.columns:
+            mask = mask & pivot_df['industry'].isna()
+        if 'household' in pivot_df.columns:
+            mask = mask & pivot_df['household'].isna()
+
+        industry_household_df = pivot_df.loc[mask, ['country', 'year', 'month', 'total', 'power']].copy()
+        if industry_household_df.empty:
+            return pd.DataFrame(columns=['country', 'year', 'month', 'demand', 'type', 'source'])
+
+        industry_household_df['demand'] = industry_household_df['total'] - industry_household_df['power']
+        industry_household_df['type'] = 'industry-household'
+        industry_household_df['source'] = 'calculated'
+        return industry_household_df[['country', 'year', 'month', 'demand', 'type', 'source']]
+
     def build_monthly_output(self) -> pd.DataFrame:
         #read in processed daily 
         df = pd.read_csv("src/data/processed/daily_demand_all.csv")
@@ -149,6 +176,9 @@ class MonthlyDemandAnalyzer:
 
         updated_df = pd.concat([updated_df, german_industry_df], ignore_index=True)
 
+        industry_household_df = self._calculate_industry_household(updated_df)
+        updated_df = pd.concat([updated_df, industry_household_df], ignore_index=True)
+
         #only export from year 2019 onwards
         updated_df = updated_df[updated_df['year'] >= 2019]
         updated_df['demand'] = updated_df['demand'].round(2)
@@ -156,6 +186,7 @@ class MonthlyDemandAnalyzer:
         # Apply country-specific cutoff dates from config
         config = Config()
         updated_df = apply_country_cutoffs(updated_df, config)
+        updated_df['should_plot'] = updated_df['type'] != 'industry-power'
 
         return updated_df
 

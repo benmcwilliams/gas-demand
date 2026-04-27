@@ -56,6 +56,11 @@ class EurostatAnnualScraper:
             "unit": ["TJ_GCV"],
         }
 
+        energy_balance_labels = eurostat.get_dic(
+            self.dataset_code,
+            "nrg_bal",
+            frmt="dict",
+        )
         df_euro = eurostat.get_data_df(self.dataset_code, filter_pars=filter_pars)
         df_euro = df_euro.rename(columns={"geo\\TIME_PERIOD": "geo"})
 
@@ -87,6 +92,9 @@ class EurostatAnnualScraper:
                 "nrg_bal": "energy_balance",
             }
         )
+        result_df["energy_balance_label"] = result_df["energy_balance"].map(
+            energy_balance_labels
+        )
         result_df["dataset"] = self.dataset_code
         result_df["source"] = self.source
 
@@ -99,6 +107,7 @@ class EurostatAnnualScraper:
                 "country",
                 "year",
                 "energy_balance",
+                "energy_balance_label",
                 "value",
                 "unit",
                 "siec",

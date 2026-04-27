@@ -127,14 +127,18 @@ class MongoMonthlySeriesWriter:
         working_df["month"] = pd.to_numeric(working_df["month"], errors="coerce")
         working_df = working_df.dropna(subset=["country", "year", "month", "type", "source", "value"])
         working_df["is_calculated"] = working_df["source"].eq("calculated")
+        if "should_plot" not in working_df.columns:
+            working_df["should_plot"] = working_df["type"].ne("industry-power")
+        working_df["should_plot"] = working_df["should_plot"].astype(bool)
 
         now = datetime.now(timezone.utc)
         operations = []
 
-        for row in working_df[["country", "year", "month", "type", "source", "value", "is_calculated"]].itertuples(index=False):
+        for row in working_df[["country", "year", "month", "type", "source", "value", "is_calculated", "should_plot"]].itertuples(index=False):
             year = int(row.year)
             month = int(row.month)
             is_calculated = bool(row.is_calculated)
+            should_plot = bool(row.should_plot)
             operations.append(
                 UpdateOne(
                     {
@@ -155,6 +159,7 @@ class MongoMonthlySeriesWriter:
                             "value": float(row.value),
                             "unit": "twh",
                             "is_calculated": is_calculated,
+                            "should_plot": should_plot,
                             "updated_at": now,
                         }
                     },
