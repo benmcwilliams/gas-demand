@@ -15,6 +15,9 @@ BUNDESNETZAGENTUR_MONTHLY_PATHS = [
     Path("src/data/processed/germany_household_historic.csv"),
     Path("src/data/raw/germany_household/latest_data.csv"),
 ]
+CBS_MONTHLY_PATHS = [
+    Path("src/data/raw/CBS_dutch_power.csv"),
+]
 
 class MonthlyDemandAnalyzer:
     def __init__(self):
@@ -62,6 +65,30 @@ class MonthlyDemandAnalyzer:
             df = pd.concat([df, bnetza_df], ignore_index=True)
         except Exception as e:
             print("Error reading or processing BNetzA data:", e)
+            raise
+
+        #read in CBS data for historic Netherlands power and adjusted industry
+        try:
+            cbs_df = self._read_first_existing_csv(CBS_MONTHLY_PATHS)
+            cbs_df['month'] = pd.to_datetime(cbs_df['month'], format="%m").dt.month
+            cbs_df['year'] = pd.to_datetime(cbs_df['year'], format="%Y").dt.year
+
+            nl_industry_df = df[(df['country'] == 'NL') & (df['type'] == 'industry')].copy()
+            nl_industry_adjusted_df = nl_industry_df.merge(
+                cbs_df[['demand', 'year', 'month']],
+                on=['year', 'month'],
+                how='left',
+                suffixes=('', '_cbs'),
+            )
+            nl_industry_adjusted_df['demand_cbs'] = nl_industry_adjusted_df['demand_cbs'].fillna(0)
+            nl_industry_adjusted_df['demand'] = nl_industry_adjusted_df['demand'] - nl_industry_adjusted_df['demand_cbs']
+            nl_industry_adjusted_df['source'] = "entsog, CBS"
+            nl_industry_adjusted_df = nl_industry_adjusted_df[['country', 'type', 'source', 'year', 'month', 'demand']]
+
+            cbs_df = cbs_df[['country', 'type', 'source', 'year', 'month', 'demand']]
+            df = pd.concat([df, nl_industry_adjusted_df, cbs_df], ignore_index=True)
+        except Exception as e:
+            print("Error reading or processing CBS data:", e)
             raise
 
         try:

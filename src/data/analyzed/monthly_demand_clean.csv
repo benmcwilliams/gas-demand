@@ -4157,6 +4157,135 @@ NL,household,2025,12,18.93,entsog
 NL,household,2026,1,25.05,entsog
 NL,household,2026,2,18.53,entsog
 NL,household,2026,3,13.47,entsog
+NL,industry,2019,1,10.3,"entsog, CBS"
+NL,industry,2019,2,8.93,"entsog, CBS"
+NL,industry,2019,3,10.07,"entsog, CBS"
+NL,industry,2019,4,9.16,"entsog, CBS"
+NL,industry,2019,5,9.26,"entsog, CBS"
+NL,industry,2019,6,8.41,"entsog, CBS"
+NL,industry,2019,7,8.83,"entsog, CBS"
+NL,industry,2019,8,9.0,"entsog, CBS"
+NL,industry,2019,9,9.26,"entsog, CBS"
+NL,industry,2019,10,9.79,"entsog, CBS"
+NL,industry,2019,11,9.38,"entsog, CBS"
+NL,industry,2019,12,10.21,"entsog, CBS"
+NL,industry,2020,1,9.4,"entsog, CBS"
+NL,industry,2020,2,9.5,"entsog, CBS"
+NL,industry,2020,3,10.07,"entsog, CBS"
+NL,industry,2020,4,9.0,"entsog, CBS"
+NL,industry,2020,5,8.84,"entsog, CBS"
+NL,industry,2020,6,8.26,"entsog, CBS"
+NL,industry,2020,7,9.01,"entsog, CBS"
+NL,industry,2020,8,9.17,"entsog, CBS"
+NL,industry,2020,9,9.19,"entsog, CBS"
+NL,industry,2020,10,10.42,"entsog, CBS"
+NL,industry,2020,11,9.16,"entsog, CBS"
+NL,industry,2020,12,10.73,"entsog, CBS"
+NL,industry,2021,1,12.31,"entsog, CBS"
+NL,industry,2021,2,11.16,"entsog, CBS"
+NL,industry,2021,3,12.08,"entsog, CBS"
+NL,industry,2021,4,11.22,"entsog, CBS"
+NL,industry,2021,5,11.36,"entsog, CBS"
+NL,industry,2021,6,9.46,"entsog, CBS"
+NL,industry,2021,7,9.9,"entsog, CBS"
+NL,industry,2021,8,9.78,"entsog, CBS"
+NL,industry,2021,9,9.59,"entsog, CBS"
+NL,industry,2021,10,9.31,"entsog, CBS"
+NL,industry,2021,11,8.99,"entsog, CBS"
+NL,industry,2021,12,10.03,"entsog, CBS"
+NL,industry,2022,1,9.62,"entsog, CBS"
+NL,industry,2022,2,8.49,"entsog, CBS"
+NL,industry,2022,3,8.93,"entsog, CBS"
+NL,industry,2022,4,8.92,"entsog, CBS"
+NL,industry,2022,5,8.37,"entsog, CBS"
+NL,industry,2022,6,7.93,"entsog, CBS"
+NL,industry,2022,7,7.28,"entsog, CBS"
+NL,industry,2022,8,6.38,"entsog, CBS"
+NL,industry,2022,9,5.92,"entsog, CBS"
+NL,industry,2022,10,6.53,"entsog, CBS"
+NL,industry,2022,11,6.72,"entsog, CBS"
+NL,industry,2022,12,7.12,"entsog, CBS"
+NL,industry,2023,1,6.92,"entsog, CBS"
+NL,industry,2023,2,6.13,"entsog, CBS"
+NL,industry,2023,3,7.18,"entsog, CBS"
+NL,industry,2023,4,6.63,"entsog, CBS"
+NL,industry,2023,5,6.59,"entsog, CBS"
+NL,industry,2023,6,6.83,"entsog, CBS"
+NL,industry,2023,7,6.82,"entsog, CBS"
+NL,industry,2023,8,7.11,"entsog, CBS"
+NL,industry,2023,9,7.22,"entsog, CBS"
+NL,industry,2023,10,7.66,"entsog, CBS"
+NL,industry,2023,11,7.19,"entsog, CBS"
+NL,industry,2023,12,7.87,"entsog, CBS"
+NL,industry,2024,1,8.33,"entsog, CBS"
+NL,industry,2024,2,7.64,"entsog, CBS"
+NL,industry,2024,3,7.84,"entsog, CBS"
+NL,industry,2024,4,8.27,"entsog, CBS"
+NL,industry,2024,5,8.32,"entsog, CBS"
+NL,industry,2024,6,7.47,"entsog, CBS"
+NL,industry,2024,7,7.13,"entsog, CBS"
+NL,industry,2024,8,7.36,"entsog, CBS"
+NL,industry,2024,9,7.28,"entsog, CBS"
+NL,industry,2024,10,7.63,"entsog, CBS"
+NL,industry,2024,11,7.56,"entsog, CBS"
+NL,industry,2024,12,7.93,"entsog, CBS"
+NL,industry,2025,1,7.91,"entsog, CBS"
+NL,industry,2025,2,6.93,"entsog, CBS"
+NL,industry,2025,3,7.23,"entsog, CBS"
+NL,industry,2025,4,6.52,"entsog, CBS"
+NL,industry,2025,5,6.82,"entsog, CBS"
+NL,industry,2025,6,6.37,"entsog, CBS"
+NL,industry,2025,7,6.44,"entsog, CBS"
+NL,industry,2025,8,6.48,"entsog, CBS"
+NL,industry,2025,9,6.52,"entsog, CBS"
+NL,industry,2025,10,7.02,"entsog, CBS"
+NL,industry,2025,11,6.82,"entsog, CBS"
+NL,industry,2025,12,7.41,"entsog, CBS"
+NL,industry,2026,1,7.69,"entsog, CBS"
+NL,industry,2026,2,6.75,"entsog, CBS"
+NL,industry,2026,3,6.74,"entsog, CBS"
+NL,power,2019,1,9.17,CBS
+NL,power,2019,2,8.16,CBS
+NL,power,2019,3,7.89,CBS
+NL,power,2019,4,6.51,CBS
+NL,power,2019,5,8.32,CBS
+NL,power,2019,6,7.39,CBS
+NL,power,2019,7,8.83,CBS
+NL,power,2019,8,8.91,CBS
+NL,power,2019,9,9.19,CBS
+NL,power,2019,10,9.59,CBS
+NL,power,2019,11,9.15,CBS
+NL,power,2019,12,7.64,CBS
+NL,power,2020,1,11.02,CBS
+NL,power,2020,2,8.15,CBS
+NL,power,2020,3,7.23,CBS
+NL,power,2020,4,6.09,CBS
+NL,power,2020,5,7.72,CBS
+NL,power,2020,6,8.66,CBS
+NL,power,2020,7,10.54,CBS
+NL,power,2020,8,11.25,CBS
+NL,power,2020,9,8.73,CBS
+NL,power,2020,10,7.47,CBS
+NL,power,2020,11,8.69,CBS
+NL,power,2020,12,8.58,CBS
+NL,power,2021,1,8.14,CBS
+NL,power,2021,2,8.19,CBS
+NL,power,2021,3,8.33,CBS
+NL,power,2021,4,5.93,CBS
+NL,power,2021,5,5.33,CBS
+NL,power,2021,6,7.16,CBS
+NL,power,2021,7,5.4,CBS
+NL,power,2021,8,2.33,CBS
+NL,power,2021,9,4.79,CBS
+NL,power,2021,10,3.74,CBS
+NL,power,2021,11,7.7,CBS
+NL,power,2021,12,6.78,CBS
+NL,power,2022,1,6.61,CBS
+NL,power,2022,2,3.82,CBS
+NL,power,2022,3,5.93,CBS
+NL,power,2022,4,4.01,CBS
+NL,power,2022,5,5.15,CBS
+NL,power,2022,6,5.73,CBS
 NL,power,2022,7,5.13,entsog
 NL,power,2022,8,5.75,entsog
 NL,power,2022,9,4.81,entsog
@@ -4202,93 +4331,93 @@ NL,power,2025,12,8.44,entsog
 NL,power,2026,1,10.2,entsog
 NL,power,2026,2,6.79,entsog
 NL,power,2026,3,3.77,entsog
-NL,total,2019,1,30.32,calculated
-NL,total,2019,2,21.57,calculated
-NL,total,2019,3,20.42,calculated
-NL,total,2019,4,12.45,calculated
-NL,total,2019,5,10.61,calculated
-NL,total,2019,6,5.43,calculated
-NL,total,2019,7,5.14,calculated
-NL,total,2019,8,5.02,calculated
-NL,total,2019,9,7.1,calculated
-NL,total,2019,10,13.3,calculated
-NL,total,2019,11,21.57,calculated
-NL,total,2019,12,24.71,calculated
-NL,total,2020,1,25.02,calculated
-NL,total,2020,2,22.87,calculated
-NL,total,2020,3,20.84,calculated
-NL,total,2020,4,10.58,calculated
-NL,total,2020,5,8.28,calculated
-NL,total,2020,6,5.8,calculated
-NL,total,2020,7,5.74,calculated
-NL,total,2020,8,4.77,calculated
-NL,total,2020,9,6.91,calculated
-NL,total,2020,10,14.04,calculated
-NL,total,2020,11,17.39,calculated
-NL,total,2020,12,24.82,calculated
-NL,total,2021,1,29.44,calculated
-NL,total,2021,2,25.28,calculated
-NL,total,2021,3,22.08,calculated
-NL,total,2021,4,18.19,calculated
-NL,total,2021,5,11.88,calculated
-NL,total,2021,6,5.46,calculated
-NL,total,2021,7,5.45,calculated
-NL,total,2021,8,5.59,calculated
-NL,total,2021,9,6.18,calculated
-NL,total,2021,10,11.82,calculated
-NL,total,2021,11,18.48,calculated
-NL,total,2021,12,23.88,calculated
-NL,total,2022,1,24.66,calculated
-NL,total,2022,2,20.59,calculated
-NL,total,2022,3,16.4,calculated
-NL,total,2022,4,12.57,calculated
-NL,total,2022,5,6.29,calculated
-NL,total,2022,6,4.82,calculated
-NL,total,2022,7,9.45,calculated
-NL,total,2022,8,9.56,calculated
-NL,total,2022,9,10.54,calculated
-NL,total,2022,10,13.49,calculated
-NL,total,2022,11,18.11,calculated
-NL,total,2022,12,29.32,calculated
-NL,total,2023,1,25.46,calculated
-NL,total,2023,2,23.32,calculated
-NL,total,2023,3,22.73,calculated
-NL,total,2023,4,16.65,calculated
-NL,total,2023,5,11.37,calculated
-NL,total,2023,6,10.97,calculated
-NL,total,2023,7,9.44,calculated
-NL,total,2023,8,11.28,calculated
-NL,total,2023,9,11.19,calculated
-NL,total,2023,10,12.82,calculated
-NL,total,2023,11,19.98,calculated
-NL,total,2023,12,24.44,calculated
-NL,total,2024,1,31.02,calculated
-NL,total,2024,2,21.03,calculated
-NL,total,2024,3,19.31,calculated
-NL,total,2024,4,14.21,calculated
-NL,total,2024,5,9.63,calculated
-NL,total,2024,6,9.53,calculated
-NL,total,2024,7,8.85,calculated
-NL,total,2024,8,8.54,calculated
-NL,total,2024,9,9.75,calculated
-NL,total,2024,10,13.95,calculated
-NL,total,2024,11,24.05,calculated
-NL,total,2024,12,25.19,calculated
-NL,total,2025,1,31.2,calculated
-NL,total,2025,2,27.2,calculated
-NL,total,2025,3,19.71,calculated
-NL,total,2025,4,13.16,calculated
-NL,total,2025,5,9.62,calculated
-NL,total,2025,6,7.79,calculated
-NL,total,2025,7,9.78,calculated
-NL,total,2025,8,10.0,calculated
-NL,total,2025,9,10.16,calculated
-NL,total,2025,10,15.68,calculated
-NL,total,2025,11,22.14,calculated
-NL,total,2025,12,27.37,calculated
-NL,total,2026,1,35.26,calculated
-NL,total,2026,2,25.33,calculated
-NL,total,2026,3,17.24,calculated
+NL,total,2019,1,49.79,calculated
+NL,total,2019,2,38.67,calculated
+NL,total,2019,3,38.39,calculated
+NL,total,2019,4,28.11,calculated
+NL,total,2019,5,28.19,calculated
+NL,total,2019,6,21.23,calculated
+NL,total,2019,7,22.8,calculated
+NL,total,2019,8,22.93,calculated
+NL,total,2019,9,25.55,calculated
+NL,total,2019,10,32.68,calculated
+NL,total,2019,11,40.11,calculated
+NL,total,2019,12,42.55,calculated
+NL,total,2020,1,45.44,calculated
+NL,total,2020,2,40.52,calculated
+NL,total,2020,3,38.14,calculated
+NL,total,2020,4,25.66,calculated
+NL,total,2020,5,24.83,calculated
+NL,total,2020,6,22.72,calculated
+NL,total,2020,7,25.3,calculated
+NL,total,2020,8,25.2,calculated
+NL,total,2020,9,24.83,calculated
+NL,total,2020,10,31.94,calculated
+NL,total,2020,11,35.24,calculated
+NL,total,2020,12,44.12,calculated
+NL,total,2021,1,49.89,calculated
+NL,total,2021,2,44.63,calculated
+NL,total,2021,3,42.49,calculated
+NL,total,2021,4,35.34,calculated
+NL,total,2021,5,28.57,calculated
+NL,total,2021,6,22.08,calculated
+NL,total,2021,7,20.75,calculated
+NL,total,2021,8,17.71,calculated
+NL,total,2021,9,20.56,calculated
+NL,total,2021,10,24.87,calculated
+NL,total,2021,11,35.17,calculated
+NL,total,2021,12,40.69,calculated
+NL,total,2022,1,40.89,calculated
+NL,total,2022,2,32.9,calculated
+NL,total,2022,3,31.27,calculated
+NL,total,2022,4,25.5,calculated
+NL,total,2022,5,19.81,calculated
+NL,total,2022,6,18.49,calculated
+NL,total,2022,7,16.73,calculated
+NL,total,2022,8,15.95,calculated
+NL,total,2022,9,16.45,calculated
+NL,total,2022,10,20.02,calculated
+NL,total,2022,11,24.83,calculated
+NL,total,2022,12,36.43,calculated
+NL,total,2023,1,32.38,calculated
+NL,total,2023,2,29.45,calculated
+NL,total,2023,3,29.91,calculated
+NL,total,2023,4,23.28,calculated
+NL,total,2023,5,17.96,calculated
+NL,total,2023,6,17.8,calculated
+NL,total,2023,7,16.26,calculated
+NL,total,2023,8,18.39,calculated
+NL,total,2023,9,18.41,calculated
+NL,total,2023,10,20.48,calculated
+NL,total,2023,11,27.17,calculated
+NL,total,2023,12,32.31,calculated
+NL,total,2024,1,39.35,calculated
+NL,total,2024,2,28.68,calculated
+NL,total,2024,3,27.15,calculated
+NL,total,2024,4,22.48,calculated
+NL,total,2024,5,17.95,calculated
+NL,total,2024,6,16.99,calculated
+NL,total,2024,7,15.98,calculated
+NL,total,2024,8,15.89,calculated
+NL,total,2024,9,17.03,calculated
+NL,total,2024,10,21.58,calculated
+NL,total,2024,11,31.61,calculated
+NL,total,2024,12,33.13,calculated
+NL,total,2025,1,39.1,calculated
+NL,total,2025,2,34.14,calculated
+NL,total,2025,3,26.94,calculated
+NL,total,2025,4,19.67,calculated
+NL,total,2025,5,16.44,calculated
+NL,total,2025,6,14.15,calculated
+NL,total,2025,7,16.22,calculated
+NL,total,2025,8,16.48,calculated
+NL,total,2025,9,16.69,calculated
+NL,total,2025,10,22.69,calculated
+NL,total,2025,11,28.96,calculated
+NL,total,2025,12,34.78,calculated
+NL,total,2026,1,42.95,calculated
+NL,total,2026,2,32.07,calculated
+NL,total,2026,3,23.98,calculated
 PL,power,2019,1,1.73,energy-charts
 PL,power,2019,2,1.55,energy-charts
 PL,power,2019,3,1.82,energy-charts
