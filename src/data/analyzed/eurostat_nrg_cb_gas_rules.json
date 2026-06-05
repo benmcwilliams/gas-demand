@@ -1,0 +1,118 @@
+{
+  "collection": "nrg_cb_gas",
+  "unit": "TJ_GCV",
+  "root_balance": "ID",
+  "reconciliation_tolerance": 0.01,
+  "level1": {
+    "lv1_demand": {
+      "source": "ID"
+    },
+    "lv1_fce": {
+      "source": "FC_E"
+    },
+    "lv1_fcne": {
+      "source": "FC_NE"
+    },
+    "lv1_transformation_input": {
+      "source": "TI_E"
+    },
+    "lv1_direct_energy_sector": {
+      "source": "NRG_E"
+    },
+    "lv1_losses": {
+      "coalesce": [
+        {
+          "source": "TRANSL_DL"
+        },
+        {
+          "sum": [
+            "TRANSL",
+            "DL"
+          ]
+        }
+      ]
+    }
+  },
+  "level2": {
+    "lv2_demand": {
+      "source": "ID"
+    },
+    "lv2_fce_industry": {
+      "source": "FC_IND_E"
+    },
+    "lv2_fce_household": {
+      "source": "FC_OTH_HH_E"
+    },
+    "lv2_fce_commercial": {
+      "source": "FC_OTH_CP_E"
+    },
+    "lv2_fce_other": {
+      "residual": {
+        "from": "FC_OTH_E",
+        "subtract": [
+          "FC_OTH_HH_E",
+          "FC_OTH_CP_E"
+        ]
+      }
+    },
+    "lv2_fce_transport": {
+      "source": "FC_TRA_E"
+    },
+    "lv2_fcne_industry": {
+      "source": "FC_IND_NE"
+    },
+    "lv2_fcne_other": {
+      "residual": {
+        "from": "FC_NE",
+        "subtract": [
+          "FC_IND_NE"
+        ]
+      }
+    },
+    "lv2_ti_electricity": {
+      "sum": [
+        "TI_EHG_APE_E",
+        "TI_EHG_MAPE_E"
+      ]
+    },
+    "lv2_ti_chp": {
+      "sum": [
+        "TI_EHG_APCHP_E",
+        "TI_EHG_MAPCHP_E"
+      ]
+    },
+    "lv2_ti_heat": {
+      "sum": [
+        "TI_EHG_APH_E",
+        "TI_EHG_MAPH_E"
+      ]
+    },
+    "lv2_ti_other": {
+      "sum": [
+        "TI_BF_E",
+        "TI_CO_E",
+        "TI_GTL_E",
+        "TI_GTL_GTL_E",
+        "TI_GW_E",
+        "TI_HYDP_E",
+        "TI_NSP_E"
+      ]
+    },
+    "lv2_direct_energy_sector": {
+      "source": "NRG_E"
+    },
+    "lv2_losses": {
+      "coalesce": [
+        {
+          "source": "TRANSL_DL"
+        },
+        {
+          "sum": [
+            "TRANSL",
+            "DL"
+          ]
+        }
+      ]
+    }
+  }
+}

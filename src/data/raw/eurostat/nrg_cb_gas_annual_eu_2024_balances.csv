@@ -1,0 +1,107 @@
+country,year,energy_balance,energy_balance_label,value,unit,siec,frequency,dataset,source
+EU27_2020,2024,DL,Distribution losses,26676.101,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,DL_NT,Distribution losses - non-technical,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,EXP,Exports,1994716.801,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC,Final consumption,8401152.352,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_E,Final consumption - energy use,8006963.452,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_CON_E,Final consumption - industry sector - construction - energy use,99853.213,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_CON_NE,Final consumption - industry sector - construction - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_CPC_E,Final consumption - industry sector - chemical and petrochemical - energy use,742901.231,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_CPC_NE,Final consumption - industry sector - chemical and petrochemical - non-energy use,394188.9,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_E,Final consumption - industry sector - energy use,3173167.05,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_FBT_E,"Final consumption - industry sector - food, beverages and tobacco - energy use",591817.782,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_FBT_NE,"Final consumption - industry sector - food, beverages and tobacco - non-energy use",0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_IS_E,Final consumption - industry sector - iron and steel - energy use,305487.063,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_IS_NE,Final consumption - industry sector - iron and steel - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_MAC_E,Final consumption - industry sector - machinery - energy use,213818.732,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_MAC_NE,Final consumption - industry sector - machinery - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_MQ_E,Final consumption - industry sector - mining and quarrying - energy use,29284.854,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_MQ_NE,Final consumption - industry sector - mining and quarrying - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_NE,Final consumption - industry sector - non-energy use,394188.9,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_NFM_E,Final consumption - industry sector - non-ferrous metals - energy use,142837.895,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_NFM_NE,Final consumption - industry sector - non-ferrous metals - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_NMM_E,Final consumption - industry sector - non-metallic minerals - energy use,506844.836,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_NMM_NE,Final consumption - industry sector - non-metallic minerals - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_NSP_E,Final consumption - industry sector - not elsewhere specified - energy use,81807.248,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_NSP_NE,Final consumption - industry sector - not elsewhere specified - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_PPP_E,"Final consumption - industry sector - paper, pulp and printing - energy use",276558.111,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_PPP_NE,"Final consumption - industry sector - paper, pulp and printing - non-energy use",0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_TE_E,Final consumption - industry sector - transport equipment - energy use,101001.951,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_TE_NE,Final consumption - industry sector - transport equipment - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_TL_E,Final consumption - industry sector - textile and leather - energy use,61496.236,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_TL_NE,Final consumption - industry sector - textile and leather - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_WP_E,Final consumption - industry sector - wood and wood products - energy use,19457.897,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_IND_WP_NE,Final consumption - industry sector - wood and wood products - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_NE,Final consumption - non-energy use,394188.9,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_AF_E,Final consumption - other sectors - agriculture and forestry - energy use,154350.017,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_AF_NE,Final consumption - other sectors - agriculture and forestry - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_A_E,Final consumption - other sectors - agriculture - energy use,146910.739,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_A_NE,Final consumption - other sectors - agriculture - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_CP_E,Final consumption - other sectors - commercial and public services - energy use,1400857.331,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_CP_NE,Final consumption - other sectors - commercial and public services - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_E,Final consumption - other sectors - energy use,4685006.933,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_FISH_E,Final consumption - other sectors - fishing - energy use,811.397,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_FISH_NE,Final consumption - other sectors - fishing - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_F_E,Final consumption - other sectors - forestry - energy use,692.533,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_F_NE,Final consumption - other sectors - forestry - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_HH_E,Final consumption - other sectors - households - energy use,3123884.949,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_HH_NE,Final consumption - other sectors - households - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_NE,Final consumption - other sectors - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_NSP_E,Final consumption - other sectors - not elsewhere specified - energy use,5103.24,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_OTH_NSP_NE,Final consumption - other sectors - not elsewhere specified - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_TRA_E,Final consumption - transport sector - energy use,148789.469,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_TRA_NE,Final consumption - transport sector - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_TRA_NSP_E,Final consumption - transport sector - not elsewhere specified - energy use,1552.949,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_TRA_NSP_NE,Final consumption - transport sector - not elsewhere specified - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_TRA_PIPE_E,Final consumption - transport sector - pipeline transport - energy use,38608.544,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_TRA_PIPE_NE,Final consumption - transport sector - pipeline transport - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_TRA_ROAD_E,Final consumption - transport sector - road - energy use,108627.976,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FC_TRA_ROAD_NE,Final consumption - transport sector - road - non-energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,FLARE,Flared,2331.31,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,IC_CAL,Inland consumption - calculated,12850052.482,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,IC_OBS,Inland consumption - observed,12926091.092,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,ID,Inland demand,12926091.073,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,IMP,Imports,12831093.805,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,INTMARB,International maritime bunkers,49481.332,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,IPRD,Indigenous production,1301170.519,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,IPRD_AG,Indigenous production - associated gas,96074.91,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,IPRD_CG,Indigenous production - colliery gas,15436.984,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,IPRD_NAG,Indigenous production - non-associated gas,1189658.725,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_BF_E,Energy sector - blast furnaces - energy use,3023.893,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_CM_E,Energy sector - coal mines - energy use,235.387,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_CO_E,Energy sector - coke ovens - energy use,220.878,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_E,Energy sector - energy use,381636.095,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_EHG_E,Energy sector - electricity and heat generation - energy use,5877.68,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_GTL_E,Energy sector - gas-to-liquids plants - energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_GTL_GTL_E,Energy sector - gas-to-liquids plants - GTL technology - energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_GW_E,Energy sector - gas works - energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_LNG_E,Energy sector - liquefaction and regasification plants (LNG) - energy use,9508.997,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_NSP_E,Energy sector - not elsewhere specified - energy use,15421.484,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_OIL_NG_E,Energy sector - oil and natural gas extraction plants - energy use,92556.147,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_PLG_E,"Energy sector - production, liquefaction, gasification - energy use",13325.603,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,NRG_PR_E,Energy sector - petroleum refineries (oil refineries) - energy use,241466.027,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,STATDIFF,Statistical differences,-76038.61,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,STK_CHG,Change in stock,610151.343,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,STK_CHG_CG,Change in stock - cushion gas,2141.63,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_BF_E,Transformation input - blast furnaces - energy use,2300.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_CO_E,Transformation input - coke ovens - energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_E,Transformation input - energy use,4096778.722,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_EHG_APCHP_E,Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use,717409.794,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_EHG_APE_E,Transformation input - electricity and heat generation - autoproducer electricity only - energy use,90746.096,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_EHG_APH_E,Transformation input - electricity and heat generation - autoproducer heat only - energy use,19398.451,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_EHG_MAPCHP_E,Transformation input - electricity and heat generation - main activity producer combined heat and power - energy use,1352524.844,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_EHG_MAPE_E,Transformation input - electricity and heat generation - main activity producer electricity only - energy use,1381457.409,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_EHG_MAPH_E,Transformation input - electricity and heat generation - main activity producer heat only - energy use,275524.946,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_GTL_E,Transformation input - gas-to-liquids plants - energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_GTL_GTL_E,Transformation input - gas-to-liquids plants - GTL technology - energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_GW_E,Transformation input - gas works - energy use,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_HYDP_E,Transformation input - hydrogen production - energy use,227793.885,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TI_NSP_E,Transformation input - not elsewhere specified - energy use,29623.297,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TOS,Transfer from other sources,149693.318,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TOS_COAL,Transfer from other sources - coal,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TOS_HYD,Transfer from other sources - hydrogen,0.0,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TOS_OIL,Transfer from other sources - oil,1572.173,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TOS_REN,Transfer from other sources - renewables,148122.79,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TRANSL,Transmission losses,13524.485,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,TRANSL_DL,Transmission and distribution losses,46523.904,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
+EU27_2020,2024,VENT,Vented,183.646,TJ_GCV,G3000,A,NRG_CB_GAS,eurostat
