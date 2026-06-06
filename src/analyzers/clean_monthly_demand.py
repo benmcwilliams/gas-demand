@@ -77,6 +77,7 @@ class MonthlyDemandAnalyzer:
             eurostat_df['date'] = pd.to_datetime(eurostat_df['date'], format='%Y-%m-%d', errors='coerce')
             eurostat_df['month'] = eurostat_df['date'].dt.month
             eurostat_df['year'] = eurostat_df['date'].dt.year
+            eurostat_df = eurostat_df.dropna(subset=['demand'])
             df = pd.concat([df, eurostat_df], ignore_index=True)
         except Exception as e:
             print("Error reading or processing Eurostat data:", e)

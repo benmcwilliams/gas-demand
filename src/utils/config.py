@@ -1,3 +1,4 @@
+from datetime import date
 from typing import Dict
 import yaml
 
@@ -28,6 +29,29 @@ class Config:
         Returns a dict with 'default' and country-specific cutoffs.
         """
         return self.config_data.get('country_cutoffs', {})
+
+    @staticmethod
+    def _subtract_months(reference_date: date, months: int) -> tuple:
+        month_index = reference_date.year * 12 + reference_date.month - 1 - months
+        year = month_index // 12
+        month = month_index % 12 + 1
+        return year, month
+
+    @classmethod
+    def _dynamic_monthly_cutoff(cls, release_day: int, reference_date: date = None) -> tuple:
+        if reference_date is None:
+            reference_date = date.today()
+
+        months_back = 1 if reference_date.day >= release_day else 2
+        return cls._subtract_months(reference_date, months_back)
+
+    def _get_default_cutoff(self) -> tuple:
+        default = self.country_cutoffs.get('default', {'year': 2026, 'month': 1})
+
+        if default.get('dynamic', False):
+            return self._dynamic_monthly_cutoff(default.get('release_day', 3))
+
+        return (default['year'], default['month'])
     
     def get_cutoff_for_country(self, country: str) -> tuple:
         """
@@ -41,11 +65,13 @@ class Config:
             tuple: (year, month) cutoff date
         """
         cutoffs = self.country_cutoffs
-        default = cutoffs.get('default', {'year': 2026, 'month': 1})
+        default_year, default_month = self._get_default_cutoff()
         
         if country in cutoffs:
             country_cutoff = cutoffs[country]
-            return (country_cutoff.get('year', default['year']), 
-                   country_cutoff.get('month', default['month']))
+            return (
+                country_cutoff.get('year', default_year),
+                country_cutoff.get('month', default_month),
+            )
         
-        return (default['year'], default['month']) 
+        return (default_year, default_month)

@@ -47,15 +47,13 @@ logging:
 # Countries not listed here will use the default cutoff
 country_cutoffs:
   default:
-    year: 2026
-    month: 3
+    dynamic: true
+    release_day: 3
   # Country-specific overrides (example format - update with actual dates)
   GR:
-    year: 2025
-    month: 12
+    cutoff_source: eurostat
   SK:
-    year: 2025
-    month: 12
+    cutoff_source: eurostat
   # FR:
   #   year: 2025
   #   month: 11 

@@ -86,6 +86,7 @@ AT,power,2025,12,2.33,energy-charts,True
 AT,power,2026,1,3.05,energy-charts,True
 AT,power,2026,2,2.59,energy-charts,True
 AT,power,2026,3,1.23,energy-charts,True
+AT,power,2026,4,0.68,energy-charts,True
 AT,total,2019,1,13.78,aggm,True
 AT,total,2019,2,10.27,aggm,True
 AT,total,2019,3,6.61,aggm,True
@@ -173,6 +174,7 @@ AT,total,2025,12,10.6,aggm,True
 AT,total,2026,1,13.21,aggm,True
 AT,total,2026,2,9.73,aggm,True
 AT,total,2026,3,7.69,aggm,True
+AT,total,2026,4,3.31,aggm,True
 BE,household,2019,1,15.43,entsog,True
 BE,household,2019,2,11.18,entsog,True
 BE,household,2019,3,10.35,entsog,True
@@ -260,6 +262,7 @@ BE,household,2025,12,11.29,entsog,True
 BE,household,2026,1,13.73,entsog,True
 BE,household,2026,2,9.93,entsog,True
 BE,household,2026,3,8.15,entsog,True
+BE,household,2026,4,3.46,entsog,True
 BE,industry,2019,1,4.65,entsog,True
 BE,industry,2019,2,4.19,entsog,True
 BE,industry,2019,3,4.38,entsog,True
@@ -347,6 +350,7 @@ BE,industry,2025,12,3.8,entsog,True
 BE,industry,2026,1,4.02,entsog,True
 BE,industry,2026,2,3.5,entsog,True
 BE,industry,2026,3,3.7,entsog,True
+BE,industry,2026,4,2.12,entsog,True
 BE,power,2019,1,5.79,entsog,True
 BE,power,2019,2,4.08,entsog,True
 BE,power,2019,3,3.29,entsog,True
@@ -434,6 +438,7 @@ BE,power,2025,12,3.11,entsog,True
 BE,power,2026,1,4.87,entsog,True
 BE,power,2026,2,2.27,entsog,True
 BE,power,2026,3,1.48,entsog,True
+BE,power,2026,4,1.33,entsog,True
 BE,total,2019,1,25.87,calculated,True
 BE,total,2019,2,19.45,calculated,True
 BE,total,2019,3,18.02,calculated,True
@@ -521,6 +526,7 @@ BE,total,2025,12,18.2,calculated,True
 BE,total,2026,1,22.61,calculated,True
 BE,total,2026,2,15.71,calculated,True
 BE,total,2026,3,13.33,calculated,True
+BE,total,2026,4,6.9,calculated,True
 BG,power,2019,1,0.54,energy-charts,True
 BG,power,2019,2,0.52,energy-charts,True
 BG,power,2019,3,0.47,energy-charts,True
@@ -608,6 +614,7 @@ BG,power,2025,12,0.44,energy-charts,True
 BG,power,2026,1,0.47,energy-charts,True
 BG,power,2026,2,0.43,energy-charts,True
 BG,power,2026,3,0.47,energy-charts,True
+BG,power,2026,4,0.25,energy-charts,True
 BG,total,2019,1,4.19,entsog,True
 BG,total,2019,2,3.42,entsog,True
 BG,total,2019,3,2.97,entsog,True
@@ -695,6 +702,7 @@ BG,total,2025,12,3.26,entsog,True
 BG,total,2026,1,3.66,entsog,True
 BG,total,2026,2,3.27,entsog,True
 BG,total,2026,3,3.2,entsog,True
+BG,total,2026,4,1.6,entsog,True
 CZ,power,2019,1,1.07,energy-charts,True
 CZ,power,2019,2,0.84,energy-charts,True
 CZ,power,2019,3,0.58,energy-charts,True
@@ -782,6 +790,7 @@ CZ,power,2025,12,0.97,energy-charts,True
 CZ,power,2026,1,1.67,energy-charts,True
 CZ,power,2026,2,1.23,energy-charts,True
 CZ,power,2026,3,0.76,energy-charts,True
+CZ,power,2026,4,0.37,energy-charts,True
 CZ,total,2019,1,13.79,eurostat,True
 CZ,total,2019,2,10.73,eurostat,True
 CZ,total,2019,3,9.05,eurostat,True
@@ -1043,6 +1052,7 @@ DE,power,2025,12,15.05,energy-charts,True
 DE,power,2026,1,19.63,energy-charts,True
 DE,power,2026,2,16.07,energy-charts,True
 DE,power,2026,3,9.33,energy-charts,True
+DE,power,2026,4,5.02,energy-charts,True
 DE,total,2019,1,135.07,gaspool-ncg,True
 DE,total,2019,2,105.01,gaspool-ncg,True
 DE,total,2019,3,96.27,gaspool-ncg,True
@@ -1130,6 +1140,7 @@ DE,total,2025,12,108.77,the,True
 DE,total,2026,1,135.48,the,True
 DE,total,2026,2,105.6,the,True
 DE,total,2026,3,84.45,the,True
+DE,total,2026,4,40.81,the,True
 DK,power,2019,1,0.78,energy-charts,True
 DK,power,2019,2,0.62,energy-charts,True
 DK,power,2019,3,0.55,energy-charts,True
@@ -1217,6 +1228,7 @@ DK,power,2025,12,0.44,energy-charts,True
 DK,power,2026,1,0.47,energy-charts,True
 DK,power,2026,2,0.24,energy-charts,True
 DK,power,2026,3,0.11,energy-charts,True
+DK,power,2026,4,0.06,energy-charts,True
 DK,total,2019,1,4.12,energinet,True
 DK,total,2019,2,3.12,energinet,True
 DK,total,2019,3,3.01,energinet,True
@@ -1304,6 +1316,7 @@ DK,total,2025,12,2.25,energinet,True
 DK,total,2026,1,3.92,energinet,True
 DK,total,2026,2,3.51,energinet,True
 DK,total,2026,3,1.86,energinet,True
+DK,total,2026,4,0.88,energinet,True
 EE,power,2019,1,0.0,energy-charts,True
 EE,power,2019,2,0.0,energy-charts,True
 EE,power,2019,3,0.0,energy-charts,True
@@ -1391,6 +1404,7 @@ EE,power,2025,12,0.0,energy-charts,True
 EE,power,2026,1,0.01,energy-charts,True
 EE,power,2026,2,0.01,energy-charts,True
 EE,power,2026,3,0.01,energy-charts,True
+EE,power,2026,4,0.0,energy-charts,True
 EE,total,2019,1,0.79,entsog,True
 EE,total,2019,2,0.57,entsog,True
 EE,total,2019,3,0.56,entsog,True
@@ -1478,6 +1492,7 @@ EE,total,2025,12,0.44,entsog,True
 EE,total,2026,1,0.74,entsog,True
 EE,total,2026,2,0.66,entsog,True
 EE,total,2026,3,0.32,entsog,True
+EE,total,2026,4,0.16,entsog,True
 ES,power,2019,1,6.88,enagas,True
 ES,power,2019,2,5.44,enagas,True
 ES,power,2019,3,4.9,enagas,True
@@ -1565,6 +1580,7 @@ ES,power,2025,12,9.96,enagas,True
 ES,power,2026,1,6.11,enagas,True
 ES,power,2026,2,4.5,enagas,True
 ES,power,2026,3,8.42,enagas,True
+ES,power,2026,4,4.38,enagas,True
 ES,total,2019,1,40.22,enagas,True
 ES,total,2019,2,32.71,enagas,True
 ES,total,2019,3,31.11,enagas,True
@@ -1652,6 +1668,7 @@ ES,total,2025,12,32.08,enagas,True
 ES,total,2026,1,24.27,enagas,True
 ES,total,2026,2,17.78,enagas,True
 ES,total,2026,3,30.94,enagas,True
+ES,total,2026,4,15.4,enagas,True
 FI,power,2019,1,1.44,energy-charts,True
 FI,power,2019,2,1.14,energy-charts,True
 FI,power,2019,3,1.04,energy-charts,True
@@ -1739,6 +1756,7 @@ FI,power,2025,12,0.18,energy-charts,True
 FI,power,2026,1,0.97,energy-charts,True
 FI,power,2026,2,1.0,energy-charts,True
 FI,power,2026,3,0.07,energy-charts,True
+FI,power,2026,4,0.04,energy-charts,True
 FI,total,2019,1,4.09,eurostat,True
 FI,total,2019,2,2.97,eurostat,True
 FI,total,2019,3,2.87,eurostat,True
@@ -1913,6 +1931,7 @@ FR,household,2025,12,32.82,"entsog, grtgaz",True
 FR,household,2026,1,39.29,"entsog, grtgaz",True
 FR,household,2026,2,26.59,"entsog, grtgaz",True
 FR,household,2026,3,23.75,"entsog, grtgaz",True
+FR,household,2026,4,8.84,"entsog, grtgaz",True
 FR,industry,2019,1,15.43,"entsog, grtgaz",True
 FR,industry,2019,2,12.85,"entsog, grtgaz",True
 FR,industry,2019,3,13.25,"entsog, grtgaz",True
@@ -2000,6 +2019,7 @@ FR,industry,2025,12,10.01,"entsog, grtgaz",True
 FR,industry,2026,1,11.0,"entsog, grtgaz",True
 FR,industry,2026,2,8.98,"entsog, grtgaz",True
 FR,industry,2026,3,8.97,"entsog, grtgaz",True
+FR,industry,2026,4,4.74,"entsog, grtgaz",True
 FR,power,2019,1,6.6,grtgaz,True
 FR,power,2019,2,4.59,grtgaz,True
 FR,power,2019,3,2.17,grtgaz,True
@@ -2087,6 +2107,7 @@ FR,power,2025,12,2.46,grtgaz,True
 FR,power,2026,1,4.69,grtgaz,True
 FR,power,2026,2,0.7,grtgaz,True
 FR,power,2026,3,0.6,grtgaz,True
+FR,power,2026,4,0.61,grtgaz,True
 FR,total,2019,1,74.08,calculated,True
 FR,total,2019,2,55.75,calculated,True
 FR,total,2019,3,48.79,calculated,True
@@ -2174,6 +2195,7 @@ FR,total,2025,12,45.3,calculated,True
 FR,total,2026,1,54.97,calculated,True
 FR,total,2026,2,36.26,calculated,True
 FR,total,2026,3,33.33,calculated,True
+FR,total,2026,4,14.19,calculated,True
 GR,power,2019,1,4.33,energy-charts,True
 GR,power,2019,2,2.84,energy-charts,True
 GR,power,2019,3,1.95,energy-charts,True
@@ -2258,6 +2280,8 @@ GR,power,2025,9,3.5,energy-charts,True
 GR,power,2025,10,3.66,energy-charts,True
 GR,power,2025,11,3.48,energy-charts,True
 GR,power,2025,12,4.89,energy-charts,True
+GR,power,2026,1,4.73,energy-charts,True
+GR,power,2026,2,3.15,energy-charts,True
 GR,total,2019,1,7.47,eurostat,True
 GR,total,2019,2,5.43,eurostat,True
 GR,total,2019,3,4.19,eurostat,True
@@ -2342,6 +2366,8 @@ GR,total,2025,9,5.02,eurostat,True
 GR,total,2025,10,5.69,eurostat,True
 GR,total,2025,11,5.53,eurostat,True
 GR,total,2025,12,7.76,eurostat,True
+GR,total,2026,1,8.14,eurostat,True
+GR,total,2026,2,5.78,eurostat,True
 HR,power,2019,1,0.67,energy-charts,True
 HR,power,2019,2,0.38,energy-charts,True
 HR,power,2019,3,0.24,energy-charts,True
@@ -2429,6 +2455,7 @@ HR,power,2025,12,0.62,energy-charts,True
 HR,power,2026,1,0.76,energy-charts,True
 HR,power,2026,2,0.62,energy-charts,True
 HR,power,2026,3,0.39,energy-charts,True
+HR,power,2026,4,0.09,energy-charts,True
 HR,total,2019,1,4.07,entsog,True
 HR,total,2019,2,2.99,entsog,True
 HR,total,2019,3,2.41,entsog,True
@@ -2516,6 +2543,7 @@ HR,total,2025,12,3.8,entsog,True
 HR,total,2026,1,4.31,entsog,True
 HR,total,2026,2,3.04,entsog,True
 HR,total,2026,3,2.7,entsog,True
+HR,total,2026,4,1.17,entsog,True
 HU,household,2019,1,14.82,entsog,True
 HU,household,2019,2,10.82,entsog,True
 HU,household,2019,3,8.4,entsog,True
@@ -2603,6 +2631,7 @@ HU,household,2025,12,10.37,entsog,True
 HU,household,2026,1,13.22,entsog,True
 HU,household,2026,2,9.37,entsog,True
 HU,household,2026,3,6.99,entsog,True
+HU,household,2026,4,2.81,entsog,True
 HU,industry,2019,1,0.79,calculated,True
 HU,industry,2019,2,0.92,calculated,True
 HU,industry,2019,3,0.99,calculated,True
@@ -2690,6 +2719,7 @@ HU,industry,2025,12,0.51,calculated,True
 HU,industry,2026,1,0.14,calculated,True
 HU,industry,2026,2,0.44,calculated,True
 HU,industry,2026,3,0.83,calculated,True
+HU,industry,2026,4,0.52,calculated,True
 HU,industry-power,2019,1,2.76,entsog,False
 HU,industry-power,2019,2,2.0,entsog,False
 HU,industry-power,2019,3,1.93,entsog,False
@@ -2777,6 +2807,7 @@ HU,industry-power,2025,12,2.57,entsog,False
 HU,industry-power,2026,1,2.73,entsog,False
 HU,industry-power,2026,2,2.22,entsog,False
 HU,industry-power,2026,3,1.74,entsog,False
+HU,industry-power,2026,4,0.9,entsog,False
 HU,power,2019,1,1.97,energy-charts,True
 HU,power,2019,2,1.08,energy-charts,True
 HU,power,2019,3,0.94,energy-charts,True
@@ -2864,6 +2895,7 @@ HU,power,2025,12,2.05,energy-charts,True
 HU,power,2026,1,2.6,energy-charts,True
 HU,power,2026,2,1.77,energy-charts,True
 HU,power,2026,3,0.91,energy-charts,True
+HU,power,2026,4,0.39,energy-charts,True
 HU,total,2019,1,17.58,calculated,True
 HU,total,2019,2,12.81,calculated,True
 HU,total,2019,3,10.33,calculated,True
@@ -2951,6 +2983,7 @@ HU,total,2025,12,12.93,calculated,True
 HU,total,2026,1,15.95,calculated,True
 HU,total,2026,2,11.59,calculated,True
 HU,total,2026,3,8.73,calculated,True
+HU,total,2026,4,3.72,calculated,True
 IT,household,2019,1,66.69,entsog,True
 IT,household,2019,2,48.58,entsog,True
 IT,household,2019,3,35.17,entsog,True
@@ -3038,6 +3071,7 @@ IT,household,2025,12,43.29,entsog,True
 IT,household,2026,1,53.46,entsog,True
 IT,household,2026,2,37.56,entsog,True
 IT,household,2026,3,32.17,entsog,True
+IT,household,2026,4,11.0,entsog,True
 IT,industry,2019,1,13.76,entsog,True
 IT,industry,2019,2,13.1,entsog,True
 IT,industry,2019,3,14.02,entsog,True
@@ -3125,6 +3159,7 @@ IT,industry,2025,12,9.35,entsog,True
 IT,industry,2026,1,10.39,entsog,True
 IT,industry,2026,2,10.38,entsog,True
 IT,industry,2026,3,11.46,entsog,True
+IT,industry,2026,4,6.16,entsog,True
 IT,power,2019,1,28.0,entsog,True
 IT,power,2019,2,21.01,entsog,True
 IT,power,2019,3,22.3,entsog,True
@@ -3212,6 +3247,7 @@ IT,power,2025,12,26.84,entsog,True
 IT,power,2026,1,28.61,entsog,True
 IT,power,2026,2,20.57,entsog,True
 IT,power,2026,3,18.22,entsog,True
+IT,power,2026,4,8.77,entsog,True
 IT,total,2019,1,108.45,calculated,True
 IT,total,2019,2,82.69,calculated,True
 IT,total,2019,3,71.48,calculated,True
@@ -3299,6 +3335,7 @@ IT,total,2025,12,79.48,calculated,True
 IT,total,2026,1,92.46,calculated,True
 IT,total,2026,2,68.51,calculated,True
 IT,total,2026,3,61.85,calculated,True
+IT,total,2026,4,25.93,calculated,True
 LT,power,2019,1,0.06,energy-charts,True
 LT,power,2019,2,0.07,energy-charts,True
 LT,power,2019,3,0.08,energy-charts,True
@@ -3386,6 +3423,7 @@ LT,power,2025,12,0.1,energy-charts,True
 LT,power,2026,1,0.4,energy-charts,True
 LT,power,2026,2,0.34,energy-charts,True
 LT,power,2026,3,0.06,energy-charts,True
+LT,power,2026,4,0.03,energy-charts,True
 LT,total,2019,1,3.04,eurostat,True
 LT,total,2019,2,2.3,eurostat,True
 LT,total,2019,3,2.3,eurostat,True
@@ -3560,6 +3598,7 @@ LU,household,2025,12,0.59,entsog,True
 LU,household,2026,1,0.73,entsog,True
 LU,household,2026,2,0.53,entsog,True
 LU,household,2026,3,0.46,entsog,True
+LU,household,2026,4,0.2,entsog,True
 LU,industry,2019,1,0.3,calculated,True
 LU,industry,2019,2,0.27,calculated,True
 LU,industry,2019,3,0.29,calculated,True
@@ -3647,6 +3686,7 @@ LU,industry,2025,12,0.17,calculated,True
 LU,industry,2026,1,0.21,calculated,True
 LU,industry,2026,2,0.21,calculated,True
 LU,industry,2026,3,0.22,calculated,True
+LU,industry,2026,4,0.12,calculated,True
 LU,industry-power,2019,1,0.36,entsog,False
 LU,industry-power,2019,2,0.32,entsog,False
 LU,industry-power,2019,3,0.35,entsog,False
@@ -3734,6 +3774,7 @@ LU,industry-power,2025,12,0.19,entsog,False
 LU,industry-power,2026,1,0.23,entsog,False
 LU,industry-power,2026,2,0.22,entsog,False
 LU,industry-power,2026,3,0.23,entsog,False
+LU,industry-power,2026,4,0.13,entsog,False
 LU,power,2019,1,0.06,energy-charts,True
 LU,power,2019,2,0.05,energy-charts,True
 LU,power,2019,3,0.05,energy-charts,True
@@ -3821,6 +3862,7 @@ LU,power,2025,12,0.02,energy-charts,True
 LU,power,2026,1,0.01,energy-charts,True
 LU,power,2026,2,0.01,energy-charts,True
 LU,power,2026,3,0.01,energy-charts,True
+LU,power,2026,4,0.0,energy-charts,True
 LU,total,2019,1,1.22,calculated,True
 LU,total,2019,2,0.97,calculated,True
 LU,total,2019,3,0.93,calculated,True
@@ -3908,6 +3950,7 @@ LU,total,2025,12,0.78,calculated,True
 LU,total,2026,1,0.96,calculated,True
 LU,total,2026,2,0.75,calculated,True
 LU,total,2026,3,0.69,calculated,True
+LU,total,2026,4,0.33,calculated,True
 LV,power,2019,1,0.76,energy-charts,True
 LV,power,2019,2,0.38,energy-charts,True
 LV,power,2019,3,0.32,energy-charts,True
@@ -3995,6 +4038,7 @@ LV,power,2025,12,0.27,energy-charts,True
 LV,power,2026,1,1.07,energy-charts,True
 LV,power,2026,2,1.0,energy-charts,True
 LV,power,2026,3,0.13,energy-charts,True
+LV,power,2026,4,0.0,energy-charts,True
 LV,total,2020,1,1.29,entsog,True
 LV,total,2020,2,1.28,entsog,True
 LV,total,2020,3,1.16,entsog,True
@@ -4070,6 +4114,7 @@ LV,total,2025,12,1.01,entsog,True
 LV,total,2026,1,2.34,entsog,True
 LV,total,2026,2,2.14,entsog,True
 LV,total,2026,3,0.7,entsog,True
+LV,total,2026,4,0.29,entsog,True
 NL,household,2019,1,30.32,entsog,True
 NL,household,2019,2,21.57,entsog,True
 NL,household,2019,3,20.42,entsog,True
@@ -4157,6 +4202,7 @@ NL,household,2025,12,18.93,entsog,True
 NL,household,2026,1,25.05,entsog,True
 NL,household,2026,2,18.53,entsog,True
 NL,household,2026,3,13.47,entsog,True
+NL,household,2026,4,5.57,entsog,True
 NL,industry,2019,1,10.3,"entsog, CBS",True
 NL,industry,2019,2,8.93,"entsog, CBS",True
 NL,industry,2019,3,10.07,"entsog, CBS",True
@@ -4244,6 +4290,7 @@ NL,industry,2025,12,7.41,"entsog, CBS",True
 NL,industry,2026,1,7.69,"entsog, CBS",True
 NL,industry,2026,2,6.75,"entsog, CBS",True
 NL,industry,2026,3,6.74,"entsog, CBS",True
+NL,industry,2026,4,4.12,"entsog, CBS",True
 NL,power,2019,1,9.17,CBS,True
 NL,power,2019,2,8.16,CBS,True
 NL,power,2019,3,7.89,CBS,True
@@ -4331,6 +4378,7 @@ NL,power,2025,12,8.44,entsog,True
 NL,power,2026,1,10.2,entsog,True
 NL,power,2026,2,6.79,entsog,True
 NL,power,2026,3,3.77,entsog,True
+NL,power,2026,4,2.82,entsog,True
 NL,total,2019,1,49.79,calculated,True
 NL,total,2019,2,38.67,calculated,True
 NL,total,2019,3,38.39,calculated,True
@@ -4418,6 +4466,7 @@ NL,total,2025,12,34.78,calculated,True
 NL,total,2026,1,42.95,calculated,True
 NL,total,2026,2,32.07,calculated,True
 NL,total,2026,3,23.98,calculated,True
+NL,total,2026,4,12.51,calculated,True
 PL,power,2019,1,1.73,energy-charts,True
 PL,power,2019,2,1.55,energy-charts,True
 PL,power,2019,3,1.82,energy-charts,True
@@ -4505,6 +4554,7 @@ PL,power,2025,12,5.12,energy-charts,True
 PL,power,2026,1,5.17,energy-charts,True
 PL,power,2026,2,4.71,energy-charts,True
 PL,power,2026,3,3.64,energy-charts,True
+PL,power,2026,4,2.11,energy-charts,True
 PL,total,2019,1,23.43,entsog,True
 PL,total,2019,2,18.83,entsog,True
 PL,total,2019,3,18.91,entsog,True
@@ -4592,6 +4642,7 @@ PL,total,2025,12,25.59,entsog,True
 PL,total,2026,1,29.55,entsog,True
 PL,total,2026,2,26.12,entsog,True
 PL,total,2026,3,18.98,entsog,True
+PL,total,2026,4,9.7,entsog,True
 PT,household,2019,1,2.5,entsog,True
 PT,household,2019,2,2.21,entsog,True
 PT,household,2019,3,2.26,entsog,True
@@ -4679,6 +4730,7 @@ PT,household,2025,12,1.77,entsog,True
 PT,household,2026,1,1.9,entsog,True
 PT,household,2026,2,1.76,entsog,True
 PT,household,2026,3,1.76,entsog,True
+PT,household,2026,4,0.83,entsog,True
 PT,industry,2019,1,0.73,calculated,True
 PT,industry,2019,2,0.66,calculated,True
 PT,industry,2019,3,0.71,calculated,True
@@ -4766,6 +4818,7 @@ PT,industry,2025,12,0.69,calculated,True
 PT,industry,2026,1,0.64,calculated,True
 PT,industry,2026,2,0.65,calculated,True
 PT,industry,2026,3,0.57,calculated,True
+PT,industry,2026,4,0.23,calculated,True
 PT,industry-power,2019,1,3.06,entsog,False
 PT,industry-power,2019,2,2.33,entsog,False
 PT,industry-power,2019,3,2.03,entsog,False
@@ -4853,6 +4906,7 @@ PT,industry-power,2025,12,1.92,entsog,False
 PT,industry-power,2026,1,2.14,entsog,False
 PT,industry-power,2026,2,2.56,entsog,False
 PT,industry-power,2026,3,1.91,entsog,False
+PT,industry-power,2026,4,0.99,entsog,False
 PT,power,2019,1,2.33,energy-charts,True
 PT,power,2019,2,1.67,energy-charts,True
 PT,power,2019,3,1.32,energy-charts,True
@@ -4940,6 +4994,7 @@ PT,power,2025,12,1.23,energy-charts,True
 PT,power,2026,1,1.5,energy-charts,True
 PT,power,2026,2,1.9,energy-charts,True
 PT,power,2026,3,1.34,energy-charts,True
+PT,power,2026,4,0.76,energy-charts,True
 PT,total,2019,1,5.56,calculated,True
 PT,total,2019,2,4.54,calculated,True
 PT,total,2019,3,4.29,calculated,True
@@ -5027,6 +5082,7 @@ PT,total,2025,12,3.7,calculated,True
 PT,total,2026,1,4.05,calculated,True
 PT,total,2026,2,4.32,calculated,True
 PT,total,2026,3,3.67,calculated,True
+PT,total,2026,4,1.82,calculated,True
 RO,household,2019,1,14.15,entsog,True
 RO,household,2019,2,10.86,entsog,True
 RO,household,2019,3,8.4,entsog,True
@@ -5114,6 +5170,7 @@ RO,household,2025,12,11.17,entsog,True
 RO,household,2026,1,13.75,entsog,True
 RO,household,2026,2,10.97,entsog,True
 RO,household,2026,3,8.55,entsog,True
+RO,household,2026,4,3.51,entsog,True
 RO,industry,2019,1,1.64,calculated,True
 RO,industry,2019,2,1.29,calculated,True
 RO,industry,2019,3,1.41,calculated,True
@@ -5201,6 +5258,7 @@ RO,industry,2025,12,0.3,calculated,True
 RO,industry,2026,1,0.49,calculated,True
 RO,industry,2026,2,0.29,calculated,True
 RO,industry,2026,3,0.25,calculated,True
+RO,industry,2026,4,0.1,calculated,True
 RO,industry-power,2019,1,4.25,entsog,False
 RO,industry-power,2019,2,3.52,entsog,False
 RO,industry-power,2019,3,3.05,entsog,False
@@ -5288,6 +5346,7 @@ RO,industry-power,2025,12,2.57,entsog,False
 RO,industry-power,2026,1,3.06,entsog,False
 RO,industry-power,2026,2,2.35,entsog,False
 RO,industry-power,2026,3,2.29,entsog,False
+RO,industry-power,2026,4,0.52,entsog,False
 RO,power,2019,1,2.6,energy-charts,True
 RO,power,2019,2,2.23,energy-charts,True
 RO,power,2019,3,1.64,energy-charts,True
@@ -5375,6 +5434,7 @@ RO,power,2025,12,2.27,energy-charts,True
 RO,power,2026,1,2.57,energy-charts,True
 RO,power,2026,2,2.06,energy-charts,True
 RO,power,2026,3,2.03,energy-charts,True
+RO,power,2026,4,0.42,energy-charts,True
 RO,total,2019,1,18.4,calculated,True
 RO,total,2019,2,14.38,calculated,True
 RO,total,2019,3,11.44,calculated,True
@@ -5462,6 +5522,7 @@ RO,total,2025,12,13.74,calculated,True
 RO,total,2026,1,16.81,calculated,True
 RO,total,2026,2,13.31,calculated,True
 RO,total,2026,3,10.84,calculated,True
+RO,total,2026,4,4.03,calculated,True
 SE,power,2019,1,0.0,energy-charts,True
 SE,power,2019,2,0.0,energy-charts,True
 SE,power,2019,3,0.0,energy-charts,True
@@ -5549,6 +5610,7 @@ SE,power,2025,12,0.0,energy-charts,True
 SE,power,2026,1,0.0,energy-charts,True
 SE,power,2026,2,0.0,energy-charts,True
 SE,power,2026,3,0.01,energy-charts,True
+SE,power,2026,4,0.01,energy-charts,True
 SE,total,2019,1,1.53,eurostat,True
 SE,total,2019,2,1.22,eurostat,True
 SE,total,2019,3,1.5,eurostat,True
@@ -5635,7 +5697,6 @@ SE,total,2025,11,1.06,eurostat,True
 SE,total,2025,12,0.86,eurostat,True
 SE,total,2026,1,0.95,eurostat,True
 SE,total,2026,2,0.95,eurostat,True
-SE,total,2026,3,0.0,eurostat,True
 SI,power,2019,1,0.09,energy-charts,True
 SI,power,2019,2,0.08,energy-charts,True
 SI,power,2019,3,0.09,energy-charts,True
@@ -5723,6 +5784,7 @@ SI,power,2025,12,0.27,energy-charts,True
 SI,power,2026,1,0.3,energy-charts,True
 SI,power,2026,2,0.23,energy-charts,True
 SI,power,2026,3,0.23,energy-charts,True
+SI,power,2026,4,0.12,energy-charts,True
 SI,total,2019,1,1.27,entsog,True
 SI,total,2019,2,1.02,entsog,True
 SI,total,2019,3,0.94,entsog,True
@@ -5810,6 +5872,7 @@ SI,total,2025,12,1.19,entsog,True
 SI,total,2026,1,1.41,entsog,True
 SI,total,2026,2,1.06,entsog,True
 SI,total,2026,3,1.01,entsog,True
+SI,total,2026,4,0.55,entsog,True
 SK,power,2019,1,0.41,energy-charts,True
 SK,power,2019,2,0.41,energy-charts,True
 SK,power,2019,3,0.45,energy-charts,True
@@ -5894,6 +5957,8 @@ SK,power,2025,9,0.46,energy-charts,True
 SK,power,2025,10,0.49,energy-charts,True
 SK,power,2025,11,0.69,energy-charts,True
 SK,power,2025,12,0.69,energy-charts,True
+SK,power,2026,1,0.81,energy-charts,True
+SK,power,2026,2,0.66,energy-charts,True
 SK,total,2019,1,8.17,eurostat,True
 SK,total,2019,2,6.22,eurostat,True
 SK,total,2019,3,5.42,eurostat,True
@@ -5978,6 +6043,8 @@ SK,total,2025,9,2.56,eurostat,True
 SK,total,2025,10,4.42,eurostat,True
 SK,total,2025,11,5.79,eurostat,True
 SK,total,2025,12,6.47,eurostat,True
+SK,total,2026,1,7.95,eurostat,True
+SK,total,2026,2,6.13,eurostat,True
 UK,household,2020,1,30.48,national-grid,True
 UK,household,2020,2,67.17,national-grid,True
 UK,household,2020,3,63.32,national-grid,True
@@ -6053,6 +6120,7 @@ UK,household,2025,12,57.8,national-grid,True
 UK,household,2026,1,70.43,national-grid,True
 UK,household,2026,2,53.91,national-grid,True
 UK,household,2026,3,47.98,national-grid,True
+UK,household,2026,4,20.01,national-grid,True
 UK,industry,2020,1,2.02,national-grid,True
 UK,industry,2020,2,3.66,national-grid,True
 UK,industry,2020,3,3.9,national-grid,True
@@ -6128,6 +6196,7 @@ UK,industry,2025,12,0.86,national-grid,True
 UK,industry,2026,1,1.16,national-grid,True
 UK,industry,2026,2,0.95,national-grid,True
 UK,industry,2026,3,0.83,national-grid,True
+UK,industry,2026,4,0.46,national-grid,True
 UK,power,2020,1,8.17,national-grid,True
 UK,power,2020,2,12.72,national-grid,True
 UK,power,2020,3,15.87,national-grid,True
@@ -6203,6 +6272,7 @@ UK,power,2025,12,12.89,national-grid,True
 UK,power,2026,1,17.17,national-grid,True
 UK,power,2026,2,14.28,national-grid,True
 UK,power,2026,3,11.34,national-grid,True
+UK,power,2026,4,4.45,national-grid,True
 UK,total,2020,1,40.67,national-grid,True
 UK,total,2020,2,83.55,national-grid,True
 UK,total,2020,3,83.08,national-grid,True
@@ -6278,6 +6348,7 @@ UK,total,2025,12,71.55,national-grid,True
 UK,total,2026,1,88.76,national-grid,True
 UK,total,2026,2,69.15,national-grid,True
 UK,total,2026,3,60.14,national-grid,True
+UK,total,2026,4,24.93,national-grid,True
 DE,industry,2019,1,52.22,calculated,True
 DE,industry,2019,2,44.19,calculated,True
 DE,industry,2019,3,43.27,calculated,True
@@ -6452,6 +6523,7 @@ AT,industry-household,2025,12,8.27,calculated,True
 AT,industry-household,2026,1,10.15,calculated,True
 AT,industry-household,2026,2,7.14,calculated,True
 AT,industry-household,2026,3,6.45,calculated,True
+AT,industry-household,2026,4,2.64,calculated,True
 BG,industry-household,2019,1,3.65,calculated,True
 BG,industry-household,2019,2,2.9,calculated,True
 BG,industry-household,2019,3,2.5,calculated,True
@@ -6539,6 +6611,7 @@ BG,industry-household,2025,12,2.81,calculated,True
 BG,industry-household,2026,1,3.19,calculated,True
 BG,industry-household,2026,2,2.84,calculated,True
 BG,industry-household,2026,3,2.73,calculated,True
+BG,industry-household,2026,4,1.36,calculated,True
 CZ,industry-household,2019,1,12.72,calculated,True
 CZ,industry-household,2019,2,9.89,calculated,True
 CZ,industry-household,2019,3,8.46,calculated,True
@@ -6626,6 +6699,7 @@ CZ,industry-household,2025,12,9.31,calculated,True
 CZ,industry-household,2026,1,11.87,calculated,True
 CZ,industry-household,2026,2,8.93,calculated,True
 CZ,industry-household,2026,3,4.02,calculated,True
+DE,industry-household,2026,4,35.79,calculated,True
 DK,industry-household,2019,1,3.34,calculated,True
 DK,industry-household,2019,2,2.5,calculated,True
 DK,industry-household,2019,3,2.46,calculated,True
@@ -6713,6 +6787,7 @@ DK,industry-household,2025,12,1.8,calculated,True
 DK,industry-household,2026,1,3.46,calculated,True
 DK,industry-household,2026,2,3.27,calculated,True
 DK,industry-household,2026,3,1.76,calculated,True
+DK,industry-household,2026,4,0.82,calculated,True
 EE,industry-household,2019,1,0.79,calculated,True
 EE,industry-household,2019,2,0.57,calculated,True
 EE,industry-household,2019,3,0.56,calculated,True
@@ -6800,6 +6875,7 @@ EE,industry-household,2025,12,0.43,calculated,True
 EE,industry-household,2026,1,0.73,calculated,True
 EE,industry-household,2026,2,0.65,calculated,True
 EE,industry-household,2026,3,0.31,calculated,True
+EE,industry-household,2026,4,0.16,calculated,True
 ES,industry-household,2019,1,33.35,calculated,True
 ES,industry-household,2019,2,27.26,calculated,True
 ES,industry-household,2019,3,26.21,calculated,True
@@ -6887,6 +6963,7 @@ ES,industry-household,2025,12,22.12,calculated,True
 ES,industry-household,2026,1,18.16,calculated,True
 ES,industry-household,2026,2,13.27,calculated,True
 ES,industry-household,2026,3,22.52,calculated,True
+ES,industry-household,2026,4,11.03,calculated,True
 FI,industry-household,2019,1,2.65,calculated,True
 FI,industry-household,2019,2,1.83,calculated,True
 FI,industry-household,2019,3,1.82,calculated,True
@@ -7058,6 +7135,8 @@ GR,industry-household,2025,9,1.52,calculated,True
 GR,industry-household,2025,10,2.03,calculated,True
 GR,industry-household,2025,11,2.05,calculated,True
 GR,industry-household,2025,12,2.87,calculated,True
+GR,industry-household,2026,1,3.42,calculated,True
+GR,industry-household,2026,2,2.63,calculated,True
 HR,industry-household,2019,1,3.41,calculated,True
 HR,industry-household,2019,2,2.6,calculated,True
 HR,industry-household,2019,3,2.17,calculated,True
@@ -7145,6 +7224,7 @@ HR,industry-household,2025,12,3.19,calculated,True
 HR,industry-household,2026,1,3.54,calculated,True
 HR,industry-household,2026,2,2.41,calculated,True
 HR,industry-household,2026,3,2.32,calculated,True
+HR,industry-household,2026,4,1.08,calculated,True
 LT,industry-household,2019,1,2.98,calculated,True
 LT,industry-household,2019,2,2.23,calculated,True
 LT,industry-household,2019,3,2.22,calculated,True
@@ -7307,6 +7387,7 @@ LV,industry-household,2025,12,0.74,calculated,True
 LV,industry-household,2026,1,1.27,calculated,True
 LV,industry-household,2026,2,1.14,calculated,True
 LV,industry-household,2026,3,0.57,calculated,True
+LV,industry-household,2026,4,0.29,calculated,True
 PL,industry-household,2019,1,21.7,calculated,True
 PL,industry-household,2019,2,17.28,calculated,True
 PL,industry-household,2019,3,17.09,calculated,True
@@ -7394,6 +7475,7 @@ PL,industry-household,2025,12,20.47,calculated,True
 PL,industry-household,2026,1,24.39,calculated,True
 PL,industry-household,2026,2,21.42,calculated,True
 PL,industry-household,2026,3,15.34,calculated,True
+PL,industry-household,2026,4,7.6,calculated,True
 SE,industry-household,2019,1,1.53,calculated,True
 SE,industry-household,2019,2,1.22,calculated,True
 SE,industry-household,2019,3,1.5,calculated,True
@@ -7480,7 +7562,6 @@ SE,industry-household,2025,11,1.06,calculated,True
 SE,industry-household,2025,12,0.86,calculated,True
 SE,industry-household,2026,1,0.95,calculated,True
 SE,industry-household,2026,2,0.94,calculated,True
-SE,industry-household,2026,3,-0.01,calculated,True
 SI,industry-household,2019,1,1.18,calculated,True
 SI,industry-household,2019,2,0.93,calculated,True
 SI,industry-household,2019,3,0.85,calculated,True
@@ -7568,6 +7649,7 @@ SI,industry-household,2025,12,0.92,calculated,True
 SI,industry-household,2026,1,1.11,calculated,True
 SI,industry-household,2026,2,0.84,calculated,True
 SI,industry-household,2026,3,0.78,calculated,True
+SI,industry-household,2026,4,0.43,calculated,True
 SK,industry-household,2019,1,7.76,calculated,True
 SK,industry-household,2019,2,5.81,calculated,True
 SK,industry-household,2019,3,4.97,calculated,True
@@ -7652,3 +7734,5 @@ SK,industry-household,2025,9,2.1,calculated,True
 SK,industry-household,2025,10,3.93,calculated,True
 SK,industry-household,2025,11,5.1,calculated,True
 SK,industry-household,2025,12,5.78,calculated,True
+SK,industry-household,2026,1,7.13,calculated,True
+SK,industry-household,2026,2,5.47,calculated,True
