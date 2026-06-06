@@ -28,7 +28,7 @@ class EntsogScraper:
                 # Start with empty DataFrame for initial load
                 historic_df = pd.DataFrame()
             else:
-                start_date = (datetime.now() - timedelta(days=90)).strftime('%Y-%m-%d')
+                start_date = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
                 self.logger.info("Performing multi-day ENTSOG update")
                 # Load existing data for updates
                 historic_df = self._load_existing_data()
