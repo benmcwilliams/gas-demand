@@ -6,6 +6,7 @@ highcharts/data/daily_demand_rolling30.json
 
 figures-iran-blog/
 private
+downloads/
 
 # Runtime data artefacts. The server owns these via scrapers/cron; git should not overwrite them.
 src/data/raw/
