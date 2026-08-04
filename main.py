@@ -17,7 +17,7 @@ from src.analyzers.clean_monthly_demand import MonthlyDemandAnalyzer
 from src.loaders.eurostat_monthly_series_to_mongo import publish_eurostat_monthly_series
 from src.utils.mongo import MongoDailySeriesWriter
 
-def main(update_raw=False, initial_load=False):
+def main(update_raw=False, initial_load=False, lookup_days=7):
     # initialize config and logging
     config = Config()
     logging.basicConfig(level=logging.INFO,
@@ -33,7 +33,7 @@ def main(update_raw=False, initial_load=False):
         # Optionally update raw data first
         if update_raw:
             logger.info("Updating raw data files...")
-            update_raw_data(initial_load=initial_load)
+            update_raw_data(initial_load=initial_load, lookup_days=lookup_days)
         
         # Initialize demand data extractors
         demand_extractors = [

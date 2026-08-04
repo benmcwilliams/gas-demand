@@ -16,7 +16,7 @@ sys.path.append(str(Path(__file__).parent.parent.parent))
 from src.utils.spain import accept_cookies, change_date, extract_demand_data
 
 class SpainScraper:
-    def __init__(self):
+    def __init__(self, lookup_days: int = 7):
         """Initialize the scraper with end date and lookback period."""
         self.logger = logging.getLogger(__name__)
         self.base_url = "https://www.enagas.es/en/technical-management-system/energy-data/demand/forecast/"
@@ -24,6 +24,7 @@ class SpainScraper:
         self.driver = None
         self.data = []
         self.request_count = 0
+        self.lookup_days = lookup_days
         
         # Constants for rate limiting
         #self.SAVE_INTERVAL = 10  # Save every 30 days
@@ -60,7 +61,7 @@ class SpainScraper:
             # Create output directory if it doesn't exist
             self.output_dir.mkdir(parents=True, exist_ok=True)
             
-            self.start_date = datetime.now() - timedelta(days=7)
+            self.start_date = datetime.now() - timedelta(days=self.lookup_days)
             self.end_date = datetime.now() - timedelta(days=2)
             self.logger.info(f"Scraping from {self.start_date.date()} to {self.end_date.date()}")
 
@@ -132,7 +133,6 @@ if __name__ == "__main__":
     
     # Initialize and run scraper with historic mode enabled
     scraper = SpainScraper()
-    print(f"Scraping from {scraper.start_date.date()} to {scraper.end_date.date()}")
     df = scraper.scrape()
     
     if df is not None:

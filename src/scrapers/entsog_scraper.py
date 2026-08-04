@@ -6,16 +6,17 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 class EntsogScraper:
-    def __init__(self):
+    def __init__(self, lookup_days: int = 7):
         self.logger = logging.getLogger(__name__)
         self.points_df = pd.read_excel('src/data/inputs/entsog_points_mapping.xlsx')
         self.output_file = Path('src/data/raw/entsog_data.csv')
+        self.lookup_days = lookup_days
 
     def scrape(self, initial_load=False):
         """
         Scrapes ENTSOG data for all points in points_filter.xlsx.
         Args:
-            initial_load (bool): If True, loads data since 2019, otherwise last 90 days.
+            initial_load (bool): If True, loads data since 2019, otherwise last lookup_days.
         Returns:
             bool: True if successful, False otherwise.
         """
@@ -28,8 +29,8 @@ class EntsogScraper:
                 # Start with empty DataFrame for initial load
                 historic_df = pd.DataFrame()
             else:
-                start_date = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
-                self.logger.info("Performing multi-day ENTSOG update")
+                start_date = (datetime.now() - timedelta(days=self.lookup_days)).strftime('%Y-%m-%d')
+                self.logger.info(f"Performing {self.lookup_days}-day ENTSOG update")
                 # Load existing data for updates
                 historic_df = self._load_existing_data()
             

@@ -11,7 +11,7 @@ from src.scrapers.spain_scraper import SpainScraper
 from src.scrapers.uk_scraper import UKScraper
 from src.scrapers.eurostat_scraper import EurostatScraper
 
-def update_raw_data(initial_load=False):
+def update_raw_data(initial_load=False, lookup_days=7):
 
     logger = logging.getLogger(__name__)
     
@@ -20,13 +20,13 @@ def update_raw_data(initial_load=False):
         AustriaScraper(),
         BnetzaScraper(),
         DenmarkScraper(),
-        EnergyChartsScraper(),
-        EntsogScraper(),
+        EnergyChartsScraper(lookup_days=lookup_days),
+        EntsogScraper(lookup_days=lookup_days),
         EurostatScraper(),
         FranceScraper(),
         GermanyScraper(),
         UKScraper(),
-        SpainScraper(),
+        SpainScraper(lookup_days=lookup_days),
     ]
     
     # Run all scrapers
