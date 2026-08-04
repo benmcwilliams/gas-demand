@@ -14,6 +14,7 @@ from src.extractors.spain_demand import SpainDemandExtractor
 from src.extractors.uk_demand import UKDemandExtractor
 from src.analyzers.clean_daily_demand import DailyDemandAnalyzer
 from src.analyzers.clean_monthly_demand import MonthlyDemandAnalyzer
+from src.loaders.eurostat_monthly_series_to_mongo import publish_eurostat_monthly_series
 from src.utils.mongo import MongoDailySeriesWriter
 
 def main(update_raw=False, initial_load=False):
@@ -106,13 +107,33 @@ def main(update_raw=False, initial_load=False):
                 logger.error("DailyDemandAnalyzer failed; daily_demand_clean.csv may be missing or stale")
         else:
             logger.error("No demand data was successfully extracted")
+
+        logger.info("Publishing raw Eurostat monthly series...")
+        try:
+            eurostat_documents, written_count, collection_name = publish_eurostat_monthly_series()
+            logger.info(
+                f"Wrote {len(eurostat_documents)} raw Eurostat monthly records "
+                "to src/data/analyzed/eurostat_monthly_series_mongo_ready.csv"
+            )
+            if written_count is None:
+                logger.info(
+                    "MongoDB raw Eurostat monthly publishing skipped because "
+                    "MONGO_URI is not configured"
+                )
+            else:
+                logger.info(
+                    f"Upserted {written_count} raw Eurostat monthly records "
+                    f"into MongoDB collection {collection_name}"
+                )
+        except Exception as e:
+            logger.error(f"Failed to publish raw Eurostat monthly series: {str(e)}")
             
     except Exception as e:
         logger.error(f"Critical error in main process: {str(e)}")
 
 if __name__ == "__main__":
 
-    main(update_raw=True, initial_load=False)
+    main(update_raw=False, initial_load=False)
     
     # For initial load of ENTSOG data (commented out):
     # main(update_raw=True, initial_load=True) 

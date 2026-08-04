@@ -179,6 +179,97 @@ class MongoMonthlySeriesWriter:
         return result.upserted_count + result.modified_count
 
 
+class MongoEurostatMonthlySeriesWriter:
+    def __init__(self):
+        load_dotenv(".env")
+        self.mongo_uri = os.getenv("MONGO_URI")
+        self.database_name = os.getenv("MONGO_DB", "gas_demand")
+        self.collection_name = os.getenv(
+            "MONGO_EUROSTAT_MONTHLY_COLLECTION",
+            "eurostat_monthly_series",
+        )
+
+    @property
+    def enabled(self) -> bool:
+        return bool(self.mongo_uri)
+
+    def _get_collection(self):
+        if not self.enabled:
+            raise ValueError("MONGO_URI is not configured.")
+
+        client = MongoClient(self.mongo_uri, serverSelectionTimeoutMS=5000)
+        collection = client[self.database_name][self.collection_name]
+        collection.create_index(
+            [
+                ("country", ASCENDING),
+                ("year", ASCENDING),
+                ("month", ASCENDING),
+                ("type", ASCENDING),
+                ("source", ASCENDING),
+            ],
+            unique=True,
+            name="eurostat_monthly_series_unique_record",
+        )
+        return client, collection
+
+    def upsert_dataframe(self, df: pd.DataFrame) -> int:
+        if df.empty:
+            return 0
+
+        working_df = df.copy()
+        working_df["country"] = working_df["country"].astype(str)
+        working_df["year"] = pd.to_numeric(working_df["year"], errors="coerce")
+        working_df["month"] = pd.to_numeric(working_df["month"], errors="coerce")
+        working_df["value"] = pd.to_numeric(working_df["value"], errors="coerce")
+        working_df["unit"] = "twh"
+        working_df["source"] = "eurostat"
+        working_df["type"] = "total"
+        working_df = working_df.dropna(subset=["country", "year", "month", "value"])
+
+        now = datetime.now(timezone.utc)
+        operations = []
+
+        columns = ["country", "year", "month", "value", "unit", "source", "type"]
+        for row in working_df[columns].itertuples(index=False):
+            year = int(row.year)
+            month = int(row.month)
+            operations.append(
+                UpdateOne(
+                    {
+                        "country": row.country,
+                        "year": year,
+                        "month": month,
+                        "type": row.type,
+                        "source": row.source,
+                    },
+                    {
+                        "$set": {
+                            "country": row.country,
+                            "year": year,
+                            "month": month,
+                            "value": float(row.value),
+                            "unit": row.unit,
+                            "source": row.source,
+                            "type": row.type,
+                            "updated_at": now,
+                        }
+                    },
+                    upsert=True,
+                )
+            )
+
+        if not operations:
+            return 0
+
+        client, collection = self._get_collection()
+        try:
+            result = collection.bulk_write(operations, ordered=False)
+        finally:
+            client.close()
+
+        return result.upserted_count + result.modified_count
+
+
 class MongoAnnualGasBalancesWriter:
     def __init__(self):
         load_dotenv(".env")

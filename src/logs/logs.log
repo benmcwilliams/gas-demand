@@ -9087,3 +9087,23 @@ Scraping Results:
 2026-04-19 17:50:13,820 - INFO - main.py:75 - All data saved successfully
 2026-04-19 17:50:13,820 - INFO - main.py:76 - Running DailyDemandAnalyzer...
 2026-04-19 17:50:14,128 - INFO - main.py:78 - Wrote src/data/analyzed/daily_demand_clean.csv
+2026-07-30 17:06:20,957 - INFO - main.py:58 - Successfully extracted data for AustriaDemandExtractor
+2026-07-30 17:06:20,967 - INFO - main.py:58 - Successfully extracted data for DenmarkDemandExtractor
+2026-07-30 17:06:21,912 - INFO - main.py:58 - Successfully extracted data for FranceDemandExtractor
+2026-07-30 17:06:21,916 - INFO - germany_demand.py:79 - Successfully processed THE data
+2026-07-30 17:06:21,927 - INFO - germany_demand.py:117 - Successfully processed GASPOOL/NCG data
+2026-07-30 17:06:21,928 - INFO - main.py:58 - Successfully extracted data for GermanyDemandExtractor
+2026-07-30 17:06:21,930 - INFO - spain_demand.py:31 - Reading historic file: src/data/raw/spain/spain_gas_demand_2019_feb2026.csv
+2026-07-30 17:06:21,945 - INFO - spain_demand.py:35 - Reading current file: src/data/raw/spain/spain_gas_demand_2026-03-01_2026-04-17.csv
+2026-07-30 17:06:21,947 - INFO - main.py:58 - Successfully extracted data for SpainDemandExtractor
+2026-07-30 17:06:22,004 - INFO - main.py:58 - Successfully extracted data for EntsogDemandExtractor
+2026-07-30 17:06:22,031 - INFO - main.py:58 - Successfully extracted data for EnergyChartsDemandExtractor
+2026-07-30 17:06:22,051 - INFO - main.py:58 - Successfully extracted data for UKDemandExtractor
+2026-07-30 17:06:22,098 - INFO - main.py:76 - Found demand data for 26 countries
+2026-07-30 17:06:22,281 - INFO - main.py:78 - All data saved successfully
+2026-07-30 17:08:31,773 - INFO - main.py:82 - Upserted 181802 extracted daily records into MongoDB
+2026-07-30 17:08:31,773 - INFO - main.py:88 - Running DailyDemandAnalyzer...
+2026-07-30 17:08:32,132 - INFO - main.py:91 - Wrote src/data/analyzed/daily_demand_clean.csv
+2026-07-30 17:09:01,553 - INFO - main.py:96 - Upserted 33353 calculated daily records into MongoDB
+2026-07-30 17:09:01,554 - INFO - main.py:100 - Running MonthlyDemandAnalyzer...
+2026-07-30 17:09:07,783 - INFO - main.py:102 - Wrote src/data/analyzed/monthly_demand_clean.csv and published monthly MongoDB series
