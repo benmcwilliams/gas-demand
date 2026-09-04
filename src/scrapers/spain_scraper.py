@@ -16,6 +16,9 @@ sys.path.append(str(Path(__file__).parent.parent.parent))
 from src.utils.spain import accept_cookies, change_date, extract_demand_data
 
 class SpainScraper:
+    CANONICAL_CURRENT_FILENAME = "spain_gas_demand_current.csv"
+    ROLLING_FILE_PATTERN = "spain_gas_demand_????-??-??_????-??-??.csv"
+
     def __init__(self, lookup_days: int = 7):
         """Initialize the scraper with end date and lookback period."""
         self.logger = logging.getLogger(__name__)
@@ -31,6 +34,36 @@ class SpainScraper:
         self.PAUSE_INTERVAL = 100  # Take a longer break every 100 requests
         self.SHORT_PAUSE = 2  # Regular pause between requests (seconds)
         self.LONG_PAUSE = 60  # Longer pause after PAUSE_INTERVAL requests (seconds)
+
+    def rebuild_current_file(self) -> pd.DataFrame:
+        rolling_files = sorted(self.output_dir.glob(self.ROLLING_FILE_PATTERN))
+        if not rolling_files:
+            self.logger.warning(f"No Spain rolling files found in {self.output_dir}")
+            return pd.DataFrame()
+
+        current_dfs = []
+        for rolling_file in rolling_files:
+            df = pd.read_csv(rolling_file)
+            df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
+            df['source_file_mtime'] = rolling_file.stat().st_mtime
+            current_dfs.append(df)
+
+        current_df = pd.concat(current_dfs, ignore_index=True)
+        current_df = (
+            current_df
+            .dropna(subset=['date'])
+            .sort_values(['date', 'source_file_mtime'])
+            .drop_duplicates(subset=['date'], keep='last')
+            .sort_values('date')
+            .drop(columns=['source_file_mtime'])
+        )
+
+        current_file = self.output_dir / self.CANONICAL_CURRENT_FILENAME
+        current_df.to_csv(current_file, index=False)
+        self.logger.info(
+            f"Rebuilt Spain current file {current_file} with {len(current_df)} rows"
+        )
+        return current_df
 
     def setup_driver(self):
         """Setup Chrome driver with options."""
@@ -100,6 +133,7 @@ class SpainScraper:
             output_file = self.output_dir / f"spain_gas_demand_{self.start_date.date()}_{self.end_date.date()}.csv"
             df.to_csv(output_file, index=False)
             self.logger.info(f"Dataset saved to {output_file}")
+            self.rebuild_current_file()
             return True
             
         except Exception as e:

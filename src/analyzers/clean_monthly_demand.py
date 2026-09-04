@@ -23,6 +23,7 @@ class MonthlyDemandAnalyzer:
     def __init__(self):
         self.calculate_industry_demand_countries = ['HU', 'LU', 'PT', 'RO'] #note we dropped IE.
         self.calculate_country_totals = ['BE', 'FR', 'HU', 'IT', 'LU', 'NL', 'PT', 'RO']
+        self.skip_industry_household_countries = {'DE'}
 
     def _read_first_existing_csv(self, paths: list[Path]) -> pd.DataFrame:
         for path in paths:
@@ -45,6 +46,7 @@ class MonthlyDemandAnalyzer:
             return pd.DataFrame(columns=['country', 'year', 'month', 'demand', 'type', 'source'])
 
         mask = pivot_df['total'].notna() & pivot_df['power'].notna()
+        mask = mask & ~pivot_df['country'].isin(self.skip_industry_household_countries)
         if 'industry' in pivot_df.columns:
             mask = mask & pivot_df['industry'].isna()
         if 'household' in pivot_df.columns:
