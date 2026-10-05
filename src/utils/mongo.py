@@ -131,6 +131,11 @@ class MongoMonthlySeriesWriter:
             working_df["should_plot"] = working_df["type"].ne("industry-power")
         working_df["should_plot"] = working_df["should_plot"].astype(bool)
 
+        metadata_by_key = {
+            (r['country'], int(r['year']), int(r['month']), r['type']): r['aggregate_metadata']
+            for r in working_df.to_dict('records')
+            if isinstance(r.get('aggregate_metadata'), dict)
+        }
         now = datetime.now(timezone.utc)
         operations = []
 
@@ -161,6 +166,9 @@ class MongoMonthlySeriesWriter:
                             "is_calculated": is_calculated,
                             "should_plot": should_plot,
                             "updated_at": now,
+                            **({"aggregate_metadata": metadata_by_key[(row.country, year, month, row.type)],
+                                 "aggregation_status": metadata_by_key[(row.country, year, month, row.type)]["status"]}
+                               if (row.country, year, month, row.type) in metadata_by_key else {}),
                         }
                     },
                     upsert=True,
@@ -177,6 +185,38 @@ class MongoMonthlySeriesWriter:
             client.close()
 
         return result.upserted_count + result.modified_count
+
+
+    def publish_aggregates(self, aggregates: pd.DataFrame, audit: pd.DataFrame) -> int:
+        """Refresh accepted aggregates and hide legacy values now withheld.
+
+        Withheld keys are not upserted: there is no new numerical observation.
+        Existing values are retained for audit, but are no longer plottable.
+        """
+        from src.analyzers.monthly_aggregates import AREAS, SECTORS
+
+        if audit.empty:
+            return 0
+        if not audit.country.isin(AREAS).all() or not audit.type.isin(SECTORS).all():
+            raise ValueError('Aggregate publication received non-aggregate keys')
+        operations = []
+        now = datetime.now(timezone.utc)
+        for row in audit.to_dict('records'):
+            if row['status'].startswith('withheld'):
+                operations.append(UpdateOne(
+                    {'country': row['country'], 'type': row['type'],
+                     'year': int(row['year']), 'month': int(row['month']),
+                     'source': 'calculated', 'is_calculated': True},
+                    {'$set': {'should_plot': False, 'aggregate_metadata': row['aggregate_metadata'],
+                              'aggregation_status': row['status'], 'updated_at': now}},
+                    upsert=False))
+        client, collection = self._get_collection()
+        try:
+            if operations:
+                collection.bulk_write(operations, ordered=False)
+        finally:
+            client.close()
+        return self.upsert_dataframe(aggregates)
 
 
 class MongoEurostatMonthlySeriesWriter:

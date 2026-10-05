@@ -129,3 +129,69 @@ The **`monthly-to-highcharts.ipynb`** notebook builds **`highcharts/data/monthly
 
 
 
+
+### Monthly EU and Europe aggregates
+
+`MonthlyDemandAnalyzer` now adds `country=EU` and `country=EU+UK` rows for
+`total`, `industry`, `household`, `power`, and `industry-household`. Expected
+countries are those covered for each sector in 2025, restricted to the tracker's
+EU members (plus UK for Europe). This is not full EU27 coverage. UK has no
+combined industry-household series, so that aggregate equals EU's.
+
+A daily-backed country-sector record is reported only if each selected input
+source has every calendar day with a finite value. Derived industry, combined
+industry-household, and calculated total records inherit their dependencies'
+completeness. Official monthly sources need a finite published monthly value.
+This checks daily records, not completeness of every underlying hourly reading
+or ENTSOG delivery point. It does not backfill source data.
+
+Weights are each country's recorded annual sector demand in calendar 2025,
+normalized within the area/sector. All 12 baseline monthly records must exist;
+weights are indicative sizes and do not themselves require full daily coverage.
+Configuration is in `config.yaml` under `monthly_aggregates`.
+
+- All countries complete: publish the sum.
+- Missing demand weight below 20%: impute using the combined reporting countries'
+  year-on-year ratio. Missing-country estimate = its same-month prior-year demand
+  times that ratio. Partial current-country values are excluded completely.
+  Historical reference values need to exist, but are not rejected for missing
+  daily coverage; the strict completeness check applies to the target month.
+- At least 20% missing: withhold.
+- Below 20%, if the year-on-year reference is absent or its reporting sum is
+  nonpositive, automatically use the demand-share fallback: aggregate = current
+  reporting-country sum / (1 - missing 2025 demand share). Allocate the estimate
+  among missing countries using their 2025 weights and mark
+  `aggregation_method=demand_share_fallback` with a fallback reason.
+  Prior aggregate estimates are never used as reference inputs.
+
+Published rows have `source=calculated`, `is_calculated=true`, `should_plot=true`,
+and `aggregate_metadata` containing reporting/missing countries and reasons,
+2025 missing demand share, imputation status, observed and estimated components,
+and the reference/change used. Existing withheld aggregate rows are retained
+with `should_plot=false`; no numeric value is inserted for a withheld month.
+Country records are not changed by the standalone aggregate publisher.
+
+To create a **read-only live snapshot and comparison with legacy aggregates**:
+
+```bash
+python3 -m src.loaders.monthly_aggregates --imputation-reference year-on-year
+```
+
+Reports are written to `src/data/analyzed/aggregate_audit/`: `aggregates.json`,
+`aggregate_audit.json`, `country_completeness.csv`, and `legacy_comparison.csv`.
+The comparison includes the current unguarded country sum to distinguish
+imputation changes from differences already present in legacy records.
+To repeat locally without querying MongoDB:
+
+```bash
+python3 -m src.loaders.monthly_aggregates \
+  --snapshot-dir src/data/analyzed/aggregate_audit \
+  --imputation-reference year-on-year
+```
+
+Add `--publish` to explicitly upsert the aggregates and hide withheld legacy
+values. Normal monthly analysis also publishes aggregates as part of its run.
+The website must consume these stored aggregate records; a website that sums
+all plottable country and aggregate rows together would double-count demand.
+
+Run the focused checks with `python3 -m unittest discover -s tests -v`.

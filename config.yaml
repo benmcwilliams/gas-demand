@@ -57,3 +57,9 @@ country_cutoffs:
   # FR:
   #   year: 2025
   #   month: 11 
+
+# Demand-weighted missing share; exactly 20% is withheld.
+monthly_aggregates:
+  weight_year: 2025
+  missing_share_limit: 0.20
+  imputation_reference: year-on-year

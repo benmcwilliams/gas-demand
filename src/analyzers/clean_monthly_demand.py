@@ -5,6 +5,7 @@ from src.utils.functions import calculate_totals_monthly, calculate_industry_fro
 from src.utils.config import Config
 from src.utils.country_cutoffs import apply_country_cutoffs
 from src.utils.mongo import MongoMonthlySeriesWriter
+from src.analyzers.monthly_aggregates import build_aggregates, daily_coverage, AREAS
 
 
 EUROSTAT_MONTHLY_PATHS = [
@@ -66,6 +67,8 @@ class MonthlyDemandAnalyzer:
         df = pd.read_csv("src/data/processed/daily_demand_all.csv")
         df['date'] = df['date'].astype(str).str[:10]
         df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d', errors='coerce')
+
+        daily_inputs = df.copy()
 
         #group by country, type, source, year, month and sum demand
         df['month'] = df['date'].dt.month
@@ -191,6 +194,14 @@ class MonthlyDemandAnalyzer:
         updated_df = apply_country_cutoffs(updated_df, config)
         updated_df['should_plot'] = updated_df['type'] != 'industry-power'
 
+        options = config.config_data.get('monthly_aggregates', {})
+        aggregates, self.aggregate_audit = build_aggregates(
+            updated_df, daily_coverage(daily_inputs),
+            imputation_reference=options.get('imputation_reference', 'year-on-year'),
+            weight_year=options.get('weight_year', 2025),
+            missing_share_limit=options.get('missing_share_limit', 0.20),
+        )
+        updated_df = pd.concat([updated_df, aggregates], ignore_index=True)
         return updated_df
 
     def analyze(self, publish_to_mongo: bool = True) -> bool:
@@ -201,6 +212,8 @@ class MonthlyDemandAnalyzer:
 
         try:
             updated_df.to_csv("src/data/analyzed/monthly_demand_clean.csv", index=False)
+            self.aggregate_audit.to_json("src/data/analyzed/monthly_aggregate_audit.json",
+                                         orient="records", indent=2)
         except Exception as e:
             print("Error writing to CSV file:", e)
             return False
@@ -209,7 +222,9 @@ class MonthlyDemandAnalyzer:
             writer = MongoMonthlySeriesWriter()
             if writer.enabled:
                 try:
-                    written_count = writer.upsert_dataframe(updated_df)
+                    aggregate_mask = updated_df.country.isin(AREAS)
+                    written_count = writer.upsert_dataframe(updated_df[~aggregate_mask])
+                    written_count += writer.publish_aggregates(updated_df[aggregate_mask], self.aggregate_audit)
                     print(f"Upserted {written_count} monthly records into MongoDB.")
                 except Exception as e:
                     print("Error writing monthly data to MongoDB:", e)
