@@ -8,7 +8,7 @@ from io import StringIO
 class AustriaScraper:
     def __init__(self):
         self.logger = logging.getLogger(__name__)
-        self.url = "https://energie.wifo.ac.at/data/gas/consumption-aggm.csv"
+        self.url = "https://energie.wifo.ac.at/data/gas/consumption.csv"
         self.output_dir = Path("src/data/raw")
         self.output_file = self.output_dir / "consumption-aggm.csv"
         
@@ -47,4 +47,4 @@ class AustriaScraper:
             
         except Exception as e:
             self.logger.error(f"Error scraping Austrian data: {str(e)}")
-            return False 
+            return False
